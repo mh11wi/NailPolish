@@ -1,6 +1,11 @@
 <template>
-  <Collection msg="Nail Polish App"/>
-  <img alt="Ethereal Chill" src="./assets/ethereal_chill.jpg">
+  <div>
+    <b-navbar>
+      <b-navbar-brand tag="h1" class="mb-0">Nail Polish App</b-navbar-brand>
+    </b-navbar>
+    <Collection msg="Coming soon!"/>
+    <img alt="Ethereal Chill" src="./assets/ethereal_chill.jpg">
+  </div>
 </template>
 
 <script>
