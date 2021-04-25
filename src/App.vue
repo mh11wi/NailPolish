@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-navbar sticky="true" variant="light">
+    <b-navbar variant="light">
       <b-navbar-brand tag="h1">Nail Polish App</b-navbar-brand>
       <b-navbar-nav class="ml-auto">
         <b-nav-item id="link-button" tabindex="0">
@@ -14,8 +14,20 @@
         </b-nav-item>
       </b-navbar-nav>
     </b-navbar>
-    <Collection msg="Coming soon!"/>
-    <img alt="Ethereal Chill" src="./assets/ethereal_chill.jpg">
+    <b-tabs>
+      <b-tab title="browse collection" active>
+        <Collection msg="Coming soon!"/>
+      </b-tab>
+      <b-tab title="compare polishes">
+        <p>Coming Soon!</p>
+      </b-tab>
+      <b-tab title="top it off">
+        <p>Coming Soon!</p>
+      </b-tab>
+      <b-tab title="nail art gallery">
+        <p>Coming Soon!</p>
+      </b-tab>
+    </b-tabs>
   </div>
 </template>
 
@@ -31,7 +43,5 @@ export default {
 </script>
 
 <style>
-img {
-  width: 300px;
-}
+
 </style>
