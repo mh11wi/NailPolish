@@ -1,5 +1,5 @@
 <template>
-  <b-form-radio-group buttons v-model="selected" :options="options" @change="updateValue()" />
+  <b-form-radio-group buttons button-variant="primary" v-model="selected" :options="options" @change="updateValue()" />
 </template>
 
 <script>

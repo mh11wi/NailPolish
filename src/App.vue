@@ -15,16 +15,16 @@
       </b-navbar-nav>
     </b-navbar>
     <b-tabs>
-      <b-tab title="browse collection" active>
+      <b-tab title="Browse Collection" active>
         <Collection msg="Coming soon!"/>
       </b-tab>
-      <b-tab title="compare polishes">
+      <b-tab title="Compare Polishes">
         <p>Coming Soon!</p>
       </b-tab>
-      <b-tab title="top it off">
+      <b-tab title="Top It Off">
         <p>Coming Soon!</p>
       </b-tab>
-      <b-tab title="nail art gallery">
+      <b-tab title="Nail Art Gallery">
         <p>Coming Soon!</p>
       </b-tab>
     </b-tabs>
