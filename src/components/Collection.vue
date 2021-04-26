@@ -4,7 +4,7 @@
       <div class="col-4 filtersColumn">
         <div class="row align-items-center stats">
           <div class="col-6">
-            Polishes: {{ numPolishes }}
+            Polishes: {{ polishes.length }}
           </div>
           <div class="col-6 text-right">
             <FinishToggle v-model="finish" @updateFinish="finish = $event"/>
@@ -29,7 +29,14 @@
         </div>
       </div>
       <div class="col-8 polishList">
-        <img alt="Ethereal Chill" :src="getImage('ethereal_chill_' + finish + '.jpg')">
+        <b-img-lazy 
+          v-for="(polish, index) in polishes" 
+          :key="index" :src="getImage(polish.id)" 
+          :alt="polish.name" 
+          width=175 
+          blank-color="black"
+          class="mr-3 mb-3">
+        </b-img-lazy>
       </div>
     </div>
   </div>
@@ -38,6 +45,7 @@
 <script>
 import FinishToggle from './FinishToggle.vue'
 import FilterList from './FilterList.vue'
+import allPolishes from '../data/polishes.json'
 
 export default {
   name: 'Collection',
@@ -47,13 +55,18 @@ export default {
   },
   data: function() {
     return {
-      numPolishes: 1,
       finish: 'glossy'
     }
   },
+  computed: {
+    polishes: function() {
+      return allPolishes.filter(polish => polish.type != 'Topper');
+    }
+  },
   methods: {
-    getImage(pic) {
-      return require('@/assets/' + pic);
+    getImage(polishId) {
+      const finishId = this.finish == 'glossy' ? '1' : '2';
+      return require('@/assets/' + polishId + '/' + finishId + '.jpg');
     }
   }
 }
@@ -71,9 +84,5 @@ export default {
   padding-top: 1rem;
   border-left: solid 1px #dee2e6;
   margin-left: -1px;
-}
-
-img {
-  width: 300px;
 }
 </style>

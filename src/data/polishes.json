@@ -1,0 +1,83 @@
+[
+  {
+    "id": "1",
+    "name": "Glossy Top Coat",
+    "brand": "",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1"
+  },
+  {
+    "id": "2",
+    "name": "Matte Top Coat",
+    "brand": "",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1"
+  },
+  {
+    "id": "3",
+    "name": "Ethereal Chill",
+    "brand": "Live Love Polish",
+    "type": "Magnetic",
+    "colorFamily": "Silver",
+    "color": "Silver",
+    "numCoats": "3"
+  },
+  {
+    "id": "4",
+    "name": "Faerie Glow",
+    "brand": "Live Love Polish",
+    "type": "Magnetic",
+    "colorFamily": "Gold",
+    "color": "Gold",
+    "numCoats": "3"
+  },
+  {
+    "id": "5",
+    "name": "Black Orchid",
+    "brand": "ILNP",
+    "type": "Linear Holographic",
+    "colorFamily": "Red",
+    "color": "Deep Burgundy",
+    "numCoats": "2"
+  },
+  {
+    "id": "6",
+    "name": "Chai Latte",
+    "brand": "ILNP",
+    "type": "Linear Holographic",
+    "colorFamily": "Brown",
+    "color": "Mocha",
+    "numCoats": "2"
+  },
+  {
+    "id": "7",
+    "name": "I See You",
+    "brand": "ILNP",
+    "type": "Linear Holographic",
+    "colorFamily": "Gold",
+    "color": "Champagne",
+    "numCoats": "3"
+  },
+  {
+    "id": "8",
+    "name": "Beach House",
+    "brand": "ILNP",
+    "type": "Linear Holographic",
+    "colorFamily": "Blue",
+    "color": "Aqua",
+    "numCoats": "3"
+  },
+  {
+    "id": "9",
+    "name": "Princeton",
+    "brand": "ILNP",
+    "type": "Linear Holographic",
+    "colorFamily": "Green",
+    "color": "Mint Green",
+    "numCoats": "3"
+  }
+]
