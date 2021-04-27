@@ -14,6 +14,8 @@ library.add(faInfoCircle, faHome)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
+import "./assets/scss/custom.scss";
+
 Vue.use(BootstrapVue)
 Vue.use(BootstrapVueIcons)
 
