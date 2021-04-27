@@ -40,8 +40,8 @@
     "name": "Black Orchid",
     "brand": "ILNP",
     "type": "Linear Holographic",
-    "colorFamily": "Red",
-    "color": "Deep Burgundy",
+    "colorFamily": "Purple",
+    "color": "Deep Plum",
     "numCoats": "2"
   },
   {
@@ -79,5 +79,23 @@
     "colorFamily": "Green",
     "color": "Mint Green",
     "numCoats": "3"
+  },
+  {
+    "id": "10",
+    "name": "Cyantific",
+    "brand": "Holo Taco",
+    "type": "Creme",
+    "colorFamily": "Blue",
+    "color": "Cyan",
+    "numCoats": "2"
+  },
+  {
+    "id": "11",
+    "name": "What Do You Pink?",
+    "brand": "Holo Taco",
+    "type": "Creme",
+    "colorFamily": "Pink",
+    "color": "Pink",
+    "numCoats": "2"
   }
 ]
