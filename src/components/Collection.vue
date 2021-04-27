@@ -4,7 +4,7 @@
       <div class="col-4 filtersColumn">
         <div class="row align-items-center stats">
           <div class="col-6">
-            Polishes: {{ polishes.length }}
+            Polishes: {{ filteredPolishes.length }} / {{ polishes.length }}
           </div>
           <div class="col-6 text-right">
             <FinishToggle v-model="finish" @updateFinish="finish = $event"/>
@@ -22,21 +22,26 @@
         </div>
         <div class="row filters mt-3">
           <div class="col">
-            <FilterList filter="Brand" />
-            <FilterList filter="Type" />
-            <FilterList filter="Colour" />
+            <FilterList label="Brand" filter="brand" :collection="polishes" @updatePolishList="filterPolishList"/>
+            <FilterList label="Type" filter="type" :collection="polishes" @updatePolishList="filterPolishList"/>
+            <FilterList label="Colour" filter="colorFamily" :collection="polishes" @updatePolishList="filterPolishList"/>
           </div>
         </div>
       </div>
       <div class="col-8 polishList">
-        <b-img-lazy 
-          v-for="(polish, index) in polishes" 
-          :key="index" :src="getImage(polish.id)" 
-          :alt="polish.name" 
-          width=175 
-          blank-color="black"
-          class="mr-3 mb-3">
-        </b-img-lazy>
+        <div v-if="filteredPolishes.length == 0">
+          No polishes found! Try adjusting your filters or search criteria.
+        </div>
+        <div v-else>
+          <b-img-lazy 
+            v-for="(polish, index) in filteredPolishes" 
+            :key="index" :src="getImage(polish.id)" 
+            :alt="polish.name" 
+            width=175 
+            blank-color="black"
+            class="mr-3 mb-3">
+          </b-img-lazy>
+        </div>
       </div>
     </div>
   </div>
@@ -55,8 +60,15 @@ export default {
   },
   data: function() {
     return {
-      finish: 'glossy'
+      finish: 'glossy',
+      filteredPolishes: [],
+      brandFilters: [],
+      typeFilters: [],
+      colorFilters: [],
     }
+  },
+  mounted: function() {
+    this.filteredPolishes = this.polishes;
   },
   computed: {
     polishes: function() {
@@ -67,6 +79,24 @@ export default {
     getImage(polishId) {
       const finishId = this.finish == 'glossy' ? '1' : '2';
       return require('@/assets/' + polishId + '/' + finishId + '.jpg');
+    },
+    
+    doesPolishSatisfyFilters(polish) {
+      return (this.brandFilters.length == 0 || this.brandFilters.includes(polish.brand))
+               && (this.typeFilters.length == 0 || this.typeFilters.includes(polish.type))
+               && (this.colorFilters.length == 0 || this.colorFilters.includes(polish.colorFamily));
+    },
+    
+    filterPolishList(filter, values) {
+      if (filter == 'brand') {
+        this.brandFilters = values;
+      } else if (filter == 'type') {
+        this.typeFilters = values;
+      } else {
+        this.colorFilters = values;
+      }
+    
+      this.filteredPolishes = this.polishes.filter(this.doesPolishSatisfyFilters);
     }
   }
 }
