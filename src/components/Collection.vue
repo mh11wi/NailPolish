@@ -4,7 +4,7 @@
       <div class="col-4 filtersColumn">
         <div class="row align-items-center stats">
           <div class="col-6">
-            Polishes: {{ filteredPolishes.length }} / {{ polishes.length }}
+            Polishes: {{ displayedPolishes.length }} / {{ polishes.length }}
           </div>
           <div class="col-6 text-right">
             <FinishToggle v-model="finish" @updateFinish="finish = $event"/>
@@ -13,14 +13,14 @@
         <div class="row search mt-4">
           <div class="col">
             <b-input-group>
-              <b-form-input placeholder="Search"></b-form-input>
+              <b-form-input v-model="search" placeholder="Search by name"></b-form-input>
               <b-input-group-append>
-                <b-button variant="primary">Search</b-button>
+                <b-button variant="primary" @click="doSearch()">Search</b-button>
               </b-input-group-append>
             </b-input-group>
           </div>
         </div>
-        <div class="row filters mt-4 mb-3">
+        <div v-if="search.length == 0" class="row filters mt-4 mb-3">
           <div class="col">
             <FilterList label="Brand" filter="brand" :collection="polishes" @updatePolishList="filterPolishList"/>
             <FilterList label="Type" filter="type" :collection="polishes" @updatePolishList="filterPolishList"/>
@@ -29,12 +29,12 @@
         </div>
       </div>
       <div class="col-8 polishList">
-        <div v-if="filteredPolishes.length == 0">
+        <div v-if="displayedPolishes.length == 0">
           No polishes found! Try adjusting your filters or search criteria.
         </div>
         <div v-else>
           <div class="row">
-            <PolishTile v-for="(polish, index) in filteredPolishes" :key="index" :polish="polish" :finish="finish" @updateFinish="finish = $event"/>
+            <PolishTile v-for="(polish, index) in displayedPolishes" :key="index" :polish="polish" :finish="finish" @updateFinish="finish = $event"/>
           </div>
         </div>
       </div>
@@ -58,14 +58,26 @@ export default {
   data: function() {
     return {
       finish: 'glossy',
-      filteredPolishes: [],
       brandFilters: [],
       typeFilters: [],
       colorFilters: [],
+      search: '',
+      displayedPolishes: []
+    }
+  },
+  watch: {
+    search: function(newVal, oldVal) {
+      this.brandFilters = [];
+      this.typeFilters = [];
+      this.colorFilters = [];
+      
+      if (oldVal == '' || newVal == '') {
+        this.displayedPolishes = this.polishes;
+      }
     }
   },
   mounted: function() {
-    this.filteredPolishes = this.polishes;
+    this.displayedPolishes = this.polishes;
   },
   computed: {
     polishes: function() {
@@ -88,7 +100,17 @@ export default {
         this.colorFilters = values;
       }
     
-      this.filteredPolishes = this.polishes.filter(this.doesPolishSatisfyFilters);
+      this.displayedPolishes = this.polishes.filter(this.doesPolishSatisfyFilters);
+    },
+    
+    doesPolishSatisySearchTerm(polish) {
+      const polishName = polish.name.toLowerCase();
+      const searchTerm = this.search.toLowerCase();
+      return polishName.indexOf(searchTerm) != -1;
+    },
+    
+    doSearch() {
+      this.displayedPolishes = this.polishes.filter(this.doesPolishSatisySearchTerm);
     }
   }
 }
