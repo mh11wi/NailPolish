@@ -20,7 +20,7 @@
             </b-input-group>
           </div>
         </div>
-        <div class="row filters mt-3">
+        <div class="row filters mt-3 mb-3">
           <div class="col">
             <FilterList label="Brand" filter="brand" :collection="polishes" @updatePolishList="filterPolishList"/>
             <FilterList label="Type" filter="type" :collection="polishes" @updatePolishList="filterPolishList"/>
@@ -33,14 +33,9 @@
           No polishes found! Try adjusting your filters or search criteria.
         </div>
         <div v-else>
-          <b-img-lazy 
-            v-for="(polish, index) in filteredPolishes" 
-            :key="index" :src="getImage(polish.id)" 
-            :alt="polish.name" 
-            width=175 
-            blank-color="black"
-            class="mr-3 mb-3">
-          </b-img-lazy>
+          <div class="row">
+            <PolishTile v-for="(polish, index) in filteredPolishes" :key="index" :polish="polish" :finish="finish"/>
+          </div>
         </div>
       </div>
     </div>
@@ -50,13 +45,15 @@
 <script>
 import FinishToggle from './FinishToggle.vue'
 import FilterList from './FilterList.vue'
+import PolishTile from './PolishTile.vue'
 import allPolishes from '../data/polishes.json'
 
 export default {
   name: 'Collection',
   components: {
     FinishToggle,
-    FilterList
+    FilterList,
+    PolishTile
   },
   data: function() {
     return {
@@ -76,11 +73,6 @@ export default {
     }
   },
   methods: {
-    getImage(polishId) {
-      const finishId = this.finish == 'glossy' ? '1' : '2';
-      return require('@/assets/' + polishId + '/' + finishId + '.jpg');
-    },
-    
     doesPolishSatisfyFilters(polish) {
       return (this.brandFilters.length == 0 || this.brandFilters.includes(polish.brand))
                && (this.typeFilters.length == 0 || this.typeFilters.includes(polish.type))
