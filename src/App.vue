@@ -43,5 +43,7 @@ export default {
 </script>
 
 <style>
-
+.modal-dialog {
+  min-width: 750px;
+}
 </style>

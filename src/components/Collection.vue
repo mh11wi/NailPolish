@@ -10,7 +10,7 @@
             <FinishToggle v-model="finish" @updateFinish="finish = $event"/>
           </div>
         </div>
-        <div class="row search mt-3">
+        <div class="row search mt-4">
           <div class="col">
             <b-input-group>
               <b-form-input placeholder="Search"></b-form-input>
@@ -20,7 +20,7 @@
             </b-input-group>
           </div>
         </div>
-        <div class="row filters mt-3 mb-3">
+        <div class="row filters mt-4 mb-3">
           <div class="col">
             <FilterList label="Brand" filter="brand" :collection="polishes" @updatePolishList="filterPolishList"/>
             <FilterList label="Type" filter="type" :collection="polishes" @updatePolishList="filterPolishList"/>
@@ -34,7 +34,7 @@
         </div>
         <div v-else>
           <div class="row">
-            <PolishTile v-for="(polish, index) in filteredPolishes" :key="index" :polish="polish" :finish="finish"/>
+            <PolishTile v-for="(polish, index) in filteredPolishes" :key="index" :polish="polish" :finish="finish" @updateFinish="finish = $event"/>
           </div>
         </div>
       </div>

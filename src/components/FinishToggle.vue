@@ -15,6 +15,11 @@ export default {
         ]
     }
   },
+  watch: {
+    value: function() {
+      this.selected = this.value;
+    }
+  },
   methods: {
     updateValue() {
       this.$emit("updateFinish", this.selected);
