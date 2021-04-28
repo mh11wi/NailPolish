@@ -15,7 +15,7 @@
             <b-input-group>
               <b-form-input v-model="search" placeholder="Search by name"></b-form-input>
               <b-input-group-append>
-                <b-button variant="primary" @click="doSearch()">Search</b-button>
+                <b-button variant="primary" @click="doSearch()" :disabled="search.length == 0">Search</b-button>
               </b-input-group-append>
             </b-input-group>
           </div>
