@@ -6,7 +6,8 @@
     "type": "Topper",
     "colorFamily": "",
     "color": "",
-    "numCoats": "1"
+    "numCoats": "1",
+    "collection": ""
   },
   {
     "id": "2",
@@ -15,7 +16,8 @@
     "type": "Topper",
     "colorFamily": "",
     "color": "",
-    "numCoats": "1"
+    "numCoats": "1",
+    "collection": ""
   },
   {
     "id": "3",
@@ -23,8 +25,9 @@
     "brand": "Live Love Polish",
     "type": "Magnetic",
     "colorFamily": "Silver",
-    "color": "Silver",
-    "numCoats": "3"
+    "color": "Silver with scattered holographic glitters",
+    "numCoats": "3",
+    "collection": "Mystical Echoes (2021)"
   },
   {
     "id": "4",
@@ -32,8 +35,9 @@
     "brand": "Live Love Polish",
     "type": "Magnetic",
     "colorFamily": "Gold",
-    "color": "Gold",
-    "numCoats": "3"
+    "color": "Gold with scattered holographic glitters",
+    "numCoats": "3",
+    "collection": "Mystical Echoes (2021)"
   },
   {
     "id": "5",
@@ -41,8 +45,9 @@
     "brand": "ILNP",
     "type": "Linear Holographic",
     "colorFamily": "Purple",
-    "color": "Deep Plum",
-    "numCoats": "2"
+    "color": "Deep plum",
+    "numCoats": "2",
+    "collection": "Fall Collection 2014"
   },
   {
     "id": "6",
@@ -51,7 +56,8 @@
     "type": "Linear Holographic",
     "colorFamily": "Brown",
     "color": "Mocha",
-    "numCoats": "2"
+    "numCoats": "2",
+    "collection": "Fall Into Winter Collection (2020)"
   },
   {
     "id": "7",
@@ -60,7 +66,8 @@
     "type": "Linear Holographic",
     "colorFamily": "Gold",
     "color": "Champagne",
-    "numCoats": "3"
+    "numCoats": "3",
+    "collection": "Summer Ultra Holos 2015"
   },
   {
     "id": "8",
@@ -69,7 +76,8 @@
     "type": "Linear Holographic",
     "colorFamily": "Blue",
     "color": "Aqua",
-    "numCoats": "3"
+    "numCoats": "3",
+    "collection": "Summer Collection 2017"
   },
   {
     "id": "9",
@@ -77,8 +85,9 @@
     "brand": "ILNP",
     "type": "Linear Holographic",
     "colorFamily": "Green",
-    "color": "Mint Green",
-    "numCoats": "3"
+    "color": "Mint green",
+    "numCoats": "3",
+    "collection": "Spring Collection 2014"
   },
   {
     "id": "10",
@@ -87,7 +96,8 @@
     "type": "Creme",
     "colorFamily": "Blue",
     "color": "Cyan",
-    "numCoats": "2"
+    "numCoats": "2",
+    "collection": "Unicorn Dream Collection (2021)"
   },
   {
     "id": "11",
@@ -96,6 +106,107 @@
     "type": "Creme",
     "colorFamily": "Pink",
     "color": "Pink",
-    "numCoats": "2"
+    "numCoats": "2",
+    "collection": "Unicorn Dream Collection (2021)"
+  },
+  {
+    "id": "12",
+    "name": "Pink Fizz",
+    "brand": "Holo Taco",
+    "type": "Linear Holographic",
+    "colorFamily": "Pink",
+    "color": "Cool tone pink",
+    "numCoats": "2",
+    "collection": "Pastel Rainbow Collection (2021)"
+  },
+  {
+    "id": "13",
+    "name": "Coral Chaser",
+    "brand": "Holo Taco",
+    "type": "Linear Holographic",
+    "colorFamily": "Red",
+    "color": "Coral",
+    "numCoats": "2",
+    "collection": "Pastel Rainbow Collection (2021)"
+  },
+  {
+    "id": "14",
+    "name": "Peach Tea",
+    "brand": "Holo Taco",
+    "type": "Linear Holographic",
+    "colorFamily": "Orange",
+    "color": "Peach",
+    "numCoats": "2",
+    "collection": "Pastel Rainbow Collection (2021)"
+  },
+  {
+    "id": "15",
+    "name": "Lemon Spritzer",
+    "brand": "Holo Taco",
+    "type": "Linear Holographic",
+    "colorFamily": "Yellow",
+    "color": "Pastel yellow",
+    "numCoats": "2",
+    "collection": "Pastel Rainbow Collection (2021)"
+  },
+  {
+    "id": "16",
+    "name": "Mint Mojito",
+    "brand": "Holo Taco",
+    "type": "Linear Holographic",
+    "colorFamily": "Green",
+    "color": "Mint green",
+    "numCoats": "2",
+    "collection": "Pastel Rainbow Collection (2021)"
+  },
+  {
+    "id": "17",
+    "name": "Sparkling Water",
+    "brand": "Holo Taco",
+    "type": "Linear Holographic",
+    "colorFamily": "Blue",
+    "color": "Pastel blue",
+    "numCoats": "2",
+    "collection": "Pastel Rainbow Collection (2021)"
+  },
+  {
+    "id": "18",
+    "name": "Lavender Syrup",
+    "brand": "Holo Taco",
+    "type": "Linear Holographic",
+    "colorFamily": "Purple",
+    "color": "Pastel purple",
+    "numCoats": "2",
+    "collection": "Pastel Rainbow Collection (2021)"
+  },
+  {
+    "id": "19",
+    "name": "Bewitched",
+    "brand": "Color Club",
+    "type": "Linear Holographic",
+    "colorFamily": "Silver",
+    "color": "Silver with purple shimmer",
+    "numCoats": "2",
+    "collection": ""
+  },
+  {
+    "id": "20",
+    "name": "Seriously Fun",
+    "brand": "Color Club",
+    "type": "Glitter",
+    "colorFamily": "Pink",
+    "color": "Pink shimmer with iridescent hex glitters",
+    "numCoats": "4",
+    "collection": ""
+  },
+  {
+    "id": "21",
+    "name": "Best of the Best",
+    "brand": "Color Club",
+    "type": "Glitter",
+    "colorFamily": "Gold",
+    "color": "Gold with holographic hex glitters",
+    "numCoats": "3",
+    "collection": ""
   }
 ]

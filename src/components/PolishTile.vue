@@ -11,7 +11,7 @@
       <div><strong>{{ polish.brand }}</strong></div>
       <div>{{ polish.name }}</div>
     </div>
-    <b-modal :id="polish.id" :title="polish.name" size="md">
+    <b-modal :id="polish.id" :title="polish.name" size="md" hide-footer=true>
       <div class="row">
         <div class="col-5">
           <b-img-lazy 
@@ -22,21 +22,42 @@
           >
           </b-img-lazy>
         </div>
-        <div class="col-7">
-          <div class="ml-2 mb-2"><strong>Name:</strong> {{ polish.name }}</div>
-          <div class="ml-2 mb-2"><strong>Brand:</strong> {{ polish.brand }}</div>
-          <div class="ml-2 mb-2"><strong>Type:</strong> {{ polish.type }}</div>
-          <div class="ml-2 mb-2"><strong>Colour:</strong> {{ polish.color }}</div>
-          <div class="ml-2 mb-2"><strong>Number of Coats:</strong> {{ polish.numCoats }}</div>
+        <div class="col-7 mt-3">
+          <FinishToggle class="ml-2 mb-4" v-model="finish" @updateFinish="updateFinish"/>
+          <table class="ml-2 w-100">
+            <colgroup>
+              <col span="1" style="width:25%">
+              <col span="1" style="width:75%">
+            </colgroup>
+            <tbody>
+              <tr>
+                <td><strong>Name:</strong></td>
+                <td>{{ polish.name }}</td>
+              </tr>
+              <tr>
+                <td><strong>Brand:</strong></td>
+                <td>{{ polish.brand }}</td>
+              </tr>
+              <tr v-if="polish.collection != ''">
+                <td><strong>Collection:</strong></td>
+                <td>{{ polish.collection }}</td>
+              </tr>
+              <tr>
+                <td><strong>Type:</strong></td>
+                <td>{{ polish.type }}</td>
+              </tr>
+              <tr>
+                <td><strong>Colour:</strong></td>
+                <td>{{ polish.color }}</td>
+              </tr>
+              <tr>
+                <td><strong>Coats:</strong></td>
+                <td>{{ polish.numCoats }}</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
-      
-      <template #modal-footer>
-        <div class="w-100">
-          <FinishToggle class="float-left" v-model="finish" @updateFinish="updateFinish"/>
-          <b-button class="float-right" variant="secondary" @click="$bvModal.hide(polish.id)">Close</b-button>
-        </div>
-      </template>
     </b-modal>
   </div>
 </template>
