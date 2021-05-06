@@ -11,7 +11,7 @@
       <div><strong>{{ polish.brand }}</strong></div>
       <div>{{ polish.name }}</div>
     </div>
-    <b-modal :id="polish.id" :title="polish.name" :hide-footer=true centered>
+    <b-modal :id="polish.id" :title="polish.name" :hide-footer=true>
       <div class="row">
         <div class="col-5">
           <b-img-lazy 
