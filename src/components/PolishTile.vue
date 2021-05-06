@@ -2,7 +2,7 @@
   <div>
     <div v-b-modal="polish.id" class="text-center ml-3 mb-3">
       <b-img-lazy 
-        :src="getImage(polish.id)" 
+        :src="getImage(polish.id, false)" 
         :alt="polish.name" 
         width=175 
         blank-color="black"
@@ -11,11 +11,11 @@
       <div><strong>{{ polish.brand }}</strong></div>
       <div>{{ polish.name }}</div>
     </div>
-    <b-modal :id="polish.id" :title="polish.name" size="md" hide-footer=true>
+    <b-modal :id="polish.id" :title="polish.name" :hide-footer=true centered>
       <div class="row">
         <div class="col-5">
           <b-img-lazy 
-            :src="getImage(polish.id)" 
+            :src="getImage(polish.id, true)" 
             :alt="polish.name" 
             width=300 
             blank-color="black"
@@ -23,7 +23,7 @@
           </b-img-lazy>
         </div>
         <div class="col-7 mt-3">
-          <FinishToggle class="ml-2 mb-4" v-model="finish" @updateFinish="updateFinish"/>
+          <FinishToggle class="ml-2 mb-4" v-model="modalFinish" @updateFinish="modalFinish = $event"/>
           <table class="ml-2 w-100">
             <colgroup>
               <col span="1" style="width:25%">
@@ -70,16 +70,23 @@ export default {
   components: {
     FinishToggle
   },
+  data: function() {
+    return {
+      modalFinish: this.finish
+    }
+  },
   props: ['polish', 'finish'],
+  mounted: function() {
+    this.$root.$on('bv::modal::show', () => {
+      this.modalFinish = this.finish;
+    });
+  },
   methods: {
-    getImage(polishId) {
-      const finishId = this.finish == 'glossy' ? '1' : '2';
+    getImage(polishId, isModal) {
+      const thisFinish = isModal? this.modalFinish : this.finish
+      const finishId = thisFinish == 'glossy' ? '1' : '2';
       return require('@/assets/' + polishId + '/' + finishId + '.jpg');
-    },
-    updateFinish(finish) {
-      this.finish = finish;
-      this.$emit("updateFinish", finish);
-    },
+    }
   } 
 }
 </script>

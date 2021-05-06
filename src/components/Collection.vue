@@ -34,7 +34,7 @@
         </div>
         <div v-else>
           <div class="row">
-            <PolishTile v-for="(polish, index) in displayedPolishes" :key="index" :polish="polish" :finish="finish" @updateFinish="finish = $event"/>
+            <PolishTile v-for="(polish, index) in displayedPolishes" :key="index" :polish="polish" :finish="finish"/>
           </div>
         </div>
       </div>

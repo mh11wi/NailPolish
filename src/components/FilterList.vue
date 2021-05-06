@@ -6,7 +6,7 @@
         <div class="col-6 text-right"><span class="when-open">-</span><span class="when-closed">+</span></div>
       </div>
     </b-button>
-    <b-collapse :id="filter">
+    <b-collapse :id="filter" visible>
       <b-card-body>
         <b-card-text>
           <b-form-checkbox-group
