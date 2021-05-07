@@ -16,13 +16,13 @@
     </b-navbar>
     <b-tabs>
       <b-tab title="Browse Collection" active>
-        <Collection msg="Coming soon!"/>
+        <Collection />
       </b-tab>
       <b-tab title="Compare Polishes">
         <p>Coming Soon!</p>
       </b-tab>
       <b-tab title="Top It Off">
-        <p>Coming Soon!</p>
+        <Toppers />
       </b-tab>
       <b-tab title="Nail Art Gallery">
         <p>Coming Soon!</p>
@@ -33,11 +33,13 @@
 
 <script>
 import Collection from './components/Collection.vue'
+import Toppers from './components/Toppers.vue'
 
 export default {
   name: 'App',
   components: {
-    Collection
+    Collection,
+    Toppers
   }
 }
 </script>

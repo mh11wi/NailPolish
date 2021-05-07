@@ -218,5 +218,95 @@
     "color": "Gold with holographic hex glitters",
     "numCoats": "3",
     "collection": ""
+  },
+  {
+    "id": "23",
+    "name": "Linear Holo Taco",
+    "brand": "Holo Taco",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": "Launch Collection (2019)"
+  },
+  {
+    "id": "24",
+    "name": "Scattered Holo Taco",
+    "brand": "Holo Taco",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": "Launch Collection (2019)"
+  },
+  {
+    "id": "25",
+    "name": "Flakie Holo Taco",
+    "brand": "Holo Taco",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": "Launch Collection (2019)"
+  },
+  {
+    "id": "26",
+    "name": "Solar Unicorn Skin",
+    "brand": "Holo Taco",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": "Unicorn Skin Collection (2020)"
+  },
+  {
+    "id": "27",
+    "name": "Aurora Unicorn Skin",
+    "brand": "Holo Taco",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": "Unicorn Skin Collection (2020)"
+  },
+  {
+    "id": "28",
+    "name": "Cosmic Unicorn Skin",
+    "brand": "Holo Taco",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": "Unicorn Skin Collection (2020)"
+  },
+  {
+    "id": "29",
+    "name": "Lunar Unicorn Skin",
+    "brand": "Holo Taco",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": "Unicorn Dream Collection (2021)"
+  },
+  {
+    "id": "30",
+    "name": "Galactic Unicorn Skin",
+    "brand": "Holo Taco",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": "Unicorn Dream Collection (2021)"
+  },
+  {
+    "id": "31",
+    "name": "Sonic Unicorn Skin",
+    "brand": "Holo Taco",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": "Unicorn Dream Collection (2021)"
   }
 ]
