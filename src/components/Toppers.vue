@@ -21,12 +21,13 @@ export default {
   name: 'Toppers',
   data: function() {
     return {
-      basePolish: polishes[11]
+      basePolish: polishes[31]
     }
   },
   computed: {
     toppers: function() {
       const topperIds = toppersMap[this.basePolish.id];
+      topperIds.unshift(1, 2);
       const output = [];
       
       topperIds.forEach(function(id) {
