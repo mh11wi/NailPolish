@@ -34,7 +34,14 @@
         </div>
         <div v-else>
           <div class="row">
-            <PolishTile v-for="(polish, index) in displayedPolishes" :key="index" :polish="polish" :finish="finish"/>
+            <PolishTile v-for="(polish, index) in displayedPolishes" 
+                        :key="index" 
+                        :polish="polish" 
+                        :finish="finish" 
+                        :hasToppers="toppersMap[polish.id] != null"
+                        @viewToppers="viewToppers"
+            >
+            </PolishTile>
           </div>
         </div>
       </div>
@@ -46,7 +53,6 @@
 import FinishToggle from './FinishToggle.vue'
 import FilterList from './FilterList.vue'
 import PolishTile from './PolishTile.vue'
-import allPolishes from '../data/polishes.json'
 
 export default {
   name: 'Collection',
@@ -65,6 +71,7 @@ export default {
       displayedPolishes: []
     }
   },
+  props: ['allPolishes', 'toppersMap'],
   watch: {
     search: function(newVal, oldVal) {
       this.brandFilters = [];
@@ -81,7 +88,7 @@ export default {
   },
   computed: {
     polishes: function() {
-      return allPolishes.filter(polish => polish.type != 'Topper').sort((a, b) => b.id - a.id);
+      return this.allPolishes.filter(polish => polish.type != 'Topper').sort((a, b) => b.id - a.id);
     }
   },
   methods: {
@@ -111,6 +118,10 @@ export default {
     
     doSearch() {
       this.displayedPolishes = this.polishes.filter(this.doesPolishSatisySearchTerm);
+    },
+    
+    viewToppers(event) {
+      this.$emit("viewToppers", event);
     }
   }
 }

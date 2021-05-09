@@ -18,15 +18,15 @@
         </b-nav-item>
       </b-navbar-nav>
     </b-navbar>
-    <b-tabs>
-      <b-tab title="Browse Collection" active>
-        <Collection />
+    <b-tabs v-model="tabIndex">
+      <b-tab title="Browse Collection">
+        <Collection :allPolishes="polishes" :toppersMap="toppersMap" @viewToppers="viewToppers" />
       </b-tab>
       <b-tab title="Compare Polishes">
         <p class="ml-3 mt-3">Coming Soon!</p>
       </b-tab>
       <b-tab title="Top It Off">
-        <Toppers />
+        <Toppers :polishes="polishes" :toppersMap="toppersMap" :basePolish="basePolish" :defaultTopperId="topperId" />
       </b-tab>
       <b-tab title="Nail Art Gallery">
         <p class="ml-3 mt-3">Coming Soon!</p>
@@ -36,6 +36,8 @@
 </template>
 
 <script>
+import polishes from './data/polishes.json'
+import toppersMap from './data/toppersMap.json'
 import Collection from './components/Collection.vue'
 import Toppers from './components/Toppers.vue'
 
@@ -44,6 +46,28 @@ export default {
   components: {
     Collection,
     Toppers
+  },
+  data: function() {
+    return {
+      tabIndex: 0,
+      basePolish: null,
+      topperId: ''
+    }
+  },
+  computed: {
+    polishes: function() {
+      return polishes;
+    },
+    toppersMap: function() {
+      return toppersMap;
+    }
+  },
+  methods: {
+    viewToppers(event) {
+      this.basePolish = event.basePolish;
+      this.topperId = event.finish == 'glossy' ? 1 : 2;
+      this.tabIndex = 2;
+    }
   }
 }
 </script>
@@ -67,12 +91,8 @@ export default {
   box-shadow: inset 0 -4px 0 pink;
 }
 
-.nav-link, .nav-link:visited { 
+.nav-tabs .nav-link, .nav-tabs .nav-link:visited { 
   outline: none;
-}
-
-.nav-link:focus, .nav-link:active {
-  border: 1px dotted #212529 !important;
 }
 
 .nav-tabs .nav-link:focus, .nav-tabs .nav-link:active {

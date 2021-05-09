@@ -2,55 +2,64 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-4 toppersColumn">
-        <b-form-radio-group v-model="selectedTopperId" :options="options" class="mt-2" stacked />
+        <b-form-radio-group v-model="selectedTopperId" :options="toppers" class="mt-2" stacked/>
       </div>
       <div class="col-8 display">
-        <div class="mt-2 mb-2"><strong>{{ basePolish.brand }}</strong> - {{ basePolish.name }}</div>
-        <b-img-lazy 
-          :src="getImage(basePolish.id)" 
-          :alt="basePolish.name" 
-          width=400 
-          blank-color="black"
-        >
-        </b-img-lazy>
+        <div v-if="basePolish == null">
+          Start by selecting a base polish from the <strong>Browse Collection</strong> view.
+        </div>
+        <div v-else>
+          <div class="row justify-content-center">
+            <b-img-lazy 
+              :src="getImage(basePolish.id)" 
+              :alt="basePolish.name" 
+              width=400 
+              blank-color="black"
+            >
+            </b-img-lazy>
+          </div>
+          <div class="mt-2 row justify-content-center"><strong>{{ basePolish.brand }}</strong></div>
+          <div class="row justify-content-center">{{ basePolish.name }}</div>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import polishes from '../data/polishes.json'
-import toppersMap from '../data/toppersMap.json'
-
 export default {
   name: 'Toppers',
   data: function() {
     return {
-      basePolish: polishes[31],
-      selectedTopperId: 1
+      selectedTopperId: ''
     }
   },
+  props: ['toppersMap', 'polishes', 'basePolish', 'defaultTopperId'],
   computed: {
     toppers: function() {
-      const topperIds = toppersMap[this.basePolish.id];
-      topperIds.unshift(1, 2);
-      const output = [];
+      const topperIds = [1, 2];
+      if (this.basePolish != null && this.toppersMap[this.basePolish.id] != null) {
+        topperIds.push(...this.toppersMap[this.basePolish.id]);
+      }
       
+      const options = [];
+      const self = this;
       topperIds.forEach(function(id) {
-        output.push(polishes[id - 1]);
+        const topper = self.polishes[id - 1];
+        const optionHtml = topper.brand != '' ? "<strong>" + topper.brand + "</strong> - " + topper.name : topper.name;
+        const disabled = self.basePolish == null;
+        options.push({html: optionHtml, value: topper.id, disabled: disabled});
       });
-      
-      return output;
+      return options;
+    }
+  },
+  watch: {
+    basePolish: function() {
+      this.selectedTopperId = this.defaultTopperId;
     },
-    options: function() {
-      const output = [];
-      
-      this.toppers.forEach(function(topper) {
-        const optionHtml = topper.brand != '' ? "<strong>" + topper.brand + "</strong> - " + topper.name : topper.name
-        output.push({html: optionHtml, value: topper.id});
-      });
-      
-      return output;
+    
+    defaultTopperId: function() {
+      this.selectedTopperId = this.defaultTopperId;
     }
   },
   methods: {
@@ -64,10 +73,16 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .toppersColumn {
+  padding-top: 1rem;
   border-right: solid 1px #dee2e6;
 }
 
+.toppersColumn >>> .custom-control {
+  padding-bottom: 1rem;
+}
+
 .display {
+  padding-top: 1rem;
   border-left: solid 1px #dee2e6;
   margin-left: -1px;
   min-height: calc(100vh - 110px);

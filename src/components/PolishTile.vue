@@ -11,7 +11,7 @@
       <div><strong>{{ polish.brand }}</strong></div>
       <div>{{ polish.name }}</div>
     </div>
-    <b-modal :id="polish.id" :title="polish.name" :hide-footer=true>
+    <b-modal :id="polish.id" :title="polish.name" :hide-footer=true ref="modal">
       <div class="row">
         <div class="col-5">
           <b-img-lazy 
@@ -23,7 +23,7 @@
           </b-img-lazy>
         </div>
         <div class="col-7 mt-3">
-          <FinishToggle class="ml-2 mb-4" v-model="modalFinish" @updateFinish="modalFinish = $event"/>
+          <FinishToggle class="ml-2 mb-3" v-model="modalFinish" @updateFinish="modalFinish = $event"/>
           <table class="ml-2 w-100">
             <colgroup>
               <col span="1" style="width:25%">
@@ -56,6 +56,7 @@
               </tr>
             </tbody>
           </table>
+          <b-button v-if="hasToppers" class="ml-2 mt-3" variant="primary" @click="viewToppers">Top It Off</b-button>
         </div>
       </div>
     </b-modal>
@@ -75,7 +76,7 @@ export default {
       modalFinish: this.finish
     }
   },
-  props: ['polish', 'finish'],
+  props: ['polish', 'finish', 'hasToppers'],
   mounted: function() {
     this.$root.$on('bv::modal::show', () => {
       this.modalFinish = this.finish;
@@ -86,6 +87,11 @@ export default {
       const thisFinish = isModal? this.modalFinish : this.finish
       const finishId = thisFinish == 'glossy' ? '1' : '2';
       return require('@/assets/' + polishId + '/' + finishId + '.jpg');
+    },
+    
+    viewToppers() {
+      this.$refs["modal"].hide();
+      this.$emit("viewToppers", {basePolish: this.polish, finish: this.modalFinish});
     }
   } 
 }
