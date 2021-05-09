@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-navbar variant="primary">
-      <b-navbar-brand tag="h1">Nail Polish App</b-navbar-brand>
+      <b-navbar-brand>Nail Polish App</b-navbar-brand>
       <b-navbar-nav class="ml-auto">
         <b-nav-item id="link-button" tabindex="0">
           <font-awesome-icon icon="info-circle" size="lg" />
@@ -23,13 +23,13 @@
         <Collection />
       </b-tab>
       <b-tab title="Compare Polishes">
-        <p>Coming Soon!</p>
+        <p class="ml-3 mt-3">Coming Soon!</p>
       </b-tab>
       <b-tab title="Top It Off">
         <Toppers />
       </b-tab>
       <b-tab title="Nail Art Gallery">
-        <p>Coming Soon!</p>
+        <p class="ml-3 mt-3">Coming Soon!</p>
       </b-tab>
     </b-tabs>
   </div>
@@ -50,8 +50,6 @@ export default {
 
 <style>
 .nav-tabs .nav-item {
-  margin-left: 15px;
-  margin-right: 15px;
   margin-bottom: -2px;
 }
 
