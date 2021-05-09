@@ -6,8 +6,12 @@
         <b-nav-item id="link-button" tabindex="0">
           <font-awesome-icon icon="info-circle" size="lg" />
         </b-nav-item>
-        <b-popover variant="info" target="link-button" title="Info" triggers="focus">
-          An application to track my collection of nail polishes and showcase some of my favourite nail art looks.
+        <b-popover variant="info" target="link-button" title="App Info" triggers="focus">
+          <p>I created this application to track my collection of nail polishes and showcase some of my favourite nail art looks.</p>
+          <p><strong>Browse Collection</strong><br>Sort or filter through my collection of nail polishes.</p>
+          <p><strong>Compare Polishes</strong><br>Select different polishes to compare in depth.</p>
+          <p><strong>Top It Off</strong><br>See what different toppers look like over a particular polish.</p>
+          <p><strong>Nail Art Gallery</strong><br>View some of my past nail art looks.</p>
         </b-popover>
         <b-nav-item href="https://mh11wi.github.io/">
           <font-awesome-icon icon="home" size="lg" />
@@ -45,6 +49,30 @@ export default {
 </script>
 
 <style>
+.nav-tabs .nav-item {
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: -2px;
+}
+
+.nav-tabs .nav-link {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.nav-tabs .nav-link:hover {
+  border: none;
+}
+
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+  border: none;
+  box-shadow: inset 0 -4px 0 pink;
+}
+
+.popover {
+  min-width: 400px;
+}
+
 .modal-dialog {
   min-width: 750px;
 }
