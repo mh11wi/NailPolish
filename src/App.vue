@@ -67,6 +67,14 @@ export default {
   box-shadow: inset 0 -4px 0 pink;
 }
 
+.nav-tabs .nav-link, .nav-tabs .nav-link:visited { 
+  outline: none;
+}
+
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:active {
+  background-color: #f8f9fa !important;
+}
+
 .popover {
   min-width: 400px;
 }
