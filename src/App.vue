@@ -72,7 +72,11 @@ export default {
 }
 
 .nav-link:focus, .nav-link:active {
-  border: 1px dotted black !important;
+  border: 1px dotted #212529 !important;
+}
+
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:active {
+  border: 1px dotted #dee2e6 !important;
 }
 
 .popover {

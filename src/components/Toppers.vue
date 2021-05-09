@@ -2,12 +2,17 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-4 toppersColumn">
-        <div v-for="(topper, index) in toppers" :key="index">
-            <span v-if="topper.brand != ''"><strong>{{ topper.brand }}</strong> - </span>{{ topper.name }}
-        </div>
+        <b-form-radio-group v-model="selectedTopperId" :options="options" class="mt-2" stacked />
       </div>
       <div class="col-8 display">
-        {{ basePolish.name }}
+        <div class="mt-2 mb-2"><strong>{{ basePolish.brand }}</strong> - {{ basePolish.name }}</div>
+        <b-img-lazy 
+          :src="getImage(basePolish.id)" 
+          :alt="basePolish.name" 
+          width=400 
+          blank-color="black"
+        >
+        </b-img-lazy>
       </div>
     </div>
   </div>
@@ -21,7 +26,8 @@ export default {
   name: 'Toppers',
   data: function() {
     return {
-      basePolish: polishes[31]
+      basePolish: polishes[31],
+      selectedTopperId: 1
     }
   },
   computed: {
@@ -35,6 +41,21 @@ export default {
       });
       
       return output;
+    },
+    options: function() {
+      const output = [];
+      
+      this.toppers.forEach(function(topper) {
+        const optionHtml = topper.brand != '' ? "<strong>" + topper.brand + "</strong> - " + topper.name : topper.name
+        output.push({html: optionHtml, value: topper.id});
+      });
+      
+      return output;
+    }
+  },
+  methods: {
+    getImage(polishId) {
+      return require('@/assets/' + polishId + '/' + this.selectedTopperId + '.jpg');
     }
   }
 }
@@ -43,12 +64,10 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .toppersColumn {
-  padding-top: 1rem;
   border-right: solid 1px #dee2e6;
 }
 
 .display {
-  padding-top: 1rem;
   border-left: solid 1px #dee2e6;
   margin-left: -1px;
   min-height: calc(100vh - 110px);
