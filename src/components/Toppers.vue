@@ -13,7 +13,8 @@
             <b-img-lazy 
               :src="getImage(basePolish.id)" 
               :alt="basePolish.name" 
-              width=400 
+              width=400
+              height=400
               blank-color="black"
             >
             </b-img-lazy>
