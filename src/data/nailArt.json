@@ -1,0 +1,159 @@
+[
+  {
+    "id": "1",
+    "date": "April 19, 2020",
+    "alt": "Cupcake nails",
+    "description": "Cupcakes with different toppers as 'sprinkles'.",
+    "polishes": [
+      {"brand": "Vitry", "name": "Flocon"},
+      {"brand": "Vitry", "name": "Bleu Éclatant"},
+      {"brand": "Holo Taco", "name": "Flakie Holo Taco"},
+      {"brand": "Orly", "name": "Know Your Angle"},
+      {"brand": "Holo Taco", "name": "Aurora Unicorn Skin"},
+      {"brand": "Vitry", "name": "Caraïbes"},
+      {"brand": "Holo Taco", "name": "Scattered Holo Taco"},
+      {"brand": "Vitry", "name": "Aubergine"},
+      {"brand": "Holo Taco", "name": "Solar Unicorn Skin"},
+      {"brand": "Sally Hansen", "name": "Pucker Up"}
+    ]
+  },
+  {
+    "id": "2",
+    "date": "May 18, 2020",
+    "alt": "Penguin nails",
+    "description": "Penguins with different toppers as 'feathers'.",
+    "polishes": [
+      {"brand": "Vitry", "name": "Flocon"},
+      {"brand": "Vitry", "name": "Bleu Éclatant"},
+      {"brand": "Holo Taco", "name": "Flakie Holo Taco"},
+      {"brand": "One Coat Black", "name": "Holo Taco"},
+      {"brand": "Holo Taco", "name": "Solar Unicorn Skin"},
+      {"brand": "Sally Hansen", "name": "Pucker Up"},
+      {"brand": "Holo Taco", "name": "Scattered Holo Taco"},
+      {"brand": "Vitry", "name": "Caraïbes"},
+      {"brand": "Holo Taco", "name": "Aurora Unicorn Skin"},
+      {"brand": "Color Club", "name": "East Austin"}
+    ]
+  },
+  {
+    "id": "3",
+    "date": "May 24, 2020",
+    "alt": "Yoshi nails",
+    "description": "Free-handed Yoshi over Twinkled T's Icing 'Aurora' powder.",
+    "polishes": [
+      {"brand": "Vitry", "name": "Flocon"},
+      {"brand": "Revlon", "name": "Posh"},
+      {"brand": "Sally Hansen", "name": "Pucker Up"},
+      {"brand": "Holo Taco", "name": "One Coat Black"}
+    ]
+  },
+  {
+    "id": "4",
+    "date": "September 6, 2020",
+    "alt": "Rainbow nails",
+    "description": "7-colour rainbow gradient accent nail with stickers.",
+    "polishes": [
+      {"brand": "Color Club", "name": "Bewitched"},
+      {"brand": "Holo Taco", "name": "Lemon Sucker"},
+      {"brand": "Holo Taco", "name": "Orange Drink"},
+      {"brand": "Holo Taco", "name": "Red Licorice"},
+      {"brand": "Holo Taco", "name": "Magenta Jelly"},
+      {"brand": "Holo Taco", "name": "Purple Slushie"},
+      {"brand": "Holo Taco", "name": "Blue Freezie"},
+      {"brand": "Holo Taco", "name": "Green Taffy"}
+    ]
+  },
+  {
+    "id": "5",
+    "date": "October 12, 2020",
+    "alt": "Gold nails",
+    "description": "Gold and purple combo with matching spring tape.",
+    "polishes": [
+      {"brand": "Holo Taco", "name": "Cat's Evasion"},
+      {"brand": "Holo Taco", "name": "Gold Flakie Holo Taco"}
+    ]
+  },
+  {
+    "id": "6",
+    "date": "November 3, 2020",
+    "alt": "Fall nails",
+    "description": "Fall leaves nail vinyl accent nail.",
+    "polishes": [
+      {"brand": "Holo Taco", "name": "Play Rosé"},
+      {"brand": "Holo Taco", "name": "Not Milky White"}
+    ]
+  },
+  {
+    "id": "7",
+    "date": "December 5, 2020",
+    "alt": "Present nails",
+    "description": "'Holoday' present over Twinkled T's Star Dust flakies with a striping tape bow.",
+    "polishes": [
+      {"brand": "Sally Hansen", "name": "Buffalo Nickel"},
+      {"brand": "Sally Hansen", "name": "Pucker Up"}
+    ]
+  },
+  {
+    "id": "8",
+    "date": "December 20, 2020",
+    "alt": "Christmas nails",
+    "description": "Christmas nail vinyls with gold stones.",
+    "polishes": [
+      {"brand": "Holo Taco", "name": "Not Milky White"},
+      {"brand": "Holo Taco", "name": "Green Taffy"},
+      {"brand": "Holo Taco", "name": "Red Licorice"},
+      {"brand": "Holo Taco", "name": "Mint Money"}
+    ]
+  },
+  {
+    "id": "9",
+    "date": "January 24, 2021",
+    "alt": "Negative space nails",
+    "description": "'Almost' negative space nail art with striping tape.",
+    "polishes": [
+      {"brand": "Holo Taco", "name": "Mint Money"},
+      {"brand": "Holo Taco", "name": "Solar Unicorn Skin"}
+    ]
+  },
+  {
+    "id": "10",
+    "date": "February 10, 2021",
+    "alt": "Valentine's Day nails",
+    "description": "Valentine's Day look with silver rhinestones.",
+    "polishes": [
+      {"brand": "Essie", "name": "Van D'go"},
+      {"brand": "Spider Gel", "name": "Black"},
+      {"brand": "Holo Taco", "name": "Red Licorice"}
+    ]
+  },
+  {
+    "id": "11",
+    "date": "April 2, 2021",
+    "alt": "Dotticure nails",
+    "description": "Pastel and matching linear holographic dotticure.",
+    "polishes": [
+      {"brand": "China Glaze", "name": "Casual Friday"},
+      {"brand": "Holo Taco", "name": "Lemon Sucker"},
+      {"brand": "OPI", "name": "Mod About You"},
+      {"brand": "Holo Taco", "name": "Magenta Jelly"},
+      {"brand": "Finger Paints", "name": "Heavenly Hues"},
+      {"brand": "Holo Taco", "name": "Blue Freezie"},
+      {"brand": "China Glaze", "name": "Peachy Keen"},
+      {"brand": "Holo Taco", "name": "Orange Drink"},
+      {"brand": "Sally Hansen", "name": "Lacey Lilac"},
+      {"brand": "Holo Taco", "name": "Purple Slushie"}
+    ]
+  },
+  {
+    "id": "12",
+    "date": "April 23, 2021",
+    "alt": "Tie-dye nails",
+    "description": "'Unicorn Dream' tie-dye accent nails (applied the Spot It top coat over dry nails, oops!).",
+    "polishes": [
+      {"brand": "Holo Taco", "name": "What Do You Pink?"},
+      {"brand": "Holo Taco", "name": "Cyantific"},
+      {"brand": "Holo Taco", "name": "Not Milky White"},
+      {"brand": "Dance Legend", "name": "Spot It: White"}
+    ]
+  }
+]

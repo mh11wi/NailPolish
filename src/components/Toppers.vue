@@ -65,7 +65,7 @@ export default {
   },
   methods: {
     getImage(polishId) {
-      return require('@/assets/' + polishId + '/' + this.selectedTopperId + '.jpg');
+      return require('@/assets/images/polishes/' + polishId + '/' + this.selectedTopperId + '.jpg');
     }
   }
 }

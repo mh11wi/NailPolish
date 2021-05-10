@@ -10,7 +10,7 @@
           <p>I created this application to track my collection of nail polishes and showcase some of my favourite nail art looks.</p>
           <p><strong>Browse Collection</strong><br>Sort or filter through my collection of nail polishes.</p>
           <p><strong>Compare Polishes</strong><br>Select different polishes to compare in depth.</p>
-          <p><strong>Top It Off</strong><br>See what different toppers look like over a particular polish.</p>
+          <p><strong>Top It Off</strong><br>See what different toppers look like over an applicable polish.</p>
           <p><strong>Nail Art Gallery</strong><br>View some of my past nail art looks.</p>
         </b-popover>
         <b-nav-item href="https://mh11wi.github.io/">
@@ -28,8 +28,8 @@
       <b-tab title="Top It Off">
         <Toppers :polishes="polishes" :toppersMap="toppersMap" :basePolish="basePolish" :defaultTopperId="topperId" />
       </b-tab>
-      <b-tab title="Nail Art Gallery">
-        <p class="ml-3 mt-3">Coming Soon!</p>
+      <b-tab title="Nail Art Gallery" lazy>
+        <Gallery />
       </b-tab>
     </b-tabs>
   </div>
@@ -40,12 +40,14 @@ import polishes from './data/polishes.json'
 import toppersMap from './data/toppersMap.json'
 import Collection from './components/Collection.vue'
 import Toppers from './components/Toppers.vue'
+import Gallery from './components/Gallery.vue'
 
 export default {
   name: 'App',
   components: {
     Collection,
-    Toppers
+    Toppers,
+    Gallery
   },
   data: function() {
     return {
@@ -100,7 +102,7 @@ export default {
 }
 
 .popover {
-  min-width: 400px;
+  min-width: 450px;
 }
 
 .modal-dialog {

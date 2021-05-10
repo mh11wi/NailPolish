@@ -86,7 +86,7 @@ export default {
     getImage(polishId, isModal) {
       const thisFinish = isModal? this.modalFinish : this.finish
       const finishId = thisFinish == 'glossy' ? '1' : '2';
-      return require('@/assets/' + polishId + '/' + finishId + '.jpg');
+      return require('@/assets/images/polishes/' + polishId + '/' + finishId + '.jpg');
     },
     
     viewToppers() {
