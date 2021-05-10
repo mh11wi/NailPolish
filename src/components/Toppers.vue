@@ -6,7 +6,7 @@
       </div>
       <div class="col-8 display">
         <div v-if="basePolish == null">
-          Start by selecting a base polish from the <strong>Browse Collection</strong> view.
+          Start by selecting an applicable base polish from the <strong>Browse Collection</strong> view.
         </div>
         <div v-else>
           <div class="row justify-content-center">
