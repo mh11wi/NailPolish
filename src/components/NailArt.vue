@@ -14,7 +14,7 @@
       <div class="ml-2">
         <p class="mt-3"><strong>{{ entry.date }}</strong></p>
         <p>{{ entry.description }}</p>
-        <p class="text-underline">Polishes Used</p>
+        <p class="text-underline mb-1">Polishes Used</p>
         <ul>
           <li v-for="(polish, index) in entry.polishes" :key="index">
             <strong>{{ polish.brand }}</strong> - {{ polish.name }}
