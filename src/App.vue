@@ -3,10 +3,10 @@
     <b-navbar variant="primary">
       <b-navbar-brand>Nail Polish App</b-navbar-brand>
       <b-navbar-nav class="ml-auto">
-        <b-nav-item id="link-button" tabindex="0">
+        <b-nav-item id="info-link" tabindex="0">
           <font-awesome-icon icon="info-circle" size="lg" />
         </b-nav-item>
-        <b-popover variant="info" target="link-button" title="App Info" triggers="focus">
+        <b-popover variant="info" target="info-link" title="App Info" triggers="focus">
           <p>I created this application to track my collection of nail polishes and showcase some of my favourite nail art looks.</p>
           <p><strong>Browse Collection</strong><br>Sort or filter through my collection of nail polishes.</p>
           <p><strong>Compare Polishes</strong><br>Select different polishes to compare in depth.</p>
@@ -23,7 +23,7 @@
         <Collection :allPolishes="polishes" :toppersMap="toppersMap" @viewToppers="viewToppers" />
       </b-tab>
       <b-tab title="Compare Polishes">
-        <p class="ml-3 mt-3">Coming Soon!</p>
+        <Compares :compareLists="compareLists" />
       </b-tab>
       <b-tab title="Top It Off">
         <Toppers :polishes="polishes" :toppersMap="toppersMap" :basePolish="basePolish" :defaultTopperId="topperId" />
@@ -39,6 +39,7 @@
 import polishes from './data/polishes.json'
 import toppersMap from './data/toppersMap.json'
 import Collection from './components/Collection.vue'
+import Compares from './components/Compares.vue'
 import Toppers from './components/Toppers.vue'
 import Gallery from './components/Gallery.vue'
 
@@ -46,6 +47,7 @@ export default {
   name: 'App',
   components: {
     Collection,
+    Compares,
     Toppers,
     Gallery
   },
@@ -53,7 +55,8 @@ export default {
     return {
       tabIndex: 0,
       basePolish: null,
-      topperId: ''
+      topperId: '',
+      compareLists: []
     }
   },
   computed: {
