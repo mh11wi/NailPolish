@@ -1,8 +1,9 @@
 <template>
-  <div class="container-fluid">
-    <CompareList v-for="(list, index) in compareLists" :key="index" :comparison="list" @deleteList="deleteComparison" />
+  <div class="container-fluid mt-3">
+    <span v-if="compareLists.length == 0" class="ml-5">Start by adding a new comparison list by clicking <strong>+ Add Comparison</strong>.</span>
+    <CompareList v-else v-for="(list, index) in compareLists" :key="index" :comparison="list" @deleteList="deleteComparison" />
     <div class="row mt-3">
-      <b-button variant="link" class="text-decoration-none add" @click="addComparison">+ Add Comparison</b-button>
+      <b-button variant="link" class="text-decoration-none ml-5" @click="addComparison"><strong>+ Add Comparison</strong></b-button>
     </div>
   </div>
 </template>
@@ -18,7 +19,7 @@ export default {
   props: ['compareLists'],
   methods: {
     addComparison() {
-      this.compareLists.push({name: 'New Comparison'});
+      this.compareLists.push({name: 'New Comparison', polishes: []});
     },
     
     deleteComparison(event) {
@@ -30,7 +31,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.add {
-  margin-left: 2rem;
-}
+
 </style>

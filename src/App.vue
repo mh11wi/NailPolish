@@ -56,7 +56,7 @@ export default {
       tabIndex: 0,
       basePolish: null,
       topperId: '',
-      compareLists: []
+      compareLists: [{name: 'Comparison 1', polishes: []}]
     }
   },
   computed: {
