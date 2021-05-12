@@ -22,8 +22,8 @@
           >
           </b-img-lazy>
         </div>
-        <div class="col-7 mt-3">
-          <FinishToggle class="ml-2 mb-3" v-model="modalFinish" @updateFinish="modalFinish = $event"/>
+        <div class="col-7 mt-2">
+          <FinishToggle class="ml-2 mb-4" v-model="modalFinish" @updateFinish="modalFinish = $event"/>
           <table class="ml-2 w-100">
             <colgroup>
               <col span="1" style="width:25%">
@@ -56,7 +56,14 @@
               </tr>
             </tbody>
           </table>
-          <b-button v-if="hasToppers" class="ml-2 mt-3" variant="primary" @click="viewToppers">Top It Off</b-button>
+          <div class="row align-items-center ml-2 mr-0 mt-4">
+            <div class="col-7 pl-0 comparisonsList">
+              <b-form-select v-model="selectedComparison" :options="options" @change="comparisonSelected"/>
+            </div>
+            <div class="col-4">
+              <b-button v-if="hasToppers" variant="primary" @click="viewToppers">Top It Off</b-button>
+            </div>
+          </div>
         </div>
       </div>
     </b-modal>
@@ -73,10 +80,22 @@ export default {
   },
   data: function() {
     return {
-      modalFinish: this.finish
+      modalFinish: this.finish,
+      selectedComparison: null
     }
   },
-  props: ['polish', 'finish', 'hasToppers'],
+  props: ['polish', 'finish', 'hasToppers', 'comparisons'],
+  computed: {
+    options: function() {
+      const output = [{value: null, text: 'Add to a comparison list'}];
+      for (let i=0; i < this.comparisons.length; i++) {
+        const disabled = this.comparisons[i].polishes.includes(this.polish);
+        output.push({value: i, text: this.comparisons[i].name, disabled: disabled});
+      }
+      output.push({value: -1, text: 'Create new comparison list...'});
+      return output;
+    }
+  },
   mounted: function() {
     this.$root.$on('bv::modal::show', () => {
       this.modalFinish = this.finish;
@@ -92,6 +111,23 @@ export default {
     viewToppers() {
       this.$refs["modal"].hide();
       this.$emit("viewToppers", {basePolish: this.polish, finish: this.modalFinish});
+    },
+    
+    comparisonSelected() {
+      if (this.selectedComparison == null) {
+        return;
+      }
+        
+      if (this.selectedComparison == -1) {
+        const newName = 'Comparison ' + (this.comparisons.length + 1);
+        this.comparisons.push({name: newName, polishes: [this.polish]});
+        // alert that compares list was created
+      } else {
+        this.comparisons[this.selectedComparison].polishes.push(this.polish);
+        // alert that polish was added
+      }
+      
+      this.selectedComparison = null;
     }
   } 
 }
@@ -99,5 +135,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+.comparisonsList >>> option:first-child {
+  display: none;
+}
 </style>

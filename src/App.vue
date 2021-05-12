@@ -4,7 +4,7 @@
       <b-navbar-brand>Nail Polish App</b-navbar-brand>
       <b-navbar-nav class="ml-auto">
         <b-nav-item id="info-link" tabindex="0">
-          <font-awesome-icon icon="info-circle" size="lg" />
+          <font-awesome-icon icon="info-circle" size="lg"/>
         </b-nav-item>
         <b-popover variant="info" target="info-link" title="App Info" triggers="focus">
           <p>I created this application to track my collection of nail polishes and showcase some of my favourite nail art looks.</p>
@@ -14,22 +14,22 @@
           <p><strong>Nail Art Gallery</strong><br>View some of my past nail art looks.</p>
         </b-popover>
         <b-nav-item href="https://mh11wi.github.io/">
-          <font-awesome-icon icon="home" size="lg" />
+          <font-awesome-icon icon="home" size="lg"/>
         </b-nav-item>
       </b-navbar-nav>
     </b-navbar>
     <b-tabs v-model="tabIndex">
       <b-tab title="Browse Collection">
-        <Collection :allPolishes="polishes" :toppersMap="toppersMap" @viewToppers="viewToppers" />
+        <Collection :allPolishes="polishes" :toppersMap="toppersMap" :comparisons="comparisons" @viewToppers="viewToppers"/>
       </b-tab>
       <b-tab title="Compare Polishes">
-        <Compares :compareLists="compareLists" />
+        <ComparisonsList :comparisons="comparisons"/>
       </b-tab>
       <b-tab title="Top It Off">
-        <Toppers :polishes="polishes" :toppersMap="toppersMap" :basePolish="basePolish" :defaultTopperId="topperId" />
+        <Toppers :polishes="polishes" :toppersMap="toppersMap" :basePolish="basePolish" :defaultTopperId="topperId"/>
       </b-tab>
       <b-tab title="Nail Art Gallery" lazy>
-        <Gallery />
+        <Gallery/>
       </b-tab>
     </b-tabs>
   </div>
@@ -39,7 +39,7 @@
 import polishes from './data/polishes.json'
 import toppersMap from './data/toppersMap.json'
 import Collection from './components/Collection.vue'
-import Compares from './components/Compares.vue'
+import ComparisonsList from './components/ComparisonsList.vue'
 import Toppers from './components/Toppers.vue'
 import Gallery from './components/Gallery.vue'
 
@@ -47,7 +47,7 @@ export default {
   name: 'App',
   components: {
     Collection,
-    Compares,
+    ComparisonsList,
     Toppers,
     Gallery
   },
@@ -56,7 +56,7 @@ export default {
       tabIndex: 0,
       basePolish: null,
       topperId: '',
-      compareLists: [{name: 'Comparison 1', polishes: []}]
+      comparisons: [{name: 'Comparison 1', polishes: []}]
     }
   },
   computed: {

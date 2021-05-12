@@ -1,6 +1,6 @@
 <template>
   <div class="container-fluid mb-3">
-    <NailArt v-for="(entry, index) in nailArt" :key="index" :entry="entry" />
+    <NailArt v-for="(entry, index) in nailArt" :key="index" :entry="entry"/>
   </div>
 </template>
 

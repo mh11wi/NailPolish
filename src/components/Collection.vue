@@ -39,6 +39,7 @@
                         :polish="polish" 
                         :finish="finish" 
                         :hasToppers="toppersMap[polish.id] != null"
+                        :comparisons="comparisons"
                         @viewToppers="viewToppers"
             >
             </PolishTile>
@@ -71,7 +72,7 @@ export default {
       displayedPolishes: []
     }
   },
-  props: ['allPolishes', 'toppersMap'],
+  props: ['allPolishes', 'toppersMap', 'comparisons'],
   watch: {
     search: function(newVal, oldVal) {
       this.brandFilters = [];

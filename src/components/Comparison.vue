@@ -1,5 +1,5 @@
 <template>
-  <div class="row mb-5">
+  <div class="row mb-4">
     <div class="container-fluid">
       <div class="row ml-0 mr-0 align-items-center">
         <div class="ml-5">
@@ -7,11 +7,15 @@
           <b-form-input v-model="comparison.name" autofocus v-else @blur="finishEdit"></b-form-input>
         </div>
         <b-button variant="link" class="ml-2" v-if="!editMode" @click="editMode = true"><font-awesome-icon icon="pencil-alt"/></b-button>
-        <b-button variant="link" v-if="!editMode" @click="deleteList"><font-awesome-icon icon="trash-alt"/></b-button>
+        <b-button variant="link" v-if="!editMode" @click="deleteComparison"><font-awesome-icon icon="trash-alt"/></b-button>
       </div>
       <div class="row ml-0 mr-0 mt-2">
-        <span v-if="comparison.polishes.length == 0" class="ml-5">Please add polishes from the <strong>Browse Collection</strong> view to this list to compare.</span>
-        <span v-else v-for="(polish, index) in polishes" :key="index">{{ polish.name }}</span>
+        <span v-if="comparison.polishes.length == 0" class="ml-5">
+          Please add polishes from the <strong>Browse Collection</strong> view to this list to compare.
+        </span>
+        <ul v-else class="ml-5">
+          <li v-for="(polish, index) in comparison.polishes" :key="index"><strong>{{ polish.brand }}</strong> - {{ polish.name }}</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -19,7 +23,7 @@
 
 <script>
 export default {
-  name: 'CompareList',
+  name: 'Comparison',
   props: ['comparison'],
   data: function() {
     return {
@@ -34,8 +38,8 @@ export default {
       }
     },
     
-    deleteList() {
-      this.$emit("deleteList", this.$vnode.key);
+    deleteComparison() {
+      this.$emit("deleteComparison", this.$vnode.key);
     }
   }
 }
