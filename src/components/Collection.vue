@@ -6,14 +6,14 @@
           <div class="col-6">
             Polishes: {{ displayedPolishes.length }} / {{ polishes.length }}
           </div>
-          <div class="col-6 text-right">
+          <div class="col-6 pl-0 text-right">
             <FinishToggle v-model="finish" @updateFinish="finish = $event"/>
           </div>
         </div>
         <div class="row search mt-4">
           <div class="col">
             <b-input-group>
-              <b-form-input v-model="search" placeholder="Search by name"></b-form-input>
+              <b-form-input v-model="search" placeholder="Search by name" @keyup.enter="doSearch"/>
               <b-input-group-append>
                 <b-button variant="primary" @click="doSearch()" :disabled="search.length == 0">Search</b-button>
               </b-input-group-append>

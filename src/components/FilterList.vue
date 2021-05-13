@@ -7,7 +7,7 @@
       </div>
     </b-button>
     <b-collapse :id="filter" visible>
-      <b-card-body>
+      <b-card-body class="pt-2 pb-0">
         <b-card-text>
           <b-form-checkbox-group
             v-model="selected"
@@ -53,5 +53,9 @@ export default {
 .collapsed .when-open,
 .not-collapsed .when-closed {
   display: none;
+}
+
+.show >>> .custom-control {
+  padding-bottom: 0.75rem;
 }
 </style>

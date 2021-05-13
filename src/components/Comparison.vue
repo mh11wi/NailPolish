@@ -1,22 +1,20 @@
 <template>
-  <div class="row mb-4">
-    <div class="container-fluid">
-      <div class="row ml-0 mr-0 align-items-center">
-        <div class="ml-5">
-          <strong v-if="!editMode">{{ comparison.name }}</strong>
-          <b-form-input v-model="comparison.name" autofocus v-else @blur="finishEdit"></b-form-input>
-        </div>
-        <b-button variant="link" class="ml-2" v-if="!editMode" @click="editMode = true"><font-awesome-icon icon="pencil-alt"/></b-button>
-        <b-button variant="link" v-if="!editMode" @click="deleteComparison"><font-awesome-icon icon="trash-alt"/></b-button>
+  <div class="container-fluid mb-4">
+    <div class="row align-items-center">
+      <div class="ml-5">
+        <strong v-if="!editMode">{{ comparison.name }}</strong>
+        <b-form-input v-model="comparison.name" autofocus v-else @blur="finishEdit" @keyup.enter="finishEdit"/>
       </div>
-      <div class="row ml-0 mr-0 mt-2">
-        <span v-if="comparison.polishes.length == 0" class="ml-5">
-          Please add polishes from the <strong>Browse Collection</strong> view to compare.
-        </span>
-        <ul v-else class="ml-5">
-          <li v-for="(polish, index) in comparison.polishes" :key="index"><strong>{{ polish.brand }}</strong> - {{ polish.name }}</li>
-        </ul>
-      </div>
+      <b-button variant="link" class="ml-2" v-if="!editMode" @click="editMode = true"><font-awesome-icon icon="pencil-alt"/></b-button>
+      <b-button variant="link" v-if="!editMode" @click="deleteComparison"><font-awesome-icon icon="trash-alt"/></b-button>
+    </div>
+    <div class="row mt-2">
+      <span v-if="comparison.polishes.length == 0" class="ml-5">
+        Please add polishes from the <strong>Browse Collection</strong> view to compare.
+      </span>
+      <ul v-else class="ml-5 mb-0">
+        <li v-for="(polish, index) in comparison.polishes" :key="index"><strong>{{ polish.brand }}</strong> - {{ polish.name }}</li>
+      </ul>
     </div>
   </div>
 </template>

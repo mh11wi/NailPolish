@@ -79,7 +79,7 @@ export default {
 }
 
 .toppersColumn >>> .custom-control {
-  padding-bottom: 1rem;
+  padding-bottom: 0.75rem;
 }
 
 .display {
