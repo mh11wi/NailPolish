@@ -11,7 +11,7 @@
       </div>
       <div class="row ml-0 mr-0 mt-2">
         <span v-if="comparison.polishes.length == 0" class="ml-5">
-          Please add polishes from the <strong>Browse Collection</strong> view to this list to compare.
+          Please add polishes from the <strong>Browse Collection</strong> view to compare.
         </span>
         <ul v-else class="ml-5">
           <li v-for="(polish, index) in comparison.polishes" :key="index"><strong>{{ polish.brand }}</strong> - {{ polish.name }}</li>

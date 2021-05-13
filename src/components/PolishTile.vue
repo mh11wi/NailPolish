@@ -58,7 +58,11 @@
           </table>
           <div class="row align-items-center ml-2 mr-0 mt-4">
             <div class="col-7 pl-0 comparisonsList">
-              <b-form-select v-model="selectedComparison" :options="options" @change="comparisonSelected"/>
+              <b-dropdown text="Add to a Comparison List" variant="primary" block dropup>
+                <b-dropdown-item v-for="(option, index) in options" :key="index" @click="comparisonSelected(option.value)" :disabled="option.disabled">
+                  {{ option.text }}
+                </b-dropdown-item>
+              </b-dropdown>
             </div>
             <div class="col-4">
               <b-button v-if="hasToppers" variant="primary" @click="viewToppers">Top It Off</b-button>
@@ -80,19 +84,18 @@ export default {
   },
   data: function() {
     return {
-      modalFinish: this.finish,
-      selectedComparison: null
+      modalFinish: this.finish
     }
   },
   props: ['polish', 'finish', 'hasToppers', 'comparisons'],
   computed: {
     options: function() {
-      const output = [{value: null, text: 'Add to a comparison list'}];
+      const output = [];
       for (let i=0; i < this.comparisons.length; i++) {
         const disabled = this.comparisons[i].polishes.includes(this.polish);
         output.push({value: i, text: this.comparisons[i].name, disabled: disabled});
       }
-      output.push({value: -1, text: 'Create new comparison list...'});
+      output.push({value: -1, text: 'Create new...'});
       return output;
     }
   },
@@ -113,21 +116,15 @@ export default {
       this.$emit("viewToppers", {basePolish: this.polish, finish: this.modalFinish});
     },
     
-    comparisonSelected() {
-      if (this.selectedComparison == null) {
-        return;
-      }
-        
-      if (this.selectedComparison == -1) {
+    comparisonSelected(selectedComparison) {
+      if (selectedComparison == -1) {
         const newName = 'Comparison ' + (this.comparisons.length + 1);
         this.comparisons.push({name: newName, polishes: [this.polish]});
         // alert that compares list was created
       } else {
-        this.comparisons[this.selectedComparison].polishes.push(this.polish);
+        this.comparisons[selectedComparison].polishes.push(this.polish);
         // alert that polish was added
       }
-      
-      this.selectedComparison = null;
     }
   } 
 }
@@ -135,7 +132,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.comparisonsList >>> option:first-child {
-  display: none;
-}
+
 </style>
