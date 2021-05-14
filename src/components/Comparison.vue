@@ -33,6 +33,8 @@ export default {
       this.editMode = false;
       if ('' == this.comparison.name.trim()) {
         this.comparison.name = 'Comparison ' + (this.$vnode.key + 1);
+      } else if (this.comparison.name.length > 18) {
+        this.comparison.name = this.comparison.name.substring(0, 18);
       }
     },
     
