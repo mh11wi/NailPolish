@@ -2,7 +2,7 @@
   <div class="container-fluid mt-3 mb-3">
     <div class="row ml-0 mr-0">
       <span v-if="comparisons.length == 0" class="ml-5 mb-4">
-        Start by adding a new comparison list from the <strong>Browse Collection</strong> view or by clicking <strong>+ Add Comparison</strong> below.
+        Start by adding a new comparison from the <strong>Browse Collection</strong> view or by clicking <strong>+ Add Comparison</strong> below.
       </span>
       <Comparison v-else v-for="(comparison, index) in comparisons" :key="index" :comparison="comparison" @deleteComparison="deleteComparison"/>
     </div>

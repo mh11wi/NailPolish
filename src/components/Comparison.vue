@@ -3,7 +3,7 @@
     <div class="row align-items-center">
       <div class="ml-5">
         <strong v-if="!editMode">{{ comparison.name }}</strong>
-        <b-form-input v-model="comparison.name" autofocus v-else @blur="finishEdit" @keyup.enter="finishEdit"/>
+        <b-form-input v-model="comparison.name" autofocus maxLength="18" v-else @blur="finishEdit" @keyup.enter="finishEdit"/>
       </div>
       <b-button variant="link" class="ml-2" v-if="!editMode" @click="editMode = true"><font-awesome-icon icon="pencil-alt"/></b-button>
       <b-button variant="link" v-if="!editMode" @click="deleteComparison"><font-awesome-icon icon="trash-alt"/></b-button>

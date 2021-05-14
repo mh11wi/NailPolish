@@ -23,7 +23,14 @@
           </b-img-lazy>
         </div>
         <div class="col-7 mt-2">
-          <FinishToggle class="ml-2 mb-4" v-model="modalFinish" @updateFinish="modalFinish = $event"/>
+          <div class="row align-items-center ml-2 mb-4">
+            <div class="col-5 pl-0">
+              <FinishToggle v-model="modalFinish" @updateFinish="modalFinish = $event"/>
+            </div>
+            <div class="col-7 pl-0">
+              <b-button v-if="hasToppers" variant="primary" @click="viewToppers">Top It Off</b-button>
+            </div>
+          </div>
           <table class="ml-2 w-100">
             <colgroup>
               <col span="1" style="width:25%">
@@ -57,15 +64,15 @@
             </tbody>
           </table>
           <div class="row align-items-center ml-2 mr-0 mt-4">
-            <div class="col-7 pl-0 comparisonsList">
-              <b-dropdown text="Add to a Comparison List" variant="primary" block dropup>
+            <div class="col-6 pl-0 pr-0">
+              <b-dropdown text="Add to Comparison" variant="primary" dropup>
                 <b-dropdown-item v-for="(option, index) in options" :key="index" @click="comparisonSelected(option.value)" :disabled="option.disabled">
                   {{ option.text }}
                 </b-dropdown-item>
               </b-dropdown>
             </div>
-            <div class="col-4">
-              <b-button v-if="hasToppers" variant="primary" @click="viewToppers">Top It Off</b-button>
+            <div class="col-6 pl-0 pr-0 text-success small">
+              <span v-if="showAlert"><span class="mr-2"><font-awesome-icon icon="check"/></span>Added to {{ addedComparison }}</span>
             </div>
           </div>
         </div>
@@ -84,7 +91,9 @@ export default {
   },
   data: function() {
     return {
-      modalFinish: this.finish
+      modalFinish: this.finish,
+      showAlert: false,
+      addedComparison: ''
     }
   },
   props: ['polish', 'finish', 'hasToppers', 'comparisons'],
@@ -102,6 +111,11 @@ export default {
   mounted: function() {
     this.$root.$on('bv::modal::show', () => {
       this.modalFinish = this.finish;
+      this.showAlert = false;
+    });
+    
+    this.$root.$on('bv::dropdown::show', () => {
+      this.showAlert = false;
     });
   },
   methods: {
@@ -120,11 +134,13 @@ export default {
       if (selectedComparison == -1) {
         const newName = 'Comparison ' + (this.comparisons.length + 1);
         this.comparisons.push({name: newName, polishes: [this.polish]});
-        // alert that compares list was created
+        this.addedComparison = newName;
       } else {
         this.comparisons[selectedComparison].polishes.push(this.polish);
-        // alert that polish was added
+        this.addedComparison = this.comparisons[selectedComparison].name;
       }
+      
+      this.showAlert = true;
     }
   } 
 }
