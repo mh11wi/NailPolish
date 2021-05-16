@@ -318,5 +318,55 @@
     "color": "Black",
     "numCoats": "1",
     "collection": "Launch Collection (2019)"
+  },
+  {
+    "id": "33",
+    "name": "Know Your Angle",
+    "brand": "Orly",
+    "type": "Creme",
+    "colorFamily": "Pink",
+    "color": "Salmon",
+    "numCoats": "2",
+    "collection": ""
+  },
+  {
+    "id": "34",
+    "name": "Va Va Voom",
+    "brand": "Orly",
+    "type": "Creme",
+    "colorFamily": "Pink",
+    "color": "Neon hot pink",
+    "numCoats": "3",
+    "collection": "Pin-Up (Summer 2011)"
+  },
+  {
+    "id": "35",
+    "name": "Surfer Dude",
+    "brand": "Orly",
+    "type": "Creme",
+    "colorFamily": "Orange",
+    "color": "Neon red-orange",
+    "numCoats": "3",
+    "collection": "Coastal Crush (Summer 2017)"
+  },
+  {
+    "id": "36",
+    "name": "Glowstick",
+    "brand": "Orly",
+    "type": "Creme",
+    "colorFamily": "Yellow",
+    "color": "Neon yellow",
+    "numCoats": "4",
+    "collection": "Feel the Vibe (Summer 2012)"
+  },
+  {
+    "id": "37",
+    "name": "So Fly",
+    "brand": "Orly",
+    "type": "Creme",
+    "colorFamily": "Green",
+    "color": "Neon green",
+    "numCoats": "3",
+    "collection": "Retrowave (Summer 2020)"
   }
 ]
