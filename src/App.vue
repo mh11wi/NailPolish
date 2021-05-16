@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-navbar variant="primary">
-      <b-navbar-brand>Nail Polish App</b-navbar-brand>
+      <b-navbar-brand>Madeleine's Nail Polishes</b-navbar-brand>
       <b-navbar-nav class="ml-auto">
         <b-nav-item id="info-link" tabindex="0">
           <font-awesome-icon icon="info-circle" size="lg"/>
@@ -56,7 +56,7 @@ export default {
       tabIndex: 0,
       basePolish: null,
       topperId: '',
-      comparisons: [{name: 'Comparison 1', polishes: []}]
+      comparisons: []
     }
   },
   computed: {
