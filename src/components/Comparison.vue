@@ -17,18 +17,20 @@
     </div>
     <div class="row mt-2">
       <span v-if="comparison.polishes.length == 0" class="ml-5">Please add polishes from the <strong>Browse Collection</strong> view to compare.</span>
-      <b-carousel v-else class="w-100" controls :interval="0">
+      <b-carousel v-else class="w-100 mt-4" controls :interval="0">
         <b-carousel-slide v-for="(slide, index1) in slides" :key="index1">
           <template v-slot:img>
-            <b-row align-h="center">
-              <b-col cols="12" sm="3" v-for="(polish, index2) in slide" :key="index2">
-                <b-card :img-src="getImage(polish.id)" img-top no-body border-variant="white" class="mt-4">
-                  <b-card-body>
-                    <b-card-text class="text-center">
-                      <strong>{{ polish.brand }}</strong><br>{{ polish.name }}
-                    </b-card-text>
-                  </b-card-body>
-                </b-card>
+            <b-row align-h="center" align-v="stretch">
+              <b-col cols="3" v-for="(polish, index2) in slide" :key="polish.id">
+                <ComparisonPolish 
+                  :polish="polish" 
+                  :index="3 * index1 + index2" 
+                  :finish="finish" 
+                  :length="comparison.polishes.length"
+                  @movePolish="movePolish"
+                  @removePolish="removePolish" 
+                  class="h-100">
+                </ComparisonPolish>
               </b-col>
             </b-row>
           </template>
@@ -40,11 +42,13 @@
 
 <script>
 import FinishToggle from './FinishToggle.vue';
+import ComparisonPolish from './ComparisonPolish.vue';
 
 export default {
   name: 'Comparison',
   components: {
-    FinishToggle
+    FinishToggle,
+    ComparisonPolish
   },
   props: ['comparison'],
   data: function() {
@@ -86,10 +90,17 @@ export default {
     deleteComparison() {
       this.$emit("deleteComparison", this.$vnode.key);
     },
+    
+    movePolish(event) {
+      const polishes = [...this.comparison.polishes];
+      const tmp = polishes[event.index];
+      polishes[event.index] = polishes[event.index + event.dir];
+      polishes[event.index + event.dir] = tmp;
+      this.comparison.polishes = polishes;
+    },
 
-    getImage(polishId) {
-      const finishId = this.finish == 'glossy' ? 1 : 2;
-      return require('@/assets/images/polishes/' + polishId + '/' + finishId + '.jpg');
+    removePolish(event) {
+      this.comparison.polishes.splice(event, 1);
     }
   }
 }
@@ -103,5 +114,13 @@ export default {
 
 .comparison >>> .carousel-control-prev, .comparison >>> .carousel-control-next {
   filter: invert(100%);
+}
+
+.comparison >>> .position-absolute {
+  left: 0 !important;
+  top: 0 !important;
+  transform: none !important;
+  width: 100%;
+  margin-top: -0.25rem;
 }
 </style>
