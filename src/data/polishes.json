@@ -55,7 +55,7 @@
     "brand": "ILNP",
     "type": "Linear Holographic",
     "colorFamily": "Brown",
-    "color": "Mocha",
+    "color": "Mocha brown",
     "numCoats": "2",
     "collection": "Fall Into Winter Collection (2020)"
   },
@@ -75,7 +75,7 @@
     "brand": "ILNP",
     "type": "Linear Holographic",
     "colorFamily": "Blue",
-    "color": "Aqua",
+    "color": "Aqua blue",
     "numCoats": "3",
     "collection": "Summer Collection 2017"
   },
@@ -95,7 +95,7 @@
     "brand": "Holo Taco",
     "type": "Creme",
     "colorFamily": "Blue",
-    "color": "Cyan",
+    "color": "Cyan blue",
     "numCoats": "2",
     "collection": "Unicorn Dream Collection (2021)"
   },
@@ -105,7 +105,7 @@
     "brand": "Holo Taco",
     "type": "Creme",
     "colorFamily": "Pink",
-    "color": "Pink",
+    "color": "Bubblegum pink",
     "numCoats": "2",
     "collection": "Unicorn Dream Collection (2021)"
   },
@@ -125,7 +125,7 @@
     "brand": "Holo Taco",
     "type": "Linear Holographic",
     "colorFamily": "Red",
-    "color": "Coral",
+    "color": "Light coral",
     "numCoats": "2",
     "collection": "Pastel Rainbow Collection (2021)"
   },
@@ -135,7 +135,7 @@
     "brand": "Holo Taco",
     "type": "Linear Holographic",
     "colorFamily": "Orange",
-    "color": "Peach",
+    "color": "Peachy orange",
     "numCoats": "2",
     "collection": "Pastel Rainbow Collection (2021)"
   },
@@ -215,7 +215,7 @@
     "brand": "Holo Taco",
     "type": "Creme",
     "colorFamily": "White",
-    "color": "White",
+    "color": "Opaque white",
     "numCoats": "2",
     "collection": "Unicorn Skin Collection (2020)"
   },
@@ -315,7 +315,7 @@
     "brand": "Holo Taco",
     "type": "Creme",
     "colorFamily": "Black",
-    "color": "Black",
+    "color": "Opaque black",
     "numCoats": "1",
     "collection": "Launch Collection (2019)"
   },
@@ -325,7 +325,7 @@
     "brand": "Orly",
     "type": "Creme",
     "colorFamily": "Pink",
-    "color": "Salmon pink",
+    "color": "Warm tone pink",
     "numCoats": "2",
     "collection": ""
   },

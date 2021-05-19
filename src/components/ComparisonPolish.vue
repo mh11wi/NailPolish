@@ -44,11 +44,17 @@
           </b-button>
         </div>
         <div class="col-6 px-0 text-center">
-          <b-button variant="link" class="text-decoration-none" @click="movePolish(-1)" :disabled="index == 0"><strong>&lt;</strong></b-button>
-          <b-button variant="link" class="text-decoration-none" @click="movePolish(1)" :disabled="index == length - 1"><strong>&gt;</strong></b-button>
+          <b-button variant="link" class="text-decoration-none px-2" size="lg" @click="movePolish(-1)" :disabled="index == 0">
+            <font-awesome-icon icon="arrow-left"/>
+          </b-button>
+          <b-button variant="link" class="text-decoration-none px-2" size="lg" @click="movePolish(1)" :disabled="index == length - 1">
+            <font-awesome-icon icon="arrow-right"/>
+          </b-button>
         </div>
         <div class="col-3 px-0 text-right">
-          <b-button variant="link" class="text-decoration-none" @click="removePolish"><strong>&#x2715;</strong></b-button>
+          <b-button variant="link" class="text-decoration-none" size="lg" @click="removePolish">
+            <font-awesome-icon icon="times"/>
+          </b-button>
         </div>
       </div>
     </template>
