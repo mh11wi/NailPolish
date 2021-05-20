@@ -368,5 +368,35 @@
     "color": "Neon green",
     "numCoats": "3",
     "collection": "Retrowave (Summer 2020)"
+  },
+  {
+    "id": "38",
+    "name": "Kelli's Galaxy",
+    "brand": "Orly",
+    "type": "Shimmer",
+    "colorFamily": "Blue",
+    "color": "Royal blue with violet shimmer",
+    "numCoats": "2",
+    "collection": "Kelli Marissa X Orly (2021)"
+  },
+  {
+    "id": "39",
+    "name": "Kelli's Antimatter",
+    "brand": "Orly",
+    "type": "Shimmer",
+    "colorFamily": "Black",
+    "color": "Black with red and blue shimmer",
+    "numCoats": "2",
+    "collection": "Kelli Marissa X Orly (2021)"
+  },
+  {
+    "id": "40",
+    "name": "Kelli's Solar Flare",
+    "brand": "Orly",
+    "type": "Shimmer",
+    "colorFamily": "Purple",
+    "color": "Purple with turquoise shimmer",
+    "numCoats": "2",
+    "collection": "Kelli Marissa X Orly (2021)"
   }
 ]
