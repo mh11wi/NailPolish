@@ -8,7 +8,7 @@
             <b-col cols="5">
               <b-img-lazy :src="getImage(polish.id)" :alt="polish.name" blank-color="black" fluid/>
             </b-col>
-            <b-col cols="7" class="px-0">
+            <b-col cols="7" class="pl-0">
               <p class="mb-1">{{ polish.type }}</p>
               <p class="mb-1">{{ polish.numCoats }} coat{{ polish.numCoats == 1 ? '' : 's'}}</p>
             </b-col>
