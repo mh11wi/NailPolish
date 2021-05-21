@@ -64,7 +64,6 @@ export default {
   updated() {
     if (this.detailsMode) {
       const width = this.$el.offsetWidth;
-      alert(width)
       this.$el.querySelectorAll('.polishDetails')[0].setAttribute('style', 'height: ' + width + 'px');
     }
   },
