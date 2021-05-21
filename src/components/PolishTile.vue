@@ -1,11 +1,11 @@
 <template>
   <div>
-    <div v-b-modal="polish.id" class="text-center ml-3 mb-3">
+    <div v-b-modal="polish.id" class="text-center mx-2 mb-3">
       <b-img-lazy 
         :src="getImage(polish.id, false)" 
         :alt="polish.name" 
-        width=175 
         blank-color="black"
+        fluid
       >
       </b-img-lazy>
       <div><strong>{{ polish.brand }}</strong></div>

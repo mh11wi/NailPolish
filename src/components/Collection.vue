@@ -33,7 +33,7 @@
           No polishes found! Try adjusting your filters or search criteria.
         </div>
         <div v-else>
-          <div class="row">
+          <b-row cols="3" cols-lg="4" cols-xl="5" class="px-2">
             <PolishTile v-for="(polish, index) in displayedPolishes" 
                         :key="index" 
                         :polish="polish" 
@@ -43,7 +43,7 @@
                         @viewToppers="viewToppers"
             >
             </PolishTile>
-          </div>
+          </b-row>
         </div>
       </div>
     </div>
