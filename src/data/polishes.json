@@ -322,7 +322,7 @@
   {
     "id": "33",
     "name": "Know Your Angle",
-    "brand": "Orly",
+    "brand": "ORLY",
     "type": "Creme",
     "colorFamily": "Pink",
     "color": "Warm tone pink",
@@ -332,7 +332,7 @@
   {
     "id": "34",
     "name": "Va Va Voom",
-    "brand": "Orly",
+    "brand": "ORLY",
     "type": "Creme",
     "colorFamily": "Pink",
     "color": "Neon hot pink",
@@ -342,7 +342,7 @@
   {
     "id": "35",
     "name": "Surfer Dude",
-    "brand": "Orly",
+    "brand": "ORLY",
     "type": "Creme",
     "colorFamily": "Orange",
     "color": "Neon red-orange",
@@ -352,7 +352,7 @@
   {
     "id": "36",
     "name": "Glowstick",
-    "brand": "Orly",
+    "brand": "ORLY",
     "type": "Creme",
     "colorFamily": "Yellow",
     "color": "Neon yellow",
@@ -362,7 +362,7 @@
   {
     "id": "37",
     "name": "So Fly",
-    "brand": "Orly",
+    "brand": "ORLY",
     "type": "Creme",
     "colorFamily": "Green",
     "color": "Neon green",
@@ -372,31 +372,31 @@
   {
     "id": "38",
     "name": "Kelli's Galaxy",
-    "brand": "Orly",
+    "brand": "ORLY",
     "type": "Shimmer",
     "colorFamily": "Blue",
     "color": "Royal blue with violet shimmer",
     "numCoats": "2",
-    "collection": "Kelli Marissa X Orly (2021)"
+    "collection": "Kelli Marissa x ORLY (2021)"
   },
   {
     "id": "39",
     "name": "Kelli's Antimatter",
-    "brand": "Orly",
+    "brand": "ORLY",
     "type": "Shimmer",
     "colorFamily": "Black",
     "color": "Black with red and blue shimmer",
     "numCoats": "2",
-    "collection": "Kelli Marissa X Orly (2021)"
+    "collection": "Kelli Marissa x ORLY (2021)"
   },
   {
     "id": "40",
     "name": "Kelli's Solar Flare",
-    "brand": "Orly",
+    "brand": "ORLY",
     "type": "Shimmer",
     "colorFamily": "Purple",
     "color": "Purple with turquoise shimmer",
     "numCoats": "2",
-    "collection": "Kelli Marissa X Orly (2021)"
+    "collection": "Kelli Marissa x ORLY (2021)"
   }
 ]
