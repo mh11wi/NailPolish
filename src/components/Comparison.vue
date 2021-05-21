@@ -17,10 +17,10 @@
     </div>
     <div class="row mt-2">
       <span v-if="comparison.polishes.length == 0" class="ml-5">Please add polishes from the <strong>Browse Collection</strong> view to compare.</span>
-      <b-carousel v-else class="w-100 mt-4" :controls="comparison.polishes.length > 3" :interval="0">
+      <b-carousel v-else class="w-100 mt-3" :controls="comparison.polishes.length > 3" :interval="0" @sliding-end="handleResize">
         <b-carousel-slide v-for="(slide, index1) in slides" :key="index1">
           <template v-slot:img>
-            <b-row align-h="center" align-v="stretch">
+            <b-row align-h="center">
               <b-col cols="3" v-for="(polish, index2) in slide" :key="polish.id">
                 <ComparisonPolish 
                   :polish="polish" 
@@ -29,7 +29,7 @@
                   :length="comparison.polishes.length"
                   @movePolish="movePolish"
                   @removePolish="removePolish" 
-                  class="h-100">
+                >
                 </ComparisonPolish>
               </b-col>
             </b-row>
@@ -101,6 +101,10 @@ export default {
 
     removePolish(event) {
       this.comparison.polishes.splice(event, 1);
+    },
+
+    handleResize() {
+      this.$emit("resize");
     }
   }
 }
