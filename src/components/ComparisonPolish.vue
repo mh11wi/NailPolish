@@ -1,21 +1,21 @@
 <template>
   <div class="polish">
     <b-overlay :show="true" :opacity="0">
-      <b-card v-if="!detailsMode" class="border-0" :img-src="getImage(polish.id)" :img-alt="polish.name" img-top no-body/>
-      <b-card v-else class="polishDetails pt-5" no-body>
+      <b-card v-if="!card.detailsMode" class="border-0" :img-src="getImage(card.polish.id)" :img-alt="card.polish.name" img-top no-body/>
+      <b-card v-else class="pt-5" :style="{ height: cardHeight + 'px' }" no-body>
         <b-card-text class="mx-3 h-100 d-flex flex-column">
           <b-row align-v="center">
-            <b-col cols="5">
-              <b-img-lazy :src="getImage(polish.id)" :alt="polish.name" blank-color="black" fluid/>
+            <b-col cols="6">
+              <b-img-lazy :src="getImage(card.polish.id)" :alt="card.polish.name" blank-color="black" fluid/>
             </b-col>
-            <b-col cols="7" class="pl-0">
-              <p class="mb-1">{{ polish.type }}</p>
-              <p class="mb-1">{{ polish.numCoats }} coat{{ polish.numCoats == 1 ? '' : 's'}}</p>
+            <b-col cols="6" class="pl-0">
+              <p class="mb-1">{{ card.polish.type }}</p>
+              <p class="mb-1">{{ card.polish.numCoats }} coat{{ card.polish.numCoats == 1 ? '' : 's'}}</p>
             </b-col>
           </b-row>
           <b-row align-v="center" class="flex-grow-1">
             <b-col>
-              <div class="text-center">{{ polish.color }}</div>
+              <div class="text-center">{{ card.polish.color }}</div>
             </b-col>
           </b-row>
         </b-card-text>
@@ -24,7 +24,7 @@
         <div class="row align-items-center mt-1 mx-0">
           <div class="col-3 px-0">
             <b-button variant="link" class="text-decoration-none" size="sm" @click="toggleMode">
-              <strong v-if="!detailsMode">Details</strong>
+              <strong v-if="!card.detailsMode">Details</strong>
               <strong v-else>Back</strong>
             </b-button>
           </div>
@@ -32,7 +32,7 @@
             <b-button variant="link" class="text-decoration-none px-2" size="lg" @click="movePolish(-1)" :disabled="index == 0">
               <font-awesome-icon icon="arrow-left"/>
             </b-button>
-            <b-button variant="link" class="text-decoration-none px-2" size="lg" @click="movePolish(1)" :disabled="index == length - 1">
+            <b-button variant="link" class="text-decoration-none px-2" size="lg" @click="movePolish(1)" :disabled="index == comparisonLength - 1">
               <font-awesome-icon icon="arrow-right"/>
             </b-button>
           </div>
@@ -45,9 +45,9 @@
       </template>
     </b-overlay>
     <div class="text-center mt-2">
-      <strong>{{ polish.brand }}</strong>
-      <br>{{ polish.name }}
-      <br><span class="small">{{ polish.collection || '-' }}</span>
+      <strong>{{ card.polish.brand }}</strong>
+      <br>{{ card.polish.name }}
+      <br><span class="small">{{ card.polish.collection || '-' }}</span>
     </div>
   </div>
 </template>
@@ -55,17 +55,9 @@
 <script>
 export default {
   name: 'ComparisonPolish',
-  props: ['polish', 'index', 'finish', 'length'],
-  data: function() {
-    return {
-      detailsMode: false
-    }
-  },
+  props: ['card', 'index', 'finish', 'comparisonLength', 'cardHeight'],
   updated() {
-    if (this.detailsMode) {
-      const width = this.$el.offsetWidth;
-      this.$el.querySelectorAll('.polishDetails')[0].setAttribute('style', 'height: ' + width + 'px');
-    }
+    this.$emit("resize");
   },
   methods: {
     getImage(polishId) {
@@ -82,7 +74,7 @@ export default {
     },
 
     toggleMode() {
-      this.detailsMode = !this.detailsMode;
+      this.card.detailsMode = !this.card.detailsMode;
     }
   },
 }

@@ -133,10 +133,10 @@ export default {
     comparisonSelected(selectedComparison) {
       if (selectedComparison == -1) {
         const newName = 'Comparison ' + (this.comparisons.length + 1);
-        this.comparisons.push({name: newName, polishes: [this.polish]});
+        this.comparisons.push({name: newName, polishes: [{polish: this.polish, detailsMode: false}]});
         this.addedComparison = newName;
       } else {
-        this.comparisons[selectedComparison].polishes.push(this.polish);
+        this.comparisons[selectedComparison].polishes.push({polish: this.polish, detailsMode: false});
         this.addedComparison = this.comparisons[selectedComparison].name;
       }
       

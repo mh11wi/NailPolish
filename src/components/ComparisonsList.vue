@@ -7,7 +7,8 @@
       <Comparison v-else 
         v-for="(comparison, index) in comparisons" 
         :key="index" 
-        :comparison="comparison" 
+        :comparison="comparison"
+        :cardHeight="cardHeight"
         @deleteComparison="deleteComparison"
         @resize="handleResize"
       >
@@ -28,6 +29,11 @@ export default {
     Comparison
   },
   props: ['comparisons'],
+  data: function() {
+    return { 
+      cardHeight: 0
+    }
+  },
   created() {
     window.addEventListener('resize', this.handleResize);
   },
@@ -45,12 +51,10 @@ export default {
     },
 
     handleResize() {
-      document.querySelectorAll('.polishDetails').forEach(function(card) {
-        const width = card.offsetWidth;
-        if (width > 0) {
-          card.setAttribute('style', 'height: ' + width + 'px');
-        }
-      });
+      const polish = document.querySelectorAll('.carousel-inner > .active .polish')[0];
+      if (polish && polish.offsetWidth != 0) {
+        this.cardHeight = polish.offsetWidth;
+      }
     }
   }
 }

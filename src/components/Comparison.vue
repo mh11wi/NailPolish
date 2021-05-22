@@ -4,7 +4,7 @@
       <div class="col-6 pl-0">
         <div class="ml-5">
           <strong v-if="!editMode">{{ comparison.name }}</strong>
-          <b-form-input v-model="comparison.name" autofocus maxLength="18" v-else @blur="finishEdit" @keyup.enter="finishEdit"/>
+          <b-form-input v-model="comparison.name" autofocus :maxLength="maxNameLength" v-else @blur="finishEdit" @keyup.enter="finishEdit"/>
           <b-button variant="link" class="ml-2" v-if="!editMode" @click="editMode = true"><font-awesome-icon icon="pencil-alt"/></b-button>
           <b-button variant="link" v-if="!editMode" @click="deleteComparison"><font-awesome-icon icon="trash-alt"/></b-button>
         </div>
@@ -21,12 +21,14 @@
         <b-carousel-slide v-for="(slide, index1) in slides" :key="index1">
           <template v-slot:img>
             <b-row align-h="center">
-              <b-col cols="3" v-for="(polish, index2) in slide" :key="polish.id">
+              <b-col cols="3" v-for="(card, index2) in slide" :key="card.polish.id">
                 <ComparisonPolish 
-                  :polish="polish" 
+                  :card="card" 
                   :index="3 * index1 + index2" 
                   :finish="finish" 
-                  :length="comparison.polishes.length"
+                  :comparisonLength="comparison.polishes.length"
+                  :cardHeight="cardHeight"
+                  @resize="handleResize"
                   @movePolish="movePolish"
                   @removePolish="removePolish" 
                 >
@@ -50,11 +52,12 @@ export default {
     FinishToggle,
     ComparisonPolish
   },
-  props: ['comparison'],
+  props: ['comparison', 'cardHeight'],
   data: function() {
     return {
       editMode: false,
-      finish: 'glossy'
+      finish: 'glossy',
+      maxNameLength: 18
     }
   },
   computed: {
@@ -82,8 +85,8 @@ export default {
       this.editMode = false;
       if ('' == this.comparison.name.trim()) {
         this.comparison.name = 'Comparison ' + (this.$vnode.key + 1);
-      } else if (this.comparison.name.length > 18) {
-        this.comparison.name = this.comparison.name.substring(0, 18);
+      } else if (this.comparison.name.length > this.maxNameLength) {
+        this.comparison.name = this.comparison.name.substring(0, this.maxNameLength);
       }
     },
     
@@ -112,6 +115,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.comparison >>> input[type="text"] {
+  width: 50%;
+}
+
 .comparison >>> .carousel-caption {
   color: black;
 }
