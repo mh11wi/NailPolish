@@ -87,7 +87,7 @@
     "id": "7",
     "date": "December 5, 2020",
     "alt": "Present nails",
-    "description": "Happy 'Holo'days! The gifts that kept on giving this year were these Star Dust flakies from Twinkled T. WOW! By the way, I created the bow by looping pieces of striping tape together and joining them in the middle.",
+    "description": "Happy 'Holo'days! These Star Dust flakies from Twinkled T were the gift that kept on giving this year. WOW!! By the way, I created the bow by looping pieces of striping tape together and joining them in the middle.",
     "polishes": [
       {"brand": "Sally Hansen", "name": "Buffalo Nickel"},
       {"brand": "Sally Hansen", "name": "Pucker Up"}
@@ -154,6 +154,18 @@
       {"brand": "Holo Taco", "name": "Cyantific"},
       {"brand": "Holo Taco", "name": "Not Milky White"},
       {"brand": "Dance Legend", "name": "Spot It: White"}
+    ]
+  },
+  {
+    "id": "13",
+    "date": "May 21, 2021",
+    "alt": "Galaxy nails",
+    "description": "I was inspired by the Kelli Marissa x ORLY trio to create my very own galaxy manicure. To top off these polishes, I stamped various designs from her MoYou London collaboration plate.",
+    "polishes": [
+      {"brand": "ORLY", "name": "Kelli's Solar Flare"},
+      {"brand": "ORLY", "name": "Kelli's Antimatter"},
+      {"brand": "ORLY", "name": "Kelli's Galaxy"},
+      {"brand": "Twinkled T", "name": "Liquid Gold Stamping Polish"}
     ]
   }
 ]
