@@ -1,16 +1,16 @@
 <template>
-  <div class="row mt-3">
-    <div class="col-5">
+  <b-row class="mt-3">
+    <b-col class="col-fixed-width">
       <b-img-lazy 
         :src="getImage(entry.id)" 
-        :alt="entry.alt" 
-        width=400
-        height=400
+        :alt="entry.alt"
+        width="400"
+        height="400"
         blank-color="black"
       >
       </b-img-lazy>
-    </div>
-    <div class="col-7">
+    </b-col>
+    <b-col>
       <div class="ml-2">
         <p class="mt-3"><strong>{{ entry.date }}</strong></p>
         <p>{{ entry.description }}</p>
@@ -21,8 +21,8 @@
           </li>
         </ul>
       </div>
-    </div>
-  </div>
+    </b-col>
+  </b-row>
 </template>
 
 <script>
@@ -39,11 +39,15 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  .text-underline {
-    text-decoration: underline;
-  }
-  
-  ul {
-    padding-left: 1rem;
-  }
+.text-underline {
+  text-decoration: underline;
+}
+
+ul {
+  padding-left: 1rem;
+}
+
+.col-fixed-width {
+  flex: 0 0 400px;
+}
 </style>

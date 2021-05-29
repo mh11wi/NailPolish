@@ -125,7 +125,7 @@
     "brand": "Holo Taco",
     "type": "Linear Holographic",
     "colorFamily": "Red",
-    "color": "Light coral",
+    "color": "Coral red",
     "numCoats": "2",
     "collection": "Pastel Rainbow Collection (2021)"
   },
@@ -398,5 +398,105 @@
     "color": "Purple with turquoise shimmer",
     "numCoats": "2",
     "collection": "Kelli Marissa x ORLY (2021)"
+  },
+  {
+    "id": "41",
+    "name": "Succulent Garden",
+    "brand": "Cirque Colors",
+    "type": "Shimmer",
+    "colorFamily": "Green",
+    "color": "Khaki green with red shimmer and scattered holographic glitters",
+    "numCoats": "3",
+    "collection": "Maison (2017)"
+  },
+  {
+    "id": "42",
+    "name": "Zeitgeist",
+    "brand": "Cirque Colors",
+    "type": "Multichrome",
+    "colorFamily": "Gold",
+    "color": "Gold to copper shift",
+    "numCoats": "2",
+    "collection": "Superfuture (2021)"
+  },
+  {
+    "id": "43",
+    "name": "Neo",
+    "brand": "Cirque Colors",
+    "type": "Multichrome",
+    "colorFamily": "Red",
+    "color": "Red to black shift",
+    "numCoats": "2",
+    "collection": "Superfuture (2021)"
+  },
+  {
+    "id": "44",
+    "name": "Rothko Red",
+    "brand": "Cirque Colors",
+    "type": "Thermal",
+    "colorFamily": "Red",
+    "color": "Crimson to vampy red",
+    "numCoats": "3",
+    "collection": "Maison (2017)"
+  },
+  {
+    "id": "45",
+    "name": "Evergreen",
+    "brand": "Cirque Colors",
+    "type": "Thermal",
+    "colorFamily": "Green",
+    "color": "Lime to emerald green",
+    "numCoats": "3",
+    "collection": "Do Good (2020)"
+  },
+  {
+    "id": "46",
+    "name": "Sol",
+    "brand": "Cirque Colors",
+    "type": "Thermal",
+    "colorFamily": "Pink",
+    "color": "Pink to purple with scattered holographic glitters",
+    "numCoats": "3",
+    "collection": "Celestial (2019)"
+  },
+  {
+    "id": "47",
+    "name": "Luna",
+    "brand": "Cirque Colors",
+    "type": "Thermal",
+    "colorFamily": "Blue",
+    "color": "Turquoise to violet with scattered holographic glitters",
+    "numCoats": "3",
+    "collection": "Celestial (2019)"
+  },
+  {
+    "id": "48",
+    "name": "The Enemy",
+    "brand": "Cadillacquer",
+    "type": "Thermal",
+    "colorFamily": "Blue",
+    "color": "Teal to black with white hex glitters and iridescent flakes",
+    "numCoats": "3",
+    "collection": "Winter 2021 Collection"
+  },
+  {
+    "id": "49",
+    "name": "Coldy",
+    "brand": "Bow Polish",
+    "type": "Thermal",
+    "colorFamily": "Silver",
+    "color": "Silver to bordeaux purple with linear holographic glitters",
+    "numCoats": "3",
+    "collection": "Spring 2021 Collection"
+  },
+  {
+    "id": "50",
+    "name": "Paradox",
+    "brand": "Bow Polish",
+    "type": "Thermal",
+    "colorFamily": "Blue",
+    "color": "Sheer to royal blue with silver glitters; changes to purple in the sun",
+    "numCoats": "3",
+    "collection": "Conversion Collection (2016)"
   }
 ]

@@ -12,8 +12,8 @@
       <div>{{ polish.name }}</div>
     </div>
     <b-modal :id="polish.id" :title="polish.name" :hide-footer=true ref="modal">
-      <div class="row">
-        <div class="col-5">
+      <b-row align-v="stretch">
+        <b-col cols="5">
           <b-img-lazy 
             :src="getImage(polish.id, true)" 
             :alt="polish.name" 
@@ -21,9 +21,9 @@
             blank-color="black"
           >
           </b-img-lazy>
-        </div>
-        <div class="col-7 mt-2">
-          <div class="row align-items-center ml-2 mb-4">
+        </b-col>
+        <b-col cols="7" class="mt-1 d-flex flex-column">
+          <div class="row align-items-center ml-2 mb-3">
             <div class="col-5 pl-0">
               <FinishToggle v-model="modalFinish" @updateFinish="modalFinish = $event"/>
             </div>
@@ -31,39 +31,41 @@
               <b-button v-if="hasToppers" variant="primary" @click="viewToppers">Top It Off</b-button>
             </div>
           </div>
-          <table class="ml-2 w-100">
-            <colgroup>
-              <col span="1" style="width:25%">
-              <col span="1" style="width:75%">
-            </colgroup>
-            <tbody>
-              <tr>
-                <td><strong>Name:</strong></td>
-                <td>{{ polish.name }}</td>
-              </tr>
-              <tr>
-                <td><strong>Brand:</strong></td>
-                <td>{{ polish.brand }}</td>
-              </tr>
-              <tr v-if="polish.collection != ''">
-                <td><strong>Collection:</strong></td>
-                <td>{{ polish.collection }}</td>
-              </tr>
-              <tr>
-                <td><strong>Type:</strong></td>
-                <td>{{ polish.type }}</td>
-              </tr>
-              <tr>
-                <td><strong>Colour:</strong></td>
-                <td>{{ polish.color }}</td>
-              </tr>
-              <tr>
-                <td><strong>Coats:</strong></td>
-                <td>{{ polish.numCoats }}</td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="row align-items-center ml-2 mr-0 mt-4">
+          <div class="row ml-2 flex-grow-1">
+            <table class="w-100">
+              <colgroup>
+                <col span="1" style="width:25%">
+                <col span="1" style="width:75%">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <td><strong>Name:</strong></td>
+                  <td>{{ polish.name }}</td>
+                </tr>
+                <tr>
+                  <td><strong>Brand:</strong></td>
+                  <td>{{ polish.brand }}</td>
+                </tr>
+                <tr v-if="polish.collection != ''">
+                  <td><strong>Collection:</strong></td>
+                  <td>{{ polish.collection }}</td>
+                </tr>
+                <tr>
+                  <td><strong>Type:</strong></td>
+                  <td>{{ polish.type }}</td>
+                </tr>
+                <tr>
+                  <td><strong>Colour:</strong></td>
+                  <td>{{ polish.color }}</td>
+                </tr>
+                <tr>
+                  <td><strong>Coats:</strong></td>
+                  <td>{{ polish.numCoats }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="row align-items-center ml-2 mr-0 mb-1">
             <div class="col-6 pl-0 pr-0">
               <b-dropdown text="Add to Comparison" variant="primary" dropup>
                 <b-dropdown-item v-for="(option, index) in options" :key="index" @click="comparisonSelected(option.value)" :disabled="option.disabled">
@@ -75,8 +77,8 @@
               <span v-if="showAlert"><span class="mr-2"><font-awesome-icon icon="check"/></span>Added to {{ addedComparison }}</span>
             </div>
           </div>
-        </div>
-      </div>
+        </b-col>
+      </b-row>
     </b-modal>
   </div>
 </template>
@@ -101,7 +103,7 @@ export default {
     options: function() {
       const output = [];
       for (let i=0; i < this.comparisons.length; i++) {
-        const disabled = this.comparisons[i].polishes.includes(this.polish);
+        const disabled = this.comparisons[i].polishes.some(item => item.polish === this.polish);
         output.push({value: i, text: this.comparisons[i].name, disabled: disabled});
       }
       output.push({value: -1, text: 'Create new...'});
@@ -148,5 +150,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+td {
+  vertical-align: baseline;
+}
 </style>

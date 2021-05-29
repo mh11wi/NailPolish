@@ -8,7 +8,7 @@
         </b-nav-item>
         <b-popover variant="info" target="info-link" title="App Info" triggers="focus">
           <p>I created this application to track my collection of nail polishes and showcase some of my favourite nail art looks.</p>
-          <p><strong>Browse Collection</strong><br>Sort or filter through my collection of nail polishes.</p>
+          <p><strong>Browse Collection</strong><br>Search or filter through my collection of nail polishes.</p>
           <p><strong>Compare Polishes</strong><br>Select different polishes to compare in depth.</p>
           <p><strong>Top It Off</strong><br>See what different toppers look like over an applicable polish.</p>
           <p><strong>Nail Art Gallery</strong><br>View some of my past nail art looks.</p>
