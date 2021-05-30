@@ -55,14 +55,15 @@
 <script>
 export default {
   name: 'ComparisonPolish',
-  props: ['card', 'index', 'finish', 'comparisonLength', 'cardHeight'],
+  props: ['card', 'index', 'finish', 'comparisonLength', 'cardHeight', 'isSun'],
   updated() {
     this.$emit("resize");
   },
   methods: {
     getImage(polishId) {
       const finishId = this.finish == 'glossy' ? 1 : 2;
-      return require('@/assets/images/polishes/' + polishId + '/' + finishId + '.jpg');
+      const appendSun = this.card.polish.type == 'Solar' && this.isSun ? '-sun' : '';
+      return require('@/assets/images/polishes/' + polishId + '/' + finishId + appendSun + '.jpg');
     },
 
     movePolish(dir) {

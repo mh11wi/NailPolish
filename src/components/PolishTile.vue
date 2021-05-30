@@ -10,7 +10,7 @@
         >
         </b-img-lazy>
         <template #overlay>
-          <div class="mt-3 mr-2 text-right text-primary">
+          <div class="mt-3 mr-2 text-right text-warning">
             <font-awesome-icon icon="sun" size="lg"/>
           </div>
         </template>
@@ -24,7 +24,7 @@
           <img-comparison-slider v-if="polish.type == 'Solar'">
             <img slot="before" :src="getImage(polish.id, true, true)" width="100%">
             <img slot="after" :src="getImage(polish.id, true, false)" width="100%">
-            <img slot="handle" src="https://api.iconify.design/fa-solid:sun.svg?color=pink&height=30">
+            <img slot="handle" src="https://api.iconify.design/fa-solid:sun.svg?color=%23ffc107&height=30">
           </img-comparison-slider>
           <b-img-lazy
             v-else
@@ -36,7 +36,7 @@
           </b-img-lazy>
         </b-col>
         <b-col cols="7" class="mt-1 d-flex flex-column">
-          <div class="row align-items-center ml-2 mb-3">
+          <div class="row align-items-center ml-2">
             <div class="col-5 pl-0">
               <FinishToggle v-model="modalFinish" @updateFinish="modalFinish = $event"/>
             </div>
@@ -44,7 +44,7 @@
               <b-button v-if="hasToppers" variant="primary" @click="viewToppers">Top It Off</b-button>
             </div>
           </div>
-          <div class="row ml-2 flex-grow-1">
+          <div class="row ml-2 align-items-center flex-grow-1">
             <table class="w-100">
               <colgroup>
                 <col span="1" style="width:25%">
@@ -177,7 +177,7 @@ td {
 }
 
 img-comparison-slider {
-  --divider-color: pink;
+  --divider-color: #ffc107;
   --handle-size: 30px;
   --handle-opacity: 1;
   --handle-opacity-active: 1;

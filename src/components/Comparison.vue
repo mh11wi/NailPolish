@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid mb-4 comparison">
+  <div class="container-fluid mb-5 comparison">
     <div class="row align-items-center">
       <div class="col-6 pl-0">
         <div class="ml-5">
@@ -11,6 +11,9 @@
       </div>
       <div class="col-6 pr-0 text-right">
         <div v-if="comparison.polishes.length != 0" class="mr-5">
+          <b-form-checkbox v-if="containsSolar" button button-variant="outline-warning" v-model="solarChecked" class="mr-4">
+            <font-awesome-icon icon="sun" size="lg"/>
+          </b-form-checkbox>
           <FinishToggle v-model="finish" @updateFinish="finish = $event"/>
         </div>
       </div>
@@ -28,9 +31,10 @@
                   :finish="finish" 
                   :comparisonLength="comparison.polishes.length"
                   :cardHeight="cardHeight"
+                  :isSun="solarChecked"
                   @resize="handleResize"
                   @movePolish="movePolish"
-                  @removePolish="removePolish" 
+                  @removePolish="removePolish"
                 >
                 </ComparisonPolish>
               </b-col>
@@ -57,7 +61,8 @@ export default {
     return {
       editMode: false,
       finish: 'glossy',
-      maxNameLength: 18
+      maxNameLength: 18,
+      solarChecked: false
     }
   },
   computed: {
@@ -78,6 +83,10 @@ export default {
         output.push(slide);
       }
       return output;
+    },
+
+    containsSolar: function() {
+      return this.comparison.polishes.some(item => item.polish.type == 'Solar');
     }
   },
   methods: {
