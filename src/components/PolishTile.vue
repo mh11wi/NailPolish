@@ -22,8 +22,8 @@
       <b-row style="height: 300px">
         <b-col cols="5">
           <img-comparison-slider v-if="polish.type == 'Solar'">
-            <img slot="before" :src="getImage(polish.id, true, true)" width="300px">
-            <img slot="after" :src="getImage(polish.id, true, false)" width="300px">
+            <img slot="before" :src="getImage(polish.id, true, true)" :alt="polish.name + ' in the sun'" width="300px">
+            <img slot="after" :src="getImage(polish.id, true, false)" :alt="polish.name" width="300px">
             <img slot="handle" src="https://api.iconify.design/fa-solid:sun.svg?color=%23ffc107&height=30">
           </img-comparison-slider>
           <b-img-lazy
