@@ -11,7 +11,7 @@
       </div>
       <div class="col-6 pr-0 text-right">
         <div v-if="comparison.polishes.length != 0" class="mr-5">
-          <b-form-checkbox v-if="containsSolar" button button-variant="outline-warning" v-model="solarChecked" class="mr-4">
+          <b-form-checkbox v-if="containsSolar" button button-variant="outline-warning" v-model="solarChecked" class="mr-4" @click="$event.target.blur();">
             <font-awesome-icon icon="sun" size="lg"/>
           </b-form-checkbox>
           <FinishToggle v-model="finish" @updateFinish="finish = $event"/>

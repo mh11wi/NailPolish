@@ -19,11 +19,11 @@
       <div>{{ polish.name }}</div>
     </div>
     <b-modal :id="polish.id" :title="polish.name" :hide-footer=true ref="modal">
-      <b-row align-v="stretch">
+      <b-row style="height: 300px">
         <b-col cols="5">
           <img-comparison-slider v-if="polish.type == 'Solar'">
-            <img slot="before" :src="getImage(polish.id, true, true)" width="100%">
-            <img slot="after" :src="getImage(polish.id, true, false)" width="100%">
+            <img slot="before" :src="getImage(polish.id, true, true)" width="300px">
+            <img slot="after" :src="getImage(polish.id, true, false)" width="300px">
             <img slot="handle" src="https://api.iconify.design/fa-solid:sun.svg?color=%23ffc107&height=30">
           </img-comparison-slider>
           <b-img-lazy
@@ -35,7 +35,7 @@
           >
           </b-img-lazy>
         </b-col>
-        <b-col cols="7" class="mt-1 d-flex flex-column">
+        <b-col cols="7" class="h-100 d-flex flex-column">
           <div class="row align-items-center ml-2">
             <div class="col-5 pl-0">
               <FinishToggle v-model="modalFinish" @updateFinish="modalFinish = $event"/>
@@ -78,7 +78,7 @@
               </tbody>
             </table>
           </div>
-          <div class="row align-items-center ml-2 mr-0 mb-1">
+          <div class="row align-items-center ml-2 mr-0">
             <div class="col-6 pl-0 pr-0">
               <b-dropdown text="Add to Comparison" variant="primary" dropup>
                 <b-dropdown-item v-for="(option, index) in options" :key="index" @click="comparisonSelected(option.value)" :disabled="option.disabled">
