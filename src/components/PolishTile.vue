@@ -1,21 +1,34 @@
 <template>
-  <div>
+  <div class="polish">
     <div v-b-modal="polish.id" class="text-center mx-2 mb-3">
-      <b-img-lazy 
-        :src="getImage(polish.id, false)" 
-        :alt="polish.name" 
-        blank-color="black"
-        fluid
-      >
-      </b-img-lazy>
+      <b-overlay :show="polish.type == 'Solar'" :opacity="0">
+        <b-img-lazy 
+          :src="getImage(polish.id, false, false)" 
+          :alt="polish.name" 
+          blank-color="black"
+          fluid
+        >
+        </b-img-lazy>
+        <template #overlay>
+          <div class="mt-3 mr-2 text-right text-primary">
+            <font-awesome-icon icon="sun" size="lg"/>
+          </div>
+        </template>
+      </b-overlay>
       <div><strong>{{ polish.brand }}</strong></div>
       <div>{{ polish.name }}</div>
     </div>
     <b-modal :id="polish.id" :title="polish.name" :hide-footer=true ref="modal">
       <b-row align-v="stretch">
         <b-col cols="5">
-          <b-img-lazy 
-            :src="getImage(polish.id, true)" 
+          <img-comparison-slider v-if="polish.type == 'Solar'">
+            <img slot="before" :src="getImage(polish.id, true, true)" width="100%">
+            <img slot="after" :src="getImage(polish.id, true, false)" width="100%">
+            <img slot="handle" src="https://api.iconify.design/fa-solid:sun.svg?color=pink&height=30">
+          </img-comparison-slider>
+          <b-img-lazy
+            v-else
+            :src="getImage(polish.id, true, false)" 
             :alt="polish.name" 
             width=300 
             blank-color="black"
@@ -121,10 +134,11 @@ export default {
     });
   },
   methods: {
-    getImage(polishId, isModal) {
+    getImage(polishId, isModal, isSun) {
       const thisFinish = isModal? this.modalFinish : this.finish
       const finishId = thisFinish == 'glossy' ? '1' : '2';
-      return require('@/assets/images/polishes/' + polishId + '/' + finishId + '.jpg');
+      const appendSun = isSun ? '-sun' : '';
+      return require('@/assets/images/polishes/' + polishId + '/' + finishId + appendSun + '.jpg');
     },
     
     viewToppers() {
@@ -150,7 +164,22 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.polish >>> .position-absolute {
+  left: 0 !important;
+  top: 0 !important;
+  transform: none !important;
+  width: 100%;
+  margin-top: -0.25rem;
+}
+
 td {
   vertical-align: baseline;
+}
+
+img-comparison-slider {
+  --divider-color: pink;
+  --handle-size: 30px;
+  --handle-opacity: 1;
+  --handle-opacity-active: 1;
 }
 </style>
