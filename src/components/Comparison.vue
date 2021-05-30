@@ -3,15 +3,15 @@
     <div class="row align-items-center">
       <div class="col-6 pl-0">
         <div class="ml-5">
-          <strong v-if="!editMode">{{ comparison.name }}</strong>
+          <strong v-if="!editMode" class="comparisonName h-100">{{ comparison.name }}</strong>
           <b-form-input v-model="comparison.name" autofocus :maxLength="maxNameLength" v-else @blur="finishEdit" @keyup.enter="finishEdit"/>
-          <b-button variant="link" class="ml-2" v-if="!editMode" @click="editMode = true"><font-awesome-icon icon="pencil-alt"/></b-button>
-          <b-button variant="link" v-if="!editMode" @click="deleteComparison"><font-awesome-icon icon="trash-alt"/></b-button>
+          <b-button variant="link" class="ml-3" v-if="!editMode" @click="editMode = true"><font-awesome-icon icon="pencil-alt" size="lg"/></b-button>
+          <b-button variant="link" v-if="!editMode" @click="deleteComparison"><font-awesome-icon icon="trash-alt" size="lg"/></b-button>
         </div>
       </div>
       <div class="col-6 pr-0 text-right">
         <div v-if="comparison.polishes.length != 0" class="mr-5">
-          <b-form-checkbox v-if="containsSolar" switch v-model="solarChecked" class="mr-4">
+          <b-form-checkbox v-if="containsSolar" switch v-model="solarChecked" size="lg" class="mr-4">
             <font-awesome-icon icon="sun" class="text-warning" size="lg"/>
           </b-form-checkbox>
           <FinishToggle v-model="finish" @updateFinish="finish = $event"/>
@@ -144,7 +144,8 @@ export default {
   margin-top: -0.25rem;
 }
 
-.comparison >>> .custom-switch {
+.comparisonName, .comparison >>> .custom-switch {
   display: inline-block;
+  vertical-align: middle;
 }
 </style>
