@@ -498,5 +498,55 @@
     "color": "Sheer to royal blue thermal with glitters; purple in the sun",
     "numCoats": "3",
     "collection": "Conversion Collection (2016)"
+  },
+  {
+    "id": "51",
+    "name": "Chameleon Coat",
+    "brand": "Holo Taco",
+    "type": "Multichrome",
+    "colorFamily": "Green",
+    "color": "Metallic green to gunmetal shift",
+    "numCoats": "2",
+    "collection": "Multichrome Collection (2020)"
+  },
+  {
+    "id": "52",
+    "name": "Blue Ain't Slick",
+    "brand": "Holo Taco",
+    "type": "Multichrome",
+    "colorFamily": "Blue",
+    "color": "Metallic blue to indigo shift",
+    "numCoats": "2",
+    "collection": "Multichrome Collection (2020)"
+  },
+  {
+    "id": "53",
+    "name": "Missed-Shift",
+    "brand": "Holo Taco",
+    "type": "Multichrome",
+    "colorFamily": "Purple",
+    "color": "Metallic purple to teal shift",
+    "numCoats": "2",
+    "collection": "Multichrome Collection (2020)"
+  },
+  {
+    "id": "54",
+    "name": "Purple With Envy",
+    "brand": "Holo Taco",
+    "type": "Multichrome",
+    "colorFamily": "Purple",
+    "color": "Metallic purple to indigo shift",
+    "numCoats": "2",
+    "collection": "Multichrome Collection (2020)"
+  },
+  {
+    "id": "55",
+    "name": "Cats' Evasion",
+    "brand": "Holo Taco",
+    "type": "Multichrome",
+    "colorFamily": "Gold",
+    "color": "Gold to deep magenta shift",
+    "numCoats": "2",
+    "collection": "Multichrome Collection (2020)"
   }
 ]
