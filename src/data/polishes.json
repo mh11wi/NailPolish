@@ -548,5 +548,105 @@
     "color": "Gold to deep magenta shift",
     "numCoats": "2",
     "collection": "Multichrome Collection (2020)"
+  },
+  {
+    "id": "56",
+    "name": "Mercury",
+    "brand": "Starrily",
+    "type": "Magnetic",
+    "colorFamily": "Black",
+    "color": "Black with copper shimmer and scattered holographic glitters",
+    "numCoats": "2",
+    "collection": "The Planets Collection (2020)"
+  },
+  {
+    "id": "57",
+    "name": "Venus",
+    "brand": "Starrily",
+    "type": "Magnetic",
+    "colorFamily": "Orange",
+    "color": "Red-orange with scattered holographic glitters",
+    "numCoats": "2",
+    "collection": "The Planets Collection (2020)"
+  },
+  {
+    "id": "58",
+    "name": "Earth",
+    "brand": "Starrily",
+    "type": "Magnetic",
+    "colorFamily": "Blue",
+    "color": "Teal with scattered holographic glitters",
+    "numCoats": "2",
+    "collection": "The Planets Collection (2020)"
+  },
+  {
+    "id": "59",
+    "name": "Mars",
+    "brand": "Starrily",
+    "type": "Magnetic",
+    "colorFamily": "Red",
+    "color": "Red with scattered holographic glitters",
+    "numCoats": "2",
+    "collection": "The Planets Collection (2020)"
+  },
+  {
+    "id": "60",
+    "name": "Jupiter",
+    "brand": "Starrily",
+    "type": "Magnetic",
+    "colorFamily": "Orange",
+    "color": "Orange with scattered holographic glitters",
+    "numCoats": "2",
+    "collection": "The Planets Collection (2020)"
+  },
+  {
+    "id": "61",
+    "name": "Saturn",
+    "brand": "Starrily",
+    "type": "Magnetic",
+    "colorFamily": "Purple",
+    "color": "Purple with scattered holographic glitters",
+    "numCoats": "2",
+    "collection": "The Planets Collection (2020)"
+  },
+  {
+    "id": "62",
+    "name": "Uranus",
+    "brand": "Starrily",
+    "type": "Magnetic",
+    "colorFamily": "Blue",
+    "color": "Light blue with scattered holographic glitters",
+    "numCoats": "2",
+    "collection": "The Planets Collection (2020)"
+  },
+  {
+    "id": "63",
+    "name": "Neptune",
+    "brand": "Starrily",
+    "type": "Magnetic",
+    "colorFamily": "Blue",
+    "color": "Dark sapphire blue with scattered holographic glitters",
+    "numCoats": "2",
+    "collection": "The Planets Collection (2020)"
+  },
+  {
+    "id": "64",
+    "name": "Menchie the Cat",
+    "brand": "Holo Taco",
+    "type": "Holographic Glitter",
+    "colorFamily": "Pink",
+    "color": "Baby pink jelly base",
+    "numCoats": "2",
+    "collection": ""
+  },
+  {
+    "id": "65",
+    "name": "Zyler the Cat",
+    "brand": "Holo Taco",
+    "type": "Holographic Glitter",
+    "colorFamily": "Orange",
+    "color": "Rusted orange jelly base",
+    "numCoats": "2",
+    "collection": ""
   }
 ]
