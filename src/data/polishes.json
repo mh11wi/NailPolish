@@ -416,7 +416,7 @@
     "type": "Multichrome",
     "colorFamily": "Gold",
     "color": "Gold to copper shift",
-    "numCoats": "2",
+    "numCoats": "3",
     "collection": "Superfuture (2021)"
   },
   {
@@ -426,7 +426,7 @@
     "type": "Multichrome",
     "colorFamily": "Red",
     "color": "Red to black shift",
-    "numCoats": "2",
+    "numCoats": "3",
     "collection": "Superfuture (2021)"
   },
   {
@@ -648,5 +648,55 @@
     "color": "Rusted orange jelly base",
     "numCoats": "2",
     "collection": ""
+  },
+  {
+    "id": "66",
+    "name": "Full Charge",
+    "brand": "Holo Taco",
+    "type": "Linear Holographic",
+    "colorFamily": "Green",
+    "color": "Lime green",
+    "numCoats": "2",
+    "collection": "Electric Holos Collection (2021)"
+  },
+  {
+    "id": "67",
+    "name": "Circuit Breaker",
+    "brand": "Holo Taco",
+    "type": "Linear Holographic",
+    "colorFamily": "Silver",
+    "color": "Bright silver",
+    "numCoats": "2",
+    "collection": "Electric Holos Collection (2021)"
+  },
+  {
+    "id": "68",
+    "name": "Hydropower",
+    "brand": "Holo Taco",
+    "type": "Linear Holographic",
+    "colorFamily": "Blue",
+    "color": "Aqua blue",
+    "numCoats": "2",
+    "collection": "Electric Holos Collection (2021)"
+  },
+  {
+    "id": "69",
+    "name": "Electrostatic",
+    "brand": "Holo Taco",
+    "type": "Linear Holographic",
+    "colorFamily": "Black",
+    "color": "Black with cool purple undertone",
+    "numCoats": "1",
+    "collection": "Electric Holos Collection (2021)"
+  },
+  {
+    "id": "70",
+    "name": "Hot-Wire Pink",
+    "brand": "Holo Taco",
+    "type": "Linear Holographic",
+    "colorFamily": "Pink",
+    "color": "Hot pink",
+    "numCoats": "1",
+    "collection": "Electric Holos Collection (2021)"
   }
 ]
