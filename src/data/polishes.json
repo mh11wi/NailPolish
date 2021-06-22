@@ -415,7 +415,7 @@
     "brand": "Cirque Colors",
     "type": "Multichrome",
     "colorFamily": "Gold",
-    "color": "Gold to copper shift",
+    "color": "Copper to gold shift",
     "numCoats": "3",
     "collection": "Superfuture (2021)"
   },
@@ -698,5 +698,55 @@
     "color": "Hot pink",
     "numCoats": "1",
     "collection": "Electric Holos Collection (2021)"
+  },
+  {
+    "id": "71",
+    "name": "Fire Opal",
+    "brand": "Cirque Colors",
+    "type": "Holographic Glitter",
+    "colorFamily": "Red",
+    "color": "Bright red jelly base",
+    "numCoats": "3",
+    "collection": "Facets (2021)"
+  },
+  {
+    "id": "72",
+    "name": "Citrine",
+    "brand": "Cirque Colors",
+    "type": "Holographic Glitter",
+    "colorFamily": "Yellow",
+    "color": "Golden yellow jelly base",
+    "numCoats": "3",
+    "collection": "Facets (2019)"
+  },
+  {
+    "id": "73",
+    "name": "Tsavorite",
+    "brand": "Cirque Colors",
+    "type": "Holographic Glitter",
+    "colorFamily": "Green",
+    "color": "Kelly green jelly base",
+    "numCoats": "3",
+    "collection": "Facets (2021)"
+  },
+  {
+    "id": "74",
+    "name": "Sapphire",
+    "brand": "Cirque Colors",
+    "type": "Holographic Glitter",
+    "colorFamily": "Blue",
+    "color": "Navy blue jelly base",
+    "numCoats": "2",
+    "collection": "Facets (2018)"
+  },
+  {
+    "id": "75",
+    "name": "Spinel",
+    "brand": "Cirque Colors",
+    "type": "Holographic Glitter",
+    "colorFamily": "Purple",
+    "color": "Purple-magenta jelly base",
+    "numCoats": "2",
+    "collection": "Facets (2021)"
   }
 ]
