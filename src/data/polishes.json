@@ -748,5 +748,55 @@
     "color": "Purple-magenta jelly base",
     "numCoats": "2",
     "collection": "Facets (2021)"
+  },
+  {
+    "id": "76",
+    "name": "Banana Hacks",
+    "brand": "Holo Taco",
+    "type": "Creme",
+    "colorFamily": "Yellow",
+    "color": "Banana yellow",
+    "numCoats": "2",
+    "collection": ""
+  },
+  {
+    "id": "77",
+    "name": "Narcisse",
+    "brand": "Cirque Colors",
+    "type": "Creme",
+    "colorFamily": "Purple",
+    "color": "Neon lavender purple",
+    "numCoats": "2",
+    "collection": "Vice Collection (2021)"
+  },
+  {
+    "id": "78",
+    "name": "Electric Daisy",
+    "brand": "Cirque Colors",
+    "type": "Creme",
+    "colorFamily": "Yellow",
+    "color": "Neon chartreuse",
+    "numCoats": "3",
+    "collection": "Vice Collection (2021)"
+  },
+  {
+    "id": "79",
+    "name": "East Austin",
+    "brand": "Color Club",
+    "type": "Creme",
+    "colorFamily": "Pink",
+    "color": "Pastel neon coral",
+    "numCoats": "3",
+    "collection": "Girl About Town (2013)"
+  },
+  {
+    "id": "80",
+    "name": "Caraïbes",
+    "brand": "Vitry",
+    "type": "Creme",
+    "colorFamily": "Green",
+    "color": "Bright mint green",
+    "numCoats": "2",
+    "collection": ""
   }
 ]
