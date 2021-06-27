@@ -9,9 +9,11 @@
         <b-popover variant="info" target="info-link" title="App Info" triggers="focus">
           <p>I created this application to track my collection of nail polishes and showcase some of my favourite nail art looks.</p>
           <p><strong>Browse Collection</strong><br>Search or filter through my collection of nail polishes.</p>
-          <p><strong>Compare Polishes</strong><br>Select different polishes to compare in depth.</p>
+          <p><strong>Compare Polishes</strong><br>Compare similar polishes next to one another.</p>
           <p><strong>Top It Off</strong><br>See what different toppers look like over an applicable polish.</p>
-          <p><strong>Nail Art Gallery</strong><br>View some of my past nail art looks.</p>
+          <p><strong>Nail Art Gallery</strong><br>View some of my past nail art.</p>
+          <penguin width="100" hAlign="center"/>
+          <p class="text-right">Thanks for visiting!<br>&ndash;mads</p>
         </b-popover>
         <b-nav-item href="https://mh11wi.github.io/">
           <font-awesome-icon icon="home" size="lg"/>
@@ -42,6 +44,7 @@ import Collection from './components/Collection.vue'
 import ComparisonsList from './components/ComparisonsList.vue'
 import Toppers from './components/Toppers.vue'
 import Gallery from './components/Gallery.vue'
+import Penguin from './components/Penguin.vue'
 
 export default {
   name: 'App',
@@ -49,7 +52,8 @@ export default {
     Collection,
     ComparisonsList,
     Toppers,
-    Gallery
+    Gallery,
+    Penguin
   },
   data: function() {
     return {
