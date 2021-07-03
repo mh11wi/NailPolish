@@ -82,7 +82,11 @@ export default {
 </script>
 
 <style>
-html, body, .app, .tab-pane {
+html, body, .app {
+  height: 100vh;
+}
+
+.tab-pane {
   height: 100%;
 }
 
