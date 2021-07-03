@@ -1,5 +1,5 @@
 <template>
-  <div class="comparisonsList container-fluid">
+  <div class="comparisonsList container-fluid" :style="{ height: height + 'px' }">
     <div class="row mx-0 mt-3">
       <span v-if="comparisons.length == 0" class="ml-5 mb-4">
         Start by adding a new comparison from the <strong>Browse Collection</strong> view or by clicking <strong>+ Add Comparison</strong> below.
@@ -28,7 +28,7 @@ export default {
   components: {
     Comparison
   },
-  props: ['comparisons'],
+  props: ['height', 'comparisons'],
   data: function() {
     return { 
       cardHeight: 0
@@ -63,7 +63,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .comparisonsList {
-  height: calc(100vh - 110px);
   overflow-y: auto;
 }
 </style>

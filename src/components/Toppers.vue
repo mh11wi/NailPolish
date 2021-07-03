@@ -1,10 +1,10 @@
 <template>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-4 toppersColumn">
+      <div class="col-4 toppersColumn" :style="{ height: height + 'px' }">
         <b-form-radio-group v-model="selectedTopperId" :options="toppers" class="mt-2" stacked/>
       </div>
-      <div class="col-8 display">
+      <div class="col-8 display" :style="{ height: height + 'px' }">
         <div v-if="basePolish == null">
           Start by selecting an applicable base polish from the <strong>Browse Collection</strong> view.
         </div>
@@ -35,7 +35,7 @@ export default {
       selectedTopperId: ''
     }
   },
-  props: ['toppersMap', 'polishes', 'basePolish', 'defaultTopperId'],
+  props: ['height', 'toppersMap', 'polishes', 'basePolish', 'defaultTopperId'],
   computed: {
     toppers: function() {
       const topperIds = [1, 2];
@@ -76,7 +76,6 @@ export default {
 .toppersColumn {
   padding-top: 1rem;
   border-right: solid 1px #dee2e6;
-  height: calc(100vh - 110px);
   overflow-y: auto;
 }
 
@@ -88,7 +87,6 @@ export default {
   padding-top: 1rem;
   border-left: solid 1px #dee2e6;
   margin-left: -1px;
-  height: calc(100vh - 110px);
   overflow-y: auto;
 }
 </style>

@@ -22,16 +22,16 @@
     </b-navbar>
     <b-tabs v-model="tabIndex">
       <b-tab title="Browse Collection">
-        <Collection :allPolishes="polishes" :toppersMap="toppersMap" :comparisons="comparisons" @viewToppers="viewToppers"/>
+        <Collection :height="tabHeight" :allPolishes="polishes" :toppersMap="toppersMap" :comparisons="comparisons" @viewToppers="viewToppers"/>
       </b-tab>
       <b-tab title="Compare Polishes">
-        <ComparisonsList :comparisons="comparisons"/>
+        <ComparisonsList :height="tabHeight" :comparisons="comparisons"/>
       </b-tab>
       <b-tab title="Top It Off">
-        <Toppers :polishes="polishes" :toppersMap="toppersMap" :basePolish="basePolish" :defaultTopperId="topperId"/>
+        <Toppers :height="tabHeight" :polishes="polishes" :toppersMap="toppersMap" :basePolish="basePolish" :defaultTopperId="topperId"/>
       </b-tab>
       <b-tab title="Nail Art Gallery" lazy>
-        <Gallery/>
+        <Gallery :height="tabHeight"/>
       </b-tab>
     </b-tabs>
   </div>
@@ -58,6 +58,7 @@ export default {
   data: function() {
     return {
       tabIndex: 0,
+      tabHeight: 0,
       basePolish: null,
       topperId: '',
       comparisons: []
@@ -71,7 +72,18 @@ export default {
       return toppersMap;
     }
   },
+  created() {
+    window.addEventListener('resize', this.handleResize);
+    this.handleResize();
+  },
+  destroyed() {
+    window.removeEventListener('resize', this.handleResize);
+  },
   methods: {
+    handleResize() {
+      this.tabHeight = window.innerHeight - 110;
+    },
+  
     viewToppers(event) {
       this.basePolish = event.basePolish;
       this.topperId = event.finish == 'glossy' ? 1 : 2;
