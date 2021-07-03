@@ -1,6 +1,6 @@
 <template>
-  <div class="container-fluid mt-3 mb-3">
-    <div class="row ml-0 mr-0">
+  <div class="comparisonsList container-fluid">
+    <div class="row mx-0 mt-3">
       <span v-if="comparisons.length == 0" class="ml-5 mb-4">
         Start by adding a new comparison from the <strong>Browse Collection</strong> view or by clicking <strong>+ Add Comparison</strong> below.
       </span>
@@ -14,7 +14,7 @@
       >
       </Comparison>
     </div>
-    <div class="row">
+    <div class="row mb-3">
       <b-button variant="link" class="text-decoration-none ml-5" @click="addComparison"><strong>+ Add Comparison</strong></b-button>
     </div>
   </div>
@@ -62,5 +62,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+.comparisonsList {
+  height: calc(100vh - 110px);
+  overflow-y: auto;
+}
 </style>

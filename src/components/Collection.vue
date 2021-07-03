@@ -133,12 +133,15 @@ export default {
 .filtersColumn {
   padding-top: 1rem;
   border-right: solid 1px #dee2e6;
+  height: calc(100vh - 110px);
+  overflow-y: auto;
 }
 
 .polishList {
   padding-top: 1rem;
   border-left: solid 1px #dee2e6;
   margin-left: -1px;
-  min-height: calc(100vh - 110px);
+  height: calc(100vh - 110px);
+  overflow-y: auto;
 }
 </style>
