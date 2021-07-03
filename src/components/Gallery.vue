@@ -1,5 +1,5 @@
 <template>
-  <div class="gallery container-fluid" :style="{ height: height + 'px' }">
+  <div class="gallery container-fluid mh-100">
     <div class="mb-3">
     <NailArt v-for="(entry, index) in nailArt" :key="index" :entry="entry"/>
     </div>
@@ -15,7 +15,6 @@ export default {
   components: {
     NailArt
   },
-  props: ['height'],
   computed: {
     nailArt: function() {
       return nailArtData.sort((a, b) => b.id - a.id);

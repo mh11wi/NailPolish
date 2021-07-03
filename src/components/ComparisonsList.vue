@@ -1,5 +1,5 @@
 <template>
-  <div class="comparisonsList container-fluid" :style="{ height: height + 'px' }">
+  <div class="comparisonsList container-fluid mh-100">
     <div class="row mx-0 mt-3">
       <span v-if="comparisons.length == 0" class="ml-5 mb-4">
         Start by adding a new comparison from the <strong>Browse Collection</strong> view or by clicking <strong>+ Add Comparison</strong> below.
@@ -28,7 +28,7 @@ export default {
   components: {
     Comparison
   },
-  props: ['height', 'comparisons'],
+  props: ['comparisons'],
   data: function() {
     return { 
       cardHeight: 0

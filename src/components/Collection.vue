@@ -1,7 +1,7 @@
 <template>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-4 filtersColumn" :style="{ height: height + 'px' }">
+  <div class="container-fluid h-100">
+    <div class="row h-100">
+      <div class="col-4 filtersColumn mh-100">
         <div class="row align-items-center stats">
           <div class="col-6">
             Polishes: {{ displayedPolishes.length }} / {{ polishes.length }}
@@ -28,7 +28,7 @@
           </div>
         </div>
       </div>
-      <div class="col-8 polishList" :style="{ height: height + 'px' }">
+      <div class="col-8 polishList mh-100">
         <div v-if="displayedPolishes.length == 0">
           No polishes found! Try adjusting your filters or search criteria.
         </div>
@@ -72,7 +72,7 @@ export default {
       displayedPolishes: []
     }
   },
-  props: ['height', 'allPolishes', 'toppersMap', 'comparisons'],
+  props: ['allPolishes', 'toppersMap', 'comparisons'],
   watch: {
     search: function(newVal, oldVal) {
       this.brandFilters = [];

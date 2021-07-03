@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="app d-flex flex-column">
     <b-navbar variant="primary">
       <b-navbar-brand>Madeleine's Nail Polishes</b-navbar-brand>
       <b-navbar-nav class="ml-auto">
@@ -20,18 +20,18 @@
         </b-nav-item>
       </b-navbar-nav>
     </b-navbar>
-    <b-tabs v-model="tabIndex">
+    <b-tabs v-model="tabIndex" class="flex-grow-1 d-flex flex-column" content-class="flex-grow-1">
       <b-tab title="Browse Collection">
-        <Collection :height="tabHeight" :allPolishes="polishes" :toppersMap="toppersMap" :comparisons="comparisons" @viewToppers="viewToppers"/>
+        <Collection :allPolishes="polishes" :toppersMap="toppersMap" :comparisons="comparisons" @viewToppers="viewToppers"/>
       </b-tab>
       <b-tab title="Compare Polishes">
-        <ComparisonsList :height="tabHeight" :comparisons="comparisons"/>
+        <ComparisonsList :comparisons="comparisons"/>
       </b-tab>
       <b-tab title="Top It Off">
-        <Toppers :height="tabHeight" :polishes="polishes" :toppersMap="toppersMap" :basePolish="basePolish" :defaultTopperId="topperId"/>
+        <Toppers :polishes="polishes" :toppersMap="toppersMap" :basePolish="basePolish" :defaultTopperId="topperId"/>
       </b-tab>
       <b-tab title="Nail Art Gallery" lazy>
-        <Gallery :height="tabHeight"/>
+        <Gallery/>
       </b-tab>
     </b-tabs>
   </div>
@@ -58,7 +58,6 @@ export default {
   data: function() {
     return {
       tabIndex: 0,
-      tabHeight: 0,
       basePolish: null,
       topperId: '',
       comparisons: []
@@ -72,18 +71,7 @@ export default {
       return toppersMap;
     }
   },
-  created() {
-    window.addEventListener('resize', this.handleResize);
-    this.handleResize();
-  },
-  destroyed() {
-    window.removeEventListener('resize', this.handleResize);
-  },
   methods: {
-    handleResize() {
-      this.tabHeight = window.innerHeight - 110;
-    },
-  
     viewToppers(event) {
       this.basePolish = event.basePolish;
       this.topperId = event.finish == 'glossy' ? 1 : 2;
@@ -94,6 +82,14 @@ export default {
 </script>
 
 <style>
+html, body, .app, .tab-pane {
+  height: 100%;
+}
+
+.tab-content {
+  max-height: calc(100vh - 110px);
+}
+
 .nav-tabs .nav-item {
   margin-bottom: -2px;
 }
