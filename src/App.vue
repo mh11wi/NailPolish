@@ -71,19 +71,7 @@ export default {
       return toppersMap;
     }
   },
-  created() {
-    window.addEventListener('resize', this.handleResize);
-    this.handleResize();
-  },
-  destroyed() {
-    window.removeEventListener('resize', this.handleResize);
-  },
   methods: {
-    handleResize() {
-      let vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty('--vh', `${vh}px`);
-    },
-  
     viewToppers(event) {
       this.basePolish = event.basePolish;
       this.topperId = event.finish == 'glossy' ? 1 : 2;
@@ -96,12 +84,10 @@ export default {
 <style>
 html, body, .app {
   height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
 }
 
 .tab-pane, .tab-content {
   height: calc(100vh - 110px);
-  height: calc((var(--vh, 1vh) * 100) - 110px);
 }
 
 .nav-tabs .nav-item {
@@ -119,7 +105,7 @@ html, body, .app {
 
 .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
   border: none;
-  box-shadow: inset 0 -4px 0 purple;
+  box-shadow: inset 0 -4px 0 pink;
 }
 
 .nav-tabs .nav-link, .nav-tabs .nav-link:visited { 
