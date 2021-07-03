@@ -86,12 +86,8 @@ html, body, .app {
   height: 100vh;
 }
 
-.tab-pane {
-  height: 100%;
-}
-
-.tab-content {
-  max-height: calc(100vh - 110px);
+.tab-pane, .tab-content {
+  height: calc(100vh - 110px);
 }
 
 .nav-tabs .nav-item {
