@@ -798,5 +798,95 @@
     "color": "Bright mint green",
     "numCoats": "2",
     "collection": ""
+  },
+  {
+    "id": "81",
+    "name": "Alpine Snow",
+    "brand": "OPI",
+    "type": "Creme",
+    "colorFamily": "White",
+    "color": "Opaque white",
+    "numCoats": "2",
+    "collection": ""
+  },
+  {
+    "id": "82",
+    "name": "Red Licorice",
+    "brand": "Holo Taco",
+    "type": "Linear Holographic",
+    "colorFamily": "Red",
+    "color": "Bright strawberry-red",
+    "numCoats": "2",
+    "collection": "Rainbow Collection (2020)"
+  },
+  {
+    "id": "83",
+    "name": "Orange Drink",
+    "brand": "Holo Taco",
+    "type": "Linear Holographic",
+    "colorFamily": "Orange",
+    "color": "Vibrant tangerine-orange",
+    "numCoats": "2",
+    "collection": "Rainbow Collection (2020)"
+  },
+  {
+    "id": "84",
+    "name": "Lemon Sucker",
+    "brand": "Holo Taco",
+    "type": "Linear Holographic",
+    "colorFamily": "Yellow",
+    "color": "Vibrant deep yellow",
+    "numCoats": "2",
+    "collection": "Rainbow Collection (2020)"
+  },
+  {
+    "id": "85",
+    "name": "Green Taffy",
+    "brand": "Holo Taco",
+    "type": "Linear Holographic",
+    "colorFamily": "Green",
+    "color": "Vibrant true-green",
+    "numCoats": "2",
+    "collection": "Rainbow Collection (2020)"
+  },
+  {
+    "id": "86",
+    "name": "Blue Freezie",
+    "brand": "Holo Taco",
+    "type": "Linear Holographic",
+    "colorFamily": "Blue",
+    "color": "Vivid electric-blue",
+    "numCoats": "2",
+    "collection": "Rainbow Collection (2020)"
+  },
+  {
+    "id": "87",
+    "name": "Purple Slushie",
+    "brand": "Holo Taco",
+    "type": "Linear Holographic",
+    "colorFamily": "Purple",
+    "color": "Vibrant true royal-purple",
+    "numCoats": "2",
+    "collection": "Rainbow Collection (2020)"
+  },
+  {
+    "id": "88",
+    "name": "Magenta Jelly",
+    "brand": "Holo Taco",
+    "type": "Linear Holographic",
+    "colorFamily": "Pink",
+    "color": "Vibrant deep magenta",
+    "numCoats": "2",
+    "collection": "Rainbow Collection (2020)"
+  },
+  {
+    "id": "89",
+    "name": "Got Cake?",
+    "brand": "Holo Taco",
+    "type": "Glitter",
+    "colorFamily": "Purple",
+    "color": "Icy lilac with holographic flakes, silver foil, and purple shimmer",
+    "numCoats": "3",
+    "collection": ""
   }
 ]
