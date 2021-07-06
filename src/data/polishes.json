@@ -95,7 +95,7 @@
     "brand": "Holo Taco",
     "type": "Creme",
     "colorFamily": "Blue",
-    "color": "Cyan blue",
+    "color": "Bright cyan blue",
     "numCoats": "2",
     "collection": "Unicorn Dream Collection (2021)"
   },
@@ -105,7 +105,7 @@
     "brand": "Holo Taco",
     "type": "Creme",
     "colorFamily": "Pink",
-    "color": "Bubblegum pink",
+    "color": "Cool-toned bubblegum pink",
     "numCoats": "2",
     "collection": "Unicorn Dream Collection (2021)"
   },
@@ -115,7 +115,7 @@
     "brand": "Holo Taco",
     "type": "Linear Holographic",
     "colorFamily": "Pink",
-    "color": "Cool tone pink",
+    "color": "Pastel cool-toned pink",
     "numCoats": "2",
     "collection": "Pastel Rainbow Collection (2021)"
   },
@@ -125,7 +125,7 @@
     "brand": "Holo Taco",
     "type": "Linear Holographic",
     "colorFamily": "Red",
-    "color": "Coral red",
+    "color": "Pastel coral-red",
     "numCoats": "2",
     "collection": "Pastel Rainbow Collection (2021)"
   },
@@ -135,7 +135,7 @@
     "brand": "Holo Taco",
     "type": "Linear Holographic",
     "colorFamily": "Orange",
-    "color": "Peachy orange",
+    "color": "Pastel peachy orange",
     "numCoats": "2",
     "collection": "Pastel Rainbow Collection (2021)"
   },
@@ -155,7 +155,7 @@
     "brand": "Holo Taco",
     "type": "Linear Holographic",
     "colorFamily": "Green",
-    "color": "Mint green",
+    "color": "Pastel mint green",
     "numCoats": "2",
     "collection": "Pastel Rainbow Collection (2021)"
   },
@@ -165,7 +165,7 @@
     "brand": "Holo Taco",
     "type": "Linear Holographic",
     "colorFamily": "Blue",
-    "color": "Pastel blue",
+    "color": "Pastel baby blue",
     "numCoats": "2",
     "collection": "Pastel Rainbow Collection (2021)"
   },
@@ -175,7 +175,7 @@
     "brand": "Holo Taco",
     "type": "Linear Holographic",
     "colorFamily": "Purple",
-    "color": "Pastel purple",
+    "color": "Pastel cool-toned purple",
     "numCoats": "2",
     "collection": "Pastel Rainbow Collection (2021)"
   },
@@ -325,7 +325,7 @@
     "brand": "ORLY",
     "type": "Creme",
     "colorFamily": "Pink",
-    "color": "Warm tone pink",
+    "color": "Warm-toned pink",
     "numCoats": "2",
     "collection": ""
   },
@@ -415,7 +415,7 @@
     "brand": "Cirque Colors",
     "type": "Multichrome",
     "colorFamily": "Gold",
-    "color": "Copper to gold shift",
+    "color": "Shifts between gold and copper",
     "numCoats": "3",
     "collection": "Superfuture (2021)"
   },
@@ -425,7 +425,7 @@
     "brand": "Cirque Colors",
     "type": "Multichrome",
     "colorFamily": "Red",
-    "color": "Red to black shift",
+    "color": "Shifts between red and black",
     "numCoats": "3",
     "collection": "Superfuture (2021)"
   },
@@ -505,7 +505,7 @@
     "brand": "Holo Taco",
     "type": "Multichrome",
     "colorFamily": "Green",
-    "color": "Metallic green to gunmetal shift",
+    "color": "Shifts between metallic green and gunmetal",
     "numCoats": "2",
     "collection": "Multichrome Collection (2020)"
   },
@@ -515,7 +515,7 @@
     "brand": "Holo Taco",
     "type": "Multichrome",
     "colorFamily": "Blue",
-    "color": "Metallic blue to indigo shift",
+    "color": "Shifts between metallic blue and indigo",
     "numCoats": "2",
     "collection": "Multichrome Collection (2020)"
   },
@@ -524,8 +524,8 @@
     "name": "Missed-Shift",
     "brand": "Holo Taco",
     "type": "Multichrome",
-    "colorFamily": "Blue",
-    "color": "Metallic teal to purple shift",
+    "colorFamily": "Green",
+    "color": "Shifts between metallic teal and purple",
     "numCoats": "2",
     "collection": "Multichrome Collection (2020)"
   },
@@ -535,7 +535,7 @@
     "brand": "Holo Taco",
     "type": "Multichrome",
     "colorFamily": "Purple",
-    "color": "Metallic purple to indigo shift",
+    "color": "Shifts between metallic purple and indigo",
     "numCoats": "2",
     "collection": "Multichrome Collection (2020)"
   },
@@ -544,8 +544,8 @@
     "name": "Cats' Evasion",
     "brand": "Holo Taco",
     "type": "Multichrome",
-    "colorFamily": "Pink",
-    "color": "Deep magenta to gold shift",
+    "colorFamily": "Purple",
+    "color": "Shifts between deep magenta and gold",
     "numCoats": "2",
     "collection": "Multichrome Collection (2020)"
   },
@@ -675,7 +675,7 @@
     "brand": "Holo Taco",
     "type": "Linear Holographic",
     "colorFamily": "Blue",
-    "color": "Aqua blue",
+    "color": "Vibrant aqua",
     "numCoats": "2",
     "collection": "Electric Holos Collection (2021)"
   },
@@ -714,8 +714,8 @@
     "name": "Citrine",
     "brand": "Cirque Colors",
     "type": "Holographic Glitter",
-    "colorFamily": "Yellow",
-    "color": "Golden yellow jelly base",
+    "colorFamily": "Orange",
+    "color": "Golden yellow-orange jelly base",
     "numCoats": "3",
     "collection": "Facets (2019)"
   },
@@ -874,7 +874,7 @@
     "name": "Magenta Jelly",
     "brand": "Holo Taco",
     "type": "Linear Holographic",
-    "colorFamily": "Pink",
+    "colorFamily": "Purple",
     "color": "Vibrant deep magenta",
     "numCoats": "2",
     "collection": "Rainbow Collection (2020)"

@@ -89,7 +89,7 @@ export default {
   },
   computed: {
     polishes: function() {
-      return this.allPolishes.filter(polish => polish.type != 'Topper' && polish.type != 'Multichrome').sort((a, b) => b.id - a.id);
+      return this.allPolishes.filter(polish => polish.type != 'Topper').sort((a, b) => b.id - a.id);
     }
   },
   methods: {
