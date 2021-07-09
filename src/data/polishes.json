@@ -888,5 +888,55 @@
     "color": "Icy lilac with holographic flakes, silver foil, and purple shimmer",
     "numCoats": "3",
     "collection": ""
+  },
+  {
+    "id": "90",
+    "name": "Misbehaving",
+    "brand": "ILNP",
+    "type": "Holographic Glitter",
+    "colorFamily": "Pink",
+    "color": "Neon pink jelly base",
+    "numCoats": "3",
+    "collection": "Summer Jellies 2017"
+  },
+  {
+    "id": "91",
+    "name": "Fearless",
+    "brand": "Live Love Polish",
+    "type": "Holographic Glitter",
+    "colorFamily": "Brown",
+    "color": "Deep mulberry jelly base",
+    "numCoats": "2",
+    "collection": "Sky's the Limit (2020)"
+  },
+  {
+    "id": "92",
+    "name": "Visionary",
+    "brand": "Live Love Polish",
+    "type": "Holographic Glitter",
+    "colorFamily": "Green",
+    "color": "Teal green jelly base",
+    "numCoats": "2",
+    "collection": "Sky's the Limit (2020)"
+  },
+  {
+    "id": "93",
+    "name": "Play Rosé",
+    "brand": "Holo Taco",
+    "type": "Holographic Glitter",
+    "colorFamily": "Pink",
+    "color": "Rose gold jelly base",
+    "numCoats": "2",
+    "collection": "Holoday Collection (2019)"
+  },
+  {
+    "id": "94",
+    "name": "Frost Light",
+    "brand": "Holo Taco",
+    "type": "Holographic Glitter",
+    "colorFamily": "Blue",
+    "color": "Icy blue jelly base",
+    "numCoats": "3",
+    "collection": "Holoday Collection (2019)"
   }
 ]
