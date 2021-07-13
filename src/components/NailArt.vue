@@ -47,11 +47,11 @@ ul {
   padding-left: 1rem;
 }
 
-.col-fixed-width {
-  flex: 0 0 400px;
+ul, p {
+  margin-bottom: 0.5rem;
 }
 
-p {
-  margin-bottom: 0.75rem;
+.col-fixed-width {
+  flex: 0 0 400px;
 }
 </style>
