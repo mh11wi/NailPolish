@@ -938,5 +938,35 @@
     "color": "Icy blue jelly base",
     "numCoats": "3",
     "collection": "Holoday Collection (2019)"
+  },
+  {
+    "id": "95",
+    "name": "Blue Flakie Holo Taco",
+    "brand": "Holo Taco",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": ""
+  },
+  {
+    "id": "96",
+    "name": "Gold Flakie Holo Taco",
+    "brand": "Holo Taco",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": ""
+  },
+  {
+    "id": "97",
+    "name": "Purple Flakie Holo Taco",
+    "brand": "Holo Taco",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": ""
   }
 ]

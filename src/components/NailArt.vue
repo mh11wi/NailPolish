@@ -12,7 +12,7 @@
     </b-col>
     <b-col>
       <div class="ml-2">
-        <p class="mt-3"><strong>{{ entry.date }}</strong></p>
+        <p class="mt-2"><strong>{{ entry.date }}</strong></p>
         <p>{{ entry.description }}</p>
         <p class="text-underline mb-1">Polishes Used</p>
         <ul>
@@ -49,5 +49,9 @@ ul {
 
 .col-fixed-width {
   flex: 0 0 400px;
+}
+
+p {
+  margin-bottom: 0.75rem;
 }
 </style>

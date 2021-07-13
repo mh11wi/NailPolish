@@ -167,5 +167,23 @@
       {"brand": "ORLY", "name": "Kelli's Galaxy"},
       {"brand": "Twinkled T", "name": "Liquid Gold Stamping Polish"}
     ]
+  },
+  {
+    "id": "14",
+    "date": "July 12, 2021",
+    "alt": "Birthday nails",
+    "description": "To celebrate Holo Taco's 2nd Anniversary (and my birthday too!), I sponged on some holo flakie balloons with matching diamond shaped charms. I then 'baked' up a cake to complete the look.",
+    "polishes": [
+      {"brand": "Holo Taco", "name": "One Coat Black"},
+      {"brand": "Holo Taco", "name": "Purple Flakie Holo Taco"},
+      {"brand": "Holo Taco", "name": "What Do You Pink?"},
+      {"brand": "Holo Taco", "name": "Gold Flakie Holo Taco"},
+      {"brand": "Holo Taco", "name": "Banana Hacks"},
+      {"brand": "Holo Taco", "name": "Blue Flakie Holo Taco"},
+      {"brand": "Holo Taco", "name": "Cyantific"},
+      {"brand": "Essie", "name": "Hi Maitenance"},
+      {"brand": "Holo Taco", "name": "Not Milky White"},
+      {"brand": "Holo Taco", "name": "Orange Drink"}
+    ]
   }
 ]
