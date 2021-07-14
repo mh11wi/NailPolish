@@ -7,13 +7,13 @@
     "polishes": [
       {"brand": "Vitry", "name": "Flocon"},
       {"brand": "Vitry", "name": "Bleu Éclatant"},
-      {"brand": "Holo Taco", "name": "Flakie Holo Taco"},
-      {"brand": "Orly", "name": "Know Your Angle"},
-      {"brand": "Holo Taco", "name": "Aurora Unicorn Skin"},
-      {"brand": "Vitry", "name": "Caraïbes"},
-      {"brand": "Holo Taco", "name": "Scattered Holo Taco"},
+      {"id": "25"},
+      {"id": "33"},
+      {"id": "26"},
+      {"id": "80"},
+      {"id": "24"},
       {"brand": "Vitry", "name": "Aubergine"},
-      {"brand": "Holo Taco", "name": "Solar Unicorn Skin"},
+      {"id": "28"},
       {"brand": "Sally Hansen", "name": "Pucker Up"}
     ]
   },
@@ -25,14 +25,14 @@
     "polishes": [
       {"brand": "Vitry", "name": "Flocon"},
       {"brand": "Vitry", "name": "Bleu Éclatant"},
-      {"brand": "Holo Taco", "name": "Flakie Holo Taco"},
-      {"brand": "Holo Taco", "name": "One Coat Black"},
-      {"brand": "Holo Taco", "name": "Solar Unicorn Skin"},
+      {"id": "25"},
+      {"id": "32"},
+      {"id": "28"},
       {"brand": "Sally Hansen", "name": "Pucker Up"},
-      {"brand": "Holo Taco", "name": "Scattered Holo Taco"},
-      {"brand": "Vitry", "name": "Caraïbes"},
-      {"brand": "Holo Taco", "name": "Aurora Unicorn Skin"},
-      {"brand": "Color Club", "name": "East Austin"}
+      {"id": "24"},
+      {"id": "80"},
+      {"id": "26"},
+      {"id": "79"}
     ]
   },
   {
@@ -44,7 +44,7 @@
       {"brand": "Vitry", "name": "Flocon"},
       {"brand": "Revlon", "name": "Posh"},
       {"brand": "Sally Hansen", "name": "Pucker Up"},
-      {"brand": "Holo Taco", "name": "One Coat Black"}
+      {"id": "32"}
     ]
   },
   {
@@ -53,14 +53,14 @@
     "alt": "Rainbow nails",
     "description": "As soon as I saw the Holo Taco Rainbow Collection I knew that I had to recreate the 7-colour gradient. And for fun I added some stickers!",
     "polishes": [
-      {"brand": "Color Club", "name": "Bewitched"},
-      {"brand": "Holo Taco", "name": "Lemon Sucker"},
-      {"brand": "Holo Taco", "name": "Orange Drink"},
-      {"brand": "Holo Taco", "name": "Red Licorice"},
-      {"brand": "Holo Taco", "name": "Magenta Jelly"},
-      {"brand": "Holo Taco", "name": "Purple Slushie"},
-      {"brand": "Holo Taco", "name": "Blue Freezie"},
-      {"brand": "Holo Taco", "name": "Green Taffy"}
+      {"id": "19"},
+      {"id": "84"},
+      {"id": "83"},
+      {"id": "82"},
+      {"id": "88"},
+      {"id": "87"},
+      {"id": "86"},
+      {"id": "85"}
     ]
   },
   {
@@ -69,8 +69,8 @@
     "alt": "Gold nails",
     "description": "A gold and purple #HoloTacoCombo with matching striping tape.",
     "polishes": [
-      {"brand": "Holo Taco", "name": "Cats' Evasion"},
-      {"brand": "Holo Taco", "name": "Gold Flakie Holo Taco"}
+      {"id": "55"},
+      {"id": "96"}
     ]
   },
   {
@@ -79,8 +79,8 @@
     "alt": "Fall nails",
     "description": "I swear, Play Rosé works for any season! Here I created a simple fall look with Twinkled T's leaves nail vinyl on my accent nail.",
     "polishes": [
-      {"brand": "Holo Taco", "name": "Play Rosé"},
-      {"brand": "Holo Taco", "name": "Not Milky White"}
+      {"id": "93"},
+      {"id": "22"}
     ]
   },
   {
@@ -99,9 +99,9 @@
     "alt": "Christmas nails",
     "description": "Nothing says 'Ho Ho Ho!' more than these nail vinyls from Twinkled T. Complete with gold stones for holly berries. Merry Christmas y'all!",
     "polishes": [
-      {"brand": "Holo Taco", "name": "Not Milky White"},
-      {"brand": "Holo Taco", "name": "Green Taffy"},
-      {"brand": "Holo Taco", "name": "Red Licorice"},
+      {"id": "22"},
+      {"id": "85"},
+      {"id": "82"},
       {"brand": "Holo Taco", "name": "Mint Money"}
     ]
   },
@@ -112,7 +112,7 @@
     "description": "An almost negative space look with striping tape— 'almost' because I could not resist adding a unicorn skin over the naked nail!",
     "polishes": [
       {"brand": "Holo Taco", "name": "Mint Money"},
-      {"brand": "Holo Taco", "name": "Solar Unicorn Skin"}
+      {"id": "28"}
     ]
   },
   {
@@ -123,7 +123,7 @@
     "polishes": [
       {"brand": "Essie", "name": "Van D'go"},
       {"brand": "Spider Gel", "name": "Black"},
-      {"brand": "Holo Taco", "name": "Red Licorice"}
+      {"id": "82"}
     ]
   },
   {
@@ -133,15 +133,15 @@
     "description": "Pastels? For spring? Groundbreaking, I know! To shake things up a bit, I made each nail a dotticure with a matching linear holographic colour.",
     "polishes": [
       {"brand": "China Glaze", "name": "Casual Friday"},
-      {"brand": "Holo Taco", "name": "Lemon Sucker"},
+      {"id": "84"},
       {"brand": "OPI", "name": "Mod About You"},
-      {"brand": "Holo Taco", "name": "Magenta Jelly"},
+      {"id": "88"},
       {"brand": "Finger Paints", "name": "Heavenly Hues"},
-      {"brand": "Holo Taco", "name": "Blue Freezie"},
+      {"id": "86"},
       {"brand": "China Glaze", "name": "Peachy Keen"},
-      {"brand": "Holo Taco", "name": "Orange Drink"},
+      {"id": "83"},
       {"brand": "Sally Hansen", "name": "Lacey Lilac"},
-      {"brand": "Holo Taco", "name": "Purple Slushie"}
+      {"id": "87"}
     ]
   },
   {
@@ -150,9 +150,9 @@
     "alt": "Tie-dye nails",
     "description": "To create these tie-dye accent nails, I sponged on the cremes from Holo Taco's Unicorn Dream Collection in a random pattern. I then applied the Spot It top coat (when the nails were dry, oops!), giving a muted effect. Despite this mistake, I'm not mad at the way they turned out!",
     "polishes": [
-      {"brand": "Holo Taco", "name": "What Do You Pink?"},
-      {"brand": "Holo Taco", "name": "Cyantific"},
-      {"brand": "Holo Taco", "name": "Not Milky White"},
+      {"id": "11"},
+      {"id": "10"},
+      {"id": "22"},
       {"brand": "Dance Legend", "name": "Spot It: White"}
     ]
   },
@@ -162,9 +162,9 @@
     "alt": "Galaxy nails",
     "description": "I was inspired by the Kelli Marissa x ORLY trio to create my very own galaxy manicure. To top off these polishes, I stamped various designs from her MoYou London collaboration plate.",
     "polishes": [
-      {"brand": "ORLY", "name": "Kelli's Solar Flare"},
-      {"brand": "ORLY", "name": "Kelli's Antimatter"},
-      {"brand": "ORLY", "name": "Kelli's Galaxy"},
+      {"id": "40"},
+      {"id": "39"},
+      {"id": "38"},
       {"brand": "Twinkled T", "name": "Liquid Gold Stamping Polish"}
     ]
   },
@@ -174,16 +174,16 @@
     "alt": "Birthday nails",
     "description": "To celebrate Holo Taco's 2nd Anniversary (and my birthday too!), I sponged on some holo flakie balloons with matching diamond shaped charms. I then 'baked' up a cake to complete the look.",
     "polishes": [
-      {"brand": "Holo Taco", "name": "One Coat Black"},
-      {"brand": "Holo Taco", "name": "Purple Flakie Holo Taco"},
-      {"brand": "Holo Taco", "name": "What Do You Pink?"},
-      {"brand": "Holo Taco", "name": "Gold Flakie Holo Taco"},
-      {"brand": "Holo Taco", "name": "Banana Hacks"},
-      {"brand": "Holo Taco", "name": "Blue Flakie Holo Taco"},
-      {"brand": "Holo Taco", "name": "Cyantific"},
+      {"id": "32"},
+      {"id": "97"},
+      {"id": "11"},
+      {"id": "96"},
+      {"id": "76"},
+      {"id": "95"},
+      {"id": "10"},
       {"brand": "Essie", "name": "Hi Maitenance"},
-      {"brand": "Holo Taco", "name": "Not Milky White"},
-      {"brand": "Holo Taco", "name": "Orange Drink"}
+      {"id": "22"},
+      {"id": "83"}
     ]
   }
 ]

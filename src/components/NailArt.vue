@@ -17,7 +17,24 @@
         <p class="text-underline mb-1">Polishes Used</p>
         <ul>
           <li v-for="(polish, index) in entry.polishes" :key="index">
-            <strong>{{ polish.brand }}</strong> - {{ polish.name }}
+            <span v-if="!polish.id">
+              <strong>{{ polish.brand }}</strong> - {{ polish.name }}
+            </span>
+            <div v-else>
+              <strong>{{ polishes[polish.id - 1].brand }}</strong> - {{ polishes[polish.id - 1].name }}
+              <b-link :id="entry.id + '_' + polish.id">
+                <font-awesome-icon icon="question-circle"/>
+              </b-link>
+              <b-popover :target="entry.id + '_' + polish.id"  fallback-placement="counterclockwise" triggers="click blur">
+                <b-img-lazy
+                  :src="getPolishImage(polish.id)" 
+                  :alt="polishes[polish.id - 1].name" 
+                  width=200 
+                  blank-color="black"
+                >
+                </b-img-lazy>
+              </b-popover>
+            </div>
           </li>
         </ul>
       </div>
@@ -28,10 +45,18 @@
 <script>
 export default {
   name: 'NailArt',
-  props: ['entry'],
+  props: ['entry', 'polishes'],
   methods: {
     getImage(id) {
       return require('@/assets/images/nailart/' + id + '.jpg');
+    },
+    
+    getPolishImage(id) {
+      if (this.polishes[id - 1].type == 'Topper') {
+        return require('@/assets/images/polishes/32/' + id + '.jpg');
+      }
+      
+      return require('@/assets/images/polishes/' + id + '/1.jpg');
     }
   } 
 }
@@ -53,5 +78,9 @@ ul, p {
 
 .col-fixed-width {
   flex: 0 0 400px;
+}
+
+.popover {
+  min-width: 200px;
 }
 </style>
