@@ -1,5 +1,5 @@
 <template>
-  <div class="gallery container-fluid mh-100">
+  <div id="gallery" class="container-fluid mh-100">
     <div class="mb-3">
     <NailArt v-for="(entry, index) in nailArt" :key="index" :entry="entry" :polishes="polishes"/>
     </div>
@@ -16,9 +16,28 @@ export default {
     NailArt
   },
   props: ['polishes'],
+  data: function() {
+    return {
+      popoverId: ''
+    }
+  },
+  mounted() {
+    document.getElementById('gallery').addEventListener('scroll', this.hidePopover);
+    
+    this.$root.$on('bv::popover::show', bvEventObj => {
+      if (bvEventObj.target.id != 'info-link') {
+        this.popoverId = bvEventObj.target.id;
+      }
+    });
+  },
   computed: {
     nailArt: function() {
       return nailArtData.sort((a, b) => b.id - a.id);
+    }
+  },
+  methods: {  
+    hidePopover() {
+      this.$root.$emit('bv::hide::popover', this.popoverId);
     }
   }
 }
@@ -26,7 +45,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.gallery {
+#gallery {
   overflow-y: auto;
 }
 </style>
