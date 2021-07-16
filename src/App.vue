@@ -3,7 +3,7 @@
     <b-navbar variant="primary">
       <b-navbar-brand>Madeleine's Nail Polishes</b-navbar-brand>
       <b-navbar-nav class="ml-auto">
-        <b-nav-item id="info-link" tabindex="0">
+        <b-nav-item :link-attrs="{id: 'info-link'}">
           <font-awesome-icon icon="info-circle" size="lg"/>
         </b-nav-item>
         <b-popover variant="info" target="info-link" title="App Info" triggers="click blur">
