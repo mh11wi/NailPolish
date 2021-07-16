@@ -25,7 +25,7 @@
               <b-link :id="entry.id + '_' + polish.id">
                 <font-awesome-icon icon="question-circle"/>
               </b-link>
-              <b-popover :target="entry.id + '_' + polish.id"  fallback-placement="counterclockwise" triggers="click blur">
+              <b-popover :target="entry.id + '_' + polish.id"  fallback-placement="counterclockwise" triggers="focus">
                 <b-img-lazy
                   :src="getPolishImage(polish.id)" 
                   :alt="polishes[polish.id - 1].name" 
