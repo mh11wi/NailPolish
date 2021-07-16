@@ -22,7 +22,7 @@
             </span>
             <div v-else>
               <strong>{{ polishes[polish.id - 1].brand }}</strong> - {{ polishes[polish.id - 1].name }}
-              <b-link :id="entry.id + '_' + polish.id">
+              <b-link :id="entry.id + '_' + polish.id" tabindex="0">
                 <font-awesome-icon icon="question-circle"/>
               </b-link>
               <b-popover :target="entry.id + '_' + polish.id"  fallback-placement="counterclockwise" triggers="focus">
