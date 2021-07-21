@@ -121,7 +121,7 @@
     "alt": "Valentine's Day nails",
     "description": "Happy Valentine's Day! This was my first time playing with spider gels, and I am in LOVE. So much so, I added hearts. And rhinestones. You get the picture!",
     "polishes": [
-      {"brand": "Essie", "name": "Van D'go"},
+      {"id": "100"},
       {"brand": "Spider Gel", "name": "Black"},
       {"id": "82"}
     ]
@@ -134,7 +134,7 @@
     "polishes": [
       {"brand": "China Glaze", "name": "Casual Friday"},
       {"id": "84"},
-      {"brand": "OPI", "name": "Mod About You"},
+      {"id": "99"},
       {"id": "88"},
       {"brand": "Finger Paints", "name": "Heavenly Hues"},
       {"id": "86"},

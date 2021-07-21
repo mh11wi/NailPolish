@@ -968,5 +968,55 @@
     "color": "",
     "numCoats": "1",
     "collection": ""
+  },
+  {
+    "id": "98",
+    "name": "Birthday Girl",
+    "brand": "Essie",
+    "type": "Glitter",
+    "colorFamily": "Pink",
+    "color": "Iridescent sheer pink with gold glitters",
+    "numCoats": "3",
+    "collection": "#Essielove Moments (2019)"
+  },
+  {
+    "id": "99",
+    "name": "Mod About You",
+    "brand": "OPI",
+    "type": "Creme",
+    "colorFamily": "Pink",
+    "color": "Soft pastel pink",
+    "numCoats": "3",
+    "collection": "Brights (2006)"
+  },
+  {
+    "id": "100",
+    "name": "Van D'go",
+    "brand": "Essie",
+    "type": "Creme",
+    "colorFamily": "Pink",
+    "color": "Light peachy pink",
+    "numCoats": "3",
+    "collection": "Sweet Time of the Year (2009)"
+  },
+  {
+    "id": "101",
+    "name": "Watermelon Felon",
+    "brand": "Sally Hansen",
+    "type": "Creme",
+    "colorFamily": "Pink",
+    "color": "Watermelon pink",
+    "numCoats": "3",
+    "collection": ""
+  },
+  {
+    "id": "102",
+    "name": "Signature Smile",
+    "brand": "Essie",
+    "type": "Creme",
+    "colorFamily": "Pink",
+    "color": "Rosy pink",
+    "numCoats": "2",
+    "collection": ""
   }
 ]
