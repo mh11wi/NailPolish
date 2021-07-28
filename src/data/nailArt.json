@@ -102,7 +102,7 @@
       {"id": "22"},
       {"id": "85"},
       {"id": "82"},
-      {"brand": "Holo Taco", "name": "Mint Money"}
+      {"id": "105"}
     ]
   },
   {
@@ -111,7 +111,7 @@
     "alt": "Negative space nails",
     "description": "An almost negative space look with striping tape— 'almost' because I could not resist adding a unicorn skin over the naked nail!",
     "polishes": [
-      {"brand": "Holo Taco", "name": "Mint Money"},
+      {"id": "105"},
       {"id": "28"}
     ]
   },

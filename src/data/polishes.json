@@ -1018,5 +1018,55 @@
     "color": "Rosy pink",
     "numCoats": "2",
     "collection": ""
+  },
+  {
+    "id": "103",
+    "name": "Infrared",
+    "brand": "Starrily",
+    "type": "Shimmer",
+    "colorFamily": "Red",
+    "color": "Red jelly base with golden shimmer and holographic flakes",
+    "numCoats": "1",
+    "collection": "Kelli Marissa x Starrily (2020)"
+  },
+  {
+    "id": "104",
+    "name": "Fake Date",
+    "brand": "Holo Taco",
+    "type": "Metallic Foil",
+    "colorFamily": "Pink",
+    "color": "Pale lilac pink with silver foil flakes",
+    "numCoats": "3",
+    "collection": "Frosted Metals Collection (2020)"
+  },
+  {
+    "id": "105",
+    "name": "Mint Money",
+    "brand": "Holo Taco",
+    "type": "Metallic Foil",
+    "colorFamily": "Green",
+    "color": "Mint green with silver foil flakes",
+    "numCoats": "3",
+    "collection": "Frosted Metals Collection (2020)"
+  },
+  {
+    "id": "106",
+    "name": "Dusk to Dawn",
+    "brand": "ILNP",
+    "type": "Shimmer",
+    "colorFamily": "Blue",
+    "color": "Dusky blue with red shimmer and scattered holographic glitters",
+    "numCoats": "2",
+    "collection": "Southwest Sunset Collection (2018)"
+  },
+  {
+    "id": "107",
+    "name": "Pool Party",
+    "brand": "ILNP",
+    "type": "Linear Holographic",
+    "colorFamily": "Blue",
+    "color": "Periwinkle blue jelly base with pink iridescent flakes",
+    "numCoats": "3",
+    "collection": "Summer Nights Collection (2020)"
   }
 ]
