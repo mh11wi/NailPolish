@@ -1068,5 +1068,35 @@
     "color": "Periwinkle jelly base with pink iridescent flakes",
     "numCoats": "3",
     "collection": "Summer Nights Collection (2020)"
+  },
+  {
+    "id": "108",
+    "name": "Frosted Cherry",
+    "brand": "Cirque Colors",
+    "type": "Linear Holographic",
+    "colorFamily": "Pink",
+    "color": "Light red-pink",
+    "numCoats": "2",
+    "collection": "Smarties Collection (2021)"
+  },
+  {
+    "id": "109",
+    "name": "Groovy Grape",
+    "brand": "Cirque Colors",
+    "type": "Linear Holographic",
+    "colorFamily": "Purple",
+    "color": "Lavender purple",
+    "numCoats": "2",
+    "collection": "Smarties Collection (2021)"
+  },
+  {
+    "id": "110",
+    "name": "Tropical Twist",
+    "brand": "Cirque Colors",
+    "type": "Linear Holographic",
+    "colorFamily": "Blue",
+    "color": "Light blue-green",
+    "numCoats": "2",
+    "collection": "Smarties Collection (2021)"
   }
 ]
