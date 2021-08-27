@@ -1,41 +1,36 @@
 import Vue from 'vue'
 import App from './App.vue'
 
-import { BootstrapVue, BootstrapVueIcons } from 'bootstrap-vue'
-
+// Bootstrap-Vue
+import { BootstrapVue } from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
+// Font Awesome Icons
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faInfoCircle, faHome, faPencilAlt, faTrashAlt, faCheck, faArrowLeft, faArrowRight, faTimes, faSun, faQuestionCircle } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-
 library.add(faInfoCircle, faHome, faPencilAlt, faTrashAlt, faCheck, faArrowLeft, faArrowRight, faTimes, faSun, faQuestionCircle)
-
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
+// Custom styling for Bootstrap
 import "./assets/scss/custom.scss";
-
 Vue.use(BootstrapVue)
-Vue.use(BootstrapVueIcons)
 
+// Image Comparison Slider
 import {
   applyPolyfills,
   defineCustomElements,
 } from 'img-comparison-slider/loader';
 
 Vue.config.productionTip = false;
-
-// Tell Vue to ignore all components defined in the test-components
-// package. The regex assumes all components names are prefixed
-// 'test'
 Vue.config.ignoredElements = [/test-\w*/];
 
-// Bind the custom elements to the window object
 applyPolyfills().then(() => {
   defineCustomElements(window);
 });
 
+// Mount the app
 new Vue({
   render: h => h(App),
 }).$mount('#app')
