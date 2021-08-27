@@ -1098,5 +1098,55 @@
     "color": "Light blue-green",
     "numCoats": "2",
     "collection": "Smarties Collection (2021)"
+  },
+  {
+    "id": "111",
+    "name": "Everything Taco",
+    "brand": "Holo Taco",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": "Remix Collection (2021)"
+  },
+  {
+    "id": "112",
+    "name": "Glitterally Purple",
+    "brand": "Holo Taco",
+    "type": "Holographic Glitter",
+    "colorFamily": "Purple",
+    "color": "Sweet purple grape jelly base",
+    "numCoats": "2",
+    "collection": "Remix Collection (2021)"
+  },
+  {
+    "id": "113",
+    "name": "Heavy Metal Mixtape",
+    "brand": "Holo Taco",
+    "type": "Metallic Foil",
+    "colorFamily": "Black",
+    "color": "Carbon steel with silver foil flakes and a dark purple undertone",
+    "numCoats": "2",
+    "collection": "Remix Collection (2021)"
+  },
+  {
+    "id": "114",
+    "name": "Rainbow Flood",
+    "brand": "Holo Taco",
+    "type": "Linear Holographic",
+    "colorFamily": "Purple",
+    "color": "Deep eggplant purple",
+    "numCoats": "1",
+    "collection": "Remix Collection (2021)"
+  },
+  {
+    "id": "115",
+    "name": "Way Back Chrome",
+    "brand": "Holo Taco",
+    "type": "Multichrome",
+    "colorFamily": "Blue",
+    "color": "Shifts between steel blue and purple",
+    "numCoats": "2",
+    "collection": "Remix Collection (2021)"
   }
 ]
