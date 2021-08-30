@@ -1148,5 +1148,25 @@
     "color": "Shifts between steel blue and purple",
     "numCoats": "2",
     "collection": "Remix Collection (2021)"
+  },
+  {
+    "id": "116",
+    "name": "Kelli's Green",
+    "brand": "ORLY",
+    "type": "Shimmer",
+    "colorFamily": "Green",
+    "color": "Bright lime green with gold shimmer",
+    "numCoats": "2",
+    "collection": "Kelli Marissa x ORLY (2021)"
+  },
+  {
+    "id": "117",
+    "name": "Kelli's Emerald",
+    "brand": "ORLY",
+    "type": "Shimmer",
+    "colorFamily": "Green",
+    "color": "Rich forest green with gold and blue shimmer",
+    "numCoats": "2",
+    "collection": "Kelli Marissa x ORLY (2021)"
   }
 ]

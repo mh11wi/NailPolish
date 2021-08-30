@@ -3,7 +3,7 @@
     <div class="row h-100">
       <div class="col-4 filtersColumn mh-100">
         <div class="row align-items-center stats">
-          <div class="col-6">
+          <div class="col-6 pr-0">
             Polishes: {{ displayedPolishes.length }} / {{ polishes.length }}
           </div>
           <div class="col-6 pl-0 text-right">
