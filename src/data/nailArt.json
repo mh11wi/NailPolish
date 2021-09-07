@@ -5,16 +5,16 @@
     "alt": "Cupcake nails",
     "description": "Cupcakes with different toppers as 'sprinkles'. Pretty sweet, no?",
     "polishes": [
-      {"brand": "Vitry", "name": "Flocon"},
-      {"brand": "Vitry", "name": "Bleu Éclatant"},
+      {"id": "121"},
+      {"id": "122"},
       {"id": "25"},
       {"id": "33"},
       {"id": "26"},
       {"id": "80"},
       {"id": "24"},
-      {"brand": "Vitry", "name": "Aubergine"},
+      {"id": "123"},
       {"id": "28"},
-      {"brand": "Sally Hansen", "name": "Pucker Up"}
+      {"id": "120"}
     ]
   },
   {
@@ -23,12 +23,12 @@
     "alt": "Penguin nails",
     "description": "Those who know me, know I love penguins! Similar to my last entry, I created these penguin nails with different toppers as 'feathers'.",
     "polishes": [
-      {"brand": "Vitry", "name": "Flocon"},
-      {"brand": "Vitry", "name": "Bleu Éclatant"},
+      {"id": "121"},
+      {"id": "122"},
       {"id": "25"},
       {"id": "32"},
       {"id": "28"},
-      {"brand": "Sally Hansen", "name": "Pucker Up"},
+      {"id": "120"},
       {"id": "24"},
       {"id": "80"},
       {"id": "26"},
@@ -41,9 +41,9 @@
     "alt": "Yoshi nails",
     "description": "These nails are no dino-snore! For the #holotacovideogamenailart competition I free-handed Yoshi over Twinkled T's Icing 'Aurora' powder.",
     "polishes": [
-      {"brand": "Vitry", "name": "Flocon"},
-      {"brand": "Revlon", "name": "Posh"},
-      {"brand": "Sally Hansen", "name": "Pucker Up"},
+      {"id": "121"},
+      {"id": "124"},
+      {"id": "120"},
       {"id": "32"}
     ]
   },
@@ -89,8 +89,8 @@
     "alt": "Present nails",
     "description": "Happy 'Holo'days! These Star Dust flakies from Twinkled T were the gift that kept on giving this year. WOW!! By the way, I created the bow by looping pieces of striping tape together and joining them in the middle.",
     "polishes": [
-      {"brand": "Sally Hansen", "name": "Buffalo Nickel"},
-      {"brand": "Sally Hansen", "name": "Pucker Up"}
+      {"id": "118"},
+      {"id": "120"}
     ]
   },
   {
@@ -132,15 +132,15 @@
     "alt": "Dotticure nails",
     "description": "Pastels? For spring? Groundbreaking, I know! To shake things up a bit, I made each nail a dotticure with a matching linear holographic colour.",
     "polishes": [
-      {"brand": "China Glaze", "name": "Casual Friday"},
+      {"id": "127"},
       {"id": "84"},
       {"id": "99"},
       {"id": "88"},
-      {"brand": "Finger Paints", "name": "Heavenly Hues"},
+      {"id": "125"},
       {"id": "86"},
-      {"brand": "China Glaze", "name": "Peachy Keen"},
+      {"id": "126"},
       {"id": "83"},
-      {"brand": "Sally Hansen", "name": "Lacey Lilac"},
+      {"id": "119"},
       {"id": "87"}
     ]
   },

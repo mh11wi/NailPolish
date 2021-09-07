@@ -1007,7 +1007,7 @@
     "colorFamily": "Pink",
     "color": "Watermelon pink",
     "numCoats": "3",
-    "collection": ""
+    "collection": "Xtreme Wear"
   },
   {
     "id": "102",
@@ -1168,5 +1168,105 @@
     "color": "Rich forest green with gold and blue shimmer",
     "numCoats": "2",
     "collection": "Kelli Marissa x ORLY (2021)"
+  },
+  {
+    "id": "118",
+    "name": "Buffalo Nickel",
+    "brand": "Sally Hansen",
+    "type": "Glitter",
+    "colorFamily": "Silver",
+    "color": "Glittery silver",
+    "numCoats": "2",
+    "collection": "Miracle Gel"
+  },
+  {
+    "id": "119",
+    "name": "Lacey Lilac",
+    "brand": "Sally Hansen",
+    "type": "Creme",
+    "colorFamily": "Purple",
+    "color": "Soft lilac purple",
+    "numCoats": "2",
+    "collection": "Xtreme Wear"
+  },
+  {
+    "id": "120",
+    "name": "Pucker Up",
+    "brand": "Sally Hansen",
+    "type": "Creme",
+    "colorFamily": "Red",
+    "color": "Bright tomato red",
+    "numCoats": "2",
+    "collection": "Xtreme Wear"
+  },
+  {
+    "id": "121",
+    "name": "Flocon",
+    "brand": "Vitry",
+    "type": "Creme",
+    "colorFamily": "White",
+    "color": "Snowflake white",
+    "numCoats": "3",
+    "collection": ""
+  },
+  {
+    "id": "122",
+    "name": "Bleu Éclatant",
+    "brand": "Vitry",
+    "type": "Creme",
+    "colorFamily": "Blue",
+    "color": "Bright royal blue",
+    "numCoats": "3",
+    "collection": ""
+  },
+  {
+    "id": "123",
+    "name": "Aubergine",
+    "brand": "Vitry",
+    "type": "Creme",
+    "colorFamily": "Brown",
+    "color": "Dark eggplant brown",
+    "numCoats": "2",
+    "collection": ""
+  },
+  {
+    "id": "124",
+    "name": "Posh",
+    "brand": "Revlon",
+    "type": "Creme",
+    "colorFamily": "Green",
+    "color": "Medium green",
+    "numCoats": "2",
+    "collection": ""
+  },
+  {
+    "id": "125",
+    "name": "Heavenly Hues",
+    "brand": "Finger Paints",
+    "type": "Creme",
+    "colorFamily": "Blue",
+    "color": "Sky blue",
+    "numCoats": "2",
+    "collection": ""
+  },
+  {
+    "id": "126",
+    "name": "Peachy Keen",
+    "brand": "China Glaze",
+    "type": "Creme",
+    "colorFamily": "Orange",
+    "color": "Saturated peachy orange",
+    "numCoats": "3",
+    "collection": "Up and Away (2010)"
+  },
+  {
+    "id": "127",
+    "name": "Casual Friday",
+    "brand": "China Glaze",
+    "type": "Creme",
+    "colorFamily": "Yellow",
+    "color": "Light pastel yellow",
+    "numCoats": "3",
+    "collection": "Pastels Collection (2017)"
   }
 ]
