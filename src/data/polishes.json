@@ -1268,5 +1268,25 @@
     "color": "Light pastel yellow",
     "numCoats": "3",
     "collection": "Pastels Collection (2017)"
+  },
+  {
+    "id": "128",
+    "name": "Black Magic",
+    "brand": "Cirque Colors",
+    "type": "Glitter",
+    "colorFamily": "Black",
+    "color": "Black jelly base with iridescent flakes",
+    "numCoats": "2",
+    "collection": "Do Good (2021)"
+  },
+  {
+    "id": "129",
+    "name": "Splash",
+    "brand": "Cirque Colors",
+    "type": "Glitter",
+    "colorFamily": "Blue",
+    "color": "Ocean blue jelly base with iridescent flakes",
+    "numCoats": "3",
+    "collection": "Do Good (2021)"
   }
 ]
