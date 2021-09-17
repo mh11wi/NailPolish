@@ -1288,5 +1288,55 @@
     "color": "Ocean blue jelly base with iridescent flakes",
     "numCoats": "3",
     "collection": "Do Good (2021)"
+  },
+  {
+    "id": "130",
+    "name": "Munchies",
+    "brand": "Cirque Colors",
+    "type": "Creme",
+    "colorFamily": "Yellow",
+    "color": "Neon cheddar yellow",
+    "numCoats": "3",
+    "collection": "Vice Collection (2021)"
+  },
+  {
+    "id": "131",
+    "name": "Heavy Metal",
+    "brand": "Sally Hansen",
+    "type": "Creme",
+    "colorFamily": "Grey",
+    "color": "Light grey",
+    "numCoats": "2",
+    "collection": "Xtreme Wear"
+  },
+  {
+    "id": "132",
+    "name": "Nyssa",
+    "brand": "Zoya",
+    "type": "Creme",
+    "colorFamily": "Brown",
+    "color": "Milk chocolate brown",
+    "numCoats": "2",
+    "collection": "Entice Collection (2014)"
+  },
+  {
+    "id": "133",
+    "name": "Tiramisu for Two",
+    "brand": "OPI",
+    "type": "Creme",
+    "colorFamily": "Neutral",
+    "color": "Sweet coffee cream",
+    "numCoats": "2",
+    "collection": "Venice Collection (2015)"
+  },
+  {
+    "id": "134",
+    "name": "The Floor is Guava",
+    "brand": "Holo Taco",
+    "type": "Creme",
+    "colorFamily": "Red",
+    "color": "Hot coral-red",
+    "numCoats": "2",
+    "collection": ""
   }
 ]
