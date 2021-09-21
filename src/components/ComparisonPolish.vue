@@ -47,7 +47,6 @@
     <div class="text-center mt-2">
       <strong>{{ card.polish.brand }}</strong>
       <br>{{ card.polish.name }}
-      <br><span class="small">{{ card.polish.collection || '-' }}</span>
     </div>
   </div>
 </template>
