@@ -1388,5 +1388,115 @@
     "color": "Fuschia jelly base with matte yellow hex glitters",
     "numCoats": "3",
     "collection": "Summer Flowers (2021)"
+  },
+  {
+    "id": "140",
+    "name": "Night Club",
+    "brand": "Misslyn",
+    "type": "Shimmer",
+    "colorFamily": "Blue",
+    "color": "Dark navy blue with cobalt blue shimmer",
+    "numCoats": "1",
+    "collection": ""
+  },
+  {
+    "id": "141",
+    "name": "Gold Lagoon",
+    "brand": "Misslyn",
+    "type": "Multichrome",
+    "colorFamily": "Green",
+    "color": "Shifts between teal-green and gold",
+    "numCoats": "3",
+    "collection": ""
+  },
+  {
+    "id": "142",
+    "name": "Celebri-tree",
+    "brand": "China Glaze",
+    "type": "Glitter & Sparkle",
+    "colorFamily": "Green",
+    "color": "Sparkly green jelly base with silver bar glitters",
+    "numCoats": "3",
+    "collection": "Jollywood Collection (2020)"
+  },
+  {
+    "id": "143",
+    "name": "Give Me Space",
+    "brand": "OPI",
+    "type": "Glitter & Sparkle",
+    "colorFamily": "Blue",
+    "color": "Sparkly blue jelly base with scattered holographic glitters",
+    "numCoats": "2",
+    "collection": ""
+  },
+  {
+    "id": "144",
+    "name": "Black Onyx",
+    "brand": "OPI",
+    "type": "Creme",
+    "colorFamily": "Black",
+    "color": "Opaque black",
+    "numCoats": "1",
+    "collection": ""
+  },
+  {
+    "id": "145",
+    "name": "Positive Vibes Only",
+    "brand": "OPI",
+    "type": "Creme",
+    "colorFamily": "Purple",
+    "color": "Neon purple",
+    "numCoats": "3",
+    "collection": "Neons Collection (2019)"
+  },
+  {
+    "id": "146",
+    "name": "Humble Hydrangea",
+    "brand": "Nailtural",
+    "type": "Creme",
+    "colorFamily": "Blue",
+    "color": "Bright periwinkle blue",
+    "numCoats": "2",
+    "collection": ""
+  },
+  {
+    "id": "147",
+    "name": "Big Teal",
+    "brand": "Sally Hansen",
+    "type": "Creme",
+    "colorFamily": "Blue",
+    "color": "Pale turquoise",
+    "numCoats": "2",
+    "collection": "Xtreme Wear"
+  },
+  {
+    "id": "148",
+    "name": "Mint Sorbet",
+    "brand": "Sally Hansen",
+    "type": "Creme",
+    "colorFamily": "Green",
+    "color": "Soft mint green",
+    "numCoats": "2",
+    "collection": "Xtreme Wear"
+  },
+  {
+    "id": "149",
+    "name": "Synthetic Symphony",
+    "brand": "ORLY",
+    "type": "Creme",
+    "colorFamily": "Purple",
+    "color": "Bright cool-toned purple",
+    "numCoats": "2",
+    "collection": "Electric Escape (2021)"
+  },
+  {
+    "id": "150",
+    "name": "Diamond Flake Holo Top Coat",
+    "brand": "F.U.N Lacquer",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": ""
   }
 ]
