@@ -72,9 +72,15 @@ Topper images on the other hand will not exist in their own folder, but rather i
 
 If a polish is of type "Solar" the folder should contain 2 additional images: one of the polish in the sun with a glossy top coat, and one of the polish in the sun with a matte top coat. These images should be named `1-sun` and `2-sun` respectively (plus the noted file extension). While it is not yet implemented, images of solar polishes with a topper should follow the same naming convention (i.e. `topperId-sun`).
 
-
 #### src/assets/images/nailart
 Nail art images are stored directly in the `src/assets/images/nailart` folder. These images should be named after the id specified in `nailArt.json`. For example, if you have a design with id 1, the image should be named `1` and be of the file extension configured in `main.js`.
+
+### Running the application
+1. `npm install` to install the application and dependencies (including vue)
+2. `vue ui` to open the vue client
+3. Select `NailPolish` projects, then choose the `Tasks` menu
+4. Select the `serve` option, then click `Run task`
+5. When the project successfully builds click `Open app`
 
 ## Customizations
 
