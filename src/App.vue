@@ -1,7 +1,7 @@
 <template>
   <div class="app d-flex flex-column">
     <b-navbar variant="primary">
-      <b-navbar-brand>Madeleine's Nail Polishes</b-navbar-brand>
+      <b-navbar-brand>{{$root.$options.constants.name}}'s Nail Polishes</b-navbar-brand>
       <b-navbar-nav class="ml-auto">
         <b-nav-item :link-attrs="{id: 'info-link', tabindex: '0'}">
           <font-awesome-icon icon="info-circle" size="lg"/>
@@ -57,24 +57,30 @@ export default {
   },
   data: function() {
     return {
-      tabIndex: 0,
-      basePolish: null,
-      topperId: '',
-      comparisons: []
+      tabIndex: 0, // which tab is displayed
+      basePolish: null, // the polish selected to view toppers over
+      topperId: '', // the id of the topper to first show in the 'Top It Off' tab
+      comparisons: [] // the list of polish comparisons
     }
   },
   computed: {
+    /** Polish data. */
     polishes: function() {
       return polishes;
     },
+    /** Toppers data. */ 
     toppersMap: function() {
       return toppersMap;
     }
   },
   methods: {
+    /**
+     * Opens the 'Top It Off' tab with the specified base polish and topper selected.
+     * @param event - object containing base polish and selected topper id
+     */
     viewToppers(event) {
       this.basePolish = event.basePolish;
-      this.topperId = event.finish == 'glossy' ? 1 : 2;
+      this.topperId = event.finish == 'glossy' ? this.$root.$options.constants.glossy : this.$root.$options.constants.matte;
       this.tabIndex = 2;
     }
   }
@@ -101,11 +107,6 @@ html, body, .app {
 
 .nav-tabs .nav-link:hover {
   border: none;
-}
-
-.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
-  border: none;
-  box-shadow: inset 0 -4px 0 pink;
 }
 
 .nav-tabs .nav-link, .nav-tabs .nav-link:visited { 

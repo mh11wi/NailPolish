@@ -23,33 +23,44 @@
 <script>
 import Comparison from './Comparison.vue'
 
+/** The 'Compare Polishes' tab, which displays all polish comparisons in separate Bootstrap carousels. */
 export default {
   name: 'ComparisonsList',
   components: {
     Comparison
   },
-  props: ['comparisons'],
+  props: [
+    'comparisons' // the list of comparisons
+  ],
   data: function() {
     return { 
-      cardHeight: 0
+      cardHeight: 0 // the height the Bootstrap card (containing polish info) should be, i.e. same as width, which varies on window size
     }
   },
+  /** Adds listener for when the browser is resized so that the polish cards resize appropriately. */
   created() {
     window.addEventListener('resize', this.handleResize);
   },
+  /** Removes browser resize listener. */
   destroyed() {
     window.removeEventListener('resize', this.handleResize);
   },
   methods: {
+    /** Adds a new comparison to the list when the button is clicked. */
     addComparison() {
       const newName = 'Comparison ' + (this.comparisons.length + 1);
       this.comparisons.push({name: newName, polishes: []});
     },
     
+    /**
+     * Deletes the comparison from the list when the button is clicked.
+     * @param event - object containing which comparison to delete
+     */
     deleteComparison(event) {
       this.comparisons.splice(event, 1);
     },
 
+    /** Resizes the height of all polish cards so that they are proportional to their width. */
     handleResize() {
       const polish = document.querySelectorAll('.carousel-inner > .active .polish')[0];
       if (polish && polish.offsetWidth != 0) {

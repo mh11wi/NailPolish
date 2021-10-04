@@ -52,27 +52,46 @@
 </template>
 
 <script>
+/** A 'comparison polish' is a polish in a comparison, which is displayed in a Bootstrap card. */
 export default {
   name: 'ComparisonPolish',
-  props: ['card', 'index', 'finish', 'comparisonLength', 'cardHeight', 'isSun'],
+  props: [
+    'card', // the polish information to display in the card
+    'index', // the index of the card within the parent component's carousel
+    'finish', // the finish of the polish to display (either 'glossy' or 'matte')
+    'comparisonLength', // the number of polishes in the comparison
+    'cardHeight', // the height of the card
+    'isSun' // if the polish is solar, whether the sun image should be retrieved
+  ],
+  /** Ensure that the height of the card is correct when switching between image and details in the card. */
   updated() {
     this.$emit("resize");
   },
   methods: {
+    /**
+     * Gets the specified polish image.
+     * @param polishId - the id of the polish
+     */
     getImage(polishId) {
-      const finishId = this.finish == 'glossy' ? 1 : 2;
+      const finishId = this.finish == 'glossy' ? this.$root.$options.constants.glossy : this.$root.$options.constants.matte;
       const appendSun = this.card.polish.type == 'Solar' && this.isSun ? '-sun' : '';
-      return require('@/assets/images/polishes/' + polishId + '/' + finishId + appendSun + '.jpg');
+      return require('@/assets/images/polishes/' + polishId + '/' + finishId + appendSun + this.$root.$options.constants.extension);
     },
 
+    /**
+     * Moves the polish within the comparison in the specified direction. Handled in the parent component.
+     * @param dir - the direction to move (either -1 for left, or 1 for right)
+     */
     movePolish(dir) {
       this.$emit("movePolish", {index: this.index, dir: dir});
     },
 
+    /** Removes the chosen polish from the comparison. Handled in the parent component. */
     removePolish() {
       this.$emit("removePolish", this.index);
     },
 
+    /** Whether the image or details should be displayed in the card. */
     toggleMode() {
       this.card.detailsMode = !this.card.detailsMode;
     }

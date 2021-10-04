@@ -99,20 +99,27 @@
 <script>
 import FinishToggle from './FinishToggle.vue'
 
+/** A 'polish tile' displays information about a given polish in a modal when clicked. */
 export default {
   name: 'PolishTile',
   components: {
     FinishToggle
   },
+  props: [
+    'polish', // data about a polish
+    'finish', // which finish is selected in the parent component (either 'glossy' or 'matte')
+    'hasToppers', // whether the polish has any topper images, in order to show 'Top It Off' button
+    'comparisons' // the list of polish comparisons, to choose from in a drop-down menu
+  ],
   data: function() {
     return {
-      modalFinish: this.finish,
-      showAlert: false,
-      addedComparison: ''
+      modalFinish: this.finish, // which image to display in the modal (either 'glossy' or 'matte'), defaults to the parent
+      showAlert: false, // whether it should be shown that the polish was successfully added to a comparison
+      addedComparison: '' // that comparison a polish was added to
     }
   },
-  props: ['polish', 'finish', 'hasToppers', 'comparisons'],
   computed: {
+    /** The options to display in the comparisons drop-down menu. An option is disabled if the polish already exists in the comparison. */
     options: function() {
       const output = [];
       for (let i=0; i < this.comparisons.length; i++) {
@@ -123,6 +130,7 @@ export default {
       return output;
     }
   },
+  /** Adds listeners to reset modal appearance. */
   mounted: function() {
     this.$root.$on('bv::modal::show', () => {
       this.modalFinish = this.finish;
@@ -134,18 +142,29 @@ export default {
     });
   },
   methods: {
+    /**
+     * Gets the specified polish image.
+     * @param polishId - the id of the polish
+     * @param isModal - whether the image is for the modal or not (so appropriate finish is displayed)
+     * @param isSun - if the polish is solar, whether the sun image should be retrieved or not
+     */
     getImage(polishId, isModal, isSun) {
       const thisFinish = isModal? this.modalFinish : this.finish
-      const finishId = thisFinish == 'glossy' ? '1' : '2';
+      const finishId = thisFinish == 'glossy' ? this.$root.$options.constants.glossy : this.$root.$options.constants.matte;
       const appendSun = isSun ? '-sun' : '';
-      return require('@/assets/images/polishes/' + polishId + '/' + finishId + appendSun + '.jpg');
+      return require('@/assets/images/polishes/' + polishId + '/' + finishId + appendSun + this.$root.$options.constants.extension);
     },
     
+    /** When the 'Top It Off' button is clicked, close the modal but otherwise handle in the parent component. */
     viewToppers() {
       this.$refs["modal"].hide();
       this.$emit("viewToppers", {basePolish: this.polish, finish: this.modalFinish});
     },
     
+    /**
+     * When a comparison is selected, add the polish to it.
+     * @param selectedComparison - the comparison to add to, or -1 if a comparison should first be created
+     */
     comparisonSelected(selectedComparison) {
       if (selectedComparison == -1) {
         const newName = 'Comparison ' + (this.comparisons.length + 1);

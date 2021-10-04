@@ -25,10 +25,15 @@
 </template>
 
 <script>
+/** An animated waving penguin created with only html and css. */
 export default {
   name: 'Penguin',
-  props: ['width', 'hAlign'],
+  props: [
+    'width', // the width of penguin in the browser
+    'hAlign' // the horizontal alignment of the penguin in the parent element (either 'center', 'right', or 'left')
+  ],
   computed: {
+    /** Determines the margin needed to satisfy the chosen horizontal alignment. */
     margin: function() {
       if (this.hAlign == 'center') {
         return 'auto';

@@ -22,25 +22,40 @@
 </template>
 
 <script>
+/** A 'filter list' is a set of options to filter polishes by (i.e. brand, type, or color). */
 export default {
   name: 'FilterList',
-  props: ['label', 'filter', 'collection'],
+  props: [
+    'label', // the label for the filter
+    'filter', // the kind of filter (either 'brand', 'type', or 'color')
+    'collection' // the collection of polishes to determine filter options from (excludes toppers)
+  ],
   data: function() {
     return {
-      selected: []
+      selected: [] // the selected options for the filter
     }
   },
   computed: {
+    /** Gets the filter options from the collection of polishes. */
     filterList: function() {
       return this.pluck(this.collection, this.filter);
     }
   },
   methods: {
+    /**
+     * Plucks distinct items from an array satisfying the given key, and then sorts the set.
+     * @param array - an array of items
+     * @param key - the key to check
+     */
     pluck: function(array, key) {
       return [...new Set(array.map(o => o[key]))].sort();
     }
   },
   watch: {
+    /**
+     * Handle when a filter option is checked/unchecked in the parent component.
+     * @param value - the checked state of filter options
+     */
     selected(value) {
       this.$emit("updatePolishList", this.filter, value);
     }

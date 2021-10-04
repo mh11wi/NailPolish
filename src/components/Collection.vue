@@ -55,6 +55,7 @@ import FinishToggle from './FinishToggle.vue'
 import FilterList from './FilterList.vue'
 import PolishTile from './PolishTile.vue'
 
+/** The 'Browse Collection' tab, where one can search, filter, and view polish details. */
 export default {
   name: 'Collection',
   components: {
@@ -62,18 +63,28 @@ export default {
     FilterList,
     PolishTile
   },
+  props: [
+    'allPolishes', // data of all polishes (including toppers, which will be extracted)
+    'toppersMap', // data of what polishes have images with which toppers
+    'comparisons' // the list of polish comparisons
+  ],
   data: function() {
     return {
-      finish: 'glossy',
-      brandFilters: [],
-      typeFilters: [],
-      colorFilters: [],
-      search: '',
-      displayedPolishes: []
+      finish: 'glossy', // the selected polish finish to display (either 'glossy' or 'matte')
+      brandFilters: [], // the selected brands to filter by
+      typeFilters: [], // the selected polish types to filter by
+      colorFilters: [], // the selected polish colors to filter by
+      search: '', // the inputted search term
+      displayedPolishes: [] // the subset of polishes displayed based off search or filters
     }
   },
-  props: ['allPolishes', 'toppersMap', 'comparisons'],
   watch: {
+    /**
+     * Resets the filters when searching, ensuring all polishes are searched.
+     * Also resets the displayed polishes when the search term is empty.
+     * @param newVal - the new inputted search term
+     * @param oldVal - the old inputted search term
+     */
     search: function(newVal, oldVal) {
       this.brandFilters = [];
       this.typeFilters = [];
@@ -84,21 +95,32 @@ export default {
       }
     }
   },
+  /** Initially sets the polishes to display to all the polishes. */
   mounted: function() {
     this.displayedPolishes = this.polishes;
   },
   computed: {
+    /** Initially extract all toppers from the list of polishes. */
     polishes: function() {
       return this.allPolishes.filter(polish => polish.type != 'Topper').sort((a, b) => b.id - a.id);
     }
   },
   methods: {
+    /**
+     * Verifies whether a polish satisfies the three filters (brand, type, and color).
+     * @param polish - the polish to check
+     */
     doesPolishSatisfyFilters(polish) {
       return (this.brandFilters.length == 0 || this.brandFilters.includes(polish.brand))
                && (this.typeFilters.length == 0 || this.typeFilters.includes(polish.type))
                && (this.colorFilters.length == 0 || this.colorFilters.includes(polish.colorFamily));
     },
     
+    /**
+     * When a filter option is checked/unchecked, display the subset of polishes that satisfy the three filters (brand, type, and color).
+     * @param filter - the kind of filter option being checked/unchecked (brand, type, or color)
+     * @param values - the checked state of all options of that kind
+     */
     filterPolishList(filter, values) {
       if (filter == 'brand') {
         this.brandFilters = values;
@@ -111,16 +133,25 @@ export default {
       this.displayedPolishes = this.polishes.filter(this.doesPolishSatisfyFilters);
     },
     
+    /**
+     * Verifies whether a polish's name contains the inputted search term.
+     * @param polish - the polish to check
+     */
     doesPolishSatisySearchTerm(polish) {
       const polishName = polish.name.toLowerCase();
       const searchTerm = this.search.toLowerCase();
       return polishName.indexOf(searchTerm) != -1;
     },
     
+    /** When the search button is clicked, display only the polishes satisfying the search term. */
     doSearch() {
       this.displayedPolishes = this.polishes.filter(this.doesPolishSatisySearchTerm);
     },
     
+    /** 
+     * Handle when a polish's 'Top It Off' button is clicked in the parent component.
+     * @param event - object containing polish and selected topper id
+     */
     viewToppers(event) {
       this.$emit("viewToppers", event);
     }

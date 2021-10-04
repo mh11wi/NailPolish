@@ -50,22 +50,27 @@
 import FinishToggle from './FinishToggle.vue';
 import ComparisonPolish from './ComparisonPolish.vue';
 
+/** A 'comparison' is a list of polishes to compare next to one another. */
 export default {
   name: 'Comparison',
   components: {
     FinishToggle,
     ComparisonPolish
   },
-  props: ['comparison', 'cardHeight'],
+  props: [
+    'comparison', // data of the comparison (i.e. list of polishes and name)
+    'cardHeight' // the height the Bootstrap card (containing polish info) should be, i.e. same as width, which varies on window size
+  ],
   data: function() {
     return {
-      editMode: false,
-      finish: 'glossy',
-      maxNameLength: 18,
-      solarChecked: false
+      editMode: false, // whether the comparison's name is being edited
+      finish: 'glossy', // the selected polish finish to display (either 'glossy' or 'matte)
+      maxNameLength: 18, // the maximum number of characters allowed for a comparison's name
+      solarChecked: false // whether the solar toggle is checked or not (when a comparison contains a solar polish)
     }
   },
   computed: {
+    /** Arranges the list of polishes to compare in a Bootstrap carousel. */
     slides: function() {
       const output = [];
       const numSlides = Math.ceil(this.comparison.polishes.length / 3);
@@ -85,11 +90,13 @@ export default {
       return output;
     },
 
+    /** Check whether the comparison contains a solar polish, in order to display the toggle. */
     containsSolar: function() {
       return this.comparison.polishes.some(item => item.polish.type == 'Solar');
     }
   },
   methods: {
+    /** Ensure that the name is saved with a maximum amount of characters, and if empty save a default name. */
     finishEdit() {
       this.editMode = false;
       if ('' == this.comparison.name.trim()) {
@@ -99,10 +106,15 @@ export default {
       }
     },
     
+    /** Handle the deletion of the comparison in the parent component. */
     deleteComparison() {
       this.$emit("deleteComparison", this.$vnode.key);
     },
     
+    /** 
+     * Move a polish left or right in the list of polishes to compare.
+     * @param event - object containing polish to move and direction
+     */
     movePolish(event) {
       const polishes = [...this.comparison.polishes];
       const tmp = polishes[event.index];
@@ -111,10 +123,15 @@ export default {
       this.comparison.polishes = polishes;
     },
 
+    /**
+     * Removes a polish from the list of polishes to compare.
+     * @param event - object containing polish to remove
+     */
     removePolish(event) {
       this.comparison.polishes.splice(event, 1);
     },
 
+    /** Handle the resizing of a polish's card in the parent component. */
     handleResize() {
       this.$emit("resize");
     }

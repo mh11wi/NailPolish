@@ -43,20 +43,32 @@
 </template>
 
 <script>
+/** A nail art entry to display in the gallery, with popovers to illustrate the polishes used. */
 export default {
   name: 'NailArt',
-  props: ['entry', 'polishes'],
+  props: [
+    'entry', // data of the nail art entry
+    'polishes' // data of all polishes
+  ],
   methods: {
+    /**
+     * Gets the specified nail art image.
+     * @param id - the id of the nail art entry
+     */
     getImage(id) {
-      return require('@/assets/images/nailart/' + id + '.jpg');
+      return require('@/assets/images/nailart/' + id + this.$root.$options.constants.extension);
     },
     
+    /**
+     * Gets the specified polish image. If the polish is a topper, it will be shown over the default base polish.
+     * @param id - the id of the polish
+     */
     getPolishImage(id) {
       if (this.polishes[id - 1].type == 'Topper') {
-        return require('@/assets/images/polishes/32/' + id + '.jpg');
+        return require('@/assets/images/polishes/' + this.$root.$options.constants.base + '/' + id + this.$root.$options.constants.extension);
       }
       
-      return require('@/assets/images/polishes/' + id + '/1.jpg');
+      return require('@/assets/images/polishes/' + id + '/' + this.$root.$options.constants.glossy + this.$root.$options.constants.extension);
     }
   } 
 }

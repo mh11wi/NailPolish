@@ -10,17 +10,21 @@
 import nailArtData from '../data/nailArt.json'
 import NailArt from './NailArt.vue'
 
+/** The 'Nail Art Gallery' tab, which displays a list of nail art and their polishes. */
 export default {
   name: 'Gallery',
   components: {
     NailArt
   },
-  props: ['polishes'],
+  props: [
+    'polishes' // data of all polishes
+  ],
   data: function() {
     return {
-      popoverId: ''
+      popoverId: '' // the id of the polish popover open
     }
   },
+  /** Add listeners that ensure the shown polish popover is hidden on scroll (but not the app info popover). */
   mounted() {
     document.getElementById('gallery').addEventListener('scroll', this.hidePopover);
     
@@ -31,11 +35,13 @@ export default {
     });
   },
   computed: {
+    /** Nail art data, sorted descendingly. */
     nailArt: function() {
       return nailArtData.sort((a, b) => b.id - a.id);
     }
   },
-  methods: {  
+  methods: {
+    /** Hides the polish popover. */
     hidePopover() {
       this.$root.$emit('bv::hide::popover', this.popoverId);
     }
