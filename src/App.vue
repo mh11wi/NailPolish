@@ -7,11 +7,17 @@
           <font-awesome-icon icon="info-circle" size="lg"/>
         </b-nav-item>
         <b-popover variant="info" target="info-link" title="App Info" triggers="click blur">
-          <p><strong>Browse Collection</strong><br>Search or filter through {{$root.$options.constants.name}}'s collection of nail polishes.</p>
+          <p>I created this application to track my collection of nail polishes and showcase some of my favourite nail art designs.</p>
+          <p><strong>Browse Collection</strong><br>Search or filter through my collection of nail polishes.</p>
           <p><strong>Compare Polishes</strong><br>Compare similar polishes next to one another.</p>
           <p><strong>Top It Off</strong><br>See what different toppers look like over an applicable polish.</p>
-          <p><strong>Nail Art Gallery</strong><br>View some of {{$root.$options.constants.name}}'s nail art.</p>
+          <p><strong>Nail Art Gallery</strong><br>View some of my past nail art.</p>
+          <penguin width="100" hAlign="center"/>
+          <p class="text-right">Thanks for visiting!<br>&ndash;mads</p>
         </b-popover>
+        <b-nav-item href="https://mh11wi.github.io/">
+          <font-awesome-icon icon="home" size="lg"/>
+        </b-nav-item>
       </b-navbar-nav>
     </b-navbar>
     <b-tabs v-model="tabIndex" class="flex-grow-1 d-flex flex-column" content-class="flex-grow-1">
@@ -38,6 +44,7 @@ import Collection from './components/Collection.vue'
 import ComparisonsList from './components/ComparisonsList.vue'
 import Toppers from './components/Toppers.vue'
 import Gallery from './components/Gallery.vue'
+import Penguin from './components/Penguin.vue'
 
 export default {
   name: 'App',
@@ -46,6 +53,7 @@ export default {
     ComparisonsList,
     Toppers,
     Gallery,
+    Penguin
   },
   data: function() {
     return {

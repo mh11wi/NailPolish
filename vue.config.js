@@ -5,7 +5,7 @@ module.exports = {
   pages: {
     index: {
       entry: 'src/main.js',
-      title: 'Nail Polish App'
+      title: 'Madeleine Hill - Nail Polish App'
     }
   }
 }

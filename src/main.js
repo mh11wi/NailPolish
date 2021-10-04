@@ -8,9 +8,9 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 // Font Awesome Icons
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faInfoCircle, faPencilAlt, faTrashAlt, faCheck, faArrowLeft, faArrowRight, faTimes, faSun, faQuestionCircle } from '@fortawesome/free-solid-svg-icons'
+import { faInfoCircle, faHome, faPencilAlt, faTrashAlt, faCheck, faArrowLeft, faArrowRight, faTimes, faSun, faQuestionCircle } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-library.add(faInfoCircle, faPencilAlt, faTrashAlt, faCheck, faArrowLeft, faArrowRight, faTimes, faSun, faQuestionCircle)
+library.add(faInfoCircle, faHome, faPencilAlt, faTrashAlt, faCheck, faArrowLeft, faArrowRight, faTimes, faSun, faQuestionCircle)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 // Custom styling for Bootstrap
@@ -35,8 +35,8 @@ new Vue({
   constants: {
     glossy: 1, // id of glossy top coat
     matte: 2, // id of matte top coat
-    base: 3, // id of the default base polish for toppers
-    name: "Foo", // name displayed in the header
+    base: 32, // id of the default base polish for toppers
+    name: "Madeleine", // name displayed in the header
     extension: ".jpg" // the image file extension
   },
   render: h => h(App),

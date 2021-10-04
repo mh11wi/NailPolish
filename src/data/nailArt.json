@@ -1,3 +1,189 @@
 [
-
+  {
+    "id": "1",
+    "date": "April 19, 2020",
+    "alt": "Cupcake nails",
+    "description": "Cupcakes with different toppers as 'sprinkles'. Pretty sweet, no?",
+    "polishes": [
+      {"id": "121"},
+      {"id": "122"},
+      {"id": "25"},
+      {"id": "33"},
+      {"id": "26"},
+      {"id": "80"},
+      {"id": "24"},
+      {"id": "123"},
+      {"id": "28"},
+      {"id": "120"}
+    ]
+  },
+  {
+    "id": "2",
+    "date": "May 18, 2020",
+    "alt": "Penguin nails",
+    "description": "Those who know me, know I love penguins! Similar to my last entry, I created these penguin nails with different toppers as 'feathers'.",
+    "polishes": [
+      {"id": "121"},
+      {"id": "122"},
+      {"id": "25"},
+      {"id": "32"},
+      {"id": "28"},
+      {"id": "120"},
+      {"id": "24"},
+      {"id": "80"},
+      {"id": "26"},
+      {"id": "79"}
+    ]
+  },
+  {
+    "id": "3",
+    "date": "May 24, 2020",
+    "alt": "Yoshi nails",
+    "description": "These nails are no dino-snore! For the #holotacovideogamenailart competition I free-handed Yoshi over Twinkled T's Icing 'Aurora' powder.",
+    "polishes": [
+      {"id": "121"},
+      {"id": "124"},
+      {"id": "120"},
+      {"id": "32"}
+    ]
+  },
+  {
+    "id": "4",
+    "date": "September 6, 2020",
+    "alt": "Rainbow nails",
+    "description": "As soon as I saw the Holo Taco Rainbow Collection I knew that I had to recreate the 7-colour gradient. And for fun I added some stickers!",
+    "polishes": [
+      {"id": "19"},
+      {"id": "84"},
+      {"id": "83"},
+      {"id": "82"},
+      {"id": "88"},
+      {"id": "87"},
+      {"id": "86"},
+      {"id": "85"}
+    ]
+  },
+  {
+    "id": "5",
+    "date": "October 12, 2020",
+    "alt": "Gold nails",
+    "description": "A gold and purple #HoloTacoCombo with matching striping tape.",
+    "polishes": [
+      {"id": "55"},
+      {"id": "96"}
+    ]
+  },
+  {
+    "id": "6",
+    "date": "November 3, 2020",
+    "alt": "Fall nails",
+    "description": "I swear, Play Rosé works for any season! Here I created a simple fall look with Twinkled T's leaves nail vinyl on my accent nail.",
+    "polishes": [
+      {"id": "93"},
+      {"id": "22"}
+    ]
+  },
+  {
+    "id": "7",
+    "date": "December 5, 2020",
+    "alt": "Present nails",
+    "description": "Happy 'Holo'days! These Star Dust flakies from Twinkled T were the gift that kept on giving this year. WOW!! By the way, I created the bow by looping pieces of striping tape together and joining them in the middle.",
+    "polishes": [
+      {"id": "118"},
+      {"id": "120"}
+    ]
+  },
+  {
+    "id": "8",
+    "date": "December 20, 2020",
+    "alt": "Christmas nails",
+    "description": "Nothing says 'Ho Ho Ho!' more than these nail vinyls from Twinkled T. Complete with gold stones for holly berries. Merry Christmas y'all!",
+    "polishes": [
+      {"id": "22"},
+      {"id": "85"},
+      {"id": "82"},
+      {"id": "105"}
+    ]
+  },
+  {
+    "id": "9",
+    "date": "January 24, 2021",
+    "alt": "Negative space nails",
+    "description": "An almost negative space look with striping tape— 'almost' because I could not resist adding a unicorn skin over the naked nail!",
+    "polishes": [
+      {"id": "105"},
+      {"id": "28"}
+    ]
+  },
+  {
+    "id": "10",
+    "date": "February 10, 2021",
+    "alt": "Valentine's Day nails",
+    "description": "Happy Valentine's Day! This was my first time playing with spider gels, and I am in LOVE. So much so, I added hearts. And rhinestones. You get the picture!",
+    "polishes": [
+      {"id": "100"},
+      {"brand": "Spider Gel", "name": "Black"},
+      {"id": "82"}
+    ]
+  },
+  {
+    "id": "11",
+    "date": "April 2, 2021",
+    "alt": "Dotticure nails",
+    "description": "Pastels? For spring? Groundbreaking, I know! To shake things up a bit, I made each nail a dotticure with a matching linear holographic colour.",
+    "polishes": [
+      {"id": "127"},
+      {"id": "84"},
+      {"id": "99"},
+      {"id": "88"},
+      {"id": "125"},
+      {"id": "86"},
+      {"id": "126"},
+      {"id": "83"},
+      {"id": "119"},
+      {"id": "87"}
+    ]
+  },
+  {
+    "id": "12",
+    "date": "April 23, 2021",
+    "alt": "Tie-dye nails",
+    "description": "To create these tie-dye accent nails, I sponged on the cremes from Holo Taco's Unicorn Dream Collection in a random pattern. I then applied the Spot It top coat (when the nails were dry, oops!), giving a muted effect. Despite this mistake, I'm not mad at the way they turned out!",
+    "polishes": [
+      {"id": "11"},
+      {"id": "10"},
+      {"id": "22"},
+      {"brand": "Dance Legend", "name": "Spot It: White"}
+    ]
+  },
+  {
+    "id": "13",
+    "date": "May 21, 2021",
+    "alt": "Galaxy nails",
+    "description": "I was inspired by the Kelli Marissa x ORLY trio to create my very own galaxy manicure. To top off these polishes, I stamped various designs from her MoYou London collaboration plate.",
+    "polishes": [
+      {"id": "40"},
+      {"id": "39"},
+      {"id": "38"},
+      {"brand": "Twinkled T", "name": "Liquid Gold Stamping Polish"}
+    ]
+  },
+  {
+    "id": "14",
+    "date": "July 12, 2021",
+    "alt": "Birthday nails",
+    "description": "To celebrate Holo Taco's 2nd Anniversary (and my birthday too!), I sponged on some holo flakie balloons with matching diamond shaped charms. I then 'baked' up a cake to complete the look.",
+    "polishes": [
+      {"id": "32"},
+      {"id": "97"},
+      {"id": "11"},
+      {"id": "96"},
+      {"id": "76"},
+      {"id": "95"},
+      {"id": "10"},
+      {"brand": "Essie", "name": "Hi Maitenance"},
+      {"id": "22"},
+      {"id": "83"}
+    ]
+  }
 ]
