@@ -7,7 +7,7 @@
           <font-awesome-icon icon="info-circle" size="lg"/>
         </b-nav-item>
         <b-popover variant="info" target="info-link" title="App Info" triggers="click blur">
-          <p>I created this application to track my collection of nail polishes and showcase some of my favourite nail art designs.</p>
+          <p>I created this application to track my collection of nail polishes and showcase some of my favourite nail art looks.</p>
           <p><strong>Browse Collection</strong><br>Search or filter through my collection of nail polishes.</p>
           <p><strong>Compare Polishes</strong><br>Compare similar polishes next to one another.</p>
           <p><strong>Top It Off</strong><br>See what different toppers look like over an applicable polish.</p>
