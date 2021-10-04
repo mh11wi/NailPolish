@@ -1,12 +1,12 @@
 {
   "name": "NailPolish",
+  "author": "Madeleine Hill <mh11wi@outlook.com> (https://mh11wi.github.io)",
   "version": "0.0.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "gh-pages-deploy": "node scripts/gh-pages-deploy.js"
+    "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
