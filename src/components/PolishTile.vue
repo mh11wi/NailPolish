@@ -150,9 +150,9 @@ export default {
      */
     getImage(polishId, isModal, isSun) {
       const thisFinish = isModal? this.modalFinish : this.finish
-      const finishId = thisFinish == 'glossy' ? this.$root.$options.constants.glossy : this.$root.$options.constants.matte;
+      const finishId = thisFinish == 'glossy' ? process.env.VUE_APP_GLOSSY : process.env.VUE_APP_MATTE;
       const appendSun = isSun ? '-sun' : '';
-      return require('@/assets/images/polishes/' + polishId + '/' + finishId + appendSun + this.$root.$options.constants.extension);
+      return require('@/assets/images/polishes/' + polishId + '/' + finishId + appendSun + process.env.VUE_APP_EXTENSION);
     },
     
     /** When the 'Top It Off' button is clicked, close the modal but otherwise handle in the parent component. */

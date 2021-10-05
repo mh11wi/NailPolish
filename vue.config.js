@@ -5,7 +5,14 @@ module.exports = {
   pages: {
     index: {
       entry: 'src/main.js',
-      title: 'Nail Polish App'
+      title: process.env.VUE_APP_TITLE
+    }
+  },
+  css: {
+    loaderOptions: {
+      scss: {
+        additionalData: '$primary-color: ' + process.env.VUE_APP_PRIMARY_COLOR + ';'
+      }
     }
   }
 }

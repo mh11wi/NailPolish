@@ -45,7 +45,7 @@ export default {
   computed: {
     /** Gets the toppers associated to the base polish. */
     toppers: function() {
-      const topperIds = [this.$root.$options.constants.glossy, this.$root.$options.constants.matte];
+      const topperIds = [process.env.VUE_APP_GLOSSY, process.env.VUE_APP_MATTE];
       if (this.basePolish != null && this.toppersMap[this.basePolish.id] != null) {
         topperIds.push(...this.toppersMap[this.basePolish.id]);
       }
@@ -78,7 +78,7 @@ export default {
      * @param polishId - the id of the polish to display the selected topper over
      */
     getImage(polishId) {
-      return require('@/assets/images/polishes/' + polishId + '/' + this.selectedTopperId + this.$root.$options.constants.extension);
+      return require('@/assets/images/polishes/' + polishId + '/' + this.selectedTopperId + process.env.VUE_APP_EXTENSION);
     }
   }
 }

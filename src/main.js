@@ -32,12 +32,5 @@ applyPolyfills().then(() => {
 
 // Mount the app
 new Vue({
-  constants: {
-    glossy: 1, // id of glossy top coat
-    matte: 2, // id of matte top coat
-    base: 3, // id of the default base polish for toppers
-    name: "Foo", // name displayed in the header
-    extension: ".jpg" // the image file extension
-  },
   render: h => h(App),
 }).$mount('#app')

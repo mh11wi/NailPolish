@@ -1,7 +1,10 @@
 <template>
   <div id="gallery" class="container-fluid mh-100">
-    <div class="mb-3">
-    <NailArt v-for="(entry, index) in nailArt" :key="index" :entry="entry" :polishes="polishes"/>
+    <div v-if="nailArt.length == 0" class="mt-3">
+      No nail art found! Check back soon.
+    </div>
+    <div v-else class="mb-3">
+      <NailArt v-for="(entry, index) in nailArt" :key="index" :entry="entry" :polishes="polishes"/>
     </div>
   </div>
 </template>
