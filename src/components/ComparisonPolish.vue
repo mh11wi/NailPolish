@@ -73,9 +73,9 @@ export default {
      * @param polishId - the id of the polish
      */
     getImage(polishId) {
-      const finishId = this.finish == 'glossy' ? this.$root.$options.constants.glossy : this.$root.$options.constants.matte;
+      const finishId = this.finish == 'glossy' ? process.env.VUE_APP_GLOSSY : process.env.VUE_APP_MATTE;
       const appendSun = this.card.polish.type == 'Solar' && this.isSun ? '-sun' : '';
-      return require('@/assets/images/polishes/' + polishId + '/' + finishId + appendSun + this.$root.$options.constants.extension);
+      return require('@/assets/images/polishes/' + polishId + '/' + finishId + appendSun + process.env.VUE_APP_EXTENSION);
     },
 
     /**

@@ -1,7 +1,7 @@
 <template>
   <div class="app d-flex flex-column">
     <b-navbar variant="primary">
-      <b-navbar-brand>{{$root.$options.constants.name}}'s Nail Polishes</b-navbar-brand>
+      <b-navbar-brand>{{ collector }}'s Nail Polishes</b-navbar-brand>
       <b-navbar-nav class="ml-auto">
         <b-nav-item :link-attrs="{id: 'info-link', tabindex: '0'}">
           <font-awesome-icon icon="info-circle" size="lg"/>
@@ -60,7 +60,8 @@ export default {
       tabIndex: 0, // which tab is displayed
       basePolish: null, // the polish selected to view toppers over
       topperId: '', // the id of the topper to first show in the 'Top It Off' tab
-      comparisons: [] // the list of polish comparisons
+      comparisons: [], // the list of polish comparisons
+      collector: process.env.VUE_APP_COLLECTOR // the name of the collector to display in the navbar
     }
   },
   computed: {
@@ -80,7 +81,7 @@ export default {
      */
     viewToppers(event) {
       this.basePolish = event.basePolish;
-      this.topperId = event.finish == 'glossy' ? this.$root.$options.constants.glossy : this.$root.$options.constants.matte;
+      this.topperId = event.finish == 'glossy' ? process.env.VUE_APP_GLOSSY : process.env.VUE_APP_MATTE;
       this.tabIndex = 2;
     }
   }

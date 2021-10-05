@@ -56,7 +56,7 @@ export default {
      * @param id - the id of the nail art entry
      */
     getImage(id) {
-      return require('@/assets/images/nailart/' + id + this.$root.$options.constants.extension);
+      return require('@/assets/images/nailart/' + id + process.env.VUE_APP_EXTENSION);
     },
     
     /**
@@ -65,10 +65,10 @@ export default {
      */
     getPolishImage(id) {
       if (this.polishes[id - 1].type == 'Topper') {
-        return require('@/assets/images/polishes/' + this.$root.$options.constants.base + '/' + id + this.$root.$options.constants.extension);
+        return require('@/assets/images/polishes/' + process.env.VUE_APP_DEFAULT_BASE + '/' + id + process.env.VUE_APP_EXTENSION);
       }
-      
-      return require('@/assets/images/polishes/' + id + '/' + this.$root.$options.constants.glossy + this.$root.$options.constants.extension);
+
+      return require('@/assets/images/polishes/' + id + '/' + process.env.VUE_APP_GLOSSY + process.env.VUE_APP_EXTENSION);
     }
   } 
 }
