@@ -1498,5 +1498,55 @@
     "color": "",
     "numCoats": "1",
     "collection": ""
+  },
+  {
+    "id": "151",
+    "name": "Au",
+    "brand": "Cirque Colors",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": ""
+  },
+  {
+    "id": "152",
+    "name": "Coup de Foudre",
+    "brand": "Vitry",
+    "type": "Jelly",
+    "colorFamily": "Red",
+    "color": "Deep cool-toned red",
+    "numCoats": "2",
+    "collection": ""
+  },
+  {
+    "id": "153",
+    "name": "Nude",
+    "brand": "Vitry",
+    "type": "Creme",
+    "colorFamily": "Neutral",
+    "color": "Creamy almond",
+    "numCoats": "3",
+    "collection": ""
+  },
+  {
+    "id": "154",
+    "name": "Flamenco",
+    "brand": "Vitry",
+    "type": "Creme",
+    "colorFamily": "Orange",
+    "color": "Bright medium orange",
+    "numCoats": "3",
+    "collection": ""
+  },
+  {
+    "id": "155",
+    "name": "Macaron",
+    "brand": "Vitry",
+    "type": "Creme",
+    "colorFamily": "Brown",
+    "color": "Chocolate macaron cookie",
+    "numCoats": "2",
+    "collection": ""
   }
 ]
