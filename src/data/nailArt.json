@@ -198,5 +198,18 @@
       {"id": "155"},
       {"id": "151"}
     ]
+  },
+  {
+    "id": "16",
+    "date": "October 24, 2021",
+    "alt": "Halloween nails",
+    "description": "Nothing says 'Holo'ween like five holo pumpkins / jack-o'-lanterns in the dark. Spooky!",
+    "polishes": [
+      {"id": "65"},
+      {"id": "32"},
+      {"id": "124"},
+      {"brand": "Twinkled T", "name": "Liquid Gold Stamping Polish"},
+      {"brand": "ORLY", "name": "Glow Up Top Effect"}
+    ]
   }
 ]
