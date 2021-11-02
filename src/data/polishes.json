@@ -1548,5 +1548,35 @@
     "color": "Chocolate macaron cookie",
     "numCoats": "2",
     "collection": ""
+  },
+  {
+    "id": "156",
+    "name": "Anachronic",
+    "brand": "Live Love Polish",
+    "type": "Magnetic",
+    "colorFamily": "Pink",
+    "color": "Shifts between dark pink and orange with holographic glitters",
+    "numCoats": "3",
+    "collection": "Time Warp (2020)"
+  },
+  {
+    "id": "157",
+    "name": "Millenia",
+    "brand": "Live Love Polish",
+    "type": "Magnetic",
+    "colorFamily": "Blue",
+    "color": "Shifts between dark blue and purple with gold holographic glitters",
+    "numCoats": "3",
+    "collection": "Time Warp (2020)"
+  },
+  {
+    "id": "158",
+    "name": "Optic",
+    "brand": "Live Love Polish",
+    "type": "Magnetic",
+    "colorFamily": "Black",
+    "color": "Black with silver highlight and subtle blue shimmer",
+    "numCoats": "3",
+    "collection": "Viewfinder (2020)"
   }
 ]
