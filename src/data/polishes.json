@@ -1578,5 +1578,55 @@
     "color": "Black with silver highlight and subtle blue shimmer",
     "numCoats": "3",
     "collection": "Viewfinder (2020)"
+  },
+  {
+    "id": "159",
+    "name": "Mordoré",
+    "brand": "Vitry",
+    "type": "Shimmer",
+    "colorFamily": "Gold",
+    "color": "Light brown with gold shimmer",
+    "numCoats": "3",
+    "collection": ""
+  },
+  {
+    "id": "160",
+    "name": "Grenadine",
+    "brand": "Vitry",
+    "type": "Creme",
+    "colorFamily": "Red",
+    "color": "Deep cherry red",
+    "numCoats": "2",
+    "collection": ""
+  },
+  {
+    "id": "161",
+    "name": "Rose Thé",
+    "brand": "Vitry",
+    "type": "Creme",
+    "colorFamily": "Pink",
+    "color": "Dusty rose",
+    "numCoats": "3",
+    "collection": ""
+  },
+  {
+    "id": "162",
+    "name": "Myrtille",
+    "brand": "Vitry",
+    "type": "Creme",
+    "colorFamily": "Purple",
+    "color": "Deep plum purple",
+    "numCoats": "2",
+    "collection": ""
+  },
+  {
+    "id": "163",
+    "name": "Two-Timing the Zones",
+    "brand": "OPI",
+    "type": "Creme",
+    "colorFamily": "Pink",
+    "color": "Vibrant Barbie pink",
+    "numCoats": "2",
+    "collection": "Fiji Collection (2017)"
   }
 ]
