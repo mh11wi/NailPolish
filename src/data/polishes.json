@@ -1628,5 +1628,25 @@
     "color": "Vibrant Barbie pink",
     "numCoats": "2",
     "collection": "Fiji Collection (2017)"
+  },
+  {
+    "id": "164",
+    "name": "Existential Crisis",
+    "brand": "Holo Taco",
+    "type": "Shimmer",
+    "colorFamily": "Blue",
+    "color": "Teal jelly base with iridescent shimmer and blue holographic flakes",
+    "numCoats": "2",
+    "collection": ""
+  },
+  {
+    "id": "165",
+    "name": "Frozen Benanas",
+    "brand": "Holo Taco",
+    "type": "Metallic Foil",
+    "colorFamily": "Gold",
+    "color": "Yellow-gold with silver foil flakes and scattered holographic glitters",
+    "numCoats": "3",
+    "collection": ""
   }
 ]
