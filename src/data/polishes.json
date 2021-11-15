@@ -1615,7 +1615,7 @@
     "brand": "Vitry",
     "type": "Creme",
     "colorFamily": "Purple",
-    "color": "Deep plum purple",
+    "color": "Blueberry smoothie",
     "numCoats": "2",
     "collection": ""
   },
@@ -1647,6 +1647,36 @@
     "colorFamily": "Gold",
     "color": "Yellow-gold with silver foil flakes and scattered holographic glitters",
     "numCoats": "3",
+    "collection": ""
+  },
+  {
+    "id": "166",
+    "name": "XX",
+    "brand": "Cirque Colors",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": ""
+  },
+  {
+    "id": "167",
+    "name": "Diamond Top Coat",
+    "brand": "Bow Polish",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": ""
+  },
+  {
+    "id": "168",
+    "name": "Spot It: White",
+    "brand": "Dance Legend",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
     "collection": ""
   }
 ]
