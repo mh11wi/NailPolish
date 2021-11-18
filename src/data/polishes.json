@@ -1678,5 +1678,35 @@
     "color": "",
     "numCoats": "1",
     "collection": ""
+  },
+  {
+    "id": "169",
+    "name": "Rainbow Snow",
+    "brand": "Holo Taco",
+    "type": "Holographic Glitter",
+    "colorFamily": "Silver",
+    "color": "Clear jelly base",
+    "numCoats": "2",
+    "collection": "Holoday Collection (2019)"
+  },
+  {
+    "id": "170",
+    "name": "Dilly Dally",
+    "brand": "Bitzy",
+    "type": "Layering Glitter",
+    "colorFamily": "Pink",
+    "color": "Hot pink jelly base with matte blue hex glitters",
+    "numCoats": "4",
+    "collection": ""
+  },
+  {
+    "id": "171",
+    "name": "Knick Knack",
+    "brand": "Bitzy",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": ""
   }
 ]
