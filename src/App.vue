@@ -28,7 +28,7 @@
         <ComparisonsList :comparisons="comparisons"/>
       </b-tab>
       <b-tab title="Top It Off">
-        <Toppers :polishes="polishes" :toppersMap="toppersMap" :basePolish="basePolish" :defaultTopperId="topperId"/>
+        <Toppers :polishes="polishes" :toppersMap="toppersMap" :basePolishId="basePolishId" :defaultTopperId="topperId"/>
       </b-tab>
       <b-tab title="Nail Art Gallery" lazy>
         <Gallery :polishes="polishes"/>
@@ -58,8 +58,8 @@ export default {
   data: function() {
     return {
       tabIndex: 0, // which tab is displayed
-      basePolish: null, // the polish selected to view toppers over
-      topperId: '', // the id of the topper to first show in the 'Top It Off' tab
+      basePolishId: null, // the polish selected to view toppers over
+      topperId: process.env.VUE_APP_GLOSSY, // the id of the topper to first show in the 'Top It Off' tab
       comparisons: [], // the list of polish comparisons
       collector: process.env.VUE_APP_COLLECTOR // the name of the collector to display in the navbar
     }
@@ -80,7 +80,7 @@ export default {
      * @param event - object containing base polish and selected topper id
      */
     viewToppers(event) {
-      this.basePolish = event.basePolish;
+      this.basePolishId = event.basePolishId;
       this.topperId = event.finish == 'glossy' ? process.env.VUE_APP_GLOSSY : process.env.VUE_APP_MATTE;
       this.tabIndex = 2;
     }
