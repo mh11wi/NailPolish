@@ -211,5 +211,18 @@
       {"brand": "Twinkled T", "name": "Liquid Gold Stamping Polish"},
       {"brand": "ORLY", "name": "Glow Up Top Effect"}
     ]
+  },
+  {
+    "id": "17",
+    "date": "December 8, 2021",
+    "alt": "Ferrero Rocher nails",
+    "description": "A 'holo'day manicure inspired by Ferrero Rochers, and the iconic tree of gold wrapped chocolates.",
+    "polishes": [
+      {"brand": "Holo Taco", "name": "Gold Play Button"},
+      {"id": "132"},
+      {"brand": "Holo Taco", "name": "Choco Holo"},
+      {"id": "22"},
+      {"id": "67"}
+    ]
   }
 ]
