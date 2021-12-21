@@ -39,12 +39,11 @@ export default {
   ],
   data: function() {
     return {
-      combination: {basePolishId: null, topperId: null}, // the current combination of base polish and topper
-      collectionBasePolishUpdated: false // whether the base polish from the 'Browser Collection' tab has updated
+      combination: {basePolishId: null, topperId: null} // the current combination of base polish and topper
     }
   },
   computed: {
-    /** Gets the toppers associated to the base polish. */
+    /** Gets the toppers associated to the selected base polish. */
     toppers: function() {
       const topperIds = [process.env.VUE_APP_GLOSSY, process.env.VUE_APP_MATTE];
       if (this.combination.basePolishId != null && this.toppersMap[this.combination.basePolishId] != null) {

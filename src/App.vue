@@ -28,7 +28,7 @@
         <ComparisonsList :comparisons="comparisons"/>
       </b-tab>
       <b-tab title="Top It Off">
-        <Toppers :polishes="polishes" :toppersMap="toppersMap" :collectionBasePolishId="basePolish"/>
+        <Toppers :polishes="polishes" :toppersMap="toppersMap" :collectionBasePolish="basePolish"/>
       </b-tab>
       <b-tab title="Nail Art Gallery" lazy>
         <Gallery :polishes="polishes"/>
