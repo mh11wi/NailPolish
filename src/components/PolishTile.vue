@@ -158,7 +158,7 @@ export default {
     /** When the 'Top It Off' button is clicked, close the modal but otherwise handle in the parent component. */
     viewToppers() {
       this.$refs["modal"].hide();
-      this.$emit("viewToppers", {basePolishId: this.polish.id, finish: this.modalFinish});
+      this.$emit("viewToppers", {id: this.polish.id, finish: this.modalFinish});
     },
     
     /**
