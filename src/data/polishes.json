@@ -1705,7 +1705,7 @@
     "brand": "Bitzy",
     "type": "Topper",
     "colorFamily": "",
-    "color": "",
+    "color": "test",
     "numCoats": "1",
     "collection": ""
   }
