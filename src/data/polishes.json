@@ -1738,5 +1738,35 @@
     "color": "Taupe brown with silver highlight",
     "numCoats": "3",
     "collection": "The Aura Collection (2021)"
+  },
+  {
+    "id": "175",
+    "name": "Dream Within a Dream",
+    "brand": "Cirque Colors",
+    "type": "Magnetic",
+    "colorFamily": "Blue",
+    "color": "Indigo blue jelly base with a pink to orange shifting highlight",
+    "numCoats": "3",
+    "collection": "Illusion Collection (2021)"
+  },
+  {
+    "id": "176",
+    "name": "Mobius",
+    "brand": "Cirque Colors",
+    "type": "Magnetic",
+    "colorFamily": "Green",
+    "color": "Forest green jelly base with a teal to purple shifting highlight",
+    "numCoats": "3",
+    "collection": "Illusion Collection (2021)"
+  },
+  {
+    "id": "177",
+    "name": "Princesses Rule!",
+    "brand": "OPI",
+    "type": "Glitter & Sparkle",
+    "colorFamily": "Pink",
+    "color": "Bright sparkly pink",
+    "numCoats": "4",
+    "collection": "Princess Charming (2006)"
   }
 ]
