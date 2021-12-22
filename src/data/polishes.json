@@ -1708,5 +1708,35 @@
     "color": "",
     "numCoats": "1",
     "collection": ""
+  },
+  {
+    "id": "172",
+    "name": "Big Aura Energy",
+    "brand": "Cirque Colors",
+    "type": "Magnetic",
+    "colorFamily": "Pink",
+    "color": "Light dusty pink with silver highlight",
+    "numCoats": "3",
+    "collection": "The Aura Collection (2021)"
+  },
+  {
+    "id": "173",
+    "name": "Clairvoyant",
+    "brand": "Cirque Colors",
+    "type": "Magnetic",
+    "colorFamily": "Purple",
+    "color": "Deep lavender with silver highlight",
+    "numCoats": "4",
+    "collection": "The Aura Collection (2021)"
+  },
+  {
+    "id": "174",
+    "name": "Halo",
+    "brand": "Cirque Colors",
+    "type": "Magnetic",
+    "colorFamily": "Brown",
+    "color": "Taupe brown with silver highlight",
+    "numCoats": "3",
+    "collection": "The Aura Collection (2021)"
   }
 ]
