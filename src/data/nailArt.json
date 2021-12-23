@@ -218,9 +218,9 @@
     "alt": "Ferrero Rocher nails",
     "description": "A 'holo'day manicure inspired by Ferrero Rochers, and the iconic tree of gold wrapped chocolates.",
     "polishes": [
-      {"brand": "Holo Taco", "name": "Gold Play Button"},
+      {"id": "179"},
       {"id": "132"},
-      {"brand": "Holo Taco", "name": "Choco Holo"},
+      {"id": "182"},
       {"id": "22"},
       {"id": "67"}
     ]

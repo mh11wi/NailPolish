@@ -1768,5 +1768,65 @@
     "color": "Bright sparkly pink",
     "numCoats": "4",
     "collection": "Princess Charming (2006)"
+  },
+  {
+    "id": "178",
+    "name": "Plumb Luck",
+    "brand": "Holo Taco",
+    "type": "Holographic Glitter",
+    "colorFamily": "Purple",
+    "color": "Plum purple jelly base",
+    "numCoats": "2",
+    "collection": "Cristmas Collection (2021)"
+  },
+  {
+    "id": "179",
+    "name": "Gold Play Button",
+    "brand": "Holo Taco",
+    "type": "Holographic Glitter",
+    "colorFamily": "Gold",
+    "color": "Yellow-gold jelly base",
+    "numCoats": "3",
+    "collection": "Cristmas Collection (2021)"
+  },
+  {
+    "id": "180",
+    "name": "Naughty List",
+    "brand": "Holo Taco",
+    "type": "Holographic Glitter",
+    "colorFamily": "Red",
+    "color": "Deep red jelly base",
+    "numCoats": "2",
+    "collection": "Cristmas Collection (2021)"
+  },
+  {
+    "id": "181",
+    "name": "Everything is Pine",
+    "brand": "Holo Taco",
+    "type": "Holographic Glitter",
+    "colorFamily": "Green",
+    "color": "Deep green jelly base",
+    "numCoats": "2",
+    "collection": "Cristmas Collection (2021)"
+  },
+  {
+    "id": "182",
+    "name": "Choco-Holo",
+    "brand": "Holo Taco",
+    "type": "Holographic Glitter",
+    "colorFamily": "Brown",
+    "color": "Chocolate brown jelly base",
+    "numCoats": "2",
+    "collection": "Cristmas Collection (2021)"
+  },
+  {
+    "id": "183",
+    "name": "Black Holo Wish",
+    "brand": "Holo Taco",
+    "type": "Holographic Glitter",
+    "colorFamily": "Black",
+    "color": "Black jelly base",
+    "numCoats": "2",
+    "collection": "Cristmas Collection (2021)"
   }
 ]
