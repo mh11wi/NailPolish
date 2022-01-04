@@ -1828,5 +1828,25 @@
     "color": "Black jelly base",
     "numCoats": "2",
     "collection": "Cristmas Collection (2021)"
+  },
+  {
+    "id": "184",
+    "name": "Haunted Forest",
+    "brand": "Live Love Polish",
+    "type": "Iridescent Flakie",
+    "colorFamily": "Green",
+    "color": "Forest green jelly base",
+    "numCoats": "3",
+    "collection": "Dragon's Lair (2020)"
+  },
+  {
+    "id": "185",
+    "name": "Supernatural",
+    "brand": "Live Love Polish",
+    "type": "Iridescent Flakie",
+    "colorFamily": "Purple",
+    "color": "Deep magenta jelly base",
+    "numCoats": "3",
+    "collection": "Dragon's Lair (2020)"
   }
 ]
