@@ -1848,5 +1848,35 @@
     "color": "Deep magenta jelly base",
     "numCoats": "3",
     "collection": "Dragon's Lair (2020)"
+  },
+  {
+    "id": "186",
+    "name": "Blinder",
+    "brand": "Bow Polish",
+    "type": "Flash Reflective",
+    "colorFamily": "Silver",
+    "color": "Silver jelly base",
+    "numCoats": "3",
+    "collection": "Flash Collection (2021)"
+  },
+  {
+    "id": "187",
+    "name": "No Rest",
+    "brand": "Bow Polish",
+    "type": "Flash Reflective",
+    "colorFamily": "Pink",
+    "color": "Neon hot pink jelly base",
+    "numCoats": "3",
+    "collection": "Flash Collection (2021)"
+  },
+  {
+    "id": "188",
+    "name": "Lime",
+    "brand": "Bow Polish",
+    "type": "Flash Reflective",
+    "colorFamily": "Green",
+    "color": "Neon lime green jelly base",
+    "numCoats": "4",
+    "collection": "Flash Collection (2021)"
   }
 ]
