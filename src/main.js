@@ -8,9 +8,9 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 // Font Awesome Icons
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faInfoCircle, faPencilAlt, faTrashAlt, faCheck, faChevronCircleLeft, faChevronCircleRight, faArrowLeft, faArrowRight, faTimes, faSun, faQuestionCircle } from '@fortawesome/free-solid-svg-icons'
+import { faInfoCircle, faHome, faPencilAlt, faTrashAlt, faCheck, faChevronCircleLeft, faChevronCircleRight, faArrowLeft, faArrowRight, faTimes, faSun, faQuestionCircle } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-library.add(faInfoCircle, faPencilAlt, faTrashAlt, faCheck, faChevronCircleLeft, faChevronCircleRight, faArrowLeft, faArrowRight, faTimes, faSun, faQuestionCircle)
+library.add(faInfoCircle, faHome, faPencilAlt, faTrashAlt, faCheck, faChevronCircleLeft, faChevronCircleRight, faArrowLeft, faArrowRight, faTimes, faSun, faQuestionCircle)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 // Custom styling for Bootstrap
