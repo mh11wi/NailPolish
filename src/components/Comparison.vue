@@ -4,7 +4,7 @@
       <div class="col-6 pl-0">
         <div class="ml-5">
           <strong v-if="!editMode" class="comparisonName h-100">{{ comparison.name }}</strong>
-          <b-form-input v-model="comparison.name" autofocus :maxLength="maxNameLength" v-else @blur="finishEdit" @keyup.enter="finishEdit"/>
+          <b-form-input v-model="name" autofocus :maxLength="maxNameLength" v-else @blur="finishEdit" @keyup.enter="finishEdit"/>
           <b-button variant="link" class="ml-3" v-if="!editMode" @click="editMode = true"><font-awesome-icon icon="pencil-alt" size="lg"/></b-button>
           <b-button variant="link" v-if="!editMode" @click="deleteComparison"><font-awesome-icon icon="trash-alt" size="lg"/></b-button>
         </div>
@@ -66,7 +66,8 @@ export default {
       editMode: false, // whether the comparison's name is being edited
       finish: 'glossy', // the selected polish finish to display (either 'glossy' or 'matte)
       maxNameLength: 18, // the maximum number of characters allowed for a comparison's name
-      solarChecked: false // whether the solar toggle is checked or not (when a comparison contains a solar polish)
+      solarChecked: false, // whether the solar toggle is checked or not (when a comparison contains a solar polish)
+      name: this.comparison.name // the name being edited when editMode is true, and copied to the comparison prop when finished (for performance)
     }
   },
   computed: {
@@ -99,11 +100,13 @@ export default {
     /** Ensure that the name is saved with a maximum amount of characters, and if empty save a default name. */
     finishEdit() {
       this.editMode = false;
-      if ('' == this.comparison.name.trim()) {
-        this.comparison.name = 'Comparison ' + (this.$vnode.key + 1);
-      } else if (this.comparison.name.length > this.maxNameLength) {
-        this.comparison.name = this.comparison.name.substring(0, this.maxNameLength);
+      if ('' == this.name.trim()) {
+        this.name = 'Comparison ' + (this.$vnode.key + 1);
+      } else if (this.name.length > this.maxNameLength) {
+        this.name = this.name.substring(0, this.maxNameLength);
       }
+      
+      this.comparison.name = this.name;
     },
     
     /** Handle the deletion of the comparison in the parent component. */
