@@ -1,5 +1,5 @@
 <template>
-  <div class="polish">
+  <div class="polish mx-2">
     <b-overlay :show="true" :opacity="0">
       <b-card v-if="!card.detailsMode" class="border-0" :img-src="getImage(card.polish.id)" :img-alt="card.polish.name" img-top no-body/>
       <b-card v-else class="pt-5" :style="{ height: cardHeight + 'px' }" no-body>
