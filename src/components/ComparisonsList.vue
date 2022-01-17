@@ -5,8 +5,8 @@
         Start by adding a new comparison from the <strong>Browse Collection</strong> view or by clicking <strong>+ Add Comparison</strong> below.
       </span>
       <Comparison v-else 
-        v-for="(comparison, index) in comparisons" 
-        :key="index" 
+        v-for="comparison in comparisons" 
+        :key="comparison.id" 
         :comparison="comparison"
         :cardHeight="cardHeight"
         @deleteComparison="deleteComparison"
@@ -30,10 +30,11 @@ export default {
     Comparison
   },
   props: [
+    'comparisonId', // the id for a new comparison
     'comparisons' // the list of comparisons
   ],
   data: function() {
-    return { 
+    return {
       cardHeight: 0 // the height the Bootstrap card (containing polish info) should be, i.e. same as width, which varies on window size
     }
   },
@@ -49,7 +50,8 @@ export default {
     /** Adds a new comparison to the list when the button is clicked. */
     addComparison() {
       const newName = 'Comparison ' + (this.comparisons.length + 1);
-      this.comparisons.push({name: newName, polishes: []});
+      this.comparisons.push({id: this.comparisonId, name: newName, polishes: []});
+      this.$emit("incrementComparisonId");
     },
     
     /**
@@ -57,7 +59,8 @@ export default {
      * @param event - object containing which comparison to delete
      */
     deleteComparison(event) {
-      this.comparisons.splice(event, 1);
+      const index = this.comparisons.findIndex((comparison) => comparison.id == event);
+      this.comparisons.splice(index, 1);
     },
 
     /** Resizes the height of all polish cards so that they are proportional to their width. */
