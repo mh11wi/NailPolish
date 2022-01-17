@@ -109,6 +109,7 @@ export default {
     'polish', // data about a polish
     'finish', // which finish is selected in the parent component (either 'glossy' or 'matte')
     'hasToppers', // whether the polish has any topper images, in order to show 'Top It Off' button
+    'comparisonId', // the id for a new comparison
     'comparisons' // the list of polish comparisons, to choose from in a drop-down menu
   ],
   data: function() {
@@ -168,7 +169,8 @@ export default {
     comparisonSelected(selectedComparison) {
       if (selectedComparison == -1) {
         const newName = 'Comparison ' + (this.comparisons.length + 1);
-        this.comparisons.push({name: newName, polishes: [{polish: this.polish, detailsMode: false}]});
+        this.comparisons.push({id: this.comparisonId, name: newName, polishes: [{polish: this.polish, detailsMode: false}]});
+        this.$emit("incrementComparisonId");
         this.addedComparison = newName;
       } else {
         this.comparisons[selectedComparison].polishes.push({polish: this.polish, detailsMode: false});

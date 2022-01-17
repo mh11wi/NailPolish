@@ -22,10 +22,17 @@
     </b-navbar>
     <b-tabs v-model="tabIndex" class="flex-grow-1 d-flex flex-column" content-class="flex-grow-1">
       <b-tab title="Browse Collection">
-        <Collection :allPolishes="polishes" :toppersMap="toppersMap" :comparisons="comparisons" @viewToppers="viewToppers"/>
+        <Collection :allPolishes="polishes" 
+                    :toppersMap="toppersMap" 
+                    :comparisonId="comparisonId" 
+                    :comparisons="comparisons" 
+                    @viewToppers="viewToppers" 
+                    @incrementComparisonId="incrementComparisonId"
+        >
+        </Collection>
       </b-tab>
       <b-tab title="Compare Polishes">
-        <ComparisonsList :comparisons="comparisons"/>
+        <ComparisonsList :comparisonId="comparisonId" :comparisons="comparisons" @incrementComparisonId="incrementComparisonId"/>
       </b-tab>
       <b-tab title="Top It Off">
         <Toppers :polishes="polishes" :toppersMap="toppersMap" :collectionBasePolish="basePolish"/>
@@ -59,6 +66,7 @@ export default {
     return {
       tabIndex: 0, // which tab is displayed
       basePolish: null, // the polish selected to view toppers over
+      comparisonId: 0, // an identifier for a new comparison
       comparisons: [], // the list of polish comparisons
       collector: process.env.VUE_APP_COLLECTOR // the name of the collector to display in the navbar
     }
@@ -81,6 +89,11 @@ export default {
     viewToppers(event) {
       this.basePolish = event;
       this.tabIndex = 2;
+    },
+    
+    /** Increments the comparison id. */
+    incrementComparisonId() {
+      this.comparisonId++;
     }
   }
 }

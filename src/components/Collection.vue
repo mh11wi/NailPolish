@@ -39,8 +39,10 @@
                         :polish="polish" 
                         :finish="finish" 
                         :hasToppers="toppersMap[polish.id] != null"
+                        :comparisonId="comparisonId"
                         :comparisons="comparisons"
                         @viewToppers="viewToppers"
+                        @incrementComparisonId="incrementComparisonId"
             >
             </PolishTile>
           </b-row>
@@ -66,6 +68,7 @@ export default {
   props: [
     'allPolishes', // data of all polishes (including toppers, which will be extracted)
     'toppersMap', // data of what polishes have images with which toppers
+    'comparisonId', // the id for a new comparison
     'comparisons' // the list of polish comparisons
   ],
   data: function() {
@@ -154,6 +157,11 @@ export default {
      */
     viewToppers(event) {
       this.$emit("viewToppers", event);
+    },
+    
+    /** Increments the comparison id in the parent component. */
+    incrementComparisonId() {
+      this.$emit("incrementComparisonId");
     }
   }
 }
