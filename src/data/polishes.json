@@ -187,7 +187,7 @@
     "colorFamily": "Silver",
     "color": "Silver with purple shimmer",
     "numCoats": "2",
-    "collection": ""
+    "collection": "Hello Holo Collection (2019)"
   },
   {
     "id": "20",
@@ -1685,7 +1685,7 @@
     "brand": "Holo Taco",
     "type": "Holographic Glitter",
     "colorFamily": "Silver",
-    "color": "Clear jelly base",
+    "color": "Silver in a clear base",
     "numCoats": "2",
     "collection": "Holoday Collection (2019)"
   },
@@ -1888,5 +1888,35 @@
     "color": "Aqua blue with iridescent shimmer and subtle holographic glitters",
     "numCoats": "3",
     "collection": "Allure of the Deep (2021)"
+  },
+  {
+    "id": "190",
+    "name": "Strobe Light",
+    "brand": "Sally Hansen",
+    "type": "Layering Glitter",
+    "colorFamily": "Pink",
+    "color": "Rose gold glitters in a clear base with holographic hex glitters",
+    "numCoats": "3",
+    "collection": "Xtreme Wear"
+  },
+  {
+    "id": "191",
+    "name": "Unicorn Crossing",
+    "brand": "Color Club",
+    "type": "Shimmer",
+    "colorFamily": "Blue",
+    "color": "Blue jelly base with green shimmer and holographic hex glitters",
+    "numCoats": "3",
+    "collection": ""
+  },
+  {
+    "id": "192",
+    "name": "Blinded by the Bling",
+    "brand": "Color Club",
+    "type": "Layering Glitter",
+    "colorFamily": "Pink",
+    "color": "Multi-sized holographic hex glitters in a sheer pink base",
+    "numCoats": "2",
+    "collection": "Hello Holo Collection (2019)"
   }
 ]
