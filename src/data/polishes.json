@@ -1918,5 +1918,25 @@
     "color": "Multi-sized holographic hex glitters in a sheer pink base",
     "numCoats": "2",
     "collection": "Hello Holo Collection (2019)"
+  },
+  {
+    "id": "193",
+    "name": "Grinch",
+    "brand": "Starrily",
+    "type": "Linear Holographic",
+    "colorFamily": "Green",
+    "color": "Light-medium green",
+    "numCoats": "2",
+    "collection": ""
+  },
+  {
+    "id": "194",
+    "name": "Damsel",
+    "brand": "Starrily",
+    "type": "Holographic Glitter",
+    "colorFamily": "Purple",
+    "color": "Bright light purple in a clear base",
+    "numCoats": "2",
+    "collection": ""
   }
 ]
