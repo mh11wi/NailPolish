@@ -1995,7 +1995,7 @@
     "brand": "Revlon",
     "type": "Glitter & Sparkle",
     "colorFamily": "Pink",
-    "color": "Sparkly peachy-pink",
+    "color": "Sparkly peachy pink",
     "numCoats": "4",
     "collection": "Colorstay Gel Envy"
   },
@@ -2008,5 +2008,25 @@
     "color": "Iridescent sheer pink",
     "numCoats": "4",
     "collection": "Xtreme Wear"
+  },
+  {
+    "id": "202",
+    "name": "Wild Berry West",
+    "brand": "Cirque Colors",
+    "type": "Shimmer",
+    "colorFamily": "Pink",
+    "color": "Berry jelly base with blue-violet shimmer and subtle holographic glitters",
+    "numCoats": "2",
+    "collection": "Cowboy Collection (2021)"
+  },
+  {
+    "id": "203",
+    "name": "Fandango",
+    "brand": "Cirque Colors",
+    "type": "Shimmer",
+    "colorFamily": "Orange",
+    "color": "Coral pink with iridescent shimmer and subtle holographic glitters",
+    "numCoats": "3",
+    "collection": "Cowboy Collection (2021)"
   }
 ]
