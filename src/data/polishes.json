@@ -1988,5 +1988,25 @@
     "color": "Dark green jelly base with golden shimmer and holographic flakes",
     "numCoats": "1",
     "collection": "Kelli Marissa Series 3(2020)"
+  },
+  {
+    "id": "200",
+    "name": "Bet On Love",
+    "brand": "Revlon",
+    "type": "Glitter & Sparkle",
+    "colorFamily": "Pink",
+    "color": "Sparkly peachy-pink",
+    "numCoats": "4",
+    "collection": "Colorstay Gel Envy"
+  },
+  {
+    "id": "201",
+    "name": "On Cloud Shine",
+    "brand": "Sally Hansen",
+    "type": "Pearl",
+    "colorFamily": "Pink",
+    "color": "Iridescent sheer pink",
+    "numCoats": "4",
+    "collection": "Xtreme Wear"
   }
 ]
