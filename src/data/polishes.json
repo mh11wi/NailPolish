@@ -1938,5 +1938,55 @@
     "color": "Bright light purple in a clear base",
     "numCoats": "2",
     "collection": ""
+  },
+  {
+    "id": "195",
+    "name": "Cosmic Voyage",
+    "brand": "Starrily",
+    "type": "Glitter & Sparkle",
+    "colorFamily": "Black",
+    "color": "Black jelly base with blue flakes, copper shimmer and holographic glitters",
+    "numCoats": "2",
+    "collection": "Kelli Marissa Series 2 (2019)"
+  },
+  {
+    "id": "196",
+    "name": "Stargazer",
+    "brand": "Starrily",
+    "type": "Holographic Glitter",
+    "colorFamily": "Purple",
+    "color": "Purple jelly base with copper shimmer",
+    "numCoats": "2",
+    "collection": "Kelli Marissa Series 2 (2019)"
+  },
+  {
+    "id": "197",
+    "name": "Luna",
+    "brand": "Starrily",
+    "type": "Holographic Glitter",
+    "colorFamily": "Gold",
+    "color": "Gold, light purple and silver in a clear base",
+    "numCoats": "3",
+    "collection": "Kelli Marissa Series 2 (2019)"
+  },
+  {
+    "id": "198",
+    "name": "Alternate Universe",
+    "brand": "Starrily",
+    "type": "Glitter & Sparkle",
+    "colorFamily": "Purple",
+    "color": "Dark 'blurple' (blue based purple) with holographic flakes",
+    "numCoats": "2",
+    "collection": "Kelli Marissa Series 3 (2020)"
+  },
+  {
+    "id": "199",
+    "name": "Terra",
+    "brand": "Starrily",
+    "type": "Glitter & Sparkle",
+    "colorFamily": "Green",
+    "color": "Dark green jelly base with golden shimmer and holographic flakes",
+    "numCoats": "1",
+    "collection": "Kelli Marissa Series 3(2020)"
   }
 ]
