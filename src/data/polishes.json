@@ -2048,5 +2048,45 @@
     "color": "",
     "numCoats": "1",
     "collection": "Tea Cremes Collection (2021)"
+  },
+  {
+    "id": "206",
+    "name": "Celestial Lights",
+    "brand": "Holo Taco",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": "Winter Shimmers Collection (2022)"
+  },
+  {
+    "id": "207",
+    "name": "Twilight Shimmer",
+    "brand": "Holo Taco",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": "Winter Shimmers Collection (2022)"
+  },
+  {
+    "id": "208",
+    "name": "Polar Princess",
+    "brand": "Holo Taco",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": "Winter Shimmers Collection (2022)"
+  },
+  {
+    "id": "209",
+    "name": "Glitter Glam",
+    "brand": "Sally Hansen",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": "Xtreme Wear"
   }
 ]
