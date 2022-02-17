@@ -2028,5 +2028,25 @@
     "color": "Coral pink with iridescent shimmer and subtle holographic glitters",
     "numCoats": "3",
     "collection": "Cowboy Collection (2021)"
+  },
+  {
+    "id": "204",
+    "name": "Tequila Sunrise",
+    "brand": "Cirque Colors",
+    "type": "Thermal",
+    "colorFamily": "Yellow",
+    "color": "Medium yellow to red",
+    "numCoats": "2",
+    "collection": "Cowboy Collection (2021)"
+  },
+  {
+    "id": "205",
+    "name": "Gold Flake Taco",
+    "brand": "Holo Taco",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": "Tea Cremes Collection (2021)"
   }
 ]
