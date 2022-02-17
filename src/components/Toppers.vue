@@ -50,10 +50,24 @@ export default {
         topperIds.push(...this.toppersMap[this.combination.basePolishId]);
       }
       
-      const options = [];
       const self = this;
+      const toppers = [];
       topperIds.forEach(function(id) {
-        const topper = self.polishes[id - 1];
+        toppers.push(self.polishes[id -1]);
+      });
+      
+      toppers.sort(function(a, b) {
+        if (a.brand < b.brand) {
+          return -1;
+        } else if (a.brand > b.brand) {
+          return 1;
+        } else {
+          return 0
+        }
+      });
+      
+      const options = [];
+      toppers.forEach(function(topper) {
         const optionHtml = topper.brand != '' ? "<strong>" + topper.brand + "</strong> - " + topper.name : topper.name;
         const disabled = self.combination.basePolishId == null;
         options.push({html: optionHtml, value: topper.id, disabled: disabled});
