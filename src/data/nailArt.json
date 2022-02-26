@@ -224,5 +224,16 @@
       {"id": "22"},
       {"id": "67"}
     ]
+  },
+  {
+    "id": "18",
+    "date": "February 21, 2022",
+    "alt": "DigitalEd nails",
+    "description": "In honour of my last week at DigitalEd, I created a goodbye mani showcasing the Mobius polish (which not so coincidentally has the same name as our online education platform).",
+    "polishes": [
+      {"id": "176"},
+      {"id": "210"},
+      {"id": "22"}
+    ]
   }
 ]

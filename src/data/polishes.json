@@ -2088,5 +2088,15 @@
     "color": "",
     "numCoats": "1",
     "collection": "Xtreme Wear"
+  },
+  {
+    "id": "210",
+    "name": "Bring me the Teal",
+    "brand": "Holo Taco",
+    "type": "Creme",
+    "colorFamily": "Blue",
+    "color": "Deep teal",
+    "numCoats": "1",
+    "collection": "Tea Cremes Collection (2021)"
   }
 ]
