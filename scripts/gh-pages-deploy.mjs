@@ -1,5 +1,5 @@
-import execa = from "execa";
-import fs = from "fs";
+import execa from "execa";
+import fs from "fs";
 
 (async () => {
   try {
