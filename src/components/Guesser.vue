@@ -124,7 +124,7 @@ export default {
     /** Validates the entered guess and updates the game if it's ok. */
     makeGuess() {
       // make sure that there is a polish in the list with the name
-      const guess = this.guess.trim().toLowerCase();
+      const guess = this.guess.trim().toLowerCase().replace(/[\u2018\u2019]/g, "'");
       const matchingPolishes = this.polishes.filter(polish => polish.name.toLowerCase() === guess);
       if (matchingPolishes.length == 0) {
         return;
