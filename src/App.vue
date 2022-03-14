@@ -12,6 +12,7 @@
           <p><strong>Compare Polishes</strong><br>Compare similar polishes next to one another.</p>
           <p><strong>Top It Off</strong><br>See what different toppers look like over an applicable polish.</p>
           <p><strong>Nail Art Gallery</strong><br>View some of my past nail art.</p>
+          <p><strong>Polish Guesser</strong><br>A 'Wordle' inspired game!</p>
           <penguin width="100" hAlign="center"/>
           <p class="text-right">Thanks for visiting!<br>&ndash;mads</p>
         </b-popover>
@@ -40,6 +41,9 @@
       <b-tab title="Nail Art Gallery" lazy>
         <Gallery :polishes="polishes"/>
       </b-tab>
+      <b-tab title="Polish Guesser">
+        <Guesser :allPolishes="polishes"/>
+      </b-tab>
     </b-tabs>
   </div>
 </template>
@@ -51,6 +55,7 @@ import Collection from './components/Collection.vue'
 import ComparisonsList from './components/ComparisonsList.vue'
 import Toppers from './components/Toppers.vue'
 import Gallery from './components/Gallery.vue'
+import Guesser from './components/Guesser.vue'
 import Penguin from './components/Penguin.vue'
 
 export default {
@@ -60,6 +65,7 @@ export default {
     ComparisonsList,
     Toppers,
     Gallery,
+    Guesser,
     Penguin
   },
   data: function() {

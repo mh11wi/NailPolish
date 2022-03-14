@@ -20,7 +20,12 @@ import {
   faArrowRight, 
   faTimes, 
   faSun, 
-  faQuestionCircle 
+  faQuestionCircle,
+  faStore,
+  faHandSparkles,
+  faPalette,
+  faGift,
+  faPaintBrush
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 library.add(
@@ -35,7 +40,12 @@ library.add(
   faArrowRight, 
   faTimes, 
   faSun, 
-  faQuestionCircle
+  faQuestionCircle,
+  faStore,
+  faHandSparkles,
+  faPalette,
+  faGift,
+  faPaintBrush
 )
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
