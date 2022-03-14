@@ -21,10 +21,10 @@
     </button>
     <b-tooltip :target="'coatsCorrect-' + index">Number of coats correct</b-tooltip>
 
-    <button class="square" :id="'collectionCorrect-' + index" :disabled="!isCollectionCorrect">
-      <font-awesome-icon v-if="isCollectionCorrect" icon="gift" size="xl"/>
+    <button class="square" :id="'polishCorrect-' + index" :disabled="!isPolishCorrect">
+      <font-awesome-icon v-if="isPolishCorrect" icon="flask" size="xl"/>
     </button>
-    <b-tooltip :target="'collectionCorrect-' + index">Collection set correct</b-tooltip>
+    <b-tooltip :target="'polishCorrect-' + index">Polish correct</b-tooltip>
   </div>
 </template>
 
@@ -63,9 +63,9 @@ export default {
       return this.guess && this.guess.filter(polish => polish.numCoats == this.correctPolish.numCoats).length > 0;
     },
     
-    /** Whether the guessed polish has the right collection, if any. */
-    isCollectionCorrect: function() {
-      return this.guess && this.guess.filter(polish => polish.collection == this.correctPolish.collection).length > 0;
+    /** Whether the guessed polish is correct. */
+    isPolishCorrect: function() {
+      return this.guess && this.guess.filter(polish => polish.name == this.correctPolish.name).length > 0;
     }
   }
 }

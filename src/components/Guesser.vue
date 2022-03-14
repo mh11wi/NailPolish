@@ -4,8 +4,8 @@
       <div class="col-12 mh-100">
         <div class="row mt-3 text-center justify-content-center">
           A random polish has been selected. Try to guess the polish by name in {{ tries }} tries!<br>
-          Each guess must be a valid polish in my collection, excluding toppers and top coats.<br>
-          You will be informed if your guess had the right brand, type, colour, number of coats, and collection set.
+          Each guess must be a valid polish in my collection, but excluding toppers and top coats.<br>
+          You will be informed if your guess is correct or has the right brand, type, colour, and number of coats.
         </div>
         <div class="row py-4 justify-content-center">
           <div class="col-4 pl-0 offset-sm-2">
@@ -48,7 +48,7 @@
                   <td><strong>Brand:</strong></td>
                   <td>{{ correctPolish.brand }}</td>
                 </tr>
-                <tr>
+                <tr v-if="correctPolish.collection != ''">
                   <td><strong>Collection:</strong></td>
                   <td>{{ correctPolish.collection }}</td>
                 </tr>

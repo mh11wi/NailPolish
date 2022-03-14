@@ -24,8 +24,8 @@ import {
   faStore,
   faHandSparkles,
   faPalette,
-  faGift,
-  faPaintBrush
+  faPaintBrush,
+  faFlask
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 library.add(
@@ -44,8 +44,8 @@ library.add(
   faStore,
   faHandSparkles,
   faPalette,
-  faGift,
-  faPaintBrush
+  faPaintBrush,
+  faFlask
 )
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
