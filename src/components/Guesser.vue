@@ -2,26 +2,59 @@
   <div class="container-fluid h-100">
     <div class="row h-100">
       <div class="col-12 mh-100">
-        <div class="row mt-3 text-center justify-content-center">
-          A random polish has been selected. Try to guess the polish by name in {{ tries }} tries!<br>
-          Each guess must be a valid polish in my collection, but excluding toppers and top coats.<br>
-          You will be informed if your guess is correct or has the right brand, type, colour, and number of coats.
-        </div>
-        <div class="row py-4 justify-content-center">
-          <div class="col-4 pl-0 offset-sm-2">
-            <b-input-group>
-              <b-form-input v-model="guess" ref="guessBox" @keyup.enter="makeGuess" :disabled="hasWon || guesses.length == tries"/>
-              <b-input-group-append>
-                <b-button variant="primary" @click="makeGuess" :disabled="hasWon || guess.length == 0 || guesses.length == tries">Guess</b-button>
-              </b-input-group-append>
-            </b-input-group>
-          </div>
-          <div class="col-3"><b-button id="newButton" variant="primary" @click="newGame">New Game</b-button></div>
+        <div class="row mt-3 py-4 justify-content-center">
+          <b-input-group class="col-5">
+            <b-form-input v-model="guess" ref="guessBox" @keyup.enter="makeGuess" :disabled="hasWon || guesses.length == tries"/>
+            <b-input-group-append>
+              <b-button variant="primary" @click="makeGuess" :disabled="hasWon || guess.length == 0 || guesses.length == tries">Guess</b-button>
+            </b-input-group-append>
+          </b-input-group>
         </div>
         <Guess v-for="index in tries" :key="index" :correctPolish="correctPolish" :guess="guesses[index - 1]" :index="index"/>
+        <div class="row py-4 justify-content-center">
+          <b-button variant="primary" class="mr-3" v-b-modal.rulesModal>How To Play</b-button>
+          <b-button id="newButton" variant="primary" class="ml-3" @click="newGame">New Game</b-button>
+        </div>
       </div>
     </div>
-    <b-modal id="gameModal" v-if="Object.keys(this.correctPolish).length > 0" :title="hasWon ? 'You got it!' : 'Sorry! You are out of guesses.'" :hide-footer=true>
+    <b-modal id="rulesModal" title="How To Play" :hide-footer=true>
+      <div class="row pb-3 text-center justify-content-center">
+        A random polish has been selected. Try to guess the polish by name in {{ tries }} tries!<br>
+        Each guess must be a valid polish in my collection, but excluding toppers and top coats.<br>
+        You will be informed if your guess is correct or has the right brand, type, colour, and number of coats.<br>
+      </div>
+      <div class="row examples">
+        <div class="col-12">
+          <div class="row py-2 text-center justify-content-center">
+            <strong>Examples</strong>
+          </div>
+          <Guess :correctPolish="exampleCorrectPolish" :guess="exampleGuesses[0]" index="ex1"/>
+          <div class="row py-2 text-center justify-content-center">
+            <div class="col-12">
+              The polish <strong>{{ exampleGuesses[0][0].name }}</strong> does not have any of the same properties as the correct polish.
+            </div>
+          </div>
+          <Guess :correctPolish="exampleCorrectPolish" :guess="exampleGuesses[1]" index="ex2"/>
+          <div class="row py-2 text-center justify-content-center">
+            <div class="col-12">
+              The polish <strong>{{ exampleGuesses[1][0].name }}</strong> has the same brand, colour, and number of coats as the correct polish.
+          </div>
+          </div>
+          <Guess :correctPolish="exampleCorrectPolish" :guess="exampleGuesses[2]" index="ex3"/>
+          <div class="row py-2 text-center justify-content-center">
+            <div class="col-12">
+              The polish <strong>{{ exampleGuesses[2][0].name }}</strong>  is the correct polish!
+            </div>
+          </div>
+        </div>
+      </div>
+    </b-modal>
+    <b-modal 
+      id="gameModal" 
+      v-if="Object.keys(this.correctPolish).length > 0" 
+      :title="hasWon ? 'You got it!' : 'Sorry! You are out of guesses.'" 
+      :hide-footer=true
+    >
       <b-row style="height: 300px">
         <b-col cols="5">
           <b-img-lazy
@@ -33,7 +66,7 @@
           </b-img-lazy>
         </b-col>
         <b-col cols="7">
-            <div class="mb-3">The correct polish was...</div>
+            <div class="my-3">The correct polish was...</div>
             <table class="mb-3 w-100">
               <colgroup>
                 <col span="1" style="width:25%">
@@ -66,7 +99,7 @@
                 </tr>
               </tbody>
             </table>
-            <div>You can try another by clicking <strong>New Game</strong> outside of this dialog.</div>
+            <div>Try another by clicking <strong>New Game</strong> outside this dialog.</div>
         </b-col>
       </b-row>
     </b-modal>
@@ -102,6 +135,21 @@ export default {
     /** Initially extract all toppers from the list of polishes. */
     polishes: function() {
       return this.allPolishes.filter(polish => polish.type != 'Topper').sort((a, b) => b.id - a.id);
+    },
+    
+    /** The correct polish in the 'How To Play' modal. */
+    exampleCorrectPolish: function() {
+      return this.allPolishes[process.env.VUE_APP_DEFAULT_BASE - 1];
+    },
+    
+    /** The guesses to show in the 'How To Play' modal. */
+    exampleGuesses: function() {
+      const exampleIds = [176, 69, this.exampleCorrectPolish.id];
+      const examples = new Array(exampleIds.length);
+      for (let i=0; i < exampleIds.length; i++) {
+        examples[i] = this.allPolishes.filter(polish => polish.id == exampleIds[i]);
+      }
+      return examples;
     }
   },
   methods: {
@@ -154,5 +202,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+  .examples {
+    border-top: solid 1px #dee2e6;
+  }
 </style>

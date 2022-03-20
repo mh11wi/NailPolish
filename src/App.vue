@@ -136,7 +136,7 @@ html, body, .app {
 }
 
 .popover {
-  min-width: 450px;
+  min-width: 475px;
 }
 
 .modal-dialog {
