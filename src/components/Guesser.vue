@@ -4,10 +4,20 @@
       <div class="col-12 mh-100">
         <div class="row mt-3 py-4 justify-content-center">
           <b-input-group class="col-5">
-            <b-form-input v-model="guess" ref="guessBox" @keyup.enter="makeGuess" :disabled="hasWon || guesses.length == tries"/>
+            <b-form-input 
+              v-model="guess" 
+              ref="guessBox"
+              :state="guessState"
+              @keyup="resetState" 
+              @keyup.enter="makeGuess" 
+              :disabled="hasWon || guesses.length == tries"
+            />
             <b-input-group-append>
               <b-button variant="primary" @click="makeGuess" :disabled="hasWon || guess.length == 0 || guesses.length == tries">Guess</b-button>
             </b-input-group-append>
+            <b-form-invalid-feedback>
+              Please enter a valid polish name.
+            </b-form-invalid-feedback>
           </b-input-group>
         </div>
         <Guess v-for="index in tries" :key="index" :correctPolish="correctPolish" :guess="guesses[index - 1]" :index="index"/>
@@ -125,6 +135,7 @@ export default {
       guesses: [], // the polishes guessed each try
       guess: '', // the guess typed in the textbox
       hasWon: false, // whether the polish was correctly guessed
+      guessState: null, // the state of the guess textbox
     }
   },
   /** Loads an initial game. */
@@ -169,12 +180,19 @@ export default {
       this.correctPolish = this.polishes[id];
     },
     
+    /** Resets the state of the guess textbox. */
+    resetState() {
+      this.guessState = null;
+    },
+    
     /** Validates the entered guess and updates the game if it's ok. */
     makeGuess() {
       // make sure that there is a polish in the list with the name
       const guess = this.guess.trim().toLowerCase().replace(/[\u2018\u2019]/g, "'");
       const matchingPolishes = this.polishes.filter(polish => polish.name.toLowerCase() === guess);
       if (matchingPolishes.length == 0) {
+        this.guessState = false;
+        this.$refs.guessBox.focus();
         return;
       }      
       
