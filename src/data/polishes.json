@@ -1987,7 +1987,7 @@
     "colorFamily": "Green",
     "color": "Dark green jelly base with golden shimmer and holographic flakes",
     "numCoats": "1",
-    "collection": "Kelli Marissa Series 3(2020)"
+    "collection": "Kelli Marissa Series 3 (2020)"
   },
   {
     "id": "200",
@@ -2098,5 +2098,85 @@
     "color": "Deep teal",
     "numCoats": "1",
     "collection": "Tea Cremes Collection (2021)"
+  },
+  {
+    "id": "211",
+    "name": "Gravity",
+    "brand": "Starrily",
+    "type": "Creme",
+    "colorFamily": "Purple",
+    "color": "Medium toned purple",
+    "numCoats": "2",
+    "collection": "Kelli Marissa Series 4 (2021)"
+  },
+  {
+    "id": "212",
+    "name": "Crater",
+    "brand": "Starrily",
+    "type": "Creme",
+    "colorFamily": "Grey",
+    "color": "Medium to dark grey",
+    "numCoats": "2",
+    "collection": "Kelli Marissa Series 4 (2021)"
+  },
+  {
+    "id": "213",
+    "name": "The Crab",
+    "brand": "Starrily",
+    "type": "Iridescent Flakie",
+    "colorFamily": "Blue",
+    "color": "Blue jelly base with subtle holographic glitters",
+    "numCoats": "3",
+    "collection": "Kelli Marissa Series 4 (2021)"
+  },
+  {
+    "id": "214",
+    "name": "The Scales",
+    "brand": "Starrily",
+    "type": "Iridescent Flakie",
+    "colorFamily": "Green",
+    "color": "Teal jelly base with subtle holographic glitters",
+    "numCoats": "3",
+    "collection": "Kelli Marissa Series 4 (2021)"
+  },
+  {
+    "id": "215",
+    "name": "Spiral",
+    "brand": "Starrily",
+    "type": "Linear Holographic",
+    "colorFamily": "Blue",
+    "color": "Medium blue with purple to green color shifting shimmer",
+    "numCoats": "2",
+    "collection": "Kelli Marissa Series 4 (2021)"
+  },
+  {
+    "id": "216",
+    "name": "Luminous",
+    "brand": "Starrily",
+    "type": "Linear Holographic",
+    "colorFamily": "Yellow",
+    "color": "Golden yellow with copper to green color shifting shimmer",
+    "numCoats": "3",
+    "collection": "Kelli Marissa Series 4 (2021)"
+  },
+  {
+    "id": "217",
+    "name": "Star Cluster",
+    "brand": "Starrily",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": "Kelli Marissa Series 4 (2021)"
+  },
+  {
+    "id": "218",
+    "name": "Callisto",
+    "brand": "Starrily",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": "Kelli Marissa Series 4 (2021)"
   }
 ]
