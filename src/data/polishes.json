@@ -487,7 +487,7 @@
     "colorFamily": "Silver",
     "color": "Silver to bordeaux purple with linear holographic glitters",
     "numCoats": "3",
-    "collection": "Spring 2021 Collection"
+    "collection": "Winter 2021 Collection"
   },
   {
     "id": "50",
@@ -495,7 +495,7 @@
     "brand": "Bow Polish",
     "type": "Solar",
     "colorFamily": "Blue",
-    "color": "Sheer to royal blue thermal with glitters; purple in the sun",
+    "color": "Sheer to royal blue thermal with glitters; purple shades in the sun",
     "numCoats": "3",
     "collection": "Conversion Collection (2016)"
   },
@@ -2238,5 +2238,25 @@
     "color": "Sheer pale pink",
     "numCoats": "3",
     "collection": "In the Mood (2008)"
+  },
+  {
+    "id": "225",
+    "name": "Love at War",
+    "brand": "Bow Polish",
+    "type": "Solar",
+    "colorFamily": "Red",
+    "color": "Subdued redish-brown with glitters; dark purple in the sun",
+    "numCoats": "3",
+    "collection": "Conversion Collection (2015)"
+  },
+  {
+    "id": "226",
+    "name": "Sunny",
+    "brand": "Bow Polish",
+    "type": "Solar",
+    "colorFamily": "Silver",
+    "color": "Steel linear holographic; pinky-purple in the sun",
+    "numCoats": "3",
+    "collection": "Summer 2020 Collection"
   }
 ]
