@@ -2258,5 +2258,35 @@
     "color": "Steel linear holographic; pinky-purple in the sun",
     "numCoats": "3",
     "collection": "Summer 2020 Collection"
+  },
+  {
+    "id": "227",
+    "name": "Kaleidoscope",
+    "brand": "ILNP",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": ""
+  },
+  {
+    "id": "228",
+    "name": "Mayfield",
+    "brand": "ILNP",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": ""
+  },
+  {
+    "id": "229",
+    "name": "Ferris Wheel",
+    "brand": "ILNP",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": ""
   }
 ]
