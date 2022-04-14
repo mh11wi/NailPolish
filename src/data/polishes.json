@@ -2288,5 +2288,55 @@
     "color": "",
     "numCoats": "1",
     "collection": ""
+  },
+  {
+    "id": "230",
+    "name": "Encryption Key",
+    "brand": "Holo Taco",
+    "type": "Multichrome",
+    "colorFamily": "Red",
+    "color": "Shifts between reddish-pink and orange",
+    "numCoats": "3",
+    "collection": "Lite Mode Collection (2022)"
+  },
+  {
+    "id": "231",
+    "name": "Wireless Mode",
+    "brand": "Holo Taco",
+    "type": "Multichrome",
+    "colorFamily": "Blue",
+    "color": "Shifts between cobalt blue and turquoise",
+    "numCoats": "3",
+    "collection": "Lite Mode Collection (2022)"
+  },
+  {
+    "id": "232",
+    "name": "Lite Link",
+    "brand": "Holo Taco",
+    "type": "Multichrome",
+    "colorFamily": "Green",
+    "color": "Shifts between teal and green",
+    "numCoats": "3",
+    "collection": "Lite Mode Collection (2022)"
+  },
+  {
+    "id": "233",
+    "name": "Flash Drive",
+    "brand": "Holo Taco",
+    "type": "Multichrome",
+    "colorFamily": "Purple",
+    "color": "Shifts between purple and magenta",
+    "numCoats": "3",
+    "collection": "Lite Mode Collection (2022)"
+  },
+  {
+    "id": "234",
+    "name": "Sunset Simulation",
+    "brand": "Holo Taco",
+    "type": "Multichrome",
+    "colorFamily": "Pink",
+    "color": "Shifts between rose-pink and amber",
+    "numCoats": "3",
+    "collection": "Lite Mode Collection (2022)"
   }
 ]
