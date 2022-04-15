@@ -245,5 +245,18 @@
       {"id": "83"},
       {"id": "22"}
     ]
+  },
+  {
+    "id": "20",
+    "date": "April 15, 2022",
+    "alt": "Raindrop lazy gradient nails",
+    "description": "A combination of the lazy gradient and raindrop techniques using Holo Taco's new Lite Mode multichromes.",
+    "polishes": [
+      {"id": "230"},
+      {"id": "231"},
+      {"id": "232"},
+      {"id": "233"},
+      {"id": "234"}
+    ]
   }
 ]
