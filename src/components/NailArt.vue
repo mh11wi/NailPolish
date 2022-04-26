@@ -27,7 +27,7 @@
               </b-link>
               <b-popover :target="entry.id + '_' + polish.id"  fallback-placement="counterclockwise" triggers="click blur">
                 <b-img-lazy
-                  :src="getPolishImage(polish.id)" 
+                  :src="getPolishImage(polish)" 
                   :alt="polishes[polish.id - 1].name" 
                   width=200 
                   blank-color="black"
@@ -60,15 +60,15 @@ export default {
     },
     
     /**
-     * Gets the specified polish image. If the polish is a topper, it will be shown over the default base polish.
-     * @param id - the id of the polish
+     * Gets the specified polish image. If the polish is a topper, it will be shown over the specifed base polish.
+     * @param polish - information about the polish
      */
-    getPolishImage(id) {
-      if (this.polishes[id - 1].type == 'Topper') {
-        return require('@/assets/images/polishes/' + process.env.VUE_APP_DEFAULT_BASE + '/' + id + process.env.VUE_APP_EXTENSION);
+    getPolishImage(polish) {
+      if (polish.base) {
+        return require('@/assets/images/polishes/' + polish.base + '/' + polish.id + process.env.VUE_APP_EXTENSION);
       }
 
-      return require('@/assets/images/polishes/' + id + '/' + process.env.VUE_APP_GLOSSY + process.env.VUE_APP_EXTENSION);
+      return require('@/assets/images/polishes/' + polish.id + '/' + process.env.VUE_APP_GLOSSY + process.env.VUE_APP_EXTENSION);
     }
   } 
 }

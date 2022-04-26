@@ -136,6 +136,7 @@ export default {
       guess: '', // the guess typed in the textbox
       hasWon: false, // whether the polish was correctly guessed
       guessState: null, // the state of the guess textbox
+      exampleCorrectPolishId: 32, // the id of the correct polish in the 'How To Play' modal
     }
   },
   /** Loads an initial game. */
@@ -150,12 +151,12 @@ export default {
     
     /** The correct polish in the 'How To Play' modal. */
     exampleCorrectPolish: function() {
-      return this.allPolishes[process.env.VUE_APP_DEFAULT_BASE - 1];
+      return this.allPolishes[this.exampleCorrectPolishId - 1];
     },
     
     /** The guesses to show in the 'How To Play' modal. */
     exampleGuesses: function() {
-      const exampleIds = [176, 69, this.exampleCorrectPolish.id];
+      const exampleIds = [176, 69, this.exampleCorrectPolishId];
       const examples = new Array(exampleIds.length);
       for (let i=0; i < exampleIds.length; i++) {
         examples[i] = this.allPolishes.filter(polish => polish.id == exampleIds[i]);

@@ -7,13 +7,13 @@
     "polishes": [
       {"id": "121"},
       {"id": "122"},
-      {"id": "25"},
+      {"id": "25", "base": "22"},
       {"id": "33"},
-      {"id": "26"},
+      {"id": "26", "base": "22"},
       {"id": "80"},
-      {"id": "24"},
+      {"id": "24", "base": "22"},
       {"id": "123"},
-      {"id": "28"},
+      {"id": "28", "base": "22"},
       {"id": "120"}
     ]
   },
@@ -25,13 +25,13 @@
     "polishes": [
       {"id": "121"},
       {"id": "122"},
-      {"id": "25"},
+      {"id": "25", "base": "22"},
       {"id": "32"},
-      {"id": "28"},
+      {"id": "28", "base": "22"},
       {"id": "120"},
-      {"id": "24"},
+      {"id": "24", "base": "22"},
       {"id": "80"},
-      {"id": "26"},
+      {"id": "26", "base": "22"},
       {"id": "79"}
     ]
   },
@@ -70,7 +70,7 @@
     "description": "A gold and purple #HoloTacoCombo with matching striping tape.",
     "polishes": [
       {"id": "55"},
-      {"id": "96"}
+      {"id": "96", "base": "32"}
     ]
   },
   {
@@ -112,7 +112,7 @@
     "description": "An almost negative space look with striping tape— 'almost' because I could not resist adding a unicorn skin over the naked nail!",
     "polishes": [
       {"id": "105"},
-      {"id": "28"}
+      {"id": "28", "base": "32"}
     ]
   },
   {
@@ -153,7 +153,7 @@
       {"id": "11"},
       {"id": "10"},
       {"id": "22"},
-      {"id": "168"}
+      {"id": "168", "base": "32"}
     ]
   },
   {
@@ -175,11 +175,11 @@
     "description": "To celebrate Holo Taco's 2nd Anniversary (and my birthday too!), I sponged on some holo flakie balloons with matching diamond shaped charms. I then 'baked' up a cake to complete the look.",
     "polishes": [
       {"id": "32"},
-      {"id": "97"},
+      {"id": "97", "base": "32"},
       {"id": "11"},
-      {"id": "96"},
+      {"id": "96", "base": "32"},
       {"id": "76"},
-      {"id": "95"},
+      {"id": "95", "base": "32"},
       {"id": "10"},
       {"id": "224"},
       {"id": "22"},
@@ -196,7 +196,7 @@
       {"id": "153"},
       {"id": "154"},
       {"id": "155"},
-      {"id": "151"}
+      {"id": "151", "base": "32"}
     ]
   },
   {

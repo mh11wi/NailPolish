@@ -10,7 +10,6 @@ See my own collection at [https://mh11wi.github.io/NailPolish/](https://mh11wi.g
 Several envars can be modified to customize the application. These are set in the `.env` file, and include
 - `VUE_APP_TITLE`: the title of the application shown in the browser's tab
 - `VUE_APP_COLLECTOR`: the name of the collector shown in the navbar
-- `VUE_APP_DEFAULT_BASE`: the default base polish id; used to display toppers in the Nail Art Gallery view
 - `VUE_APP_EXTENSION`: the file extension expected of all image files (default: .jpg)
 - `VUE_APP_PRIMARY_COLOR`: the primary color of the application; any of the Bootstrap-Vue color variants can be set, namely: `blue`, `indigo`, `purple`, `pink`, `red`, `orange`, `yellow`, `green`, `teal`, or `cyan`
 
@@ -77,7 +76,7 @@ The place to store information about nail designs is `src/data/nailArt.json`. Ea
 - **description**: a broader description of the design
 - **polishes**: an array of polishes used to create the design (either logged in `polishes.json` or not)
 
-For example, if for a nail art design you used 2 polishes: one that you have logged already with id 3, and one that you have not logged yet, the json would be like:
+For example, if for a nail art design you used three polishes: one that you have logged already with id 3, one topper with id 4 over that polish, and one that you have not logged yet, the json would be like:
 
 ```
 {
@@ -87,6 +86,7 @@ For example, if for a nail art design you used 2 polishes: one that you have log
   "description": "A nail art design",
   "polishes": [
     {"id": "3"},
+    {"id": "4", "base": "3"},
     {"brand": "Some Brand", "name": "Some Name"}
   ]
 }
@@ -94,7 +94,6 @@ For example, if for a nail art design you used 2 polishes: one that you have log
 
 Notes:
 - If the polish is logged, the glossy image of the polish will display in the Nail Art Gallery view in a popover (unless the polish is a topper)
-- If the logged polish is a topper, the image of the topper over the default base polish (configured by `VUE_APP_DEFAULT_BASE`) will be displayed in the popover instead
-- It is recommended that whenever adding a new topper, to always first add an image of it over this default polish
+- If the logged polish is a topper, the image of the topper over a specified `base` polish will be displayed in the popover instead
 
 Nail art images are stored directly in the `src/assets/images/nailart` folder. These images should be named after the id specified in `nailArt.json`. For example, if you have a design with id 1, the image should be named `1` and be of the file extension configured by `VUE_APP_EXTENSION`.
