@@ -2338,5 +2338,45 @@
     "color": "Shifts between rose-pink and amber",
     "numCoats": "3",
     "collection": "Lite Mode Collection (2022)"
+  },
+  {
+    "id": "235",
+    "name": "Coma White",
+    "brand": "Bow Polish",
+    "type": "Thermal",
+    "colorFamily": "Grey",
+    "color": "Light grey to black with gold color shifting flakes",
+    "numCoats": "2",
+    "collection": "Conversion Collection (2017)"
+  },
+  {
+    "id": "236",
+    "name": "Thermal Top Coat: Black",
+    "brand": "Bow Polish",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": ""
+  },
+  {
+    "id": "237",
+    "name": "Fast Dry Sun Top Coat",
+    "brand": "Bow Polish",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": ""
+  },
+  {
+    "id": "238",
+    "name": "Lumière",
+    "brand": "Cirque Colors",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": "Daylight (2022)"
   }
 ]
