@@ -2145,7 +2145,7 @@
     "brand": "Starrily",
     "type": "Linear Holographic",
     "colorFamily": "Blue",
-    "color": "Medium blue with purple to green color shifting shimmer",
+    "color": "Medium blue with purple to green colour shifting shimmer",
     "numCoats": "2",
     "collection": "Kelli Marissa Series 4 (2021)"
   },
@@ -2155,7 +2155,7 @@
     "brand": "Starrily",
     "type": "Linear Holographic",
     "colorFamily": "Yellow",
-    "color": "Golden yellow with copper to green color shifting shimmer",
+    "color": "Golden yellow with copper to green colour shifting shimmer",
     "numCoats": "3",
     "collection": "Kelli Marissa Series 4 (2021)"
   },
@@ -2345,7 +2345,7 @@
     "brand": "Bow Polish",
     "type": "Thermal",
     "colorFamily": "Grey",
-    "color": "Light grey to black with gold color shifting flakes",
+    "color": "Neutral light grey to black with gold colour shifting flakes",
     "numCoats": "2",
     "collection": "Conversion Collection (2017)"
   },
@@ -2377,6 +2377,36 @@
     "colorFamily": "",
     "color": "",
     "numCoats": "1",
+    "collection": "Daylight (2022)"
+  },
+  {
+    "id": "239",
+    "name": "Morningtide",
+    "brand": "Cirque Colors",
+    "type": "Jelly",
+    "colorFamily": "Blue",
+    "color": "Sheer french blue",
+    "numCoats": "3",
+    "collection": "Daylight (2022)"
+  },
+  {
+    "id": "240",
+    "name": "Jade Jelly",
+    "brand": "Cirque Colors",
+    "type": "Jelly",
+    "colorFamily": "Green",
+    "color": "Sheer seafoam green",
+    "numCoats": "3",
+    "collection": "Daylight (2022)"
+  },
+  {
+    "id": "241",
+    "name": "Lavender Sky",
+    "brand": "Cirque Colors",
+    "type": "Jelly",
+    "colorFamily": "Purple",
+    "color": "Sheer lilac purple",
+    "numCoats": "3",
     "collection": "Daylight (2022)"
   }
 ]
