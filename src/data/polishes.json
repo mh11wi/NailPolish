@@ -65,7 +65,7 @@
     "brand": "ILNP",
     "type": "Linear Holographic",
     "colorFamily": "Gold",
-    "color": "Champagne",
+    "color": "Champagne with holographic flakes",
     "numCoats": "3",
     "collection": "Summer Ultra Holos 2015"
   },
@@ -75,7 +75,7 @@
     "brand": "ILNP",
     "type": "Linear Holographic",
     "colorFamily": "Blue",
-    "color": "Aqua blue",
+    "color": "Aqua blue with holographic flakes",
     "numCoats": "3",
     "collection": "Summer Collection 2017"
   },
@@ -2405,7 +2405,7 @@
     "brand": "Cirque Colors",
     "type": "Jelly",
     "colorFamily": "Purple",
-    "color": "Sheer lilac purple",
+    "color": "Sheer lavender purple",
     "numCoats": "3",
     "collection": "Daylight (2022)"
   }
