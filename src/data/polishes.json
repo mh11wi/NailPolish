@@ -2428,5 +2428,55 @@
     "color": "Orange shimmer with iridescent hex glitters",
     "numCoats": "3",
     "collection": "Miracle Gel x Friends (2022)"
+  },
+  {
+    "id": "244",
+    "name": "Gravity, Hold Me Back",
+    "brand": "Mooncat",
+    "type": "Holographic Glitter",
+    "colorFamily": "Pink",
+    "color": "Berry jelly base",
+    "numCoats": "2",
+    "collection": "Toxic Stardust (2021)"
+  },
+  {
+    "id": "245",
+    "name": "Curiosity's Prey",
+    "brand": "Mooncat",
+    "type": "Iridescent Flakie",
+    "colorFamily": "White",
+    "color": "White jelly base with holographic glitters",
+    "numCoats": "3",
+    "collection": "Best Sellers Set (2021)"
+  },
+  {
+    "id": "246",
+    "name": "Moonfairy",
+    "brand": "Mooncat",
+    "type": "Iridescent Flakie",
+    "colorFamily": "Purple",
+    "color": "Lavender jelly base with indigo shimmer and holographic glitters",
+    "numCoats": "3",
+    "collection": "Once Upon a Fairytale (2022)"
+  },
+  {
+    "id": "247",
+    "name": "A Midsummer's Dream",
+    "brand": "Mooncat",
+    "type": "Pearl",
+    "colorFamily": "Pink",
+    "color": "Iridescent soft pink with bright blue shimmer",
+    "numCoats": "2",
+    "collection": "Once Upon a Fairytale (2022)"
+  },
+  {
+    "id": "248",
+    "name": "Access Denied",
+    "brand": "Mooncat",
+    "type": "Shimmer",
+    "colorFamily": "Green",
+    "color": "Black jelly base with green shimmer",
+    "numCoats": "2",
+    "collection": "Glitch in the Matrix (2022)"
   }
 ]
