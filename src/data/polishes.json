@@ -1173,9 +1173,9 @@
     "id": "118",
     "name": "Buffalo Nickel",
     "brand": "Sally Hansen",
-    "type": "Glitter & Sparkle",
+    "type": "Smooth Metallic",
     "colorFamily": "Silver",
-    "color": "Glittery silver",
+    "color": "Shimmery metallic silver",
     "numCoats": "2",
     "collection": "Miracle Gel"
   },
@@ -1645,7 +1645,7 @@
     "brand": "Holo Taco",
     "type": "Metallic Foil",
     "colorFamily": "Gold",
-    "color": "Yellow-gold with silver foil flakes and scattered holographic glitters",
+    "color": "Yellow-gold with foil flakes and scattered holographic glitters",
     "numCoats": "3",
     "collection": ""
   },
@@ -2478,5 +2478,26 @@
     "color": "Black jelly base with green shimmer",
     "numCoats": "2",
     "collection": "Glitch in the Matrix (2022)"
+  },
+  {
+    "id": "249",
+    "name": "Gift Receipt",
+    "brand": "Holo Taco",
+    "type": "Metallic Foil",
+    "colorFamily": "Silver",
+    "color": "Sterling silver with foil flakes",
+    "numCoats": "3",
+    "collection": "Frosted Metals Collection (2020)"
+  }
+  ,
+  {
+    "id": "250",
+    "name": "Greyt",
+    "brand": "Holo Taco",
+    "type": "Smooth Metallic",
+    "colorFamily": "Grey",
+    "color": "Dark charcoal metallic grey",
+    "numCoats": "3",
+    "collection": "Holo Taco x Julien Collection (2022)"
   }
 ]
