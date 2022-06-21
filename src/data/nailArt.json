@@ -258,5 +258,19 @@
       {"id": "233"},
       {"id": "234"}
     ]
+  },
+    {
+    "id": "21",
+    "date": "June 21, 2022",
+    "alt": "Rainbow tips",
+    "description": "Rainbows on rainbows! The holographic flakes in Cirque Color's House of Rainbow polishes catch the light just right.",
+    "polishes": [
+      {"id": "71"},
+      {"id": "72"},
+      {"id": "73"},
+      {"id": "74"},
+      {"id": "75"},
+      {"id": "224"}
+    ]
   }
 ]
