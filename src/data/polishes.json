@@ -2488,8 +2488,7 @@
     "color": "Sterling silver with foil flakes",
     "numCoats": "3",
     "collection": "Frosted Metals Collection (2020)"
-  }
-  ,
+  },
   {
     "id": "250",
     "name": "Greyt",
@@ -2499,5 +2498,25 @@
     "color": "Dark charcoal metallic grey",
     "numCoats": "2",
     "collection": "Holo Taco x Julien Collection (2022)"
+  },
+  {
+    "id": "251",
+    "name": "Funhouse",
+    "brand": "ILNP",
+    "type": "Metallic Foil",
+    "colorFamily": "Green",
+    "color": "Carribean green with foil flakes",
+    "numCoats": "2",
+    "collection": "Ultra Metallics Bright Collection (2018)"
+  },
+  {
+    "id": "252",
+    "name": "Hi-Fi",
+    "brand": "ILNP",
+    "type": "Metallic Foil",
+    "colorFamily": "Purple",
+    "color": "Bright purple with foil flakes",
+    "numCoats": "2",
+    "collection": "Ultra Metallics Bright Collection (2018)"
   }
 ]
