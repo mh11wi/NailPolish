@@ -2518,5 +2518,45 @@
     "color": "Bright purple with foil flakes",
     "numCoats": "2",
     "collection": "Ultra Metallics Bright Collection (2018)"
+  },
+  {
+    "id": "253",
+    "name": "Tutti Frutti",
+    "brand": "Cirque Colors",
+    "type": "Iridescent Flakie",
+    "colorFamily": "Red",
+    "color": "Fire red jelly base",
+    "numCoats": "2",
+    "collection": "Candy Coat (2019)"
+  },
+  {
+    "id": "254",
+    "name": "Mystic Moonstone",
+    "brand": "Cirque Colors",
+    "type": "Pearl",
+    "colorFamily": "White",
+    "color": "Milky white with blue shimmer and scattered holographic glitters",
+    "numCoats": "3",
+    "collection": "Resort Collection (2019)"
+  },
+  {
+    "id": "255",
+    "name": "XOXO Jelly",
+    "brand": "Cirque Colors",
+    "type": "Jelly",
+    "colorFamily": "Pink",
+    "color": "Sheer hot pink",
+    "numCoats": "2",
+    "collection": "Glazed (2022)"
+  },
+  {
+    "id": "256",
+    "name": "Once Upon a Time",
+    "brand": "Cirque Colors",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": "Do Good (2022)"
   }
 ]
