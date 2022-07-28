@@ -947,7 +947,7 @@
     "colorFamily": "",
     "color": "",
     "numCoats": "1",
-    "collection": ""
+    "collection": "1st Anniversary Collection (2020)"
   },
   {
     "id": "96",
@@ -957,7 +957,7 @@
     "colorFamily": "",
     "color": "",
     "numCoats": "1",
-    "collection": ""
+    "collection": "1st Anniversary Collection (2020)"
   },
   {
     "id": "97",
@@ -967,7 +967,7 @@
     "colorFamily": "",
     "color": "",
     "numCoats": "1",
-    "collection": ""
+    "collection": "1st Anniversary Collection (2020)"
   },
   {
     "id": "98",
@@ -1107,27 +1107,27 @@
     "colorFamily": "",
     "color": "",
     "numCoats": "1",
-    "collection": "Remix Collection (2021)"
+    "collection": "2nd Anniversary Remix Collection (2021)"
   },
   {
-    "id": "112",
+    "id": "112", 
     "name": "Glitterally Purple",
     "brand": "Holo Taco",
     "type": "Holographic Glitter",
     "colorFamily": "Purple",
     "color": "Sweet purple grape jelly base",
     "numCoats": "2",
-    "collection": "Remix Collection (2021)"
+    "collection": "2nd Anniversary Remix Collection (2021)"
   },
   {
     "id": "113",
     "name": "Heavy Metal Mixtape",
     "brand": "Holo Taco",
     "type": "Metallic Foil",
-    "colorFamily": "Black",
+    "colorFamily": "Grey",
     "color": "Carbon steel with silver foil flakes and a dark purple undertone",
     "numCoats": "2",
-    "collection": "Remix Collection (2021)"
+    "collection": "2nd Anniversary Remix Collection (2021)"
   },
   {
     "id": "114",
@@ -1137,7 +1137,7 @@
     "colorFamily": "Purple",
     "color": "Deep eggplant purple",
     "numCoats": "1",
-    "collection": "Remix Collection (2021)"
+    "collection": "2nd Anniversary Remix Collection (2021)"
   },
   {
     "id": "115",
@@ -1147,7 +1147,7 @@
     "colorFamily": "Blue",
     "color": "Shifts between steel blue and purple",
     "numCoats": "2",
-    "collection": "Remix Collection (2021)"
+    "collection": "2nd Anniversary Remix Collection (2021)"
   },
   {
     "id": "116",
@@ -2558,5 +2558,55 @@
     "color": "",
     "numCoats": "1",
     "collection": "Do Good (2022)"
+  },
+  {
+    "id": "257",
+    "name": "Reflective Taco",
+    "brand": "Holo Taco",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": "3rd Anniversary Gala Collection (2022)"
+  },
+  {
+    "id": "258",
+    "name": "Blacklisted",
+    "brand": "Holo Taco",
+    "type": "Metallic Foil",
+    "colorFamily": "Black",
+    "color": "Nearly-black with silver foil flakes and scattered holographic glitters",
+    "numCoats": "2",
+    "collection": "3rd Anniversary Gala Collection (2022)"
+  },
+  {
+    "id": "259",
+    "name": "Smokeshow",
+    "brand": "Holo Taco",
+    "type": "Holographic Glitter",
+    "colorFamily": "Grey",
+    "color": "Dark grey jelly base",
+    "numCoats": "2",
+    "collection": "3rd Anniversary Gala Collection (2022)"
+  },
+  {
+    "id": "260",
+    "name": "Highest Bidder",
+    "brand": "Holo Taco",
+    "type": "Glitter & Sparkle",
+    "colorFamily": "Grey",
+    "color": "Soft grey with scattered holographic micro-flakes",
+    "numCoats": "2",
+    "collection": "3rd Anniversary Gala Collection (2022)"
+  },
+  {
+    "id": "261",
+    "name": "Featured Guest",
+    "brand": "Holo Taco",
+    "type": "Linear Holographic",
+    "colorFamily": "White",
+    "color": "Nearly-white dove grey",
+    "numCoats": "3",
+    "collection": "3rd Anniversary Gala Collection (2022)"
   }
 ]
