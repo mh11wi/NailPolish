@@ -2608,5 +2608,25 @@
     "color": "Nearly-white dove grey",
     "numCoats": "3",
     "collection": "3rd Anniversary Gala Collection (2022)"
+  },
+  {
+    "id": "262",
+    "name": "Sandy Baby",
+    "brand": "ILNP",
+    "type": "Holographic Glitter",
+    "colorFamily": "Neutral",
+    "color": "Peach beige jelly base",
+    "numCoats": "3",
+    "collection": "Spring Jellies 2016"
+  },
+  {
+    "id": "263",
+    "name": "Sweet Pea",
+    "brand": "ILNP",
+    "type": "Holographic Glitter",
+    "colorFamily": "Pink",
+    "color": "Seashell pink jelly base",
+    "numCoats": "3",
+    "collection": "Spring Jellies 2016"
   }
 ]
