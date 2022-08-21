@@ -20,8 +20,23 @@
             >
             </b-img-lazy>
           </div>
-          <div class="mt-2 row justify-content-center"><strong>{{ polishes[combination.basePolishId - 1].brand }}</strong></div>
-          <div class="row justify-content-center">{{ polishes[combination.basePolishId - 1].name }}</div>
+          <div class="mt-2 row justify-content-center">
+            <span>
+              <strong>{{ polishes[combination.basePolishId - 1].brand }}</strong>
+              <span> - </span>
+              {{ polishes[combination.basePolishId - 1].name }}
+            </span>
+          </div>
+          <div class="row justify-content-center">+</div>
+          <div class="row justify-content-center">
+            <span>
+              <span v-if="polishes[combination.topperId - 1].brand">
+                <strong>{{ polishes[combination.topperId - 1].brand }}</strong>
+                <span> - </span>
+              </span>
+              {{ polishes[combination.topperId - 1].name }}
+            </span>
+          </div>
         </div>
       </div>
     </div>
