@@ -259,7 +259,7 @@
       {"id": "234"}
     ]
   },
-    {
+  {
     "id": "21",
     "date": "June 21, 2022",
     "alt": "Rainbow tips",
@@ -271,6 +271,15 @@
       {"id": "74"},
       {"id": "75"},
       {"id": "224"}
+    ]
+  },
+  {
+    "id": "22",
+    "date": "August 22, 2022",
+    "alt": "Metal shock powders",
+    "description": "A skittle of Essence's Metal Shock powders with stickers. From left to right: a touch of vintage; me and my unicorn; mirror, mirror on the nail; I'm so fancy; be my little mermaid.",
+    "polishes": [
+      {"id": "32"}
     ]
   }
 ]
