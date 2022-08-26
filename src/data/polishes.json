@@ -2648,5 +2648,25 @@
     "color": "Blue linear holographic with reflective glitters; purple in the sun",
     "numCoats": "2",
     "collection": "Summer 2022 Collection"
+  },
+  {
+    "id": "266",
+    "name": "Headstrong",
+    "brand": "Bow Polish",
+    "type": "Thermal",
+    "colorFamily": "Purple",
+    "color": "Shimmery lilac tri-thermal that transitions to pink and purple",
+    "numCoats": "3",
+    "collection": "Summer 2022 Collection"
+  },
+  {
+    "id": "267",
+    "name": "Sunglow",
+    "brand": "ILNP",
+    "type": "Holographic Glitter",
+    "colorFamily": "Gold",
+    "color": "Intense warm gold jelly base",
+    "numCoats": "2",
+    "collection": "Tropics Collection (2021)"
   }
 ]
