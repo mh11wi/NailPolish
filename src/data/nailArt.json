@@ -281,5 +281,14 @@
     "polishes": [
       {"id": "32"}
     ]
+  },
+  {
+    "id": "23",
+    "date": "August 31, 2022",
+    "alt": "Aflorable nail strips",
+    "description": "This is my first time using nail polish strips, and I think it was a success! So easy I could apply using my non-dominant hand.",
+    "polishes": [
+      {"brand": "Sally Hansen", "name": "Aflorable"}
+    ]
   }
 ]
