@@ -2668,5 +2668,55 @@
     "color": "Intense warm gold jelly base",
     "numCoats": "2",
     "collection": "Tropics Collection (2021)"
+  },
+  {
+    "id": "268",
+    "name": "New Day",
+    "brand": "ILNP",
+    "type": "Metallic Foil",
+    "colorFamily": "Blue",
+    "color": "Icy blue with foil flakes and scattered holographic glitters",
+    "numCoats": "3",
+    "collection": "Spring Collection 2018"
+  },
+  {
+    "id": "269",
+    "name": "Caesar",
+    "brand": "ILNP",
+    "type": "Metallic Foil",
+    "colorFamily": "Brown",
+    "color": "Olive brown with foil flakes and scattered holographic glitters",
+    "numCoats": "2",
+    "collection": "New Year's Collection 2016"
+  },
+  {
+    "id": "270",
+    "name": "Juliette",
+    "brand": "ILNP",
+    "type": "Metallic Foil",
+    "colorFamily": "Pink",
+    "color": "Rose gold with foil flakes and scattered holographic glitters",
+    "numCoats": "2",
+    "collection": "Winter Collection 2015"
+  },
+  {
+    "id": "271",
+    "name": "Time in a Bottle",
+    "brand": "ILNP",
+    "type": "Metallic Foil",
+    "colorFamily": "Blue",
+    "color": "Rich aquamarine with foil flakes and scattered holographic glitters",
+    "numCoats": "2",
+    "collection": "Holiday Collection 2015"
+  },
+  {
+    "id": "272",
+    "name": "Bulletproof Symphony",
+    "brand": "ILNP",
+    "type": "Metallic Foil",
+    "colorFamily": "Purple",
+    "color": "Medium periwinkle with foil flakes and scattered holographic glitters",
+    "numCoats": "2",
+    "collection": "Spring Collection 2016"
   }
 ]
