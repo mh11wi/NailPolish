@@ -2718,5 +2718,75 @@
     "color": "Medium periwinkle with foil flakes and scattered holographic glitters",
     "numCoats": "2",
     "collection": "Spring Collection 2016"
+  },
+  {
+    "id": "273",
+    "name": "Amber Apathy",
+    "brand": "Holo Taco",
+    "type": "Linear Holographic",
+    "colorFamily": "Yellow",
+    "color": "Dark topaz yellow",
+    "numCoats": "2",
+    "collection": "Dark Rainbow Collection (2022)"
+  },
+  {
+    "id": "274",
+    "name": "Burnt Bridges",
+    "brand": "Holo Taco",
+    "type": "Linear Holographic",
+    "colorFamily": "Brown",
+    "color": "Warm rusty brown",
+    "numCoats": "2",
+    "collection": "Dark Rainbow Collection (2022)"
+  },
+  {
+    "id": "275",
+    "name": "Crimson Void",
+    "brand": "Holo Taco",
+    "type": "Linear Holographic",
+    "colorFamily": "Red",
+    "color": "Dark scarlet red",
+    "numCoats": "2",
+    "collection": "Dark Rainbow Collection (2022)"
+  },
+  {
+    "id": "276",
+    "name": "Dead Petals",
+    "brand": "Holo Taco",
+    "type": "Linear Holographic",
+    "colorFamily": "Purple",
+    "color": "Dark magenta",
+    "numCoats": "2",
+    "collection": "Dark Rainbow Collection (2022)"
+  },
+  {
+    "id": "277",
+    "name": "Violet Nightmares",
+    "brand": "Holo Taco",
+    "type": "Linear Holographic",
+    "colorFamily": "Purple",
+    "color": "Deep royal purple",
+    "numCoats": "1",
+    "collection": "Dark Rainbow Collection (2022)"
+  },
+  {
+    "id": "278",
+    "name": "Sunken Secrets",
+    "brand": "Holo Taco",
+    "type": "Linear Holographic",
+    "colorFamily": "Blue",
+    "color": "Dark navy blue",
+    "numCoats": "1",
+    "collection": "Dark Rainbow Collection (2022)"
+  },
+  {
+    "id": "279",
+    "name": "Lost in the Woods",
+    "brand": "Holo Taco",
+    "type": "Linear Holographic",
+    "colorFamily": "Green",
+    "color": "Deep forest green",
+    "numCoats": "1",
+    "collection": "Dark Rainbow Collection (2022)"
   }
 ]
