@@ -2788,5 +2788,25 @@
     "color": "Deep forest green",
     "numCoats": "1",
     "collection": "Dark Rainbow Collection (2022)"
+  },
+  {
+    "id": "280",
+    "name": "Sunlight",
+    "brand": "Starrily",
+    "type": "Metallic Foil",
+    "colorFamily": "Orange",
+    "color": "Orange with foil flakes and golden shimmer",
+    "numCoats": "2",
+    "collection": ""
+  },
+  {
+    "id": "281",
+    "name": "Pluto",
+    "brand": "Starrily",
+    "type": "Magnetic",
+    "colorFamily": "Green",
+    "color": "Emerald green with scattered holographic glitters",
+    "numCoats": "2",
+    "collection": "The Planets Collection (2022)"
   }
 ]
