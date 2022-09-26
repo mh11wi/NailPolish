@@ -65,7 +65,7 @@
     "brand": "ILNP",
     "type": "Linear Holographic",
     "colorFamily": "Gold",
-    "color": "Champagne with holographic flakes",
+    "color": "Delicate champagne with holographic flakes",
     "numCoats": "3",
     "collection": "Summer Ultra Holos 2015"
   },
@@ -85,7 +85,7 @@
     "brand": "ILNP",
     "type": "Linear Holographic",
     "colorFamily": "Green",
-    "color": "Mint green",
+    "color": "Refined mint green",
     "numCoats": "3",
     "collection": "Spring Collection 2014"
   },
@@ -2808,5 +2808,25 @@
     "color": "Emerald green with scattered holographic glitters",
     "numCoats": "2",
     "collection": "The Planets Collection (2022)"
+  },
+  {
+    "id": "282",
+    "name": "Maybe We'll Learn To Be Kind",
+    "brand": "Cadillacquer",
+    "type": "Flash Reflective",
+    "colorFamily": "Pink",
+    "color": "Gold/orange aurora shimmer base with pink reflective glitters",
+    "numCoats": "3",
+    "collection": "Summer 2022 Quad"
+  },
+  {
+    "id": "283",
+    "name": "The Dark",
+    "brand": "Cadillacquer",
+    "type": "Flash Reflective",
+    "colorFamily": "Green",
+    "color": "Teal jelly base with iridescent flakies and purple reflective glitters",
+    "numCoats": "3",
+    "collection": "Summer 2022 Quad"
   }
 ]
