@@ -44,8 +44,8 @@
     "name": "Black Orchid",
     "brand": "ILNP",
     "type": "Linear Holographic",
-    "colorFamily": "Purple",
-    "color": "Deep plum",
+    "colorFamily": "Red",
+    "color": "Deep burgundy/plum",
     "numCoats": "2",
     "collection": "Fall Collection 2014"
   },
@@ -2226,7 +2226,7 @@
     "type": "Jelly",
     "colorFamily": "Blue",
     "color": "Sheer denim blue",
-    "numCoats": "3",
+    "numCoats": "2",
     "collection": "Glazed (2021)"
   },
   {
