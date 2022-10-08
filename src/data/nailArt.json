@@ -289,5 +289,19 @@
     "polishes": [
       {"brand": "Sally Hansen", "name": "Aflorable"}
     ]
+  },
+  {
+    "id": "24",
+    "date": "October 7, 2022",
+    "alt": "Stamped fall leaves",
+    "description": "Happy fall y'all! I created this autumnal look using the Twinkled T Leaves stamping plate.",
+    "polishes": [
+      {"id": "159"},
+      {"id": "275"},
+      {"brand": "Twinkled T", "name": "Stay Yolk Stamping Polish"},
+      {"brand": "Twinkled T", "name": "Passionfruit Stamping Polish"},
+      {"brand": "Twinkled T", "name": "Volcanic Stamping Polish"},
+      {"brand": "Twinkled T", "name": "Liquid Gold Stamping Polish"}
+    ]
   }
 ]
