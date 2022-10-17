@@ -2868,5 +2868,25 @@
     "color": "",
     "numCoats": "1",
     "collection": ""
+  },
+  {
+    "id": "288",
+    "name": "Luminous",
+    "brand": "Bow Polish",
+    "type": "Glow in the Dark",
+    "colorFamily": "Neutral",
+    "color": "Sheer nude base with golden shimmer; bright green in the dark",
+    "numCoats": "4",
+    "collection": "Spring 2021 Collection"
+  },
+  {
+    "id": "289",
+    "name": "Duality",
+    "brand": "Bow Polish",
+    "type": "Glow in the Dark",
+    "colorFamily": "Pink",
+    "color": "Pink to burgundy thermal with glitters; peach and green in the dark",
+    "numCoats": "3",
+    "collection": "Summer 2022 Collection"
   }
 ]
