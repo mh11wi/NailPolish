@@ -1,17 +1,22 @@
 <template>
   <div class="polish">
     <div v-b-modal="polish.id" class="text-center mx-2 mb-3">
-      <b-overlay :show="polish.type == 'Solar'" :opacity="0">
+      <b-overlay :show="polish.type == 'Solar' || polish.type == 'Glow in the Dark'" :opacity="0">
         <b-img-lazy 
-          :src="getImage(polish.id, false, false)" 
+          :src="getImage(polish.id, false)" 
           :alt="polish.name" 
           blank-color="black"
           fluid
         >
         </b-img-lazy>
-        <template #overlay>
+        <template #overlay v-if="polish.type == 'Solar'">
           <div class="mt-3 mr-2 text-right text-warning">
             <font-awesome-icon icon="sun" size="lg"/>
+          </div>
+        </template>
+        <template #overlay v-else-if="polish.type == 'Glow in the Dark'">
+          <div class="mt-3 mr-2 text-right text-warning">
+            <font-awesome-icon icon="moon"/>
           </div>
         </template>
       </b-overlay>
@@ -22,13 +27,18 @@
       <b-row style="height: 300px">
         <b-col cols="5">
           <img-comparison-slider v-if="polish.type == 'Solar'">
-            <img slot="before" :src="getImage(polish.id, true, true)" :alt="polish.name + ' in the sun'" width="300px">
-            <img slot="after" :src="getImage(polish.id, true, false)" :alt="polish.name" width="300px">
+            <img slot="before" :src="getImage(polish.id, true, '-sun')" :alt="polish.name + ' in the sun'" width="300px">
+            <img slot="after" :src="getImage(polish.id, true)" :alt="polish.name" width="300px">
             <img slot="handle" src="https://api.iconify.design/fa-solid:sun.svg?color=%23ffc107&height=30">
+          </img-comparison-slider>
+          <img-comparison-slider v-else-if="polish.type == 'Glow in the Dark'">
+            <img slot="before" :src="getImage(polish.id, true, '-dark')" :alt="polish.name + ' in the dark'" width="300px">
+            <img slot="after" :src="getImage(polish.id, true)" :alt="polish.name" width="300px">
+            <img slot="handle" src="https://api.iconify.design/fa-solid:moon.svg?color=%23ffc107&width=35&height=30">
           </img-comparison-slider>
           <b-img-lazy
             v-else
-            :src="getImage(polish.id, true, false)" 
+            :src="getImage(polish.id, true)" 
             :alt="polish.name" 
             width=300 
             blank-color="black"
@@ -147,13 +157,12 @@ export default {
      * Gets the specified polish image.
      * @param polishId - the id of the polish
      * @param isModal - whether the image is for the modal or not (so appropriate finish is displayed)
-     * @param isSun - if the polish is solar, whether the sun image should be retrieved or not
+     * @param suffix - an optional suffix to the image file (e.g. '-sun' for solar, '-dark' for glow in the dark)
      */
-    getImage(polishId, isModal, isSun) {
+    getImage(polishId, isModal, suffix = '') {
       const thisFinish = isModal? this.modalFinish : this.finish
       const finishId = thisFinish == 'glossy' ? process.env.VUE_APP_GLOSSY : process.env.VUE_APP_MATTE;
-      const appendSun = isSun ? '-sun' : '';
-      return require('@/assets/images/polishes/' + polishId + '/' + finishId + appendSun + process.env.VUE_APP_EXTENSION);
+      return require('@/assets/images/polishes/' + polishId + '/' + finishId + suffix + process.env.VUE_APP_EXTENSION);
     },
     
     /** When the 'Top It Off' button is clicked, close the modal but otherwise handle in the parent component. */

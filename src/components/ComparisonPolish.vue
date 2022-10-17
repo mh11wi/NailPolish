@@ -61,7 +61,7 @@ export default {
     'finish', // the finish of the polish to display (either 'glossy' or 'matte')
     'comparisonLength', // the number of polishes in the comparison
     'cardHeight', // the height of the card
-    'isSun' // if the polish is solar, whether the sun image should be retrieved
+    'isEffect' // if the polish is solar or glow in the dark, whether the sun/dark image should be retrieved
   ],
   /** Ensure that the height of the card is correct when switching between image and details in the card. */
   updated() {
@@ -74,8 +74,15 @@ export default {
      */
     getImage(polishId) {
       const finishId = this.finish == 'glossy' ? process.env.VUE_APP_GLOSSY : process.env.VUE_APP_MATTE;
-      const appendSun = this.card.polish.type == 'Solar' && this.isSun ? '-sun' : '';
-      return require('@/assets/images/polishes/' + polishId + '/' + finishId + appendSun + process.env.VUE_APP_EXTENSION);
+      
+      let suffix = '';
+      if (this.card.polish.type == 'Solar' && this.isEffect) {
+        suffix = '-sun';
+      } else if (this.card.polish.type == 'Glow in the Dark' && this.isEffect) {
+        suffix = '-dark';
+      }
+      
+      return require('@/assets/images/polishes/' + polishId + '/' + finishId + suffix + process.env.VUE_APP_EXTENSION);
     },
 
     /**
