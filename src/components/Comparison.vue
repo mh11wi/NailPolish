@@ -11,8 +11,10 @@
       </div>
       <div class="col-6 pr-0 text-right">
         <div v-if="comparison.polishes.length != 0" class="mr-5">
-          <b-form-checkbox v-if="containsSolar" switch v-model="solarChecked" size="lg" class="mr-4">
+          <b-form-checkbox v-if="containsTwoState" switch v-model="effectChecked" size="lg" class="mr-4">
             <font-awesome-icon icon="sun" class="text-warning" size="lg"/>
+            /
+            <font-awesome-icon icon="moon" class="text-warning"/>
           </b-form-checkbox>
           <FinishToggle v-model="finish" @updateFinish="finish = $event"/>
         </div>
@@ -38,7 +40,7 @@
                       :finish="finish" 
                       :comparisonLength="comparison.polishes.length"
                       :cardHeight="cardHeight"
-                      :isSun="solarChecked"
+                      :isEffect="effectChecked"
                       @resize="handleResize"
                       @movePolish="movePolish"
                       @removePolish="removePolish"
@@ -80,7 +82,7 @@ export default {
       editMode: false, // whether the comparison's name is being edited
       finish: 'glossy', // the selected polish finish to display (either 'glossy' or 'matte)
       maxNameLength: 18, // the maximum number of characters allowed for a comparison's name
-      solarChecked: false, // whether the solar toggle is checked or not (when a comparison contains a solar polish)
+      effectChecked: false, // whether the effect toggle is checked or not (when a comparison contains a solar or glow in the dark polish)
       name: this.comparison.name, // the name being edited when editMode is true, and copied to the comparison prop when finished (for performance)
       cardsPerSlide: 3, // the number of polish cards to show on a carousel slide
       slideIndex:0 // the index of the current slide shown
@@ -111,9 +113,9 @@ export default {
       return output;
     },
 
-    /** Check whether the comparison contains a solar polish, in order to display the toggle. */
-    containsSolar: function() {
-      return this.comparison.polishes.some(item => item.polish.type == 'Solar');
+    /** Check whether the comparison contains a two state polish (solar or glow in the dark), in order to display the toggle. */
+    containsTwoState: function() {
+      return this.comparison.polishes.some(item => item.polish.type == 'Solar' || item.polish.type == 'Glow in the Dark');
     }
   },
   methods: {

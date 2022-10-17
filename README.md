@@ -19,8 +19,6 @@ Clone this repository and in the command line enter `npm install` in its directo
 ### Running the application
 From the command line enter `npm run serve` in the repository's directory. The application will be available at `localhost:8080` by default once compiled.
 
-Note that when adding new images, this command will need to be rerun.
-
 
 ## Adding Content to the Application
 
@@ -53,7 +51,10 @@ After logging a polish it is time to add images. All polish images are to be sto
 
 It is expected that each subfolder will minimally contain 2 images: one of the polish with a glossy top coat, and one of the polish with a matte top coat. These images should be named `1` and `2` respectively, and be of the file extension configured by `VUE_APP_EXTENSION`.
 
+#### Two-state polish effects
 If a polish is of type "Solar" its subfolder should contain 2 additional images: one of the polish in the sun with a glossy top coat, and one of the polish in the sun with a matte top coat. These images should be named `1-sun` and `2-sun` respectively (plus the noted file extension).
+
+Similarly, if a polish is of type "Glow in the Dark" its subfolder should contain 2 additional images: one of the polish in the dark with a glossy top coat, and one of the polish in the dark with a matte top coat. These images should be named `1-dark` and `2-dark` respectively (plus the noted file extension).
 
 ### Adding a new topper
 Toppers are a special type of polish whose type must be "Topper". In the application they are not displayed in the Browse Collection view, but rather in the Top It Off view when mapped to another polish. 
@@ -66,7 +67,7 @@ After logging a topper in `polishes.json` (as above), it can be mapped to a base
 
 Unlike regular polishes, topper images will not exist in their own subfolder in `src/assets/images/polishes`, but rather in the subfolder of the associated base polish. Continuing our example, images of toppers 4 and 5, should be placed in the `src/assets/images/polishes/3` subfolder with names `4` and `5` respectively (plus the noted file extension).
 
-While it is not yet implemented, images of solar polishes with a topper should follow the same naming convention (i.e. `topperId-sun`).
+While it is not yet implemented, images of solar or glow in the dark polishes with a topper should follow the same naming convention (i.e. `topperId-sun` or `topperId-dark`).
 
 ### Adding a new nail art entry
 The place to store information about nail designs is `src/data/nailArt.json`. Each entry must have the following attributes
