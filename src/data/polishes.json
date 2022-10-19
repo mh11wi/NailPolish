@@ -2888,5 +2888,25 @@
     "color": "Pink to burgundy thermal with glitters; peach and green in the dark",
     "numCoats": "3",
     "collection": "Summer 2022 Collection"
+  },
+  {
+    "id": "290",
+    "name": "Favourite Sister",
+    "brand": "Holo Taco",
+    "type": "Metallic Foil",
+    "colorFamily": "Red",
+    "color": "Bright red with foil flakes and scattered holographic glitters",
+    "numCoats": "2",
+    "collection": ""
+  },
+  {
+    "id": "291",
+    "name": "Double Dare",
+    "brand": "Holo Taco",
+    "type": "Flash Reflective",
+    "colorFamily": "Black",
+    "color": "Black-to-red multichrome with holographic and red reflective glitters",
+    "numCoats": "2",
+    "collection": ""
   }
 ]
