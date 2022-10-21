@@ -226,27 +226,6 @@
   },
   {
     "id": "18",
-    "date": "February 21, 2022",
-    "alt": "DigitalEd nails",
-    "description": "In honour of my last week at DigitalEd, I created a goodbye mani showcasing the Mobius polish (which not so coincidentally has the same name as our online education platform).",
-    "polishes": [
-      {"id": "176"},
-      {"id": "210"},
-      {"id": "22"}
-    ]
-  },
-  {
-    "id": "19",
-    "date": "February 28, 2022",
-    "alt": "Prodigy nails",
-    "description": "New year, new job! I was so excited for my first day of work at Prodigy Education that I decided to recreate their logo.",
-    "polishes": [
-      {"id": "83"},
-      {"id": "22"}
-    ]
-  },
-  {
-    "id": "20",
     "date": "April 15, 2022",
     "alt": "Raindrop lazy gradient nails",
     "description": "A combination of the lazy gradient and raindrop techniques using Holo Taco's new Lite Mode multichromes.",
@@ -259,7 +238,7 @@
     ]
   },
   {
-    "id": "21",
+    "id": "19",
     "date": "June 21, 2022",
     "alt": "Rainbow tips",
     "description": "Rainbows on rainbows! The holographic flakes in Cirque Color's House of Rainbow polishes catch the light just right.",
@@ -273,7 +252,7 @@
     ]
   },
   {
-    "id": "22",
+    "id": "20",
     "date": "August 22, 2022",
     "alt": "Metal shock powders",
     "description": "A skittle of Essence's Metal Shock powders with stickers. From left to right: a touch of vintage; me and my unicorn; mirror, mirror on the nail; I'm so fancy; be my little mermaid.",
@@ -282,7 +261,7 @@
     ]
   },
   {
-    "id": "23",
+    "id": "21",
     "date": "August 31, 2022",
     "alt": "Aflorable nail strips",
     "description": "This is my first time using nail polish strips, and I think it was a success! So easy I could apply using my non-dominant hand.",
@@ -291,7 +270,7 @@
     ]
   },
   {
-    "id": "24",
+    "id": "22",
     "date": "October 7, 2022",
     "alt": "Stamped fall leaves",
     "description": "Happy fall y'all! I created this autumnal look using the Twinkled T Leaves stamping plate.",
@@ -302,6 +281,20 @@
       {"brand": "Twinkled T", "name": "Passionfruit Stamping Polish"},
       {"brand": "Twinkled T", "name": "Volcanic Stamping Polish"},
       {"brand": "Twinkled T", "name": "Liquid Gold Stamping Polish"}
+    ]
+  },
+  {
+    "id": "23",
+    "date": "October 21, 2022",
+    "alt": "Watermarble witch nails",
+    "description": "This Halloween I tried to become a 'Watermarble Witch'. How did I do?",
+    "polishes": [
+      {"id": "22"},
+      {"id": "69"},
+      {"id": "149"},
+      {"id": "154"},
+      {"id": "249"},
+      {"id": "28", "base": "32"}
     ]
   }
 ]
