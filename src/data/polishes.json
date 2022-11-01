@@ -2938,5 +2938,35 @@
     "color": "",
     "numCoats": "1",
     "collection": "Witching Hour by Kelli Marissa (2022)"
+  },
+  {
+    "id": "295",
+    "name": "Oasis Jelly",
+    "brand": "ORLY",
+    "type": "Jelly",
+    "colorFamily": "Blue",
+    "color": "Sheer medium teal",
+    "numCoats": "2",
+    "collection": "Witching Hour by Kelli Marissa (2022)"
+  },
+  {
+    "id": "296",
+    "name": "Smoke Jelly",
+    "brand": "ORLY",
+    "type": "Jelly",
+    "colorFamily": "Black",
+    "color": "Sheer black",
+    "numCoats": "2",
+    "collection": "Witching Hour by Kelli Marissa (2022)"
+  },
+  {
+    "id": "297",
+    "name": "Mystic Jelly",
+    "brand": "ORLY",
+    "type": "Jelly",
+    "colorFamily": "Purple",
+    "color": "Sheer medium purple",
+    "numCoats": "3",
+    "collection": "Witching Hour by Kelli Marissa (2022)"
   }
 ]
