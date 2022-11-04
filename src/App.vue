@@ -127,10 +127,13 @@ export default {
     
     /** 
      * Calculates the available height of the screen to size tabs appropriately.
-     * On mobile, this does not include the address bar.
+     * On mobile, this does not include the address bar. If the height is too small,
+     * e.g. the keyboard is open in landscape mode, ensure header can be scrolled away.
      */
     handleResize() {
-      const height = document.querySelectorAll('html')[0].offsetHeight;
+      const headerHeight = 110;
+      const screenHeight = document.querySelectorAll('html')[0].offsetHeight;
+      const height = screenHeight < 2 * headerHeight ? screenHeight : screenHeight - headerHeight;
       document.documentElement.style.setProperty('--height', `${height}px`);
     }
   }
@@ -140,12 +143,11 @@ export default {
 <style>
 html, body, .app {
   height: 100%;
-  overflow-y: hidden;
 }
 
 .tab-pane, .tab-content {
   height: calc(100vh - 110px);
-  height: calc(var(--height) - 110px);
+  height: var(--height);
   overflow-y: auto;
 }
 
