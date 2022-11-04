@@ -73,6 +73,15 @@ export default {
       return toppersMap;
     }
   },
+  /** Adds listener for when the browser is resized so that the tabs resize appropriately. */
+  created() {
+    window.addEventListener('resize', this.debounce(this.handleResize));
+    this.handleResize();
+  },
+  /** Removes browser resize listener. */
+  destroyed() {
+    window.removeEventListener('resize', this.handleResize);
+  },
   methods: {
     /**
      * Opens the 'Top It Off' tab with the specified base polish and topper selected.
@@ -86,6 +95,29 @@ export default {
     /** Increments the comparison id. */
     incrementComparisonId() {
       this.comparisonId++;
+    },
+    
+    /** 
+     * Debounces the call of a specified function.
+     * @param func - the function to debounce
+     */
+    debounce(func){
+      let timer;
+      return function(event) {
+        if (timer) {
+          clearTimeout(timer);
+        }
+        timer = setTimeout(func, 100, event);
+      };
+    },
+    
+    /** 
+     * Calculates the available height of the screen to size tabs appropriately.
+     * On mobile, this does not include the address bar.
+     */
+    handleResize() {
+      const height = document.querySelectorAll('html')[0].offsetHeight;
+      document.documentElement.style.setProperty('--height', `${height}px`);
     }
   }
 }
@@ -93,11 +125,13 @@ export default {
 
 <style>
 html, body, .app {
-  height: 100vh;
+  height: 100%;
 }
 
 .tab-pane, .tab-content {
   height: calc(100vh - 110px);
+  height: calc(var(--height) - 110px);
+  overflow-y: auto;
 }
 
 .nav-tabs .nav-item {
