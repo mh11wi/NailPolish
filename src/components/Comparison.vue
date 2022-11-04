@@ -4,7 +4,7 @@
       <div class="col-6 pl-0">
         <div class="ml-5">
           <strong v-if="!editMode" class="comparisonName h-100">{{ comparison.name }}</strong>
-          <b-form-input v-model="name" autofocus :maxLength="maxNameLength" v-else @blur="finishEdit" @keyup.enter="finishEdit"/>
+          <b-form-input ref="editName" v-model="name" :maxLength="maxNameLength" v-else @blur="finishEdit" @keyup.enter="finishEdit"/>
           <b-button variant="link" class="ml-3" v-if="!editMode" @click="editMode = true"><font-awesome-icon icon="pencil-alt" size="lg"/></b-button>
           <b-button variant="link" v-if="!editMode" @click="deleteComparison"><font-awesome-icon icon="trash-alt" size="lg"/></b-button>
         </div>
@@ -88,6 +88,16 @@ export default {
       slideIndex:0 // the index of the current slide shown
     }
   },
+  watch: {
+    /** Focus the input when in edit mode. */
+    editMode: function() {
+      if (this.editMode) {
+        this.$nextTick(() => {
+          this.$refs.editName.focus();
+        });
+      }
+    }
+  },
   computed: {
     /** The number of carousel slides needed to display all comparison polishes. */
     numSlides: function() {
@@ -119,11 +129,11 @@ export default {
     }
   },
   methods: {
-    /** Ensure that the name is saved with a maximum amount of characters, and if empty save a default name. */
+    /** Ensure that the name is saved with a maximum amount of characters, and if empty keep old name. */
     finishEdit() {
       this.editMode = false;
       if ('' == this.name.trim()) {
-        this.name = 'Comparison ' + (this.$vnode.key + 1);
+        this.name = this.comparison.name;
       } else if (this.name.length > this.maxNameLength) {
         this.name = this.name.substring(0, this.maxNameLength);
       }
