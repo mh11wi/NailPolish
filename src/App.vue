@@ -126,6 +126,7 @@ export default {
 <style>
 html, body, .app {
   height: 100%;
+  overflow-y: hidden;
 }
 
 .tab-pane, .tab-content {
@@ -157,6 +158,9 @@ html, body, .app {
 
 .popover {
   min-width: 450px;
+  max-height: 95%;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .modal-dialog {
