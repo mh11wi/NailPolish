@@ -865,7 +865,7 @@
     "brand": "Holo Taco",
     "type": "Linear Holographic",
     "colorFamily": "Purple",
-    "color": "Vibrant true royal-purple",
+    "color": "Vibrant true royal purple",
     "numCoats": "2",
     "collection": "Rainbow Collection (2020)"
   },
@@ -2968,5 +2968,25 @@
     "color": "Sheer medium purple",
     "numCoats": "3",
     "collection": "Witching Hour by Kelli Marissa (2022)"
+  },
+  {
+    "id": "298",
+    "name": "Party Punch",
+    "brand": "Holo Taco",
+    "type": "Holographic Glitter",
+    "colorFamily": "Pink",
+    "color": "Vibrant pink jelly base; almost red",
+    "numCoats": "2",
+    "collection": "Holoday Collection (2019)"
+  },
+  {
+    "id": "299",
+    "name": "Midnight Spark",
+    "brand": "Holo Taco",
+    "type": "Holographic Glitter",
+    "colorFamily": "Purple",
+    "color": "Vibrant indigo jelly base",
+    "numCoats": "2",
+    "collection": "Holoday Collection (2019)"
   }
 ]
