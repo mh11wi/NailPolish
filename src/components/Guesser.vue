@@ -7,6 +7,7 @@
             <b-form-input 
               v-model="guess" 
               ref="guessBox"
+              aria-label="Enter guess"
               :state="guessState"
               @keyup="resetState" 
               @keyup.enter="makeGuess" 
@@ -27,7 +28,7 @@
         </div>
       </div>
     </div>
-    <b-modal id="rulesModal" title="How To Play" :hide-footer=true>
+    <b-modal id="rulesModal" title="How To Play" :hide-footer=true title-tag="h2">
       <div class="row pb-3 text-center justify-content-center">
         A random polish has been selected. Try to guess the polish by name in {{ tries }} tries!<br>
         Each guess must be a valid polish in my collection, but excluding toppers and top coats.<br>
@@ -64,6 +65,7 @@
       v-if="Object.keys(this.correctPolish).length > 0" 
       :title="hasWon ? 'You got it!' : 'Sorry! You are out of guesses.'" 
       :hide-footer=true
+      title-tag="h2"
     >
       <b-row style="height: 300px">
         <b-col cols="5">
@@ -197,18 +199,20 @@ export default {
         return;
       }      
       
-      // submit the guess
-      this.guesses.push(matchingPolishes);
+      // reset the guess box if accepted
       this.guess = '';
       
-      // check if won
-      this.hasWon = matchingPolishes[0].name == this.correctPolish.name;
-      
-      if (this.hasWon || this.guesses.length == this.tries) {
-        this.$root.$emit('bv::show::modal', 'gameModal', '#newButton')
-      } else {
-        this.$refs.guessBox.focus();
-      }
+      // submit the guess and check if won
+      this.$nextTick(() => {
+        this.guesses.push(matchingPolishes);
+        this.hasWon = matchingPolishes[0].name == this.correctPolish.name;
+        
+        if (this.hasWon || this.guesses.length == this.tries) {
+          this.$root.$emit('bv::show::modal', 'gameModal', '#newButton')
+        } else {
+          this.$refs.guessBox.focus();
+        }
+      });
     },
     
     /** Gets the image of the correct polish. */

@@ -1,30 +1,30 @@
 <template>
   <div class="row py-3 justify-content-center">
     <div class="col-3 guessMade">{{ displayGuess }}</div>
-    <button class="square" :id="'brandCorrect-' + index" :disabled="!isBrandCorrect">
-      <font-awesome-icon :id="'brandCorrect-' + index" v-if="isBrandCorrect" icon="store" size="xl"/>
+    <button class="square" :id="'brandCorrect-' + index" :disabled="!isBrandCorrect" :aria-label="getBrandLabel()">
+      <font-awesome-icon v-if="isBrandCorrect" icon="store" size="xl"/>
     </button>
-    <b-tooltip :target="'brandCorrect-' + index" triggers="hover focus">Brand correct</b-tooltip>
+    <b-tooltip :target="'brandCorrect-' + index" triggers="hover focus">{{ getBrandLabel() }}</b-tooltip>
 
-    <button class="square" :id="'typeCorrect-' + index" :disabled="!isTypeCorrect">
+    <button class="square" :id="'typeCorrect-' + index" :disabled="!isTypeCorrect" :aria-label="getTypeLabel()">
       <font-awesome-icon v-if="isTypeCorrect" icon="hand-sparkles" size="xl"/>
     </button>
-    <b-tooltip :target="'typeCorrect-' + index">Type correct</b-tooltip>
+    <b-tooltip :target="'typeCorrect-' + index">{{ getTypeLabel() }}</b-tooltip>
 
-    <button class="square" :id="'colorCorrect-' + index" :disabled="!isColorCorrect">
+    <button class="square" :id="'colorCorrect-' + index" :disabled="!isColorCorrect" :aria-label="getColorLabel()">
       <font-awesome-icon v-if="isColorCorrect" icon="palette" size="xl"/>
     </button>
-    <b-tooltip :target="'colorCorrect-' + index">Colour correct</b-tooltip>
+    <b-tooltip :target="'colorCorrect-' + index">{{ getColorLabel() }}</b-tooltip>
 
-    <button class="square" :id="'coatsCorrect-' + index" :disabled="!isCoatsCorrect">
+    <button class="square" :id="'coatsCorrect-' + index" :disabled="!isCoatsCorrect" :aria-label="getCoatsLabel()">
       <font-awesome-icon v-if="isCoatsCorrect" icon="paint-brush" size="xl"/>
     </button>
-    <b-tooltip :target="'coatsCorrect-' + index">Number of coats correct</b-tooltip>
+    <b-tooltip :target="'coatsCorrect-' + index">{{ getCoatsLabel() }}</b-tooltip>
 
-    <button class="square" :id="'polishCorrect-' + index" :disabled="!isPolishCorrect">
+    <button class="square" :id="'polishCorrect-' + index" :disabled="!isPolishCorrect" :aria-label="getPolishLabel()">
       <font-awesome-icon v-if="isPolishCorrect" icon="flask" size="xl"/>
     </button>
-    <b-tooltip :target="'polishCorrect-' + index">Polish correct</b-tooltip>
+    <b-tooltip :target="'polishCorrect-' + index">{{ getPolishLabel() }}</b-tooltip>
   </div>
 </template>
 
@@ -66,6 +66,52 @@ export default {
     /** Whether the guessed polish is correct. */
     isPolishCorrect: function() {
       return this.guess && this.guess.filter(polish => polish.name == this.correctPolish.name).length > 0;
+    }
+  },
+  methods: {
+    /** Gets the label for the brand box. */
+    getBrandLabel() {
+      if (!this.guess) {
+        return "Enter a guess to see whether the brand is correct";
+      }
+      
+      return `Brand ${this.isBrandCorrect ? 'correct' : 'incorrect'}`;
+    },
+    
+    /** Gets the label for the type box. */
+    getTypeLabel() {
+      if (!this.guess) {
+        return "Enter a guess to see whether the type is correct";
+      }
+      
+      return `Type ${this.isTypeCorrect ? 'correct' : 'incorrect'}`;
+    },
+    
+    /** Gets the label for the colour box. */
+    getColorLabel() {
+      if (!this.guess) {
+        return "Enter a guess to see whether the colour is correct";
+      }
+      
+      return `Colour ${this.isColorCorrect ? 'correct' : 'incorrect'}`;
+    },
+    
+    /** Gets the label for the coats box. */
+    getCoatsLabel() {
+      if (!this.guess) {
+        return "Enter a guess to see whether the number of coats is correct";
+      }
+      
+      return `Number of coats ${this.isCoatsCorrect ? 'correct' : 'incorrect'}`;
+    },
+    
+    /** Gets the label for the polish box. */
+    getPolishLabel() {
+      if (!this.guess) {
+        return "Enter a guess to see whether the polish is correct";
+      }
+      
+      return `Polish ${this.isPolishCorrect ? 'correct' : 'incorrect'}`;
     }
   }
 }
