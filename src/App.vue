@@ -16,7 +16,7 @@
           <penguin width="100" hAlign="center"/>
           <p class="text-right">Thanks for visiting!<br>&ndash;mads</p>
         </b-popover>
-        <b-nav-item href="https://mh11wi.github.io/">
+        <b-nav-item href="https://mh11wi.github.io/" :link-attrs="{'aria-label': 'Home'}">
           <font-awesome-icon icon="home" size="lg"/>
         </b-nav-item>
       </b-navbar-nav>
