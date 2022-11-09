@@ -29,15 +29,28 @@
             </b-button>
           </div>
           <div class="col-6 px-0 text-center">
-            <b-button variant="link" class="text-decoration-none px-2" size="lg" @click="movePolish(-1)" :disabled="index == 0">
+            <b-button 
+              variant="link" 
+              class="text-decoration-none px-2" 
+              size="lg" 
+              @click="movePolish(-1)" 
+              :disabled="index == 0" 
+              aria-label="Move polish left"
+            >
               <font-awesome-icon icon="arrow-left"/>
             </b-button>
-            <b-button variant="link" class="text-decoration-none px-2" size="lg" @click="movePolish(1)" :disabled="index == comparisonLength - 1">
+            <b-button 
+              variant="link" 
+              class="text-decoration-none px-2" 
+              size="lg" @click="movePolish(1)" 
+              :disabled="index == comparisonLength - 1" 
+              aria-label="Move polish right"
+            >
               <font-awesome-icon icon="arrow-right"/>
             </b-button>
           </div>
           <div class="col-3 px-0 text-right">
-            <b-button variant="link" class="text-decoration-none" size="lg" @click="removePolish">
+            <b-button variant="link" class="text-decoration-none" size="lg" @click="removePolish" aria-label="Remove polish from comparison">
               <font-awesome-icon icon="times"/>
             </b-button>
           </div>

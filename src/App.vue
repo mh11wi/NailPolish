@@ -1,9 +1,9 @@
 <template>
-  <div class="app d-flex flex-column">
+  <div role="main" class="app d-flex flex-column">
     <b-navbar variant="primary">
-      <b-navbar-brand>{{ collector }}'s Nail Polishes</b-navbar-brand>
+      <b-navbar-brand tag="h1" class="mb-0">{{ collector }}'s Nail Polishes</b-navbar-brand>
       <b-navbar-nav class="ml-auto">
-        <b-nav-item :link-attrs="{id: 'info-link', tabindex: '0'}">
+        <b-nav-item :link-attrs="{id: 'info-link', tabindex: '0', 'aria-label': 'App Info'}">
           <font-awesome-icon icon="info-circle" size="lg"/>
         </b-nav-item>
         <b-popover variant="info" target="info-link" title="App Info" triggers="click blur">
@@ -181,5 +181,9 @@ html, body, .app {
 
 .modal-dialog {
   min-width: 750px;
+}
+
+.modal-dialog h2 {
+  font-size: 1.25rem;
 }
 </style>

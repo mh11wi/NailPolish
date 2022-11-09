@@ -5,13 +5,24 @@
         <div class="ml-5">
           <strong v-if="!editMode" class="comparisonName h-100">{{ comparison.name }}</strong>
           <b-form-input ref="editName" v-model="name" :maxLength="maxNameLength" v-else @blur="finishEdit" @keyup.enter="finishEdit"/>
-          <b-button variant="link" class="ml-3" v-if="!editMode" @click="editMode = true"><font-awesome-icon icon="pencil-alt" size="lg"/></b-button>
-          <b-button variant="link" v-if="!editMode" @click="deleteComparison"><font-awesome-icon icon="trash-alt" size="lg"/></b-button>
+          <b-button variant="link" class="ml-3" v-if="!editMode" @click="editMode = true" aria-label="Edit comparison name">
+            <font-awesome-icon icon="pencil-alt" size="lg"/>
+          </b-button>
+          <b-button variant="link" v-if="!editMode" @click="deleteComparison" aria-label="Delete comparison">
+            <font-awesome-icon icon="trash-alt" size="lg"/>
+          </b-button>
         </div>
       </div>
       <div class="col-6 pr-0 text-right">
         <div v-if="comparison.polishes.length != 0" class="mr-5">
-          <b-form-checkbox v-if="containsTwoState" switch v-model="effectChecked" size="lg" class="mr-4">
+          <b-form-checkbox 
+            v-if="containsTwoState" 
+            switch 
+            v-model="effectChecked" 
+            size="lg" 
+            class="mr-4" 
+            aria-label="State for 'Solar' and 'Glow in the Dark' polishes"
+          >
             <font-awesome-icon icon="sun" class="text-warning" size="lg"/>
             /
             <font-awesome-icon icon="moon" class="text-warning"/>
@@ -24,7 +35,7 @@
       <span v-if="comparison.polishes.length == 0" class="ml-5">Please add polishes from the <strong>Browse Collection</strong> view to compare.</span>
       <div v-else class="row align-items-center w-100">
         <div class="col-1">
-          <b-button v-if="slideIndex > 0" variant="link" @click="prev">
+          <b-button v-if="slideIndex > 0" variant="link" @click="prev" aria-label="Previous polishes in comparison">
             <font-awesome-icon icon="chevron-circle-left" size="2x"/>
           </b-button>
         </div>
@@ -53,7 +64,7 @@
           </b-carousel>
         </div>
         <div class="col-1 text-right">
-          <b-button v-if="slideIndex < numSlides - 1" variant="link" @click="next">
+          <b-button v-if="slideIndex < numSlides - 1" variant="link" @click="next" aria-label="Next polishes in comparison">
             <font-awesome-icon icon="chevron-circle-right" size="2x"/>
           </b-button>
         </div>
