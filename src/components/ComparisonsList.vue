@@ -14,8 +14,8 @@
       >
       </Comparison>
     </div>
-    <div class="row mb-3">
-      <b-button variant="link" class="text-decoration-none ml-5" @click="addComparison"><strong>+ Add Comparison</strong></b-button>
+    <div class="row">
+      <b-button variant="link" class="text-decoration-none ml-5 mb-3" @click="addComparison"><strong>+ Add Comparison</strong></b-button>
     </div>
   </div>
 </template>

@@ -23,18 +23,18 @@
       <div><strong>{{ polish.brand }}</strong></div>
       <div>{{ polish.name }}</div>
     </div>
-    <b-modal :id="polish.id" :title="polish.name" :hide-footer=true ref="modal">
+    <b-modal :id="polish.id" :title="polish.name" :hide-footer=true ref="modal" title-tag="h2">
       <b-row style="height: 300px">
         <b-col cols="5">
           <img-comparison-slider v-if="polish.type == 'Solar'">
             <img slot="before" :src="getImage(polish.id, true, '-sun')" :alt="polish.name + ' in the sun'" width="300px">
             <img slot="after" :src="getImage(polish.id, true)" :alt="polish.name" width="300px">
-            <img slot="handle" src="https://api.iconify.design/fa-solid:sun.svg?color=%23ffc107&height=30">
+            <img slot="handle" src="https://api.iconify.design/fa-solid:sun.svg?color=%23ffc107&height=30" role="none">
           </img-comparison-slider>
           <img-comparison-slider v-else-if="polish.type == 'Glow in the Dark'">
             <img slot="before" :src="getImage(polish.id, true, '-dark')" :alt="polish.name + ' in the dark'" width="300px">
             <img slot="after" :src="getImage(polish.id, true)" :alt="polish.name" width="300px">
-            <img slot="handle" src="https://api.iconify.design/fa-solid:moon.svg?color=%23ffc107&width=35&height=30">
+            <img slot="handle" src="https://api.iconify.design/fa-solid:moon.svg?color=%23ffc107&width=35&height=30" role="none">
           </img-comparison-slider>
           <b-img-lazy
             v-else

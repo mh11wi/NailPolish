@@ -2,7 +2,7 @@
   <div class="container-fluid h-100">
     <div class="row h-100">
       <div class="col-4 toppersColumn mh-100">
-        <b-form-select :value="combination.basePolishId" :options="bases" @change="updateBasePolish" class="mb-2"/>
+        <b-form-select :value="combination.basePolishId" aria-label="Select a base polish" :options="bases" @change="updateBasePolish" class="mb-2"/>
         <b-form-radio-group :checked="combination.topperId" :options="toppers" @change="updateTopper" class="mt-2" stacked/>
       </div>
       <div class="col-8 display mh-100">
