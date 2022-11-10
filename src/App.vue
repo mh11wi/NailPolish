@@ -1,7 +1,7 @@
 <template>
   <div role="main" class="app d-flex flex-column">
     <b-navbar variant="primary">
-      <b-navbar-brand tag="h1" class="mb-0">{{ collector }}'s Nail Polishes</b-navbar-brand>
+      <b-navbar-brand tag="h1" class="font-weight-normal mb-0">{{ collector }}'s Nail Polishes</b-navbar-brand>
       <b-navbar-nav class="ml-auto">
         <b-nav-item :link-attrs="{id: 'info-link', tabindex: '0', 'aria-label': 'App Info'}">
           <font-awesome-icon icon="info-circle" size="lg"/>
@@ -172,11 +172,16 @@ html, body, .app {
   border: 1px dotted #dee2e6 !important;
 }
 
-.popover {
+.b-popover-info {
   min-width: 450px;
   max-height: 95%;
   overflow-y: auto;
   overflow-x: hidden;
+}
+
+.b-popover-info .popover-header {
+  color: #0c5460 !important;
+  font-weight: 500;
 }
 
 .modal-dialog {
