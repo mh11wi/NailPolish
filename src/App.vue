@@ -43,7 +43,7 @@
         <Gallery v-if="polishes.length > 0" :polishes="polishes"/>
       </b-tab>
       <b-tab title="Polish Guesser">
-        <Guesser :allPolishes="polishes"/>
+        <Guesser v-if="polishes.length > 0" :allPolishes="polishes"/>
       </b-tab>
     </b-tabs>
   </div>
