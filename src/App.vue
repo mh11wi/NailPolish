@@ -1,7 +1,7 @@
 <template>
   <div role="main" class="app d-flex flex-column">
     <b-navbar variant="primary">
-      <b-navbar-brand tag="h1" class="font-weight-normal mb-0">{{ collector }}'s Nail Polishes: {{ screenHeight }}</b-navbar-brand>
+      <b-navbar-brand tag="h1" class="font-weight-normal mb-0">{{ collector }}'s Nail Polishes</b-navbar-brand>
       <b-navbar-nav class="ml-auto">
         <b-nav-item :link-attrs="{id: 'info-link', tabindex: '0', 'aria-label': 'App Info'}">
           <font-awesome-icon icon="info-circle" size="lg"/>
@@ -77,8 +77,7 @@ export default {
       basePolish: null, // the polish selected to view toppers over
       comparisonId: 0, // an identifier for a new comparison
       comparisons: [], // the list of polish comparisons
-      collector: process.env.VUE_APP_COLLECTOR, // the name of the collector to display in the navbar
-      screenHeight: 0
+      collector: process.env.VUE_APP_COLLECTOR // the name of the collector to display in the navbar
     }
   },
   /** 
@@ -94,6 +93,7 @@ export default {
       this.toppersMap = require('@/data/toppersMap.json');
     }, 500);
   },
+  /** Ensure that the tabs are the correct height. */
   updated() {
     this.handleResize();
   },
@@ -138,7 +138,6 @@ export default {
     handleResize() {
       const headerHeight = 110;
       const screenHeight = document.querySelectorAll('html')[0].offsetHeight;
-      this.screenHeight = screenHeight;
       const height = screenHeight < 2 * headerHeight ? screenHeight : screenHeight - headerHeight;
       document.documentElement.style.setProperty('--height', `${height}px`);
     }
