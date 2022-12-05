@@ -16,31 +16,31 @@
     </b-navbar>
     <b-tabs v-model="tabIndex" class="flex-grow-1 d-flex flex-column" content-class="flex-grow-1">
       <b-tab title="Browse Collection">
-        <Collection :allPolishes="polishes" 
+        <Collection v-if="polishes.length > 0"
+                    :allPolishes="polishes" 
                     :toppersMap="toppersMap" 
                     :comparisonId="comparisonId" 
                     :comparisons="comparisons" 
                     @viewToppers="viewToppers" 
                     @incrementComparisonId="incrementComparisonId"
-        >
-        </Collection>
+        />
+        <Spinner v-else />
       </b-tab>
       <b-tab title="Compare Polishes">
-        <ComparisonsList :comparisonId="comparisonId" :comparisons="comparisons" @incrementComparisonId="incrementComparisonId"/>
+        <ComparisonsList v-if="polishes.length > 0" :comparisonId="comparisonId" :comparisons="comparisons" @incrementComparisonId="incrementComparisonId"/>
       </b-tab>
       <b-tab title="Top It Off">
-        <Toppers :polishes="polishes" :toppersMap="toppersMap" :collectionBasePolish="basePolish"/>
+        <Toppers v-if="polishes.length > 0" :polishes="polishes" :toppersMap="toppersMap" :collectionBasePolish="basePolish"/>
       </b-tab>
-      <b-tab title="Nail Art Gallery" lazy>
-        <Gallery :polishes="polishes"/>
+      <b-tab title="Nail Art Gallery">
+        <Gallery v-if="polishes.length > 0" :polishes="polishes"/>
       </b-tab>
     </b-tabs>
   </div>
 </template>
 
 <script>
-import polishes from './data/polishes.json'
-import toppersMap from './data/toppersMap.json'
+import Spinner from './components/Spinner.vue'
 import Collection from './components/Collection.vue'
 import ComparisonsList from './components/ComparisonsList.vue'
 import Toppers from './components/Toppers.vue'
@@ -49,6 +49,7 @@ import Gallery from './components/Gallery.vue'
 export default {
   name: 'App',
   components: {
+    Spinner,
     Collection,
     ComparisonsList,
     Toppers,
@@ -56,6 +57,8 @@ export default {
   },
   data: function() {
     return {
+      polishes: [], // polish data
+      toppersMap: {}, // toppers data
       tabIndex: 0, // which tab is displayed
       basePolish: null, // the polish selected to view toppers over
       comparisonId: 0, // an identifier for a new comparison
@@ -63,20 +66,18 @@ export default {
       collector: process.env.VUE_APP_COLLECTOR // the name of the collector to display in the navbar
     }
   },
-  computed: {
-    /** Polish data. */
-    polishes: function() {
-      return polishes;
-    },
-    /** Toppers data. */ 
-    toppersMap: function() {
-      return toppersMap;
-    }
-  },
-  /** Adds listener for when the browser is resized so that the tabs resize appropriately. */
+  /** 
+   * Adds listener for when the browser is resized so that the tabs resize appropriately.
+   * Also loads polish and topper data.
+   */
   created() {
     window.addEventListener('resize', this.debounce(this.handleResize));
     this.handleResize();
+
+    setTimeout(() => {
+      this.polishes = require('@/data/polishes.json');
+      this.toppersMap = require('@/data/toppersMap.json');
+    }, 500);
   },
   /** Removes browser resize listener. */
   destroyed() {
