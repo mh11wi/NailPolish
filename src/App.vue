@@ -79,6 +79,10 @@ export default {
       this.toppersMap = require('@/data/toppersMap.json');
     }, 500);
   },
+  /** Ensure that the tabs are the correct height. */
+  updated() {
+    this.handleResize();
+  },
   /** Removes browser resize listener. */
   destroyed() {
     window.removeEventListener('resize', this.handleResize);
