@@ -1,7 +1,7 @@
 <template>
   <div role="main" class="app d-flex flex-column">
     <b-navbar variant="primary">
-      <b-navbar-brand tag="h1" class="font-weight-normal mb-0">{{ collector }}'s Nail Polishes {{ screenHeight }}</b-navbar-brand>
+      <b-navbar-brand tag="h1" class="font-weight-normal mb-0">{{ collector }}'s Nail Polishes: {{ screenHeight }}</b-navbar-brand>
       <b-navbar-nav class="ml-auto">
         <b-nav-item :link-attrs="{id: 'info-link', tabindex: '0', 'aria-label': 'App Info'}">
           <font-awesome-icon icon="info-circle" size="lg"/>
@@ -94,7 +94,7 @@ export default {
       this.toppersMap = require('@/data/toppersMap.json');
     }, 500);
   },
-  mounted() {
+  updated() {
     this.handleResize();
   },
   /** Removes browser resize listener. */
