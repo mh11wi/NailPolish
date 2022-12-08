@@ -2998,5 +2998,25 @@
     "color": "Metallic violet-purple with blue, red and silver shimmer",
     "numCoats": "2",
     "collection": "Classics Collection (2010)"
+  },
+  {
+    "id": "301",
+    "name": "Light My (Camp)Fire",
+    "brand": "ORLY",
+    "type": "Smooth Metallic",
+    "colorFamily": "Orange",
+    "color": "Bright shimmery copper",
+    "numCoats": "1",
+    "collection": "Breathable: In the Spirit (2022)"
+  },
+  {
+    "id": "302",
+    "name": "Cran-Barely Believe It",
+    "brand": "ORLY",
+    "type": "Smooth Metallic",
+    "colorFamily": "Red",
+    "color": "Shimmery candy apple red metallic",
+    "numCoats": "1",
+    "collection": "Breathable: In the Spirit (2022)"
   }
 ]
