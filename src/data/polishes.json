@@ -3018,5 +3018,35 @@
     "color": "Shimmery candy apple red metallic",
     "numCoats": "1",
     "collection": "Breathable: In the Spirit (2022)"
+  },
+  {
+    "id": "303",
+    "name": "Fairy Tail",
+    "brand": "Holo Taco",
+    "type": "Magnetic",
+    "colorFamily": "Brown",
+    "color": "Rich brown-taupe with holographic micro-flakes",
+    "numCoats": "3",
+    "collection": "Magnetic Magic Collection (2022)"
+  },
+  {
+    "id": "304",
+    "name": "Queen's Curse",
+    "brand": "Holo Taco",
+    "type": "Magnetic",
+    "colorFamily": "Purple",
+    "color": "Royal purple with holographic micro-flakes",
+    "numCoats": "3",
+    "collection": "Magnetic Magic Collection (2022)"
+  },
+  {
+    "id": "305",
+    "name": "Love Spell",
+    "brand": "Holo Taco",
+    "type": "Magnetic",
+    "colorFamily": "Pink",
+    "color": "Red-magenta pink with holographic micro-flakes",
+    "numCoats": "2",
+    "collection": "Magnetic Magic Collection (2022)"
   }
 ]
