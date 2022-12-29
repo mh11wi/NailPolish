@@ -1,25 +1,27 @@
 <template>
   <div class="polish mx-2">
     <b-overlay :show="true" :opacity="0">
-      <b-card v-if="!card.detailsMode" class="border-0" :img-src="getImage(card.polish.id)" :img-alt="card.polish.name" img-top no-body/>
-      <b-card v-else class="pt-5" :style="{ height: cardHeight + 'px' }" no-body>
-        <b-card-text class="mx-3 h-100 d-flex flex-column">
-          <b-row align-v="center">
-            <b-col cols="6">
-              <b-img-lazy :src="getImage(card.polish.id)" :alt="card.polish.name" blank-color="black" fluid/>
-            </b-col>
-            <b-col cols="6" class="pl-0">
-              <p class="mb-1">{{ card.polish.type }}</p>
-              <p class="mb-1">{{ card.polish.numCoats }} coat{{ card.polish.numCoats == 1 ? '' : 's'}}</p>
-            </b-col>
-          </b-row>
-          <b-row align-v="center" class="flex-grow-1">
-            <b-col>
-              <div class="text-center">{{ card.polish.color }}</div>
-            </b-col>
-          </b-row>
-        </b-card-text>
-      </b-card>
+      <b-aspect aspect="1:1">
+        <b-card v-if="!card.detailsMode" class="border-0" :img-src="getImage(card.polish.id)" :img-alt="card.polish.name" img-top no-body/>
+        <b-card v-else class="pt-5 h-100" no-body>
+          <b-card-text class="mx-3 h-100 d-flex flex-column">
+            <b-row align-v="center">
+              <b-col cols="6">
+                <b-img-lazy :src="getImage(card.polish.id)" :alt="card.polish.name" blank-color="black" fluid/>
+              </b-col>
+              <b-col cols="6" class="pl-0">
+                <p class="mb-1">{{ card.polish.type }}</p>
+                <p class="mb-1">{{ card.polish.numCoats }} coat{{ card.polish.numCoats == 1 ? '' : 's'}}</p>
+              </b-col>
+            </b-row>
+            <b-row align-v="center" class="flex-grow-1">
+              <b-col>
+                <div class="text-center">{{ card.polish.color }}</div>
+              </b-col>
+            </b-row>
+          </b-card-text>
+        </b-card>
+      </b-aspect>
       <template #overlay>
         <div class="row align-items-center mt-1 mx-0">
           <div class="col-3 px-0">
@@ -73,13 +75,8 @@ export default {
     'index', // the index of the card within the parent component's carousel
     'finish', // the finish of the polish to display (either 'glossy' or 'matte')
     'comparisonLength', // the number of polishes in the comparison
-    'cardHeight', // the height of the card
     'isEffect' // if the polish is solar or glow in the dark, whether the sun/dark image should be retrieved
   ],
-  /** Ensure that the height of the card is correct when switching between image and details in the card. */
-  updated() {
-    this.$emit("resize");
-  },
   methods: {
     /**
      * Gets the specified polish image.

@@ -8,9 +8,7 @@
         v-for="comparison in comparisons" 
         :key="comparison.id" 
         :comparison="comparison"
-        :cardHeight="cardHeight"
         @deleteComparison="deleteComparison"
-        @resize="handleResize"
       >
       </Comparison>
     </div>
@@ -33,19 +31,6 @@ export default {
     'comparisonId', // the id for a new comparison
     'comparisons' // the list of comparisons
   ],
-  data: function() {
-    return {
-      cardHeight: 0 // the height the Bootstrap card (containing polish info) should be, i.e. same as width, which varies on window size
-    }
-  },
-  /** Adds listener for when the browser is resized so that the polish cards resize appropriately. */
-  created() {
-    window.addEventListener('resize', this.handleResize);
-  },
-  /** Removes browser resize listener. */
-  destroyed() {
-    window.removeEventListener('resize', this.handleResize);
-  },
   methods: {
     /** Adds a new comparison to the list when the button is clicked. */
     addComparison() {
@@ -61,14 +46,6 @@ export default {
     deleteComparison(event) {
       const index = this.comparisons.findIndex((comparison) => comparison.id == event);
       this.comparisons.splice(index, 1);
-    },
-
-    /** Resizes the height of all polish cards so that they are proportional to their width. */
-    handleResize() {
-      const polish = document.querySelectorAll('.carousel-inner > .active .polish')[0];
-      if (polish && polish.offsetWidth != 0) {
-        this.cardHeight = polish.offsetWidth;
-      }
     }
   }
 }

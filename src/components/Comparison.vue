@@ -50,9 +50,7 @@
                       :index="cardsPerSlide * index1 + index2" 
                       :finish="finish" 
                       :comparisonLength="comparison.polishes.length"
-                      :cardHeight="cardHeight"
                       :isEffect="effectChecked"
-                      @resize="handleResize"
                       @movePolish="movePolish"
                       @removePolish="removePolish"
                     >
@@ -85,8 +83,7 @@ export default {
     ComparisonPolish
   },
   props: [
-    'comparison', // data of the comparison (i.e. list of polishes and name)
-    'cardHeight' // the height the Bootstrap card (containing polish info) should be, i.e. same as width, which varies on window size
+    'comparison' // data of the comparison (i.e. list of polishes and name)
   ],
   data: function() {
     return {
@@ -189,15 +186,9 @@ export default {
       }
       this.comparison.polishes.splice(event, 1);
     },
-
-    /** Handle the resizing of a polish's card in the parent component. */
-    handleResize() {
-      this.$emit("resize");
-    },
     
     /** Handle when the slide is changed. */
     slidingEnd(slide) {
-      this.handleResize();
       this.slideIndex = slide;
     }
   }
