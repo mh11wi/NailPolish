@@ -3,7 +3,7 @@
     <div class="row h-100">
       <div class="col-12 mh-100">
         <div class="row mt-3 py-4 justify-content-center">
-          <b-input-group class="col-5">
+          <b-input-group class="col-7 col-md-6 col-lg-5 col-xl-4">
             <b-form-input 
               v-model="guess" 
               ref="guessBox"
@@ -14,25 +14,37 @@
               :disabled="hasWon || guesses.length == tries"
             />
             <b-input-group-append>
-              <b-button variant="primary" @click="makeGuess" :disabled="hasWon || guess.length == 0 || guesses.length == tries">Guess</b-button>
+              <b-button 
+                variant="primary" 
+                @click="makeGuess" 
+                :disabled="hasWon || guess.length == 0 || guesses.length == tries"
+              >
+                Guess
+              </b-button>
             </b-input-group-append>
             <b-form-invalid-feedback>
               Please enter a valid polish name.
             </b-form-invalid-feedback>
           </b-input-group>
         </div>
-        <Guess v-for="index in tries" :key="index" :correctPolish="correctPolish" :guess="guesses[index - 1]" :index="index"/>
+        <Guess 
+          v-for="index in tries" 
+          :key="index" 
+          :correctPolish="correctPolish" 
+          :guess="guesses[index - 1]" 
+          :index="index"
+        />
         <div class="row py-4 justify-content-center">
           <b-button variant="primary" class="mr-3" v-b-modal.rulesModal>How To Play</b-button>
           <b-button id="newButton" variant="primary" class="ml-3" @click="newGame">New Game</b-button>
         </div>
       </div>
     </div>
-    <b-modal id="rulesModal" title="How To Play" :hide-footer=true title-tag="h2">
+    <b-modal id="rulesModal" title="How To Play" :hide-footer=true title-tag="h2" :scrollable=true size="lg">
       <div class="row pb-3 text-center justify-content-center">
         A random polish has been selected. Try to guess the polish by name in {{ tries }} tries!<br>
         Each guess must be a valid polish in my collection, but excluding toppers and top coats.<br>
-        You will be informed if your guess is correct or has the right brand, type, colour, and number of coats.<br>
+        You are shown if your guess is correct or has the right brand, type, colour, and number of coats.<br>
       </div>
       <div class="row examples">
         <div class="col-12">
@@ -40,21 +52,21 @@
             <strong>Examples</strong>
           </div>
           <Guess :correctPolish="exampleCorrectPolish" :guess="exampleGuesses[0]" index="ex1"/>
-          <div class="row py-2 text-center justify-content-center">
+          <div class="row py-1 text-center justify-content-center">
             <div class="col-12">
-              The polish <strong>{{ exampleGuesses[0][0].name }}</strong> does not have any of the same properties as the correct polish.
+              <strong>{{ exampleGuesses[0][0].name }}</strong> does not have any of the same properties as the correct polish.
             </div>
           </div>
           <Guess :correctPolish="exampleCorrectPolish" :guess="exampleGuesses[1]" index="ex2"/>
-          <div class="row py-2 text-center justify-content-center">
+          <div class="row py-1 text-center justify-content-center">
             <div class="col-12">
-              The polish <strong>{{ exampleGuesses[1][0].name }}</strong> has the same brand, colour, and number of coats as the correct polish.
+              <strong>{{ exampleGuesses[1][0].name }}</strong> has the same brand, colour, and number of coats as the correct polish.
           </div>
           </div>
           <Guess :correctPolish="exampleCorrectPolish" :guess="exampleGuesses[2]" index="ex3"/>
-          <div class="row py-2 text-center justify-content-center">
+          <div class="row py-1 text-center justify-content-center">
             <div class="col-12">
-              The polish <strong>{{ exampleGuesses[2][0].name }}</strong>  is the correct polish!
+              <strong>{{ exampleGuesses[2][0].name }}</strong>  is the correct polish!
             </div>
           </div>
         </div>
@@ -67,17 +79,16 @@
       :hide-footer=true
       title-tag="h2"
     >
-      <b-row style="height: 300px">
+      <b-row>
         <b-col cols="5">
           <b-img-lazy
             :src="getCorrectPolishImage()" 
             :alt="correctPolish.name" 
-            width=300 
+            fluid
             blank-color="black"
-          >
-          </b-img-lazy>
+          />
         </b-col>
-        <b-col cols="7">
+        <b-col cols="7" class="pl-0">
             <div class="my-3">The correct polish was...</div>
             <table class="mb-3 w-100">
               <colgroup>
