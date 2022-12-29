@@ -2,40 +2,37 @@
   <div class="container-fluid h-100">
     <div class="row h-100">
       <div class="col-4 toppersColumn mh-100">
-        <b-form-select :value="combination.basePolishId" aria-label="Select a base polish" :options="bases" @change="updateBasePolish" class="mb-2"/>
-        <b-form-radio-group :checked="combination.topperId" :options="toppers" @change="updateTopper" class="mt-2" stacked/>
+        <div>
+          <label>Base polish:</label>
+          <b-form-select 
+            :value="combination.basePolishId" 
+            aria-label="Select a base polish" 
+            :options="bases" 
+            @change="updateBasePolish" 
+          />
+        </div>
+        <div v-if="combination.basePolishId" class="mt-4">
+          <label>Topper:</label>
+          <b-form-select 
+            :value="combination.topperId" 
+            aria-label="Select a topper" 
+            :options="toppers" 
+            @change="updateTopper" 
+          />
+        </div>
       </div>
       <div class="col-8 display mh-100">
         <div v-if="combination.basePolishId == null">
           Start by selecting an applicable base polish from the <strong>Browse Collection</strong> view or from the drop-down menu to the left.
         </div>
         <div v-else>
-          <div class="row justify-content-center">
+          <div class="container-fluid combo">
             <b-img-lazy 
               :src="getImage()" 
               :alt="getAlt()" 
-              width=400
-              height=400
+              fluid
               blank-color="black"
-            >
-            </b-img-lazy>
-          </div>
-          <div class="mt-2 row justify-content-center">
-            <span>
-              <strong>{{ polishes[combination.basePolishId - 1].brand }}</strong>
-              <span> - </span>
-              {{ polishes[combination.basePolishId - 1].name }}
-            </span>
-          </div>
-          <div class="row justify-content-center">+</div>
-          <div class="row justify-content-center">
-            <span>
-              <span v-if="polishes[combination.topperId - 1].brand">
-                <strong>{{ polishes[combination.topperId - 1].brand }}</strong>
-                <span> - </span>
-              </span>
-              {{ polishes[combination.topperId - 1].name }}
-            </span>
+            />
           </div>
         </div>
       </div>
@@ -60,33 +57,30 @@ export default {
   computed: {
     /** Gets the toppers associated to the selected base polish. */
     toppers: function() {
-      const topperIds = [process.env.VUE_APP_GLOSSY, process.env.VUE_APP_MATTE];
-      if (this.combination.basePolishId != null && this.toppersMap[this.combination.basePolishId] != null) {
-        topperIds.push(...this.toppersMap[this.combination.basePolishId]);
-      }
-      
+      const options = [];
       const self = this;
-      const toppers = [];
-      topperIds.forEach(function(id) {
-        toppers.push(self.polishes[id -1]);
-      });
       
-      toppers.sort(function(a, b) {
-        if (a.brand < b.brand) {
-          return -1;
-        } else if (a.brand > b.brand) {
-          return 1;
-        } else {
-          return 0
+      options.push({text: 'Select a topper', value: null, disabled: true});
+      options.push({text: self.polishes[process.env.VUE_APP_GLOSSY - 1].name, value: process.env.VUE_APP_GLOSSY});
+      options.push({text: self.polishes[process.env.VUE_APP_MATTE - 1].name, value: process.env.VUE_APP_MATTE});
+      
+      const brands = this.pluck(this.polishes, 'brand');
+      brands.forEach(function(brand) {
+        const brandPolishes = self.polishes.filter(polish => polish.brand == brand);
+        const brandPolishesIds = self.pluck(brandPolishes, 'id');
+        
+        const brandOptions = [];
+        self.toppersMap[self.combination.basePolishId].forEach(function(id) {
+          if (brandPolishesIds.includes(id)) {
+            brandOptions.push({text: self.polishes[id - 1].name, value: id});
+          }
+        });
+        
+        if (brandOptions.length > 0) {
+          options.push({label: brand, options: brandOptions});
         }
       });
       
-      const options = [];
-      toppers.forEach(function(topper) {
-        const optionHtml = topper.brand != '' ? "<strong>" + topper.brand + "</strong> - " + topper.name : topper.name;
-        const disabled = self.combination.basePolishId == null;
-        options.push({html: optionHtml, value: topper.id, disabled: disabled});
-      });
       return options;
     },
     
@@ -176,5 +170,17 @@ export default {
   border-left: solid 1px #dee2e6;
   margin-left: -1px;
   overflow-y: auto;
+}
+
+@media (orientation: portrait) {
+  .combo {
+    width: 55vmin;
+  }
+}
+
+@media (orientation: landscape) {
+  .combo {
+    width: 65vmin;
+  }
 }
 </style>

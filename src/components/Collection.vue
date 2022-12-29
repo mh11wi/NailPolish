@@ -3,10 +3,10 @@
     <div class="row h-100">
       <div class="col-4 filtersColumn mh-100">
         <div class="row align-items-center stats">
-          <div class="col-6 pr-0">
+          <div class="col-12 col-lg-6">
             Polishes: {{ displayedPolishes.length }} / {{ polishes.length }}
           </div>
-          <div class="col-6 pl-0 text-right">
+          <div class="col-12 col-lg-6 mt-4 mt-lg-0 text-lg-right">
             <FinishToggle v-model="finish" @updateFinish="finish = $event"/>
           </div>
         </div>
@@ -15,7 +15,9 @@
             <b-input-group>
               <b-form-input v-model="search" placeholder="Search by name" @keyup.enter="doSearch"/>
               <b-input-group-append>
-                <b-button variant="primary" @click="doSearch()" :disabled="search.length == 0">Search</b-button>
+                <b-button variant="primary" @click="doSearch()" :disabled="search.length == 0" aria-label="Search">
+                  <font-awesome-icon icon="search" size="lg"/>
+                </b-button>
               </b-input-group-append>
             </b-input-group>
           </div>
@@ -33,18 +35,18 @@
           No polishes found! Try adjusting your filters or search criteria.
         </div>
         <div v-else>
-          <b-row cols="3" cols-lg="4" cols-xl="5" class="px-2">
-            <PolishTile v-for="(polish, index) in displayedPolishes" 
-                        :key="index" 
-                        :polish="polish" 
-                        :finish="finish" 
-                        :hasToppers="toppersMap[polish.id] != null"
-                        :comparisonId="comparisonId"
-                        :comparisons="comparisons"
-                        @viewToppers="viewToppers"
-                        @incrementComparisonId="incrementComparisonId"
-            >
-            </PolishTile>
+          <b-row cols="3" cols-md="4" cols-xl="5" class="px-2">
+            <PolishTile 
+              v-for="(polish, index) in displayedPolishes" 
+              :key="index" 
+              :polish="polish" 
+              :finish="finish" 
+              :hasToppers="toppersMap[polish.id] != null"
+              :comparisonId="comparisonId"
+              :comparisons="comparisons"
+              @viewToppers="viewToppers"
+              @incrementComparisonId="incrementComparisonId"
+            />
           </b-row>
         </div>
       </div>

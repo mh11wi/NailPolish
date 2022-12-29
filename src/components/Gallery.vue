@@ -3,7 +3,7 @@
     <div v-if="nailArt.length == 0" class="mt-3">
       No nail art found! Check back soon.
     </div>
-    <div v-else class="mb-3">
+    <div v-else class="mt-3">
       <NailArt v-for="(entry, index) in nailArt" :key="index" :entry="entry" :polishes="polishes"/>
     </div>
   </div>
@@ -56,5 +56,9 @@ export default {
 <style scoped>
 #gallery {
   overflow-y: auto;
+}
+
+.entry:not(:last-child) {
+  padding-bottom: 3rem;
 }
 </style>

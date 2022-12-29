@@ -16,21 +16,33 @@
     </b-navbar>
     <b-tabs v-model="tabIndex" class="flex-grow-1 d-flex flex-column" content-class="flex-grow-1">
       <b-tab title="Browse Collection">
-        <Collection v-if="polishes.length > 0"
-                    :allPolishes="polishes" 
-                    :toppersMap="toppersMap" 
-                    :comparisonId="comparisonId" 
-                    :comparisons="comparisons" 
-                    @viewToppers="viewToppers" 
-                    @incrementComparisonId="incrementComparisonId"
+        <Collection
+          v-if="polishes.length > 0"
+          :allPolishes="polishes" 
+          :toppersMap="toppersMap" 
+          :comparisonId="comparisonId" 
+          :comparisons="comparisons" 
+          @viewToppers="viewToppers" 
+          @incrementComparisonId="incrementComparisonId"
         />
         <Spinner v-else />
       </b-tab>
       <b-tab title="Compare Polishes">
-        <ComparisonsList v-if="polishes.length > 0" :comparisonId="comparisonId" :comparisons="comparisons" @incrementComparisonId="incrementComparisonId"/>
+        <ComparisonsList 
+          v-if="polishes.length > 0" 
+          :comparisonId="comparisonId" 
+          :comparisons="comparisons"
+          :cardsPerSlide="cardsPerSlide"
+          @incrementComparisonId="incrementComparisonId"
+        />
       </b-tab>
       <b-tab title="Top It Off">
-        <Toppers v-if="polishes.length > 0" :polishes="polishes" :toppersMap="toppersMap" :collectionBasePolish="basePolish"/>
+        <Toppers 
+          v-if="polishes.length > 0" 
+          :polishes="polishes" 
+          :toppersMap="toppersMap" 
+          :collectionBasePolish="basePolish"
+        />
       </b-tab>
       <b-tab title="Nail Art Gallery">
         <Gallery v-if="polishes.length > 0" :polishes="polishes"/>
@@ -63,6 +75,7 @@ export default {
       basePolish: null, // the polish selected to view toppers over
       comparisonId: 0, // an identifier for a new comparison
       comparisons: [], // the list of polish comparisons
+      cardsPerSlide: 2, // the number of polishes to show in a comparison slide
       collector: process.env.VUE_APP_COLLECTOR // the name of the collector to display in the navbar
     }
   },
@@ -120,12 +133,27 @@ export default {
      * Calculates the available height of the screen to size tabs appropriately.
      * On mobile, this does not include the address bar. If the height is too small,
      * e.g. the keyboard is open in landscape mode, ensure header can be scrolled away.
+     *
+     * Also determines the correct number of polishes to show in a comparison
+     * based on the screen width.
      */
     handleResize() {
-      const headerHeight = 110;
-      const screenHeight = document.querySelectorAll('html')[0].offsetHeight;
+      let headerHeight = 110;
+      if (document.querySelectorAll('nav').length > 0) {
+        headerHeight = document.querySelector('nav').offsetHeight + document.querySelector('.nav').offsetHeight;
+      }
+      const screenHeight = document.querySelector('html').offsetHeight;
       const height = screenHeight < 2 * headerHeight ? screenHeight : screenHeight - headerHeight;
       document.documentElement.style.setProperty('--height', `${height}px`);
+      
+      const screenWidth = document.querySelectorAll('html')[0].offsetWidth;
+      if (screenWidth < 992) {
+        this.cardsPerSlide = 2;
+      } else if (screenWidth < 1200) {
+        this.cardsPerSlide = 3;
+      } else {
+        this.cardsPerSlide = 4;
+      }
     }
   }
 }
@@ -140,6 +168,10 @@ html, body, .app {
   height: calc(100vh - 110px);
   height: var(--height);
   overflow-y: auto;
+}
+
+.nav-tabs {
+  flex-wrap: nowrap !important;
 }
 
 .nav-tabs .nav-item {
@@ -175,11 +207,21 @@ html, body, .app {
   font-weight: 500;
 }
 
-.modal-dialog {
-  min-width: 750px;
-}
-
 .modal-dialog h2 {
   font-size: 1.25rem;
+}
+
+.modal-md, .modal-lg {
+  max-width: 97% !important;
+}
+
+@media (min-width: 768px) {
+  .modal-md  {
+    max-width: 720px !important;
+  }
+  
+  .modal-lg  {
+    max-width: 760px !important;
+  }
 }
 </style>
