@@ -14,7 +14,7 @@
             :options="filterList"
             :name="filter"
             stacked
-          ></b-form-checkbox-group>
+          />
         </b-card-text>
       </b-card-body>
     </b-collapse>

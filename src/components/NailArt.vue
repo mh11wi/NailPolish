@@ -1,18 +1,16 @@
 <template>
-  <b-row class="mt-3">
-    <b-col class="col-fixed-width">
+  <b-row class="mb-3 entry">
+    <b-col cols="5" lg="4">
       <b-img-lazy 
         :src="getImage(entry.id)" 
         :alt="entry.alt"
-        width="400"
-        height="400"
+        fluid
         blank-color="black"
-      >
-      </b-img-lazy>
+      />
     </b-col>
-    <b-col>
-      <div class="ml-2">
-        <p class="mt-2"><strong>{{ entry.date }}</strong></p>
+    <b-col cols="7" lg="8">
+      <div>
+        <p><strong>{{ entry.date }}</strong></p>
         <p>{{ entry.description }}</p>
         <p class="text-underline mb-1">Polishes Used</p>
         <ul>
@@ -25,14 +23,18 @@
               <b-link :id="entry.id + '_' + polish.id" tabindex="0" aria-label="See polish">
                 <font-awesome-icon icon="question-circle"/>
               </b-link>
-              <b-popover :target="entry.id + '_' + polish.id" fallback-placement="counterclockwise" triggers="click blur" boundary-padding="0">
+              <b-popover 
+                :target="entry.id + '_' + polish.id" 
+                fallback-placement="counterclockwise" 
+                triggers="click blur" 
+                boundary-padding="0"
+              >
                 <b-img-lazy
                   :src="getPolishImage(polish)" 
                   :alt="polishes[polish.id - 1].name" 
                   width=200 
                   blank-color="black"
-                >
-                </b-img-lazy>
+                />
               </b-popover>
             </div>
           </li>
@@ -86,10 +88,6 @@ ul {
 
 ul, p {
   margin-bottom: 0.5rem;
-}
-
-.col-fixed-width {
-  flex: 0 0 400px;
 }
 
 .popover {

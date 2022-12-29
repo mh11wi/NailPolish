@@ -2,7 +2,7 @@
   <div class="container-fluid mb-5 comparison">
     <div class="row align-items-center">
       <div class="col-6 pl-0">
-        <div class="ml-5">
+        <div class="ml-4">
           <strong v-if="!editMode" class="comparisonName h-100">{{ comparison.name }}</strong>
           <b-form-input ref="editName" v-model="name" :maxLength="maxNameLength" v-else @blur="finishEdit" @keyup.enter="finishEdit"/>
           <b-button variant="link" class="ml-3" v-if="!editMode" @click="editMode = true" aria-label="Edit comparison name">
@@ -14,7 +14,7 @@
         </div>
       </div>
       <div class="col-6 pr-0 text-right">
-        <div v-if="comparison.polishes.length != 0" class="mr-5">
+        <div v-if="comparison.polishes.length != 0" class="mr-4">
           <b-form-checkbox 
             v-if="containsTwoState" 
             switch 
@@ -32,39 +32,52 @@
       </div>
     </div>
     <div class="row mt-2">
-      <span v-if="comparison.polishes.length == 0" class="ml-5">Please add polishes from the <strong>Browse Collection</strong> view to compare.</span>
-      <div v-else class="row align-items-center w-100">
-        <div class="col-1">
-          <b-button v-if="slideIndex > 0" variant="link" @click="prev" aria-label="Previous polishes in comparison">
-            <font-awesome-icon icon="chevron-circle-left" size="2x"/>
-          </b-button>
-        </div>
-        <div class="col-10">
-          <b-carousel class="mt-3" ref="comparisonCarousel" :controls="false" :interval="0" @sliding-end="slidingEnd" no-wrap>
-            <b-carousel-slide v-for="(slide, index1) in slides" :key="index1">
-              <template v-slot:img>
-                <b-row align-h="center">
-                  <b-col :cols="12 / cardsPerSlide" v-for="(card, index2) in slide" :key="card.polish.id">
-                    <ComparisonPolish 
-                      :card="card" 
-                      :index="cardsPerSlide * index1 + index2" 
-                      :finish="finish" 
-                      :comparisonLength="comparison.polishes.length"
-                      :isEffect="effectChecked"
-                      @movePolish="movePolish"
-                      @removePolish="removePolish"
-                    >
-                    </ComparisonPolish>
-                  </b-col>
-                </b-row>
-              </template>
-            </b-carousel-slide>
-          </b-carousel>
-        </div>
-        <div class="col-1 text-right">
-          <b-button v-if="slideIndex < numSlides - 1" variant="link" @click="next" aria-label="Next polishes in comparison">
-            <font-awesome-icon icon="chevron-circle-right" size="2x"/>
-          </b-button>
+      <div class="container-fluid">
+        <span v-if="comparison.polishes.length == 0" class="ml-2">Please add polishes from the <strong>Browse Collection</strong> view to compare.</span>
+        <div v-else class="row align-items-center">
+          <div class="col-1">
+            <b-button 
+              v-if="slideIndex > 0" 
+              variant="link" 
+              class="px-0" 
+              @click="prev" 
+              aria-label="Previous polishes in comparison"
+            >
+              <font-awesome-icon icon="chevron-circle-left" size="2x"/>
+            </b-button>
+          </div>
+          <div class="col-10">
+            <b-carousel class="mt-3" ref="comparisonCarousel" :controls="false" :interval="0" @sliding-end="slidingEnd" no-wrap>
+              <b-carousel-slide v-for="(slide, index1) in slides" :key="index1">
+                <template v-slot:img>
+                  <b-row align-h="center" class="mx-0">
+                    <b-col :cols="12 / cardsPerSlide" v-for="(card, index2) in slide" :key="card.polish.id">
+                      <ComparisonPolish 
+                        :card="card" 
+                        :index="cardsPerSlide * index1 + index2" 
+                        :finish="finish" 
+                        :comparisonLength="comparison.polishes.length"
+                        :isEffect="effectChecked"
+                        @movePolish="movePolish"
+                        @removePolish="removePolish"
+                      />
+                    </b-col>
+                  </b-row>
+                </template>
+              </b-carousel-slide>
+            </b-carousel>
+          </div>
+          <div class="col-1 text-right">
+            <b-button 
+              v-if="slideIndex < numSlides - 1" 
+              variant="link" 
+              class="px-0" 
+              @click="next" 
+              aria-label="Next polishes in comparison"
+            >
+              <font-awesome-icon icon="chevron-circle-right" size="2x"/>
+            </b-button>
+          </div>
         </div>
       </div>
     </div>
@@ -83,7 +96,8 @@ export default {
     ComparisonPolish
   },
   props: [
-    'comparison' // data of the comparison (i.e. list of polishes and name)
+    'comparison', // data of the comparison (i.e. list of polishes and name)
+    'cardsPerSlide' // the number of polish cards to show on a carousel slide
   ],
   data: function() {
     return {
@@ -92,7 +106,6 @@ export default {
       maxNameLength: 18, // the maximum number of characters allowed for a comparison's name
       effectChecked: false, // whether the effect toggle is checked or not (when a comparison contains a solar or glow in the dark polish)
       name: this.comparison.name, // the name being edited when editMode is true, and copied to the comparison prop when finished (for performance)
-      cardsPerSlide: 3, // the number of polish cards to show on a carousel slide
       slideIndex:0 // the index of the current slide shown
     }
   },
@@ -104,6 +117,12 @@ export default {
           this.$refs.editName.focus();
         });
       }
+    },
+    
+    /** Reset slides when number of cards per slides changes. */
+    cardsPerSlide: function() {
+      this.slideIndex = 0;
+      this.$refs.comparisonCarousel.setSlide(0);
     }
   },
   computed: {

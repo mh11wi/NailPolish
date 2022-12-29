@@ -1,8 +1,14 @@
 <template>
-  <div class="polish mx-2">
+  <div class="polish">
     <b-overlay :show="true" :opacity="0">
       <b-aspect aspect="1:1">
-        <b-card v-if="!card.detailsMode" class="border-0" :img-src="getImage(card.polish.id)" :img-alt="card.polish.name" img-top no-body/>
+        <b-card 
+          v-if="!card.detailsMode" 
+          class="border-0" 
+          :img-src="getImage(card.polish.id)" 
+          :img-alt="card.polish.name" 
+          img-top no-body
+        />
         <b-card v-else class="pt-5 h-100" no-body>
           <b-card-text class="mx-3 h-100 d-flex flex-column">
             <b-row align-v="center">
@@ -44,7 +50,8 @@
             <b-button 
               variant="link" 
               class="text-decoration-none px-2" 
-              size="lg" @click="movePolish(1)" 
+              size="lg" 
+              @click="movePolish(1)" 
               :disabled="index == comparisonLength - 1" 
               aria-label="Move polish right"
             >
@@ -52,7 +59,13 @@
             </b-button>
           </div>
           <div class="col-3 px-0 text-right">
-            <b-button variant="link" class="text-decoration-none" size="lg" @click="removePolish" aria-label="Remove polish from comparison">
+            <b-button 
+              variant="link" 
+              class="text-decoration-none" 
+              size="lg" 
+              @click="removePolish" 
+              aria-label="Remove polish from comparison"
+            >
               <font-awesome-icon icon="times"/>
             </b-button>
           </div>

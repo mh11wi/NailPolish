@@ -7,8 +7,7 @@
           :alt="polish.name" 
           blank-color="black"
           fluid
-        >
-        </b-img-lazy>
+        />
         <template #overlay v-if="polish.type == 'Solar'">
           <div class="mt-3 mr-2 text-right text-warning">
             <font-awesome-icon icon="sun" size="lg"/>
@@ -24,37 +23,36 @@
       <div>{{ polish.name }}</div>
     </div>
     <b-modal :id="polish.id" :title="polish.name" :hide-footer=true ref="modal" title-tag="h2">
-      <b-row style="height: 300px">
+      <b-row>
         <b-col cols="5">
           <img-comparison-slider v-if="polish.type == 'Solar'">
-            <img slot="before" :src="getImage(polish.id, true, '-sun')" :alt="polish.name + ' in the sun'" width="300px">
-            <img slot="after" :src="getImage(polish.id, true)" :alt="polish.name" width="300px">
+            <b-img slot="before" :src="getImage(polish.id, true, '-sun')" :alt="polish.name + ' in the sun'" fluid/>
+            <b-img slot="after" :src="getImage(polish.id, true)" :alt="polish.name" fluid/>
             <img slot="handle" src="https://api.iconify.design/fa-solid:sun.svg?color=%23ffc107&height=30" role="none">
           </img-comparison-slider>
           <img-comparison-slider v-else-if="polish.type == 'Glow in the Dark'">
-            <img slot="before" :src="getImage(polish.id, true, '-dark')" :alt="polish.name + ' in the dark'" width="300px">
-            <img slot="after" :src="getImage(polish.id, true)" :alt="polish.name" width="300px">
+            <b-img slot="before" :src="getImage(polish.id, true, '-dark')" :alt="polish.name + ' in the dark'" fluid/>
+            <b-img slot="after" :src="getImage(polish.id, true)" :alt="polish.name" fluid/>
             <img slot="handle" src="https://api.iconify.design/fa-solid:moon.svg?color=%23ffc107&width=35&height=30" role="none">
           </img-comparison-slider>
           <b-img-lazy
             v-else
             :src="getImage(polish.id, true)" 
             :alt="polish.name" 
-            width=300 
             blank-color="black"
-          >
-          </b-img-lazy>
+            fluid
+          />
         </b-col>
-        <b-col cols="7" class="h-100 d-flex flex-column">
-          <div class="row align-items-center ml-2">
+        <b-col cols="7" class="h-100 pr-0 d-flex flex-column">
+          <div class="row  align-items-center w-100">
             <div class="col-5 pl-0">
               <FinishToggle v-model="modalFinish" @updateFinish="modalFinish = $event"/>
             </div>
-            <div class="col-7 pl-0">
+            <div class="col-7">
               <b-button v-if="hasToppers" variant="primary" @click="viewToppers">Top It Off</b-button>
             </div>
           </div>
-          <div class="row ml-2 align-items-center flex-grow-1">
+          <div class="row my-4 align-items-center flex-grow-1 w-100">
             <table class="w-100">
               <colgroup>
                 <col span="1" style="width:25%">
@@ -88,15 +86,20 @@
               </tbody>
             </table>
           </div>
-          <div class="row align-items-center ml-2 mr-0">
-            <div class="col-6 pl-0 pr-0">
+          <div class="row align-items-center w-100">
+            <div class="col-6 px-0">
               <b-dropdown text="Add to Comparison" variant="primary" dropup>
-                <b-dropdown-item v-for="(option, index) in options" :key="index" @click="comparisonSelected(option.value)" :disabled="option.disabled">
+                <b-dropdown-item 
+                  v-for="(option, index) in options" 
+                  :key="index" 
+                  @click="comparisonSelected(option.value)" 
+                  :disabled="option.disabled"
+                >
                   {{ option.text }}
                 </b-dropdown-item>
               </b-dropdown>
             </div>
-            <div class="col-6 pl-0 pr-0 text-success small">
+            <div class="col-6 px-0 text-success small">
               <span v-if="showAlert"><span class="mr-2"><font-awesome-icon icon="check"/></span>Added to {{ addedComparison }}</span>
             </div>
           </div>

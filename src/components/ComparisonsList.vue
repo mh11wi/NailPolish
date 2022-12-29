@@ -1,19 +1,25 @@
 <template>
   <div class="comparisonsList container-fluid mh-100">
     <div class="row mx-0 mt-3">
-      <span v-if="comparisons.length == 0" class="ml-5 mb-4">
+      <span v-if="comparisons.length == 0" class="mx-4 mb-4">
         Start by adding a new comparison from the <strong>Browse Collection</strong> view or by clicking <strong>+ Add Comparison</strong> below.
       </span>
       <Comparison v-else 
         v-for="comparison in comparisons" 
         :key="comparison.id" 
         :comparison="comparison"
+        :cardsPerSlide="cardsPerSlide"
         @deleteComparison="deleteComparison"
-      >
-      </Comparison>
+      />
     </div>
     <div class="row">
-      <b-button variant="link" class="text-decoration-none ml-5 mb-3" @click="addComparison"><strong>+ Add Comparison</strong></b-button>
+      <b-button 
+        variant="link" 
+        class="text-decoration-none ml-4 mb-3" 
+        @click="addComparison"
+      >
+        <strong>+ Add Comparison</strong>
+      </b-button>
     </div>
   </div>
 </template>
@@ -29,7 +35,8 @@ export default {
   },
   props: [
     'comparisonId', // the id for a new comparison
-    'comparisons' // the list of comparisons
+    'comparisons', // the list of comparisons
+    'cardsPerSlide', // the number of polishes to show in a comparison slide
   ],
   methods: {
     /** Adds a new comparison to the list when the button is clicked. */
