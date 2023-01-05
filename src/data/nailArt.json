@@ -296,5 +296,18 @@
       {"id": "249"},
       {"id": "28", "base": "32"}
     ]
+  },
+  {
+    "id": "24",
+    "date": "January 3, 2023",
+    "alt": "Year of the rabbit nails",
+    "description": "New year, new nails! 2023 is the year of the rabbit.",
+    "polishes": [
+      {"id": "290"},
+      {"id": "22"},
+      {"id": "11"},
+      {"id": "32"},
+      {"id": "308", "base": "32"}
+    ]
   }
 ]

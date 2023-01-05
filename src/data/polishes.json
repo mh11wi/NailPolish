@@ -3058,5 +3058,25 @@
     "color": "",
     "numCoats": "1",
     "collection": ""
+  },
+  {
+    "id": "307",
+    "name": "Silver Flake Taco",
+    "brand": "Holo Taco",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": ""
+  },
+  {
+    "id": "308",
+    "name": "Red Flake Taco",
+    "brand": "Holo Taco",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": ""
   }
 ]
