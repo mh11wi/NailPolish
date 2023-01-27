@@ -2593,9 +2593,9 @@
     "id": "260",
     "name": "Highest Bidder",
     "brand": "Holo Taco",
-    "type": "Glitter & Sparkle",
+    "type": "Crushed Holographic",
     "colorFamily": "Grey",
-    "color": "Soft grey with scattered holographic micro-flakes",
+    "color": "Soft grey base",
     "numCoats": "2",
     "collection": "3rd Anniversary Gala Collection (2022)"
   },
@@ -3078,5 +3078,55 @@
     "color": "",
     "numCoats": "1",
     "collection": ""
+  },
+  {
+    "id": "309",
+    "name": "Oat Couture",
+    "brand": "Holo Taco",
+    "type": "Crushed Holographic",
+    "colorFamily": "Neutral",
+    "color": "Cool ivory base",
+    "numCoats": "3",
+    "collection": "Barista Collection (2023)"
+  },
+  {
+    "id": "310",
+    "name": "Blushed Ice",
+    "brand": "Holo Taco",
+    "type": "Crushed Holographic",
+    "colorFamily": "Neutral",
+    "color": "Light blush peach base",
+    "numCoats": "2",
+    "collection": "Barista Collection (2023)"
+  },
+  {
+    "id": "311",
+    "name": "Holo Cappuccino",
+    "brand": "Holo Taco",
+    "type": "Crushed Holographic",
+    "colorFamily": "Brown",
+    "color": "Medium brown base",
+    "numCoats": "2",
+    "collection": "Barista Collection (2023)"
+  },
+  {
+    "id": "312",
+    "name": "Need I Say Mocha?",
+    "brand": "Holo Taco",
+    "type": "Crushed Holographic",
+    "colorFamily": "Brown",
+    "color": "Deep mocha brown base",
+    "numCoats": "2",
+    "collection": "Barista Collection (2023)"
+  },
+  {
+    "id": "313",
+    "name": "Espresso Your Holo",
+    "brand": "Holo Taco",
+    "type": "Crushed Holographic",
+    "colorFamily": "Brown",
+    "color": "Dark espresso brown base",
+    "numCoats": "2",
+    "collection": "Barista Collection (2023)"
   }
 ]
