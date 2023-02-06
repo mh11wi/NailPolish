@@ -40,7 +40,7 @@
         </div>
       </div>
     </div>
-    <b-modal id="rulesModal" title="How To Play" :hide-footer=true title-tag="h2" :scrollable=true size="lg">
+    <b-modal centered id="rulesModal" title="How To Play" :hide-footer=true title-tag="h2" :scrollable=true size="lg">
       <div class="row pb-3 text-center justify-content-center">
         A random polish has been selected. Try to guess the polish by name in {{ tries }} tries!<br>
         Each guess must be a valid polish in my collection, but excluding toppers and top coats.<br>
@@ -72,7 +72,8 @@
         </div>
       </div>
     </b-modal>
-    <b-modal 
+    <b-modal
+      centered
       id="gameModal" 
       v-if="Object.keys(this.correctPolish).length > 0" 
       :title="hasWon ? 'You got it!' : 'Sorry! You are out of guesses.'" 
