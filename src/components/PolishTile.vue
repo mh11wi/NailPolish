@@ -22,7 +22,7 @@
       <div><strong>{{ polish.brand }}</strong></div>
       <div>{{ polish.name }}</div>
     </div>
-    <b-modal :id="polish.id" :title="polish.name" :hide-footer=true ref="modal" title-tag="h2">
+    <b-modal centered :id="polish.id" :title="polish.name" :hide-footer=true ref="modal" title-tag="h2">
       <b-row>
         <b-col cols="5">
           <img-comparison-slider v-if="polish.type == 'Solar'">
