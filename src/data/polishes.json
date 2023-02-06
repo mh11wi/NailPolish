@@ -3128,5 +3128,15 @@
     "color": "Dark espresso brown base",
     "numCoats": "2",
     "collection": "Barista Collection (2023)"
+  },
+  {
+    "id": "314",
+    "name": "Sour Punch",
+    "brand": "Cirque Colors",
+    "type": "Iridescent Flakie",
+    "colorFamily": "Green",
+    "color": "Bright lime green jelly base",
+    "numCoats": "3",
+    "collection": "Candy Coat (2020)"
   }
 ]
