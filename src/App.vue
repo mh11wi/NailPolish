@@ -224,4 +224,12 @@ html, body, .app {
     max-width: 760px !important;
   }
 }
+
+@media (orientation: portrait) {
+  .modal-dialog-centered {
+    align-items: start !important;
+    justify-content: start !important;
+    padding-top: 20% !important;
+  }
+}
 </style>
