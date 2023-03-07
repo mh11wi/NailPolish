@@ -377,7 +377,7 @@
     "colorFamily": "Blue",
     "color": "Royal blue with violet shimmer",
     "numCoats": "2",
-    "collection": "Kelli Marissa x ORLY (2021)"
+    "collection": "ORLY x Kelli Marissa (2021)"
   },
   {
     "id": "39",
@@ -387,7 +387,7 @@
     "colorFamily": "Black",
     "color": "Black with red and blue glitters",
     "numCoats": "2",
-    "collection": "Kelli Marissa x ORLY (2021)"
+    "collection": "ORLY x Kelli Marissa (2021)"
   },
   {
     "id": "40",
@@ -397,7 +397,7 @@
     "colorFamily": "Purple",
     "color": "Purple with turquoise shimmer",
     "numCoats": "2",
-    "collection": "Kelli Marissa x ORLY (2021)"
+    "collection": "ORLY x Kelli Marissa (2021)"
   },
   {
     "id": "41",
@@ -1157,7 +1157,7 @@
     "colorFamily": "Green",
     "color": "Bright lime green with gold shimmer",
     "numCoats": "2",
-    "collection": "Kelli Marissa x ORLY (2021)"
+    "collection": "ORLY x Kelli Marissa (2021)"
   },
   {
     "id": "117",
@@ -1167,7 +1167,7 @@
     "colorFamily": "Green",
     "color": "Rich forest green with gold and blue glitters",
     "numCoats": "2",
-    "collection": "Kelli Marissa x ORLY (2021)"
+    "collection": "ORLY x Kelli Marissa(2021)"
   },
   {
     "id": "118",
@@ -2187,7 +2187,7 @@
     "colorFamily": "",
     "color": "",
     "numCoats": "1",
-    "collection": "Lisa Frank x ORLY (2021)"
+    "collection": "ORLY x Lisa Frank (2021)"
   },
   {
     "id": "220",
@@ -3148,5 +3148,45 @@
     "color": "Shifts between violet, purple, and red",
     "numCoats": "3",
     "collection": "Do Good (2020)"
+  },
+  {
+    "id": "316",
+    "name": "Golden Record",
+    "brand": "ORLY",
+    "type": "Smooth Metallic",
+    "colorFamily": "Gold",
+    "color": "Deep yellow gold; inspired by the golden record on board the Voyager",
+    "numCoats": "2",
+    "collection": "ORLY x NASA (2023)"
+  },
+  {
+    "id": "317",
+    "name": "View From L2",
+    "brand": "ORLY",
+    "type": "Holographic Glitter",
+    "colorFamily": "Black",
+    "color": "Shimmery black jelly base; inspired by the James Webb Space Telescope",
+    "numCoats": "2",
+    "collection": "ORLY x NASA (2023)"
+  },
+  {
+    "id": "318",
+    "name": "Perseverance",
+    "brand": "ORLY",
+    "type": "Shimmer",
+    "colorFamily": "Red",
+    "color": "Dusky red with copper shimmer; inspired by the Martian landscape",
+    "numCoats": "2",
+    "collection": "ORLY x NASA (2023)"
+  },
+  {
+    "id": "319",
+    "name": "Spirit of Peace",
+    "brand": "ORLY",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "White and gold confetti; inspired by the moon landing",
+    "numCoats": "1",
+    "collection": "ORLY x NASA (2023)"
   }
 ]
