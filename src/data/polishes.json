@@ -3138,5 +3138,15 @@
     "color": "Bright lime green jelly base",
     "numCoats": "3",
     "collection": "Candy Coat (2020)"
+  },
+  {
+    "id": "315",
+    "name": "Very Valentino",
+    "brand": "Cirque Colors",
+    "type": "Multichrome",
+    "colorFamily": "Purple",
+    "color": "Shifts between violet, purple, and red",
+    "numCoats": "3",
+    "collection": "Do Good (2020)"
   }
 ]
