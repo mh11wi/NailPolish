@@ -99,7 +99,7 @@
                 </b-dropdown-item>
               </b-dropdown>
             </div>
-            <div class="col-6 px-0 text-success small">
+            <div class="col-6 pl-2 pr-0 text-success small">
               <span v-if="showAlert"><span class="mr-2"><font-awesome-icon icon="check"/></span>Added to {{ addedComparison }}</span>
             </div>
           </div>
