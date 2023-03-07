@@ -90,7 +90,7 @@
           />
         </b-col>
         <b-col cols="7" class="pl-0">
-            <div class="my-3">The correct polish was...</div>
+            <div class="mt-1 mb-3">The correct polish was...</div>
             <table class="mb-3 w-100">
               <colgroup>
                 <col span="1" style="width:25%">
@@ -123,7 +123,7 @@
                 </tr>
               </tbody>
             </table>
-            <div>Try another by clicking <strong>New Game</strong> outside this dialog.</div>
+            <div>Try another by clicking the <strong>New Game</strong> button.</div>
         </b-col>
       </b-row>
     </b-modal>
