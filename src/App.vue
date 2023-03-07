@@ -211,17 +211,21 @@ html, body, .app {
   font-size: 1.25rem;
 }
 
-.modal-md, .modal-lg {
+.modal-md {
+  max-width: 90% !important;
+}
+
+.modal-lg {
   max-width: 97% !important;
 }
 
 @media (min-width: 768px) {
   .modal-md  {
-    max-width: 720px !important;
+    max-width: 670px !important;
   }
   
   .modal-lg  {
-    max-width: 760px !important;
+    max-width: 720px !important;
   }
 }
 
