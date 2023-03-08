@@ -1167,7 +1167,7 @@
     "colorFamily": "Green",
     "color": "Rich forest green with gold and blue glitters",
     "numCoats": "2",
-    "collection": "ORLY x Kelli Marissa(2021)"
+    "collection": "ORLY x Kelli Marissa (2021)"
   },
   {
     "id": "118",
@@ -3155,7 +3155,7 @@
     "brand": "ORLY",
     "type": "Smooth Metallic",
     "colorFamily": "Gold",
-    "color": "Deep yellow gold; inspired by the golden record on board the Voyager",
+    "color": "Deep warm gold; inspired by the golden record on board the Voyager",
     "numCoats": "2",
     "collection": "ORLY x NASA (2023)"
   },
@@ -3188,5 +3188,55 @@
     "color": "White and gold confetti; inspired by the moon landing",
     "numCoats": "1",
     "collection": "ORLY x NASA (2023)"
+  },
+  {
+    "id": "320",
+    "name": "World's First",
+    "brand": "Holo Taco",
+    "type": "Chrome",
+    "colorFamily": "Silver",
+    "color": "Bright silver",
+    "numCoats": "1",
+    "collection": "One-Coat Chrome (2023)"
+  },
+  {
+    "id": "321",
+    "name": "Trophy Life",
+    "brand": "Holo Taco",
+    "type": "Chrome",
+    "colorFamily": "Gold",
+    "color": "Pale yellow-gold",
+    "numCoats": "1",
+    "collection": "One-Coat Chrome (2023)"
+  },
+  {
+    "id": "322",
+    "name": "Aquafoil",
+    "brand": "Holo Taco",
+    "type": "Chrome",
+    "colorFamily": "Blue",
+    "color": "True turquoise",
+    "numCoats": "1",
+    "collection": "One-Coat Chrome (2023)"
+  },
+  {
+    "id": "323",
+    "name": "Iron Violet",
+    "brand": "Holo Taco",
+    "type": "Chrome",
+    "colorFamily": "Purple",
+    "color": "Cool-toned purple",
+    "numCoats": "1",
+    "collection": "One-Coat Chrome (2023)"
+  },
+  {
+    "id": "324",
+    "name": "Pink Steel",
+    "brand": "Holo Taco",
+    "type": "Chrome",
+    "colorFamily": "Pink",
+    "color": "Icy pale pink",
+    "numCoats": "1",
+    "collection": "One-Coat Chrome (2023)"
   }
 ]
