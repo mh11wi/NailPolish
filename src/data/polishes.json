@@ -3238,5 +3238,35 @@
     "color": "Icy pale pink",
     "numCoats": "1",
     "collection": "One-Coat Chrome (2023)"
+  },
+  {
+    "id": "325",
+    "name": "Iris Illusion",
+    "brand": "Sally Hansen",
+    "type": "Pearl",
+    "colorFamily": "Purple",
+    "color": "Iridescent sheer purple",
+    "numCoats": "3",
+    "collection": "Xtreme Wear"
+  },
+  {
+    "id": "326",
+    "name": "Set in Stones",
+    "brand": "Essie",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": ""
+  },
+  {
+    "id": "327",
+    "name": "Sea Glass",
+    "brand": "Starrily",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": ""
   }
 ]
