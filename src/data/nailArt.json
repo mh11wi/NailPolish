@@ -309,5 +309,16 @@
       {"id": "32"},
       {"id": "308", "base": "32"}
     ]
+  },
+  {
+    "id": "25",
+    "date": "March 17, 2023",
+    "alt": "St. Patrick's Day nails",
+    "description": "A simple green & gold St. Patrick's Day manicure, using nail vinyls and glitter accents.",
+    "polishes": [
+      {"id": "73"},
+      {"id": "316"},
+      {"id": "85"}
+    ]
   }
 ]
