@@ -1365,8 +1365,8 @@
     "brand": "Cadillacquer",
     "type": "Layering Glitter",
     "colorFamily": "Pink",
-    "color": "Baby pink jelly base with matte red hex glitters",
-    "numCoats": "4",
+    "color": "Baby pink crelly base with matte red hex glitters",
+    "numCoats": "3",
     "collection": "Summer Flowers (2021)"
   },
   {
@@ -1375,7 +1375,7 @@
     "brand": "Cadillacquer",
     "type": "Layering Glitter",
     "colorFamily": "Purple",
-    "color": "Purple jelly base with matte red hex glitters",
+    "color": "Purple crelly base with matte red hex glitters",
     "numCoats": "3",
     "collection": "Summer Flowers (2021)"
   },
@@ -1385,7 +1385,7 @@
     "brand": "Cadillacquer",
     "type": "Layering Glitter",
     "colorFamily": "Pink",
-    "color": "Fuschia jelly base with matte yellow hex glitters",
+    "color": "Fuschia crelly base with matte yellow hex glitters",
     "numCoats": "3",
     "collection": "Summer Flowers (2021)"
   },
@@ -1945,7 +1945,7 @@
     "brand": "Starrily",
     "type": "Glitter & Sparkle",
     "colorFamily": "Black",
-    "color": "Black jelly base with blue flakes, copper shimmer and holographic glitters",
+    "color": "Black jelly with blue flakes, copper shimmer and holographic glitters",
     "numCoats": "2",
     "collection": "Kelli Marissa Series 2 (2019)"
   },
@@ -3246,7 +3246,7 @@
     "type": "Pearl",
     "colorFamily": "Purple",
     "color": "Iridescent sheer purple",
-    "numCoats": "3",
+    "numCoats": "4",
     "collection": "Xtreme Wear"
   },
   {
@@ -3268,5 +3268,35 @@
     "color": "",
     "numCoats": "1",
     "collection": ""
+  },
+  {
+    "id": "328",
+    "name": "Royal Crush",
+    "brand": "Holo Taco",
+    "type": "Metallic Foil",
+    "colorFamily": "Purple",
+    "color": "Medium purple with foil flakes and scattered holographic glitters",
+    "numCoats": "3",
+    "collection": "Holo Royalty Debut (2023)"
+  },
+  {
+    "id": "329",
+    "name": "Glamethyst",
+    "brand": "Holo Taco",
+    "type": "Holographic Glitter",
+    "colorFamily": "Purple",
+    "color": "Light purple jelly base with green shimmer",
+    "numCoats": "3",
+    "collection": "Holo Royalty Debut (2023)"
+  },
+  {
+    "id": "330",
+    "name": "Toe Beans",
+    "brand": "Holo Taco",
+    "type": "Linear Holographic",
+    "colorFamily": "Pink",
+    "color": "Pale pink with pink shimmer",
+    "numCoats": "2",
+    "collection": "Holo Royalty Debut (2023)"
   }
 ]
