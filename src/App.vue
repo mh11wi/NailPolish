@@ -14,11 +14,7 @@
           <p><strong>Nail Art Gallery</strong><br>View some of my past nail art.</p>
           <p><strong>Polish Guesser</strong><br>A 'Wordle' inspired game!</p>
           <penguin width="100" hAlign="center"/>
-          <div class="text-center">
-            Thanks for visiting! &ndash;mads
-            <br>
-            <a href="https://mh11wi.github.io/privacy-policy.html">Terms & Privacy Policy</a>
-          </div>
+          <p class="text-center"><a href="https://mh11wi.github.io/privacy-policy.html">Terms & Privacy Policy</a></p>
         </b-popover>
         <b-nav-item href="https://mh11wi.github.io/" :link-attrs="{'aria-label': 'Home'}">
           <font-awesome-icon icon="home" size="lg"/>
