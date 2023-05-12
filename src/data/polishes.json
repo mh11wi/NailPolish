@@ -3298,5 +3298,25 @@
     "color": "Pale pink with pink shimmer",
     "numCoats": "2",
     "collection": "Holo Royalty Debut (2023)"
+  },
+  {
+    "id": "331",
+    "name": "Eyegazer",
+    "brand": "What's Up Nails",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": ""
+  },
+  {
+    "id": "332",
+    "name": "Rainbow Ice",
+    "brand": "China Glaze",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": "Dippin' Dots (2022)"
   }
 ]
