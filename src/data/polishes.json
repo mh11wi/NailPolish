@@ -3318,5 +3318,55 @@
     "color": "",
     "numCoats": "1",
     "collection": "Dippin' Dots (2022)"
+  },
+  {
+    "id": "333",
+    "name": "Never Tide Down",
+    "brand": "Holo Taco",
+    "type": "Glitter & Sparkle",
+    "colorFamily": "Blue",
+    "color": "Turquoise jelly base with iridescent flakes and holographic glitters",
+    "numCoats": "2",
+    "collection": "Vacation (2023)"
+  },
+  {
+    "id": "334",
+    "name": "Tax Haven",
+    "brand": "Holo Taco",
+    "type": "Multichrome",
+    "colorFamily": "Brown",
+    "color": "Shifts between bronze and gold with scattered gold holographic glitters",
+    "numCoats": "2",
+    "collection": "Vacation (2023)"
+  },
+  {
+    "id": "335",
+    "name": "Private Villa",
+    "brand": "Holo Taco",
+    "type": "Flash Reflective",
+    "colorFamily": "Pink",
+    "color": "Red-pink jelly base with gold shimmer and hot pink reflective glitters",
+    "numCoats": "2",
+    "collection": "Vacation (2023)"
+  },
+  {
+    "id": "336",
+    "name": "Beach Please",
+    "brand": "Holo Taco",
+    "type": "Crushed Holographic",
+    "colorFamily": "Neutral",
+    "color": "Sand-coloured jelly base with gold reflective glitters",
+    "numCoats": "3",
+    "collection": "Vacation (2023)"
+  },
+  {
+    "id": "337",
+    "name": "Late Checkout",
+    "brand": "Holo Taco",
+    "type": "Flash Reflective",
+    "colorFamily": "Purple",
+    "color": "Purple-indigo shimmer polish with gold reflective glitters",
+    "numCoats": "2",
+    "collection": "Vacation (2023)"
   }
 ]
