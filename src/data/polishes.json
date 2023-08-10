@@ -3378,5 +3378,55 @@
     "color": "Bright warm-toned pink",
     "numCoats": "2",
     "collection": ""
+  },
+  {
+    "id": "339",
+    "name": "Adam's Apple",
+    "brand": "ORLY",
+    "type": "Pearl",
+    "colorFamily": "Green",
+    "color": "Light lime green with satin shimmer",
+    "numCoats": "3",
+    "collection": "Adam Lambert: High Drama (2023)"
+  },
+  {
+    "id": "340",
+    "name": "Surf Naked",
+    "brand": "OPI",
+    "type": "Pearl",
+    "colorFamily": "Blue",
+    "color": "Sky blue with satin shimmer",
+    "numCoats": "3",
+    "collection": "#SummerMakeTheRules (2023)"
+  },
+  {
+    "id": "341",
+    "name": "Bikini Boardroom",
+    "brand": "OPI",
+    "type": "Pearl",
+    "colorFamily": "Purple",
+    "color": "Lavender with satin shimmer",
+    "numCoats": "3",
+    "collection": "#SummerMakeTheRules (2023)"
+  },
+  {
+    "id": "342",
+    "name": "Sanding in Stilettos",
+    "brand": "OPI",
+    "type": "Pearl",
+    "colorFamily": "Orange",
+    "color": "Peachy nude with satin shimmer",
+    "numCoats": "3",
+    "collection": "#SummerMakeTheRules (2023)"
+  },
+  {
+    "id": "343",
+    "name": "Sunscreening My Calls",
+    "brand": "OPI",
+    "type": "Pearl",
+    "colorFamily": "Yellow",
+    "color": "Yellow with satin shimmer",
+    "numCoats": "3",
+    "collection": "#SummerMakeTheRules (2023)"
   }
 ]
