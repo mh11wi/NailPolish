@@ -3428,5 +3428,55 @@
     "color": "Yellow with satin shimmer",
     "numCoats": "3",
     "collection": "#SummerMakeTheRules (2023)"
+  },
+  {
+    "id": "344",
+    "name": "Be Kind Rewind",
+    "brand": "Holo Taco",
+    "type": "Glitter & Sparkle",
+    "colorFamily": "Blue",
+    "color": "Bright blue jelly polish with scattered holographic sparkle",
+    "numCoats": "3",
+    "collection": "4th Anniversary: Retro (2023)"
+  },
+  {
+    "id": "345",
+    "name": "Life in Plastic",
+    "brand": "Holo Taco",
+    "type": "Glitter & Sparkle",
+    "colorFamily": "Pink",
+    "color": "Bright pink jelly polish with scattered holographic sparkle",
+    "numCoats": "3",
+    "collection": "4th Anniversary: Retro (2023)"
+  },
+  {
+    "id": "346",
+    "name": "Hi-Def",
+    "brand": "Holo Taco",
+    "type": "Glitter & Sparkle",
+    "colorFamily": "Yellow",
+    "color": "Bright yellow jelly polish with scattered holographic sparkle",
+    "numCoats": "3",
+    "collection": "4th Anniversary: Retro (2023)"
+  },
+  {
+    "id": "347",
+    "name": "Anti-Hero",
+    "brand": "Holo Taco",
+    "type": "Glitter & Sparkle",
+    "colorFamily": "Purple",
+    "color": "Bright purple jelly polish with scattered holographic sparkle",
+    "numCoats": "3",
+    "collection": "4th Anniversary: Retro (2023)"
+  },
+  {
+    "id": "348",
+    "name": "Box Office Bomb",
+    "brand": "Holo Taco",
+    "type": "Glitter & Sparkle",
+    "colorFamily": "Orange",
+    "color": "Bright orange jelly polish with scattered holographic sparkle",
+    "numCoats": "3",
+    "collection": "4th Anniversary: Retro (2023)"
   }
 ]
