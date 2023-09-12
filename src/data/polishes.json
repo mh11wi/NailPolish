@@ -3478,5 +3478,35 @@
     "color": "Bright orange jelly polish with scattered holographic sparkle",
     "numCoats": "3",
     "collection": "4th Anniversary: Retro (2023)"
+  },
+  {
+    "id": "349",
+    "name": "Kelli's Moondust",
+    "brand": "ORLY",
+    "type": "Shimmer",
+    "colorFamily": "Purple",
+    "color": "Vibrant fuchsia shimmer",
+    "numCoats": "2",
+    "collection": "ORLY x Kelli Marissa: Remix (2023)"
+  },
+  {
+    "id": "350",
+    "name": "Kelli's Solstice",
+    "brand": "ORLY",
+    "type": "Shimmer",
+    "colorFamily": "Blue",
+    "color": "Bright cyan shimmer",
+    "numCoats": "2",
+    "collection": "ORLY x Kelli Marissa: Remix (2023)"
+  },
+  {
+    "id": "351",
+    "name": "Kelli's Constellation",
+    "brand": "ORLY",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": "ORLY x Kelli Marissa: Remix (2023)"
   }
 ]
