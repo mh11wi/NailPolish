@@ -3508,5 +3508,35 @@
     "color": "",
     "numCoats": "1",
     "collection": "ORLY x Kelli Marissa: Remix (2023)"
+  },
+  {
+    "id": "352",
+    "name": "Halogen Glow",
+    "brand": "Holo Taco",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": "Fire & Ice (2023)"
+  },
+  {
+    "id": "353",
+    "name": "Freezer Burn",
+    "brand": "Holo Taco",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": "Fire & Ice (2023)"
+  },
+  {
+    "id": "354",
+    "name": "Scorched Earth",
+    "brand": "Holo Taco",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": "Fire & Ice (2023)"
   }
 ]
