@@ -3538,5 +3538,35 @@
     "color": "",
     "numCoats": "1",
     "collection": "Fire & Ice (2023)"
+  },
+  {
+    "id": "355",
+    "name": "Venetian Sky",
+    "brand": "Cirque Colors",
+    "type": "Shimmer",
+    "colorFamily": "Purple",
+    "color": "Blurple 'shimmergraphic' with pink aurora shimmer",
+    "numCoats": "3",
+    "collection": "Kelli Marissa: Vegas (2023)"
+  },
+  {
+    "id": "356",
+    "name": "Ethel",
+    "brand": "Cirque Colors",
+    "type": "Shimmer",
+    "colorFamily": "Green",
+    "color": "Forest green 'shimmergraphic' with red aurora shimmer",
+    "numCoats": "3",
+    "collection": "Kelli Marissa: Vegas (2023)"
+  },
+  {
+    "id": "357",
+    "name": "Lost Berry",
+    "brand": "Cirque Colors",
+    "type": "Thermal",
+    "colorFamily": "Pink",
+    "color": "Berry tri-thermal that transitions to red and burgundy with glitters",
+    "numCoats": "3",
+    "collection": "Gourmand (2023)"
   }
 ]
