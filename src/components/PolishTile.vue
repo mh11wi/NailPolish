@@ -22,8 +22,8 @@
       <div><strong>{{ polish.brand }}</strong></div>
       <div>{{ polish.name }}</div>
     </div>
-    <b-modal centered :id="polish.id" :title="polish.name" :hide-footer=true ref="modal" title-tag="h2">
-      <b-row>
+    <b-modal centered :id="polish.id" :title="polish.name" :hide-footer=true ref="modal" title-tag="h2" body-class="d-flex">
+      <b-row class="flex-grow-1 align-items-center">
         <b-col cols="5">
           <img-comparison-slider v-if="polish.type == 'Solar'">
             <b-img slot="before" :src="getImage(polish.id, true, '-sun')" :alt="polish.name + ' in the sun'" fluid/>
@@ -43,7 +43,7 @@
             fluid
           />
         </b-col>
-        <b-col cols="7" class="h-100 pr-0 d-flex flex-column">
+        <b-col cols="7" class="h-100 justify-content-between gap pr-0 d-flex flex-column">
           <div class="row  align-items-center w-100">
             <div class="col-5 pl-0">
               <FinishToggle v-model="modalFinish" @updateFinish="modalFinish = $event"/>
@@ -52,7 +52,7 @@
               <b-button v-if="hasToppers" variant="primary" @click="viewToppers">Top It Off</b-button>
             </div>
           </div>
-          <div class="row my-4 align-items-center flex-grow-1 w-100">
+          <div class="row align-items-center w-100">
             <table class="w-100">
               <colgroup>
                 <col span="1" style="width:25%">
@@ -77,7 +77,7 @@
                 </tr>
                 <tr>
                   <td><strong>Colour:</strong></td>
-                  <td>{{ polish.color }}</td>
+                  <td class="line-height-1">{{ polish.color }}</td>
                 </tr>
                 <tr>
                   <td><strong>Coats:</strong></td>
@@ -99,7 +99,7 @@
                 </b-dropdown-item>
               </b-dropdown>
             </div>
-            <div class="col-6 pl-2 pr-0 text-success small">
+            <div class="col-6 pl-2 pr-0 text-success small line-height-1">
               <span v-if="showAlert"><span class="mr-2"><font-awesome-icon icon="check"/></span>Added to {{ addedComparison }}</span>
             </div>
           </div>
@@ -207,6 +207,7 @@ export default {
 
 td {
   vertical-align: baseline;
+  line-height: 1.4;
 }
 
 img-comparison-slider {
@@ -214,5 +215,13 @@ img-comparison-slider {
   --handle-size: 30px;
   --handle-opacity: 1;
   --handle-opacity-active: 1;
+}
+
+.gap {
+  gap: 0.5rem;
+}
+
+.line-height-1 {
+  line-height: 1;
 }
 </style>
