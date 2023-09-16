@@ -4,27 +4,27 @@
     <button class="square" :id="'brandCorrect-' + index" :disabled="!isBrandCorrect" :aria-label="getBrandLabel()">
       <font-awesome-icon v-if="isBrandCorrect" icon="store" size="xl"/>
     </button>
-    <b-tooltip :target="'brandCorrect-' + index" triggers="hover focus">{{ getBrandLabel() }}</b-tooltip>
+    <b-tooltip :target="'brandCorrect-' + index" container="polishGuesser">{{ getBrandLabel() }}</b-tooltip>
 
     <button class="square" :id="'typeCorrect-' + index" :disabled="!isTypeCorrect" :aria-label="getTypeLabel()">
       <font-awesome-icon v-if="isTypeCorrect" icon="hand-sparkles" size="xl"/>
     </button>
-    <b-tooltip :target="'typeCorrect-' + index">{{ getTypeLabel() }}</b-tooltip>
+    <b-tooltip :target="'typeCorrect-' + index" container="polishGuesser">{{ getTypeLabel() }}</b-tooltip>
 
     <button class="square" :id="'colorCorrect-' + index" :disabled="!isColorCorrect" :aria-label="getColorLabel()">
       <font-awesome-icon v-if="isColorCorrect" icon="palette" size="xl"/>
     </button>
-    <b-tooltip :target="'colorCorrect-' + index">{{ getColorLabel() }}</b-tooltip>
+    <b-tooltip :target="'colorCorrect-' + index" container="polishGuesser">{{ getColorLabel() }}</b-tooltip>
 
     <button class="square" :id="'coatsCorrect-' + index" :disabled="!isCoatsCorrect" :aria-label="getCoatsLabel()">
       <font-awesome-icon v-if="isCoatsCorrect" icon="paint-brush" size="xl"/>
     </button>
-    <b-tooltip :target="'coatsCorrect-' + index">{{ getCoatsLabel() }}</b-tooltip>
+    <b-tooltip :target="'coatsCorrect-' + index" container="polishGuesser">{{ getCoatsLabel() }}</b-tooltip>
 
     <button class="square" :id="'polishCorrect-' + index" :disabled="!isPolishCorrect" :aria-label="getPolishLabel()">
       <font-awesome-icon v-if="isPolishCorrect" icon="flask" size="xl"/>
     </button>
-    <b-tooltip :target="'polishCorrect-' + index">{{ getPolishLabel() }}</b-tooltip>
+    <b-tooltip :target="'polishCorrect-' + index" container="polishGuesser">{{ getPolishLabel() }}</b-tooltip>
   </div>
 </template>
 

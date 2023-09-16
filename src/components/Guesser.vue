@@ -1,6 +1,6 @@
 <template>
   <div class="container-fluid h-100">
-    <div class="row h-100">
+    <div class="row h-100" id="polishGuesser">
       <div class="col-12 mh-100">
         <div class="row mt-3 py-4 justify-content-center">
           <b-input-group class="col-7 col-md-6 col-lg-5 col-xl-4">
@@ -79,8 +79,9 @@
       :title="hasWon ? 'You got it!' : 'Sorry! You are out of guesses.'" 
       :hide-footer=true
       title-tag="h2"
+      body-class="d-flex"
     >
-      <b-row>
+      <b-row class="flex-grow-1 align-items-center">
         <b-col cols="5">
           <b-img-lazy
             :src="getCorrectPolishImage()" 
@@ -89,9 +90,9 @@
             blank-color="black"
           />
         </b-col>
-        <b-col cols="7" class="pl-0">
-            <div class="mt-1 mb-3">The correct polish was...</div>
-            <table class="mb-3 w-100">
+        <b-col cols="7" class="h-100 row justify-content-between gap pr-0">
+            <div>The correct polish was...</div>
+            <table class="w-100">
               <colgroup>
                 <col span="1" style="width:25%">
                 <col span="1" style="width:75%">
@@ -116,6 +117,10 @@
                 <tr>
                   <td><strong>Colour:</strong></td>
                   <td>{{ correctPolish.colorFamily }}</td>
+                </tr>
+                <tr>
+                  <td><strong>Details:</strong></td>
+                  <td class="line-height-1">{{ correctPolish.color }}</td>
                 </tr>
                 <tr>
                   <td><strong>Coats:</strong></td>
@@ -239,5 +244,18 @@ export default {
 <style scoped>
   .examples {
     border-top: solid 1px #dee2e6;
+  }
+  
+  td {
+    vertical-align: baseline;
+    line-height: 1.4;
+  }
+  
+  .gap {
+    gap: 0.5rem;
+  }
+  
+  .line-height-1 {
+    line-height: 1;
   }
 </style>
