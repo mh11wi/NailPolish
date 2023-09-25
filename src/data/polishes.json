@@ -3568,5 +3568,55 @@
     "color": "Berry tri-thermal that transitions to red and burgundy with glitters",
     "numCoats": "3",
     "collection": "Gourmand (2023)"
+  },
+  {
+    "id": "358",
+    "name": "Fallen Flake Taco",
+    "brand": "Holo Taco",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": "Down To Earth (2023)"
+  },
+  {
+    "id": "359",
+    "name": "Modest Moss",
+    "brand": "Holo Taco",
+    "type": "Creme",
+    "colorFamily": "Green",
+    "color": "Dark mossy green",
+    "numCoats": "2",
+    "collection": "Down To Earth (2023)"
+  },
+  {
+    "id": "360",
+    "name": "Nightshade",
+    "brand": "Holo Taco",
+    "type": "Creme",
+    "colorFamily": "Purple",
+    "color": "Rich eggplant purple",
+    "numCoats": "2",
+    "collection": "Down To Earth (2023)"
+  },
+  {
+    "id": "361",
+    "name": "Not Pressed",
+    "brand": "Holo Taco",
+    "type": "Creme",
+    "colorFamily": "Green",
+    "color": "Warm olive green",
+    "numCoats": "2",
+    "collection": "Down To Earth (2023)"
+  },
+  {
+    "id": "362",
+    "name": "Feeling Fiendish",
+    "brand": "Holo Taco",
+    "type": "Creme",
+    "colorFamily": "Purple",
+    "color": "Muted deep mauve-magenta",
+    "numCoats": "2",
+    "collection": "Holo Taco x Safiya (2023)"
   }
 ]
