@@ -90,7 +90,7 @@
             blank-color="black"
           />
         </b-col>
-        <b-col cols="7" class="h-100 row justify-content-between gap pr-0">
+        <b-col cols="7" class="h-100 row justify-content-between pr-0">
             <div>The correct polish was...</div>
             <table class="w-100">
               <colgroup>
@@ -120,7 +120,7 @@
                 </tr>
                 <tr>
                   <td><strong>Details:</strong></td>
-                  <td class="line-height-1">{{ correctPolish.color }}</td>
+                  <td class="line-height-small">{{ correctPolish.color }}</td>
                 </tr>
                 <tr>
                   <td><strong>Coats:</strong></td>
@@ -128,7 +128,6 @@
                 </tr>
               </tbody>
             </table>
-            <div>Try another by clicking the <strong>New Game</strong> button.</div>
         </b-col>
       </b-row>
     </b-modal>
@@ -248,14 +247,9 @@ export default {
   
   td {
     vertical-align: baseline;
-    line-height: 1.4;
   }
   
-  .gap {
-    gap: 0.5rem;
-  }
-  
-  .line-height-1 {
-    line-height: 1;
+  .line-height-small {
+    line-height: 1.2;
   }
 </style>
