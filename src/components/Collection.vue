@@ -2,13 +2,11 @@
   <div class="container-fluid h-100">
     <div class="row h-100">
       <div class="col-4 filtersColumn mh-100">
-        <div class="row align-items-center stats">
-          <div class="col-12 col-lg-6">
+        <div class="row align-items-center justify-content-between stats">
+          <span>
             Polishes: {{ displayedPolishes.length }} / {{ polishes.length }}
-          </div>
-          <div class="col-12 col-lg-6 mt-4 mt-lg-0 text-lg-right">
-            <FinishToggle v-model="finish" @updateFinish="finish = $event"/>
-          </div>
+          </span>
+          <FinishToggle v-model="finish" @updateFinish="finish = $event"/>
         </div>
         <div class="row search mt-4">
           <div class="col">
@@ -175,6 +173,11 @@ export default {
   padding-top: 1rem;
   border-right: solid 1px #dee2e6;
   overflow-y: auto;
+}
+
+.stats {
+  padding: 0 15px;
+  gap: 15px;
 }
 
 .polishList {
