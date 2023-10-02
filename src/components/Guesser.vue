@@ -90,44 +90,46 @@
             blank-color="black"
           />
         </b-col>
-        <b-col cols="7" class="h-100 row justify-content-between pr-0">
-            <div>The correct polish was...</div>
-            <table class="w-100">
-              <colgroup>
-                <col span="1" style="width:25%">
-                <col span="1" style="width:75%">
-              </colgroup>
-              <tbody>
-                <tr>
-                  <td><strong>Name:</strong></td>
-                  <td>{{ correctPolish.name }}</td>
-                </tr>
-                <tr>
-                  <td><strong>Brand:</strong></td>
-                  <td>{{ correctPolish.brand }}</td>
-                </tr>
-                <tr v-if="correctPolish.collection != ''">
-                  <td><strong>Collection:</strong></td>
-                  <td>{{ correctPolish.collection }}</td>
-                </tr>
-                <tr>
-                  <td><strong>Type:</strong></td>
-                  <td>{{ correctPolish.type }}</td>
-                </tr>
-                <tr>
-                  <td><strong>Colour:</strong></td>
-                  <td>{{ correctPolish.colorFamily }}</td>
-                </tr>
-                <tr>
-                  <td><strong>Details:</strong></td>
-                  <td class="line-height-small">{{ correctPolish.color }}</td>
-                </tr>
-                <tr>
-                  <td><strong>Coats:</strong></td>
-                  <td>{{ correctPolish.numCoats }}</td>
-                </tr>
-              </tbody>
-            </table>
+        <b-col cols="7" class="h-100 justify-content-between pr-0 d-flex flex-column">
+            <div class="row mt-1 w-100">The correct polish was...</div>
+            <div class="row align-items-center flex-grow-1 w-100">
+              <table class="w-100">
+                <colgroup>
+                  <col span="1" style="width:25%">
+                  <col span="1" style="width:75%">
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td><strong>Name:</strong></td>
+                    <td>{{ correctPolish.name }}</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Brand:</strong></td>
+                    <td>{{ correctPolish.brand }}</td>
+                  </tr>
+                  <tr v-if="correctPolish.collection != ''">
+                    <td><strong>Collection:</strong></td>
+                    <td>{{ correctPolish.collection }}</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Type:</strong></td>
+                    <td>{{ correctPolish.type }}</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Colour:</strong></td>
+                    <td>{{ correctPolish.colorFamily }}</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Details:</strong></td>
+                    <td class="line-height-small">{{ correctPolish.color }}</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Coats:</strong></td>
+                    <td>{{ correctPolish.numCoats }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
         </b-col>
       </b-row>
     </b-modal>

@@ -3618,5 +3618,45 @@
     "color": "Muted deep mauve-magenta",
     "numCoats": "2",
     "collection": "Holo Taco x Safiya (2023)"
+  },
+  {
+    "id": "363",
+    "name": "Bat B*tch",
+    "brand": "Holo Taco",
+    "type": "Pearl",
+    "colorFamily": "Black",
+    "color": "Pearlescent black with blue micro-shimmer",
+    "numCoats": "2",
+    "collection": "Holo Taco x Safiya (2023)"
+  },
+  {
+    "id": "364",
+    "name": "Spirit Fingers",
+    "brand": "Holo Taco",
+    "type": "Shimmer",
+    "colorFamily": "Grey",
+    "color": "Grey jelly base with magenta-red shimmer and holographic glitters",
+    "numCoats": "2",
+    "collection": "Holo Taco x Safiya (2023)"
+  },
+  {
+    "id": "365",
+    "name": "Brucie",
+    "brand": "Holo Taco",
+    "type": "Linear Holographic",
+    "colorFamily": "Blue",
+    "color": "Steely teal",
+    "numCoats": "2",
+    "collection": "Holo Taco x Safiya (2023)"
+  },
+  {
+    "id": "366",
+    "name": "Berry Me In Holo",
+    "brand": "Holo Taco",
+    "type": "Crushed Holographic",
+    "colorFamily": "Red",
+    "color": "Berry lipstick shaded base",
+    "numCoats": "2",
+    "collection": "Holo Taco x Safiya (2023)"
   }
 ]
