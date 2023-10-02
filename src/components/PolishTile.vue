@@ -22,7 +22,14 @@
       <div><strong>{{ polish.brand }}</strong></div>
       <div>{{ polish.name }}</div>
     </div>
-    <b-modal centered :id="polish.id" :title="polish.name" :hide-footer=true ref="modal" title-tag="h2" body-class="d-flex">
+    <b-modal centered :id="polish.id" :hide-footer=true ref="modal" title-tag="h2" body-class="d-flex">
+      <template #modal-title>
+        <span class="modal-title">{{ polish.name }}</span>
+        <span v-if="showAlert" class="text-success ml-3">
+          <font-awesome-icon icon="check"/>
+          <span class="ml-2">Added to {{ addedComparison }}</span>
+        </span>
+      </template>
       <b-row class="flex-grow-1 align-items-center">
         <b-col cols="5">
           <img-comparison-slider v-if="polish.type == 'Solar'">
@@ -43,16 +50,28 @@
             fluid
           />
         </b-col>
-        <b-col cols="7" class="h-100 justify-content-between gap pr-0 d-flex flex-column">
-          <div class="row  align-items-center w-100">
-            <div class="col-5 pl-0">
-              <FinishToggle v-model="modalFinish" @updateFinish="modalFinish = $event"/>
+        <b-col cols="7" class="h-100 justify-content-between pr-0 d-flex flex-column">
+          <div class="row align-items-center w-100">
+            <div class="col px-0">
+              <FinishToggle v-model="modalFinish" @updateFinish="modalFinish = $event" />
             </div>
-            <div class="col-7">
+            <div class="col px-0 text-right">
+              <b-dropdown text="Add To " variant="primary">
+                <b-dropdown-item 
+                  v-for="(option, index) in options" 
+                  :key="index" 
+                  @click="comparisonSelected(option.value)" 
+                  :disabled="option.disabled"
+                >
+                  {{ option.text }}
+                </b-dropdown-item>
+              </b-dropdown>
+            </div>
+            <div class="col px-0 text-right">
               <b-button v-if="hasToppers" variant="primary" @click="viewToppers">Top It Off</b-button>
             </div>
           </div>
-          <div class="row align-items-center w-100">
+          <div class="row align-items-center flex-grow-1 w-100">
             <table class="w-100">
               <colgroup>
                 <col span="1" style="width:25%">
@@ -77,7 +96,7 @@
                 </tr>
                 <tr>
                   <td><strong>Colour:</strong></td>
-                  <td class="line-height-1">{{ polish.color }}</td>
+                  <td class="line-height-small">{{ polish.color }}</td>
                 </tr>
                 <tr>
                   <td><strong>Coats:</strong></td>
@@ -85,23 +104,6 @@
                 </tr>
               </tbody>
             </table>
-          </div>
-          <div class="row align-items-center w-100">
-            <div class="col-6 px-0">
-              <b-dropdown text="Add to Comparison" variant="primary" dropup>
-                <b-dropdown-item 
-                  v-for="(option, index) in options" 
-                  :key="index" 
-                  @click="comparisonSelected(option.value)" 
-                  :disabled="option.disabled"
-                >
-                  {{ option.text }}
-                </b-dropdown-item>
-              </b-dropdown>
-            </div>
-            <div class="col-6 pl-2 pr-0 text-success small line-height-1">
-              <span v-if="showAlert"><span class="mr-2"><font-awesome-icon icon="check"/></span>Added to {{ addedComparison }}</span>
-            </div>
           </div>
         </b-col>
       </b-row>
@@ -140,7 +142,7 @@ export default {
         const disabled = this.comparisons[i].polishes.some(item => item.polish === this.polish);
         output.push({value: i, text: this.comparisons[i].name, disabled: disabled});
       }
-      output.push({value: -1, text: 'Create new...'});
+      output.push({value: -1, text: 'New comparison...'});
       return output;
     }
   },
@@ -205,9 +207,12 @@ export default {
   margin-top: -0.25rem;
 }
 
+.modal-title {
+  vertical-align: middle;
+}
+
 td {
   vertical-align: baseline;
-  line-height: 1.4;
 }
 
 img-comparison-slider {
@@ -217,11 +222,11 @@ img-comparison-slider {
   --handle-opacity-active: 1;
 }
 
-.gap {
-  gap: 0.5rem;
+.text-success {
+  font-size: 0.75rem;
 }
 
-.line-height-1 {
-  line-height: 1;
+.line-height-small {
+  line-height: 1.2;
 }
 </style>
