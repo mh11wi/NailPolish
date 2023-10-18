@@ -2445,9 +2445,9 @@
     "brand": "Mooncat",
     "type": "Iridescent Flakie",
     "colorFamily": "White",
-    "color": "White jelly base with holographic glitters",
+    "color": "White jelly base with scattered holographic glitters",
     "numCoats": "3",
-    "collection": "Best Sellers Set (2021)"
+    "collection": ""
   },
   {
     "id": "246",
@@ -3658,5 +3658,65 @@
     "color": "Berry lipstick shaded base",
     "numCoats": "2",
     "collection": "Holo Taco x Safiya (2023)"
+  },
+  {
+    "id": "367",
+    "name": "Blame My Star Sign",
+    "brand": "Mooncat",
+    "type": "Holographic Glitter",
+    "colorFamily": "Grey",
+    "color": "Charcoal jelly base",
+    "numCoats": "2",
+    "collection": "Toxic Stardust (2021)"
+  },
+  {
+    "id": "368",
+    "name": "Winds of Fate",
+    "brand": "Mooncat",
+    "type": "Shimmer",
+    "colorFamily": "Purple",
+    "color": "Lilac blush with iridescent shimmer ",
+    "numCoats": "3",
+    "collection": ""
+  },
+  {
+    "id": "369",
+    "name": "Molten Lava",
+    "brand": "Mooncat",
+    "type": "Multichromatic Flakie",
+    "colorFamily": "Orange",
+    "color": "Coral-to-orange shifting flakies with hot pink reflective glitters; dries matte",
+    "numCoats": "3",
+    "collection": "Pretty Prehistoric (2023)"
+  },
+  {
+    "id": "370",
+    "name": "Pixiestick",
+    "brand": "Mooncat",
+    "type": "Pearl",
+    "colorFamily": "White",
+    "color": "Iridescent white with green shimmer and scattered holographic glitters",
+    "numCoats": "3",
+    "collection": "Lost in a Folktale (2023)"
+  },
+  {
+    "id": "371",
+    "name": "Spaceoddity",
+    "brand": "Mooncat",
+    "type": "Multichromatic Flakie",
+    "colorFamily": "Pink",
+    "color": "Berry-to-violet shifting flakies",
+    "numCoats": "2",
+    "collection": "Band of Misfits (2023)"
+  },
+  {
+    "id": "372",
+    "name": "A Very Merry Unbirthday",
+    "brand": "Mooncat",
+    "type": "Multichromatic Flakie",
+    "colorFamily": "Purple",
+    "color": "Purple-to-blue shifting flakies with blue shimmer",
+    "numCoats": "3",
+    "collection": "Alice in Wonderland (2023)"
   }
 ]
