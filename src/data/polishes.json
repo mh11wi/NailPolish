@@ -3718,5 +3718,85 @@
     "color": "Purple-to-blue shifting flakies with blue shimmer",
     "numCoats": "3",
     "collection": "Alice in Wonderland (2023)"
+  },
+  {
+    "id": "373",
+    "name": "New Moon",
+    "brand": "ORLY",
+    "type": "Creme",
+    "colorFamily": "Black",
+    "color": "Opaque black; dries matte",
+    "numCoats": "1",
+    "collection": "Kelli's Haunted House (2023)"
+  },
+  {
+    "id": "374",
+    "name": "Chrysalis",
+    "brand": "ORLY",
+    "type": "Shimmer",
+    "colorFamily": "Green",
+    "color": "Sage green with copper duochrome shimmer",
+    "numCoats": "2",
+    "collection": "Kelli's Haunted House (2023)"
+  },
+  {
+    "id": "375",
+    "name": "Haunted Symphony",
+    "brand": "ORLY",
+    "type": "Shimmer",
+    "colorFamily": "Purple",
+    "color": "Bright cool-toned purple with green duochrome shimmer",
+    "numCoats": "2",
+    "collection": "Kelli's Haunted House (2023)"
+  },
+  {
+    "id": "376",
+    "name": "Waking Nightmare",
+    "brand": "ORLY",
+    "type": "Shimmer",
+    "colorFamily": "Grey",
+    "color": "Light grey with copper duochrome shimmer",
+    "numCoats": "2",
+    "collection": "Kelli's Haunted House (2023)"
+  },
+  {
+    "id": "377",
+    "name": "Neon Dystopia",
+    "brand": "ORLY",
+    "type": "Shimmer",
+    "colorFamily": "Green",
+    "color": "Neon lime green with blue duochrome shimmer",
+    "numCoats": "3",
+    "collection": "Kelli's Haunted House (2023)"
+  },
+  {
+    "id": "378",
+    "name": "Cookies and Screams",
+    "brand": "ORLY",
+    "type": "Glow in the Dark",
+    "colorFamily": "White",
+    "color": "Off-white with matte black hex glitters; bright green in the dark",
+    "numCoats": "3",
+    "collection": "Kelli's Haunted House (2023)"
+  },
+  {
+    "id": "379",
+    "name": "Moonlight Ritual",
+    "brand": "ORLY",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": "Kelli's Haunted House (2023)"
+  },
+  {
+    "id": "380",
+    "name": "Gone Batty",
+    "brand": "ORLY",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": "Kelli's Haunted House (2023)"
   }
 ]
