@@ -3775,7 +3775,7 @@
     "brand": "ORLY",
     "type": "Glow in the Dark",
     "colorFamily": "White",
-    "color": "Off-white with matte black hex glitters; bright green in the dark",
+    "color": "Off-white with matte black hex glitters; bright lime in the dark",
     "numCoats": "3",
     "collection": "Kelli's Haunted House (2023)"
   },
@@ -3798,5 +3798,65 @@
     "color": "",
     "numCoats": "1",
     "collection": "Kelli's Haunted House (2023)"
+  },
+  {
+    "id": "381",
+    "name": "Moonwalk",
+    "brand": "Mooncat",
+    "type": "Iridescent Flakie",
+    "colorFamily": "Purple",
+    "color": "Lilac jelly base with micro holographic glitter",
+    "numCoats": "2",
+    "collection": "Rewards Exclusive (2023)"
+  },
+  {
+    "id": "382",
+    "name": "Artemis' Deathkiss",
+    "brand": "Mooncat",
+    "type": "Pearl",
+    "colorFamily": "Grey",
+    "color": "Grey-purple with purple shimmer and micro holographic glitter",
+    "numCoats": "3",
+    "collection": "Goddess Complex (2023)"
+  },
+  {
+    "id": "383",
+    "name": "House of Hades",
+    "brand": "Mooncat",
+    "type": "Metallic Foil",
+    "colorFamily": "Blue",
+    "color": "Deep blue with cobalt metallic flakies",
+    "numCoats": "2",
+    "collection": "Underworld (2023)"
+  },
+  {
+    "id": "384",
+    "name": "My Bugs! My Bugs!",
+    "brand": "Mooncat",
+    "type": "Glow in the Dark",
+    "colorFamily": "Green",
+    "color": "Light green with green-yellow shimmer; bright green in the dark",
+    "numCoats": "3",
+    "collection": "Nightmare Before Christmas (2023)"
+  },
+  {
+    "id": "385",
+    "name": "What a Brilliant Nose",
+    "brand": "Mooncat",
+    "type": "Glow in the Dark",
+    "colorFamily": "White",
+    "color": "White with pink-to-gold shimmer; bright green in the dark",
+    "numCoats": "3",
+    "collection": "Nightmare Before Christmas (2023)"
+  },
+  {
+    "id": "386",
+    "name": "Rag Doll",
+    "brand": "Mooncat",
+    "type": "Glow in the Dark",
+    "colorFamily": "Blue",
+    "color": "Light blue with blue shimmer; bright green in the dark",
+    "numCoats": "3",
+    "collection": "Nightmare Before Christmas (2023)"
   }
 ]
