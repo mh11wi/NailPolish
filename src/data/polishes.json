@@ -3858,5 +3858,25 @@
     "color": "Light blue with blue shimmer; bright green in the dark",
     "numCoats": "3",
     "collection": "Nightmare Before Christmas (2023)"
+  },
+  {
+    "id": "387",
+    "name": "Tahitian Pearl",
+    "brand": "Cirque Colors",
+    "type": "Pearl",
+    "colorFamily": "Purple",
+    "color": "Black pearl duochrome with scattered holographic glitters",
+    "numCoats": "3",
+    "collection": "Holiday (2022)"
+  },
+  {
+    "id": "388",
+    "name": "True Love's First Kiss",
+    "brand": "Cirque Colors",
+    "type": "Shimmer",
+    "colorFamily": "Pink",
+    "color": "Cool toned pink 'shimmergraphic' with aqua shimmer",
+    "numCoats": "3",
+    "collection": "Far Far Away (2023)"
   }
 ]
