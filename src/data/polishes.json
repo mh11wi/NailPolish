@@ -3878,5 +3878,25 @@
     "color": "Cool toned pink 'shimmergraphic' with aqua shimmer",
     "numCoats": "3",
     "collection": "Far Far Away (2023)"
+  },
+  {
+    "id": "389",
+    "name": "Snow Angel",
+    "brand": "Cirque Colors",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": ""
+  },
+  {
+    "id": "390",
+    "name": "Cracked Taco Shell",
+    "brand": "Holo Taco",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": ""
   }
 ]
