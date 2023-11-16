@@ -3898,5 +3898,35 @@
     "color": "",
     "numCoats": "1",
     "collection": ""
+  },
+  {
+    "id": "391",
+    "name": "Menchie Cat Eye",
+    "brand": "Holo Taco",
+    "type": "Magnetic",
+    "colorFamily": "Green",
+    "color": "Sage green with a gold highlight, shimmer and holographic glitters",
+    "numCoats": "3",
+    "collection": ""
+  },
+  {
+    "id": "392",
+    "name": "Zyler Cat Eye",
+    "brand": "Holo Taco",
+    "type": "Magnetic",
+    "colorFamily": "Orange",
+    "color": "Burnt orange with a copper highlight, shimmer and holographic glitters",
+    "numCoats": "3",
+    "collection": ""
+  },
+  {
+    "id": "393",
+    "name": "Cool Cat Mom",
+    "brand": "Holo Taco",
+    "type": "Magnetic",
+    "colorFamily": "Blue",
+    "color": "Deep blue with a pink highlight, blue reflective and holographic glitters",
+    "numCoats": "3",
+    "collection": ""
   }
 ]
