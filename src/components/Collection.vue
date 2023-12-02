@@ -11,10 +11,11 @@
         <div class="row search mt-4">
           <div class="col">
             <b-input-group>
-              <b-form-input v-model="search" placeholder="Search by name" @keyup.enter="doSearch"/>
+              <font-awesome-icon icon="search" class="searchIcon"/>
+              <b-form-input v-model="search" placeholder="Search by name" @keyup="doSearch" @keyup.enter="$event.target.blur()" class="searchBox"/>
               <b-input-group-append>
-                <b-button variant="primary" @click="doSearch()" :disabled="search.length == 0" aria-label="Search">
-                  <font-awesome-icon icon="search" size="lg"/>
+                <b-button variant="primary" @click="clearSearch()" v-if="search.length !== 0" aria-label="Clear">
+                  <font-awesome-icon icon="times" size="lg"/>
                 </b-button>
               </b-input-group-append>
             </b-input-group>
@@ -146,9 +147,15 @@ export default {
       return polishName.indexOf(searchTerm) != -1;
     },
     
-    /** When the search button is clicked, display only the polishes satisfying the search term. */
+    /** Display only the polishes satisfying the search term. */
     doSearch() {
       this.displayedPolishes = this.polishes.filter(this.doesPolishSatisySearchTerm);
+    },
+    
+    /** Clear the search box. */
+    clearSearch() {
+      this.search = '';
+      this.doSearch();
     },
     
     /** 
@@ -185,5 +192,17 @@ export default {
   border-left: solid 1px #dee2e6;
   margin-left: -1px;
   overflow-y: auto;
+}
+
+.searchIcon {
+  position: absolute; 
+  top: 50%; 
+  left: 0.5rem;
+  transform: translateY(-50%);
+  z-index: 100;
+}
+
+.searchBox {
+  padding-left: 2rem;
 }
 </style>
