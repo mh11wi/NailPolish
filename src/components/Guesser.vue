@@ -15,7 +15,8 @@
             />
             <b-input-group-append>
               <b-button 
-                variant="primary" 
+                variant="primary"
+                class="makeGuess"
                 @click="makeGuess" 
                 :disabled="hasWon || guess.length == 0 || guesses.length == tries"
               >
@@ -253,5 +254,10 @@ export default {
   
   .line-height-small {
     line-height: 1.2;
+  }
+  
+  .makeGuess {
+    border-top-right-radius: 0.25rem !important;
+    border-bottom-right-radius: 0.25rem !important;
   }
 </style>
