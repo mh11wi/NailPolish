@@ -12,7 +12,13 @@
           <div class="col">
             <b-input-group>
               <font-awesome-icon icon="search" class="searchIcon"/>
-              <b-form-input v-model="search" placeholder="Search by name" @keyup="doSearch" @keyup.enter="$event.target.blur()" class="searchBox"/>
+              <b-form-input 
+                v-model="search" 
+                placeholder="Search by name" 
+                @keyup="doSearch" 
+                @keyup.enter="$event.target.blur()" 
+                :class="search.length == 0 ? 'searchBox' : 'searchBox grouped'"
+              />
               <b-input-group-append>
                 <b-button variant="primary" @click="clearSearch()" v-if="search.length !== 0" aria-label="Clear">
                   <font-awesome-icon icon="times" size="lg"/>
@@ -204,5 +210,11 @@ export default {
 
 .searchBox {
   padding-left: 2rem;
+  border-radius: 0.25rem !important;
+}
+
+.searchBox.grouped {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
 }
 </style>
