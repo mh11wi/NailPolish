@@ -3988,5 +3988,25 @@
     "color": "",
     "numCoats": "1",
     "collection": "After Party (2023)"
+  },
+  {
+    "id": "400",
+    "name": "Shooting Star",
+    "brand": "ILNP",
+    "type": "Magnetic",
+    "colorFamily": "Blue",
+    "color": "Blurple jelly with an icy blue highlight, holo and blue-to-magenta flakies",
+    "numCoats": "3",
+    "collection": "Cosmos (2023)"
+  },
+  {
+    "id": "401",
+    "name": "Frankie",
+    "brand": "ILNP",
+    "type": "Magnetic",
+    "colorFamily": "Green",
+    "color": "Monster green with a lime-green highlight and holographic flakies",
+    "numCoats": "2",
+    "collection": "Fright Night (2023)"
   }
 ]
