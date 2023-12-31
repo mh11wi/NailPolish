@@ -4028,5 +4028,75 @@
     "color": "Radiant yellow-green with metallic flakes",
     "numCoats": "2",
     "collection": "Ultra Metallic Brights (2018)"
+  },
+  {
+    "id": "404",
+    "name": "Oceane",
+    "brand": "Zoya",
+    "type": "Smooth Metallic",
+    "colorFamily": "Blue",
+    "color": "Pearly true turquoise metallic",
+    "numCoats": "3",
+    "collection": "Paradise Sun (2015)"
+  },
+  {
+    "id": "405",
+    "name": "Giovanna",
+    "brand": "Zoya",
+    "type": "Smooth Metallic",
+    "colorFamily": "Green",
+    "color": "Stunning emerald green with blue undertones",
+    "numCoats": "1",
+    "collection": "Cashmeres & Satins (2013)"
+  },
+  {
+    "id": "406",
+    "name": "Daul",
+    "brand": "Zoya",
+    "type": "Metallic Flakie",
+    "colorFamily": "Purple",
+    "color": "Medium red-tone purple with gold flakes",
+    "numCoats": "3",
+    "collection": "Diva (2012)"
+  },
+  {
+    "id": "407",
+    "name": "Clarice",
+    "brand": "Zoya",
+    "type": "Smooth Metallic",
+    "colorFamily": "Green",
+    "color": "Shimmering dark emerald green",
+    "numCoats": "2",
+    "collection": "Hypnotic (2022)"
+  },
+  {
+    "id": "408",
+    "name": "Metora",
+    "brand": "Zoya",
+    "type": "Smooth Metallic",
+    "colorFamily": "Red",
+    "color": "Shimmering deep boysenberry jam",
+    "numCoats": "2",
+    "collection": "Hypnotic (2022)"
+  },
+  {
+    "id": "409",
+    "name": "Cinnamon",
+    "brand": "Zoya",
+    "type": "Smooth Metallic",
+    "colorFamily": "Brown",
+    "color": "Classic bronze liquid metal",
+    "numCoats": "3",
+    "collection": "Flair (2015)"
+  },
+  {
+    "id": "410",
+    "name": "Moki",
+    "brand": "Zoya",
+    "type": "Metallic Flakie",
+    "colorFamily": "Gold",
+    "color": "Earthly olive with golden undertones and micro-flakes",
+    "numCoats": "2",
+    "collection": "Metallic Dreams (2022)"
   }
 ]
