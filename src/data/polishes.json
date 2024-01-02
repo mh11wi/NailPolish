@@ -1395,7 +1395,7 @@
     "brand": "Misslyn",
     "type": "Smooth Metallic",
     "colorFamily": "Blue",
-    "color": "Metallic navy blue with cobalt shimmer",
+    "color": "Dark navy blue with cobalt shimmer",
     "numCoats": "1",
     "collection": ""
   },
@@ -4098,5 +4098,15 @@
     "color": "Earthly olive with golden undertones and micro-flakes",
     "numCoats": "2",
     "collection": "Metallic Dreams (2022)"
+  },
+  {
+    "id": "411",
+    "name": "Harper",
+    "brand": "Zoya",
+    "type": "Shimmer",
+    "colorFamily": "Pink",
+    "color": "Cotton candy pink with gold shimmer and sparse hex glitters",
+    "numCoats": "3",
+    "collection": "Bubbly (2014)"
   }
 ]
