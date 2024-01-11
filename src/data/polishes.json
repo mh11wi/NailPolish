@@ -3825,7 +3825,7 @@
     "brand": "Mooncat",
     "type": "Metallic Flakie",
     "colorFamily": "Blue",
-    "color": "Deep blue with cobalt metallic flakies",
+    "color": "Deep blue with cobalt flakies",
     "numCoats": "2",
     "collection": "Underworld (2023)"
   },
@@ -4108,5 +4108,35 @@
     "color": "Cotton candy pink with gold shimmer and sparse hex glitters",
     "numCoats": "3",
     "collection": "Bubbly (2014)"
+  },
+  {
+    "id": "412",
+    "name": "Fifty Shades of Greige",
+    "brand": "Holo Taco",
+    "type": "Linear Holographic",
+    "colorFamily": "Neutral",
+    "color": "Pale neutral beige",
+    "numCoats": "2",
+    "collection": "Declassified Tacos: 001 (2023)"
+  },
+  {
+    "id": "413",
+    "name": "Foiled Again",
+    "brand": "Holo Taco",
+    "type": "Metallic Flakie",
+    "colorFamily": "Green",
+    "color": "Bright green 'frosted metal' with scattered holographic glitters",
+    "numCoats": "3",
+    "collection": "Declassified Tacos: 001 (2023)"
+  },
+  {
+    "id": "414",
+    "name": "Overshadowed",
+    "brand": "Holo Taco",
+    "type": "Smooth Metallic",
+    "colorFamily": "Blue",
+    "color": "Steel blue-grey metallic duochrome with scattered holographic glitters",
+    "numCoats": "2",
+    "collection": "Declassified Tacos: 001 (2023)"
   }
 ]
