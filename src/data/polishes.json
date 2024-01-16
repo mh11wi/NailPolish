@@ -4138,5 +4138,25 @@
     "color": "Steel blue-grey metallic duochrome with scattered holographic glitters",
     "numCoats": "2",
     "collection": "Declassified Tacos: 001 (2023)"
+  },
+  {
+    "id": "415",
+    "name": "Utopia",
+    "brand": "Bow Polish",
+    "type": "Thermal",
+    "colorFamily": "Green",
+    "color": "Lime tri-thermal that shifts to fuchsia and dark purple with gold flakes",
+    "numCoats": "3",
+    "collection": "Summer 2020"
+  },
+  {
+    "id": "416",
+    "name": "Afterlife",
+    "brand": "Bow Polish",
+    "type": "Thermal",
+    "colorFamily": "Red",
+    "color": "White-grey to red with silver and red reflective glitters",
+    "numCoats": "3",
+    "collection": "Fall 2021"
   }
 ]
