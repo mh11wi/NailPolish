@@ -4158,5 +4158,15 @@
     "color": "White-grey to red with silver and red reflective glitters",
     "numCoats": "3",
     "collection": "Fall 2021"
+  },
+  {
+    "id": "417",
+    "name": "Pure Pearl",
+    "brand": "Revlon",
+    "type": "Pearl",
+    "colorFamily": "White",
+    "color": "Sheer pearly white",
+    "numCoats": "3",
+    "collection": ""
   }
 ]
