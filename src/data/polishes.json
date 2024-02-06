@@ -4178,5 +4178,25 @@
     "color": "Champagne linear holographic with a yellow-gold highlight",
     "numCoats": "2",
     "collection": "Magnetic (2021)"
+  },
+  {
+    "id": "419",
+    "name": "Nest",
+    "brand": "Bow Polish",
+    "type": "Magnetic",
+    "colorFamily": "Purple",
+    "color": "Dusty grey-purple with a silver highlight and red iridescent flakies",
+    "numCoats": "3",
+    "collection": "Magnetic (2020)"
+  },
+  {
+    "id": "420",
+    "name": "Antidote",
+    "brand": "Bow Polish",
+    "type": "Magnetic",
+    "colorFamily": "Purple",
+    "color": "Magenta-purple with a blue highlight and silver reflective glitters",
+    "numCoats": "2",
+    "collection": "Flash (2022)"
   }
 ]
