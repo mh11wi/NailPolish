@@ -4,7 +4,7 @@
       <div class="col-6 pl-0">
         <div class="ml-4">
           <strong v-if="!editMode" class="comparisonName h-100">{{ comparison.name }}</strong>
-          <b-form-input ref="editName" v-model="name" :maxLength="maxNameLength" v-else @blur="finishEdit" @keyup.enter="finishEdit"/>
+          <b-form-input type="search" ref="editName" v-model="name" :maxLength="maxNameLength" v-else @blur="finishEdit" @keyup.enter="finishEdit"/>
           <b-button variant="link" class="ml-3" v-if="!editMode" @click="editMode = true" aria-label="Edit comparison name">
             <font-awesome-icon icon="pencil-alt" size="lg"/>
           </b-button>
