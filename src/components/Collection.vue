@@ -13,6 +13,7 @@
             <b-input-group>
               <font-awesome-icon icon="search" class="searchIcon"/>
               <b-form-input 
+                type="search"
                 v-model="search" 
                 placeholder="Search by name" 
                 @keyup="doSearch" 

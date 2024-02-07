@@ -162,6 +162,14 @@ export default {
 <style>
 html, body, .app {
   height: 100%;
+  height: 100dvh;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance:none;
 }
 
 .tab-pane, .tab-content {
