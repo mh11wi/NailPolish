@@ -5,6 +5,7 @@
         <div class="row mt-3 py-4 justify-content-center">
           <b-input-group class="col-7 col-md-6 col-lg-5 col-xl-4">
             <b-form-input 
+              type="search"
               v-model="guess" 
               ref="guessBox"
               aria-label="Enter guess"
