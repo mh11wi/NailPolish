@@ -130,22 +130,10 @@ export default {
     },
     
     /** 
-     * Calculates the available height of the screen to size tabs appropriately.
-     * On mobile, this does not include the address bar. If the height is too small,
-     * e.g. the keyboard is open in landscape mode, ensure header can be scrolled away.
-     *
-     * Also determines the correct number of polishes to show in a comparison
-     * based on the screen width.
+     * Determines the correct number of polishes to show in a comparison based on the screen width.
+     * Also sets input font size so it is large enough that it will not be zoomed into on mobile.
      */
-    handleResize() {
-      let headerHeight = 110;
-      if (document.querySelectorAll('nav').length > 0) {
-        headerHeight = document.querySelector('nav').offsetHeight + document.querySelector('.nav').offsetHeight;
-      }
-      const screenHeight = document.querySelector('html').offsetHeight;
-      const height = screenHeight < 2 * headerHeight ? screenHeight : screenHeight - headerHeight;
-      document.documentElement.style.setProperty('--height', `${height}px`);
-      
+    handleResize() {      
       const screenWidth = document.querySelectorAll('html')[0].offsetWidth;
       if (screenWidth < 992) {
         this.cardsPerSlide = 2;
@@ -154,6 +142,12 @@ export default {
       } else {
         this.cardsPerSlide = 4;
       }
+      
+      let font = 16;
+      if (window.visualViewport.scale < 1) {
+        font = 16 / 0.85;
+      }
+      document.documentElement.style.setProperty('--font', `${font}px`);
     }
   }
 }
@@ -165,6 +159,11 @@ html, body, .app {
   height: 100dvh;
 }
 
+input[type="search"] {
+  font-size: 16px;
+  font-size: var(--font);
+}
+
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
@@ -173,8 +172,8 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .tab-pane, .tab-content {
-  height: calc(100vh - 110px);
-  height: var(--height);
+  height: calc(100% - 110px);
+  height: calc(100dvh - 110px);
   overflow-y: auto;
 }
 
