@@ -159,7 +159,7 @@ export default {
       
       let font = 16;
       if (window.visualViewport.scale < 1) {
-        font = 16 / 0.85;
+        font = 16 / 0.8;
       }
       document.documentElement.style.setProperty('--font', `${font}px`);
     }
@@ -176,6 +176,7 @@ html, body, .app {
 input[type="search"] {
   font-size: 16px;
   font-size: var(--font);
+  touch-action: manipulation;
 }
 
 input[type="search"]::-webkit-search-decoration,
@@ -202,6 +203,10 @@ input[type="search"]::-webkit-search-results-decoration {
 .nav-tabs .nav-link {
   padding-top: 15px;
   padding-bottom: 15px;
+}
+
+.nav-tabs .nav-link.active {
+  font-weight: 500;
 }
 
 .nav-tabs .nav-link:hover {
