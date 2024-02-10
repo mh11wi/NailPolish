@@ -3,9 +3,10 @@
     <div class="row h-100">
       <div class="col-4 filtersColumn mh-100">
         <div class="row align-items-center justify-content-between stats">
-          <span>
-            Polishes: {{ displayedPolishes.length }} / {{ polishes.length }}
-          </span>
+          <div>
+            <strong class="mr-1">Polishes:</strong> 
+            <span>{{ displayedPolishes.length }} / {{ polishes.length }}</span>
+          </div>
           <FinishToggle v-model="finish" @updateFinish="finish = $event"/>
         </div>
         <div class="row search mt-4">

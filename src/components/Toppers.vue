@@ -3,7 +3,7 @@
     <div class="row h-100">
       <div class="col-4 toppersColumn mh-100">
         <div>
-          <label>Base polish:</label>
+          <label class="font-weight-bold">Base polish:</label>
           <b-form-select 
             :value="combination.basePolishId" 
             aria-label="Select a base polish" 
@@ -12,7 +12,7 @@
           />
         </div>
         <div v-if="combination.basePolishId" class="mt-4">
-          <label>Topper:</label>
+          <label class="font-weight-bold">Topper:</label>
           <b-form-select 
             :value="combination.topperId" 
             aria-label="Select a topper" 
