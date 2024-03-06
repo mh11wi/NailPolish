@@ -4198,5 +4198,35 @@
     "color": "Magenta-purple with a blue highlight and silver reflective glitters",
     "numCoats": "2",
     "collection": "Flash (2022)"
+  },
+  {
+    "id": "421",
+    "name": "I'm Rover It",
+    "brand": "Holo Taco",
+    "type": "Shimmer",
+    "colorFamily": "Red",
+    "color": "Burnt red jelly base with orange shimmer and holographic flakes",
+    "numCoats": "2",
+    "collection": "I Need Space (2024)"
+  },
+  {
+    "id": "422",
+    "name": "Orbite Me",
+    "brand": "Holo Taco",
+    "type": "Crushed Holographic",
+    "colorFamily": "Red",
+    "color": "Deep burgundy base",
+    "numCoats": "2",
+    "collection": "I Need Space (2024)"
+  },
+  {
+    "id": "423",
+    "name": "Alien Infatuation",
+    "brand": "Holo Taco",
+    "type": "Shimmer",
+    "colorFamily": "Grey",
+    "color": "Grey jelly base with green shimmer and scattered holographic glitters",
+    "numCoats": "3",
+    "collection": "I Need Space (2024)"
   }
 ]
