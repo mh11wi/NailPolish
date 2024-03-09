@@ -4228,5 +4228,25 @@
     "color": "Grey jelly base with green shimmer and scattered holographic glitters",
     "numCoats": "3",
     "collection": "I Need Space (2024)"
+  },
+  {
+    "id": "424",
+    "name": "Sugar Plum",
+    "brand": "Starrily",
+    "type": "Holographic Glitter",
+    "colorFamily": "Purple",
+    "color": "Ultra sparkly purple in a clear base",
+    "numCoats": "3",
+    "collection": "Winter Carnival (2023)"
+  },
+  {
+    "id": "425",
+    "name": "Crystal Cave",
+    "brand": "Starrily",
+    "type": "Holographic Glitter",
+    "colorFamily": "Blue",
+    "color": "Ultra sparkly teal in a clear base",
+    "numCoats": "3",
+    "collection": "Winter Carnival (2023)"
   }
 ]
