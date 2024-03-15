@@ -4231,6 +4231,16 @@
   },
   {
     "id": "424",
+    "name": "Ghost Jelly",
+    "brand": "Starrily",
+    "type": "Jelly",
+    "colorFamily": "White",
+    "color": "Sheer white",
+    "numCoats": "3",
+    "collection": "Jellyfish Journey (2023)"
+  },
+  {
+    "id": "425",
     "name": "Sugar Plum",
     "brand": "Starrily",
     "type": "Holographic Glitter",
@@ -4240,7 +4250,7 @@
     "collection": "Winter Carnival (2023)"
   },
   {
-    "id": "425",
+    "id": "426",
     "name": "Crystal Cave",
     "brand": "Starrily",
     "type": "Holographic Glitter",
