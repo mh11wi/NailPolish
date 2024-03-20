@@ -4258,5 +4258,25 @@
     "color": "Ultra sparkly teal in a clear base",
     "numCoats": "3",
     "collection": "Winter Carnival (2023)"
+  },
+  {
+    "id": "427",
+    "name": "Northern Lights Simulator",
+    "brand": "Starrily",
+    "type": "Magnetic",
+    "colorFamily": "Brown",
+    "color": "Dark brown with gold shimmer and a green to purple shifting highlight",
+    "numCoats": "3",
+    "collection": "Winter Carnival (2023)"
+  },
+  {
+    "id": "428",
+    "name": "Fairy Floss",
+    "brand": "Starrily",
+    "type": "Magnetic",
+    "colorFamily": "Pink",
+    "color": "Candy pink with bright blue shimmer and a yellow-gold highlight",
+    "numCoats": "3",
+    "collection": "Winter Carnival (2023)"
   }
 ]
