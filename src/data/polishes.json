@@ -4278,5 +4278,25 @@
     "color": "Candy pink with bright blue shimmer and a yellow-gold highlight",
     "numCoats": "3",
     "collection": "Winter Carnival (2023)"
+  },
+  {
+    "id": "429",
+    "name": "Try to Hide the Pain",
+    "brand": "Cadillacquer",
+    "type": "Magnetic",
+    "colorFamily": "Blue",
+    "color": "Blue micro-flakes with yellow-green magnetic flakies",
+    "numCoats": "4",
+    "collection": "Winter 2024"
+  },
+  {
+    "id": "430",
+    "name": "What it Takes",
+    "brand": "Cadillacquer",
+    "type": "Magnetic",
+    "colorFamily": "Green",
+    "color": "Shimmery teal with magenta to yellow shifting magnetic flakies",
+    "numCoats": "3",
+    "collection": "Winter 2024"
   }
 ]
