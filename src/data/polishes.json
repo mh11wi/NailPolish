@@ -4286,7 +4286,7 @@
     "type": "Magnetic",
     "colorFamily": "Blue",
     "color": "Blue micro-flakes with yellow-green magnetic flakies",
-    "numCoats": "4",
+    "numCoats": "3",
     "collection": "Winter 2024"
   },
   {
@@ -4297,6 +4297,26 @@
     "colorFamily": "Green",
     "color": "Shimmery teal with magenta to yellow shifting magnetic flakies",
     "numCoats": "3",
+    "collection": "Winter 2024"
+  },
+  {
+    "id": "431",
+    "name": "Your True Colors",
+    "brand": "Cadillacquer",
+    "type": "Magnetic",
+    "colorFamily": "Pink",
+    "color": "Pink to orange shimmer with light green magnetic flakies",
+    "numCoats": "3",
+    "collection": "Winter 2024"
+  },
+  {
+    "id": "432",
+    "name": "The Lucky Ones",
+    "brand": "Cadillacquer",
+    "type": "Magnetic",
+    "colorFamily": "Green",
+    "color": "Deep green shimmer with red-orange magnetic flakies",
+    "numCoats": "2",
     "collection": "Winter 2024"
   }
 ]
