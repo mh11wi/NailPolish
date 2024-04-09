@@ -4318,5 +4318,25 @@
     "color": "Deep green shimmer with red-orange magnetic flakies",
     "numCoats": "2",
     "collection": "Winter 2024"
+  },
+  {
+    "id": "433",
+    "name": "You Are We",
+    "brand": "Bow Polish",
+    "type": "Thermal",
+    "colorFamily": "Green",
+    "color": "Cool emerald green to navy blue with silver reflective glitters",
+    "numCoats": "3",
+    "collection": "Flash (2021)"
+  },
+  {
+    "id": "434",
+    "name": "Colorblind",
+    "brand": "Bow Polish",
+    "type": "Solar",
+    "colorFamily": "Neutral",
+    "color": "Light beige to grey thermal with red speckles; pink to purple in the sun",
+    "numCoats": "2",
+    "collection": "Summer 2017"
   }
 ]
