@@ -4338,5 +4338,25 @@
     "color": "Light beige to grey thermal with red speckles; pink to purple in the sun",
     "numCoats": "2",
     "collection": "Summer 2017"
+  },
+  {
+    "id": "435",
+    "name": "Miracle",
+    "brand": "Bow Polish",
+    "type": "Solar",
+    "colorFamily": "Blue",
+    "color": "Turquoise to teal with holographic flakies; purple to navy in the sun",
+    "numCoats": "2",
+    "collection": "Conversion (2016)"
+  },
+  {
+    "id": "436",
+    "name": "Phantom",
+    "brand": "Bow Polish",
+    "type": "Solar",
+    "colorFamily": "Orange",
+    "color": "Peach to orange with holographic glitters; fuchsia to red in the sun",
+    "numCoats": "3",
+    "collection": "Conversion (2016)"
   }
 ]
