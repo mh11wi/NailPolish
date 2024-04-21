@@ -1025,7 +1025,7 @@
     "brand": "Starrily",
     "type": "Glitter & Sparkle",
     "colorFamily": "Red",
-    "color": "Red jelly base with golden shimmer and holographic flakes",
+    "color": "Red jelly base with golden shimmer",
     "numCoats": "1",
     "collection": "Kelli Marissa Series 3 (2020)"
   },
@@ -1975,7 +1975,7 @@
     "brand": "Starrily",
     "type": "Glitter & Sparkle",
     "colorFamily": "Purple",
-    "color": "Dark 'blurple' (blue based purple) with holographic flakes",
+    "color": "Dark 'blurple' (blue based purple)",
     "numCoats": "2",
     "collection": "Kelli Marissa Series 3 (2020)"
   },
@@ -1983,9 +1983,9 @@
     "id": "199",
     "name": "Terra",
     "brand": "Starrily",
-    "type": "Glitter & Sparkle",
+    "type": "Crushed Holographic",
     "colorFamily": "Green",
-    "color": "Dark green jelly base with golden shimmer and holographic flakes",
+    "color": "Dark green jelly base with golden shimmer",
     "numCoats": "1",
     "collection": "Kelli Marissa Series 3 (2020)"
   },
@@ -3323,9 +3323,9 @@
     "id": "333",
     "name": "Never Tide Down",
     "brand": "Holo Taco",
-    "type": "Glitter & Sparkle",
+    "type": "Crushed Holographic",
     "colorFamily": "Blue",
-    "color": "Turquoise jelly base with iridescent flakes and holographic glitters",
+    "color": "Turquoise jelly base with iridescent flakes",
     "numCoats": "2",
     "collection": "Vacation (2023)"
   },
@@ -4358,5 +4358,35 @@
     "color": "Peach to orange with holographic glitters; fuchsia to red in the sun",
     "numCoats": "3",
     "collection": "Conversion (2016)"
+  },
+  {
+    "id": "437",
+    "name": "Infinity Rose",
+    "brand": "Starrily",
+    "type": "Linear Holographic",
+    "colorFamily": "Pink",
+    "color": "Dusky rose gold",
+    "numCoats": "2",
+    "collection": "Pi Day (2024)"
+  },
+  {
+    "id": "438",
+    "name": "3.14 Karat",
+    "brand": "Starrily",
+    "type": "Metallic Flakie",
+    "colorFamily": "Gold",
+    "color": "Brilliant coppery golden micro foil flakie",
+    "numCoats": "2",
+    "collection": "Pi Day (2024)"
+  },
+  {
+    "id": "439",
+    "name": "Blueberry Pi",
+    "brand": "Starrily",
+    "type": "Pearl",
+    "colorFamily": "Orange",
+    "color": "Pearlescent peach base with strong blue shimmer and blue flakies",
+    "numCoats": "2",
+    "collection": "Pi Day (2024)"
   }
 ]
