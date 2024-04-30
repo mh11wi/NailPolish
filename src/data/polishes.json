@@ -2505,7 +2505,7 @@
     "brand": "ILNP",
     "type": "Metallic Flakie",
     "colorFamily": "Green",
-    "color": "Caribbean green with metallic flakes",
+    "color": "Caribbean green with metallic micro-flakes",
     "numCoats": "2",
     "collection": "Ultra Metallic Brights (2018)"
   },
@@ -2515,7 +2515,7 @@
     "brand": "ILNP",
     "type": "Metallic Flakie",
     "colorFamily": "Purple",
-    "color": "Bright purple with metallic flakes",
+    "color": "Bright purple with metallic micro-flakes",
     "numCoats": "2",
     "collection": "Ultra Metallic Brights (2018)"
   },
@@ -2675,7 +2675,7 @@
     "brand": "ILNP",
     "type": "Metallic Flakie",
     "colorFamily": "Blue",
-    "color": "Icy blue with metallic flakes and scattered holographic glitters",
+    "color": "Icy blue with metallic micro-flakes and scattered holographic glitters",
     "numCoats": "3",
     "collection": "Spring 2018"
   },
@@ -4025,7 +4025,7 @@
     "brand": "ILNP",
     "type": "Metallic Flakie",
     "colorFamily": "Green",
-    "color": "Radiant yellow-green with metallic flakes",
+    "color": "Radiant yellow-green with metallic micro-flakes",
     "numCoats": "2",
     "collection": "Ultra Metallic Brights (2018)"
   },
@@ -4388,5 +4388,35 @@
     "color": "Pearlescent peach base with strong blue shimmer and blue flakies",
     "numCoats": "2",
     "collection": "Pi Day (2024)"
+  },
+  {
+    "id": "440",
+    "name": "Spyglass",
+    "brand": "Holo Taco",
+    "type": "Crushed Holographic",
+    "colorFamily": "Blue",
+    "color": "Cornflower blue base with blue iridescent micro-shimmer",
+    "numCoats": "3",
+    "collection": "Shimmering Secrets (2024)"
+  },
+  {
+    "id": "441",
+    "name": "Teal No Lies",
+    "brand": "Holo Taco",
+    "type": "Metallic Flakie",
+    "colorFamily": "Blue",
+    "color": "Deep teal metallic micro-flakes",
+    "numCoats": "2",
+    "collection": "Shimmering Secrets (2024)"
+  },
+  {
+    "id": "442",
+    "name": "Blushed Money",
+    "brand": "Holo Taco",
+    "type": "Holographic Glitter",
+    "colorFamily": "Pink",
+    "color": "Medium pink jelly base",
+    "numCoats": "3",
+    "collection": "Shimmering Secrets (2024)"
   }
 ]
