@@ -3,7 +3,7 @@
     <div class="row h-100" id="polishGuesser">
       <div class="col-12 mh-100">
         <div class="row mt-3 py-4 justify-content-center">
-          <b-input-group class="col-7 col-md-6 col-lg-5 col-xl-4">
+          <b-input-group class="col-7 col-sm-5 col-xl-4">
             <b-form-input 
               type="search"
               v-model="guess" 

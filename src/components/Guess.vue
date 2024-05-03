@@ -1,6 +1,6 @@
 <template>
   <div class="row py-3 justify-content-center">
-    <div class="col-5 col-md-4 col-xl-3 guessMade">{{ displayGuess }}</div>
+    <div class="col-5 col-sm-4 col-xl-3 guessMade">{{ displayGuess }}</div>
     <button class="square" :id="'brandCorrect-' + index" :disabled="!isBrandCorrect" :aria-label="getBrandLabel()">
       <font-awesome-icon v-if="isBrandCorrect" icon="store" size="xl"/>
     </button>
