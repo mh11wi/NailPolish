@@ -6,7 +6,7 @@
         <b-nav-item :link-attrs="{id: 'info-link', tabindex: '0', 'aria-label': 'App Info'}">
           <font-awesome-icon icon="info-circle" size="lg"/>
         </b-nav-item>
-        <b-popover variant="info" target="info-link" title="App Info" triggers="click blur">
+        <b-popover variant="info" target="info-link" placement="leftbottom" :fallback-placement="[]" title="App Info" triggers="click blur">
           <p>I created this application to track my collection of nail polishes and showcase some of my favourite nail art looks.</p>
           <p><strong>Browse Collection</strong><br>Search or filter through my collection of nail polishes.</p>
           <p><strong>Compare Polishes</strong><br>Compare similar polishes next to one another.</p>
@@ -143,40 +143,128 @@ export default {
       };
     },
     
-    /** 
-     * Determines the correct number of polishes to show in a comparison based on the screen width.
-     * Also sets input font size so it is large enough that it will not be zoomed into on mobile.
-     */
-    handleResize() {      
+    /** Determines the correct number of polishes to show in a comparison based on the screen width. */
+    handleResize() {
       const screenWidth = document.querySelectorAll('html')[0].offsetWidth;
-      if (screenWidth < 992) {
+      if (screenWidth < 600) {
         this.cardsPerSlide = 2;
       } else if (screenWidth < 1200) {
         this.cardsPerSlide = 3;
       } else {
         this.cardsPerSlide = 4;
       }
-      
-      let font = 16;
-      if (window.visualViewport.scale < 1) {
-        font = 16 / 0.8;
-      }
-      document.documentElement.style.setProperty('--font', `${font}px`);
     }
   }
 }
 </script>
 
 <style>
+html {
+  transform: scale(1.0);
+  transform-origin: 0 0;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar { 
+  display: none;
+}
+
 html, body, .app {
+  width: 100%;
+  width: 100dvw;
   height: 100%;
   height: 100dvh;
 }
 
-input[type="search"] {
-  font-size: 16px;
-  font-size: var(--font);
-  touch-action: manipulation;
+.tab-pane, .tab-content {
+  height: calc(100% - 110px);
+  height: calc(100dvh - 110px);
+  overflow-y: auto;
+}
+
+/* Mobile - Portrait mode */
+@media (orientation: portrait) and (max-width: 600px) {
+  html {
+    transform: scale(0.5);
+  }
+  
+  body, .app, .modal, .modal-backdrop {
+    width: 200% !important;
+    width: 200dvw !important;
+    height: 200% !important;
+    height: 200dvh !important;
+  }
+  
+  .tab-pane, .tab-content {
+    height: calc(200% - 110px);
+    height: calc(200dvh - 110px);
+  }
+  
+  .b-popover-info {
+    left: calc(200% - 450px - 6rem) !important;
+    transform: translate(0, 1rem) !important;
+  }
+  
+  .dropdown-menu {
+    transform: translate(0, 38px) !important;
+  }
+}
+
+/* Tablet - Portrait mode */
+@media (orientation: portrait) and (min-width: 600px) {
+  html {
+    transform: scale(0.78125);
+  }
+  
+  body, .app, .modal, .modal-backdrop {
+    width: 128% !important;
+    width: 128dvw !important;
+    height: 128% !important;
+    height: 128dvh !important;
+  }
+  
+  .tab-pane, .tab-content {
+    height: calc(128% - 110px);
+    height: calc(128dvh - 110px);
+  }
+  
+  .b-popover-info {
+    left: calc(128% - 450px - 6rem) !important;
+    transform: translate(0, 1rem) !important;
+  }
+  
+  .dropdown-menu {
+    transform: translate(0, 38px) !important;
+  }
+}
+
+/* Mobile - Landscape mode */
+@media (orientation: landscape) and (max-height: 600px) {
+  html {
+    transform: scale(0.5);
+  }
+  
+  body, .app, .modal, .modal-backdrop {
+    width: 200% !important;
+    width: 200dvw !important;
+    height: 200% !important;
+    height: 200dvh !important;
+  }
+  
+  .tab-pane, .tab-content {
+    height: calc(200% - 110px);
+    height: calc(200dvh - 110px);
+  }
+  
+  .b-popover-info {
+    left: calc(200% - 450px - 6rem) !important;
+    transform: translate(0, 1rem) !important;
+  }
+  
+  .dropdown-menu {
+    transform: translate(0, 38px) !important;
+  }
 }
 
 input[type="search"]::-webkit-search-decoration,
@@ -184,12 +272,6 @@ input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {
   -webkit-appearance:none;
-}
-
-.tab-pane, .tab-content {
-  height: calc(100% - 110px);
-  height: calc(100dvh - 110px);
-  overflow-y: auto;
 }
 
 .nav-tabs {
@@ -223,9 +305,10 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .b-popover-info {
   min-width: 450px;
-  max-height: 95%;
-  overflow-y: auto;
-  overflow-x: hidden;
+}
+
+.b-popover-info .arrow {
+  top: 0 !important;
 }
 
 .b-popover-info .popover-header {
@@ -243,29 +326,43 @@ input[type="search"]::-webkit-search-results-decoration {
   font-size: 1.25rem;
 }
 
-.modal-md {
-  max-width: 90% !important;
+.modal-dialog-centered {
+  justify-content: center !important;
 }
 
-.modal-lg {
-  max-width: 97% !important;
+.modal-md, .modal-md .modal-content {
+  max-width: 680px !important;
 }
 
-@media (min-width: 768px) {
-  .modal-md  {
-    max-width: 670px !important;
-  }
-  
-  .modal-lg  {
-    max-width: 720px !important;
+.modal-lg, .modal-lg .modal-content {
+  max-width: 720px !important;
+}
+
+@media (max-width: 767px) {
+  .modal-md, .modal-lg {
+    max-width: 100% !important;
   }
 }
 
 @media (orientation: portrait) {
   .modal-dialog-centered {
     align-items: start !important;
+    padding-top: 22.5% !important;
+  }
+  
+  .modal-dialog-centered.modal-dialog-scrollable {
+    align-items: center !important;
     justify-content: start !important;
-    padding-top: 20% !important;
+  }
+  
+  @media (max-width: 767px) {
+    .modal-md .modal-content {
+      max-width: 92% !important;
+    }
+
+    .modal-lg .modal-content {
+      max-width: 98% !important;
+    }
   }
 }
 </style>
