@@ -172,13 +172,17 @@ export default {
   overflow-y: auto;
 }
 
-@media (orientation: portrait) {
+.combo {
+  width: 85%
+}
+
+@media (orientation: landscape) and (max-height: 600px) {
   .combo {
-    width: 55vmin;
+    width: 130vmin;
   }
 }
 
-@media (orientation: landscape) {
+@media (orientation: landscape) and (min-height: 600px) {
   .combo {
     width: 65vmin;
   }

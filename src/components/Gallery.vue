@@ -30,6 +30,7 @@ export default {
   /** Add listeners that ensure the shown polish popover is hidden on scroll (but not the app info popover). */
   mounted() {
     document.getElementById('gallery').addEventListener('scroll', this.hidePopover);
+    window.addEventListener('resize', this.hidePopover);
     
     this.$root.$on('bv::popover::show', bvEventObj => {
       if (bvEventObj.target.id != 'info-link') {

@@ -24,10 +24,11 @@
                 <font-awesome-icon icon="question-circle"/>
               </b-link>
               <b-popover 
-                :target="entry.id + '_' + polish.id" 
-                fallback-placement="counterclockwise" 
-                triggers="click blur" 
-                boundary-padding="0"
+                :target="entry.id + '_' + polish.id"
+                triggers="click blur"
+                custom-class="hidden"
+                @shown="positionPopover"
+                @hide="hidePopover"
               >
                 <b-img-lazy
                   :src="getPolishImage(polish)" 
@@ -71,6 +72,57 @@ export default {
       }
 
       return require('@/assets/images/polishes/' + polish.id + '/' + process.env.VUE_APP_GLOSSY + process.env.VUE_APP_EXTENSION);
+    },
+    
+    /**
+     * Positions the popover beside the target, taking the page scale into account.
+     * @param event - object containing the target and popover elements
+     */
+    positionPopover(event) {
+      const html = document.querySelectorAll('html')[0];
+      const matrix = window.getComputedStyle(html).transform;
+      const matrixArray = matrix.replace("matrix(", "").split(",");
+      const scale = parseFloat(matrixArray[0]);
+
+      const rect = event.target.getBoundingClientRect();
+      const { innerHeight, innerWidth } = window;
+      const popoverWidth = 225 * scale;
+      const popoverHeight = 218.125 * scale;
+      
+      let left = rect.right;
+      let right = left + popoverWidth;
+      let top = rect.top - (popoverHeight / 2);
+      let bottom = top + popoverHeight;
+      
+      if (right > innerWidth) {
+        left = innerWidth - popoverWidth - 8;
+      }
+      
+      const header = 110 * scale;
+      if (top < header) {
+        top = header;
+      }
+      
+      if (bottom > innerHeight) {
+        top = innerHeight - popoverHeight;
+      }
+
+      const popover = event.relatedTarget;
+      popover.style.transform = `translate(${left / scale}px, ${top / scale}px)`;
+      
+      const arrow = popover.querySelector('.arrow');
+      const arrowTop = rect.top - top - 3;
+      arrow.style.top = `${arrowTop / scale}px`;
+      
+      popover.classList.remove('hidden');
+    },
+    
+    /**
+     * Immediately hides the popover.
+     * @param event - object containing the target and popover elements
+     */
+    hidePopover(event) {
+      event.relatedTarget.classList?.add('hidden');
     }
   } 
 }
@@ -92,5 +144,9 @@ ul, p {
 
 .popover {
   min-width: 200px;
+}
+
+.hidden {
+  display: none !important;
 }
 </style>

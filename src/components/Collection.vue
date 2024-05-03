@@ -42,7 +42,7 @@
           No polishes found! Try adjusting your filters or search criteria.
         </div>
         <div v-else>
-          <b-row cols="3" cols-md="4" cols-xl="5" class="px-2">
+          <b-row cols="3" cols-sm="4" cols-xl="5" class="px-2">
             <PolishTile 
               v-for="(polish, index) in displayedPolishes" 
               :key="index" 
@@ -192,7 +192,7 @@ export default {
 
 .stats {
   padding: 0 15px;
-  gap: 15px;
+  gap: 7.5px;
 }
 
 .polishList {
