@@ -3,7 +3,7 @@
     <div class="row h-100" id="polishGuesser">
       <div class="col-12 mh-100">
         <div class="row mt-3 py-4 justify-content-center">
-          <b-input-group class="col-7 col-sm-5 col-xl-4">
+          <b-input-group class="col-6 col-sm-5 col-xl-4">
             <b-form-input 
               type="search"
               v-model="guess" 
@@ -34,6 +34,7 @@
           :key="index" 
           :correctPolish="correctPolish" 
           :guess="guesses[index - 1]" 
+          :disabled="hasWon && !guesses[index - 1]"
           :index="index"
         />
         <div class="row py-4 justify-content-center">
@@ -53,19 +54,19 @@
           <div class="row py-2 text-center justify-content-center">
             <strong>Examples</strong>
           </div>
-          <Guess :correctPolish="exampleCorrectPolish" :guess="exampleGuesses[0]" index="ex1"/>
+          <Guess :correctPolish="exampleCorrectPolish" :guess="exampleGuesses[0]" :disabled="false" index="ex1"/>
           <div class="row py-1 text-center justify-content-center">
             <div class="col-12">
               <strong>{{ exampleGuesses[0][0].name }}</strong> does not have any of the same properties as the correct polish.
             </div>
           </div>
-          <Guess :correctPolish="exampleCorrectPolish" :guess="exampleGuesses[1]" index="ex2"/>
+          <Guess :correctPolish="exampleCorrectPolish" :guess="exampleGuesses[1]" :disabled="false" index="ex2"/>
           <div class="row py-1 text-center justify-content-center">
             <div class="col-12">
               <strong>{{ exampleGuesses[1][0].name }}</strong> has the same brand, colour, and number of coats as the correct polish.
           </div>
           </div>
-          <Guess :correctPolish="exampleCorrectPolish" :guess="exampleGuesses[2]" index="ex3"/>
+          <Guess :correctPolish="exampleCorrectPolish" :guess="exampleGuesses[2]" :disabled="false" index="ex3"/>
           <div class="row py-1 text-center justify-content-center">
             <div class="col-12">
               <strong>{{ exampleGuesses[2][0].name }}</strong>  is the correct polish!
@@ -163,6 +164,8 @@ export default {
   },
   /** Loads an initial game. */
   mounted: function() {
+    document.getElementById('polishGuesser').addEventListener('scroll', this.hideTooltips);
+    window.addEventListener('resize', this.hideTooltips);
     this.newGame();
   },
   computed: {
@@ -238,6 +241,11 @@ export default {
     /** Gets the image of the correct polish. */
     getCorrectPolishImage() {
       return require('@/assets/images/polishes/' + this.correctPolish.id + '/' + process.env.VUE_APP_GLOSSY + process.env.VUE_APP_EXTENSION);
+    },
+    
+    /** Hides any open tooltips. */
+    hideTooltips() {
+      this.$root.$emit('bv::hide::tooltip');
     }
   }
 }
@@ -245,6 +253,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+  #polishGuesser {
+    overflow-y: auto;
+  }
+
   .examples {
     border-top: solid 1px #dee2e6;
   }

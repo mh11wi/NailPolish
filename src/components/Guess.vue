@@ -1,30 +1,80 @@
 <template>
   <div class="row py-3 justify-content-center">
-    <div class="col-5 col-sm-4 col-xl-3 guessMade">{{ displayGuess }}</div>
-    <button class="square" :id="'brandCorrect-' + index" :disabled="!isBrandCorrect" :aria-label="getBrandLabel()">
+    <div class="col-4 col-xl-3 guessMade">{{ displayGuess }}</div>
+    <button class="square" :id="'brandCorrect-' + index" :disabled="disabled" :aria-label="getBrandLabel()">
       <font-awesome-icon v-if="isBrandCorrect" icon="store" size="xl"/>
     </button>
-    <b-tooltip :target="'brandCorrect-' + index" container="polishGuesser">{{ getBrandLabel() }}</b-tooltip>
+    <b-tooltip 
+      :target="'brandCorrect-' + index" 
+      :fallback-placement="[]"
+      container="polishGuesser"
+      custom-class="hidden"
+      triggers="click blur"
+      @shown="positionTooltip"
+      @hide="hideTooltip"
+    >
+      {{ getBrandLabel() }}
+    </b-tooltip>
 
-    <button class="square" :id="'typeCorrect-' + index" :disabled="!isTypeCorrect" :aria-label="getTypeLabel()">
+    <button class="square" :id="'typeCorrect-' + index" :disabled="disabled" :aria-label="getTypeLabel()">
       <font-awesome-icon v-if="isTypeCorrect" icon="hand-sparkles" size="xl"/>
     </button>
-    <b-tooltip :target="'typeCorrect-' + index" container="polishGuesser">{{ getTypeLabel() }}</b-tooltip>
+    <b-tooltip 
+      :target="'typeCorrect-' + index" 
+      :fallback-placement="[]"
+      container="polishGuesser"
+      custom-class="hidden"
+      triggers="click blur"
+      @shown="positionTooltip"
+      @hide="hideTooltip"
+    >
+      {{ getTypeLabel() }}
+    </b-tooltip>
 
-    <button class="square" :id="'colorCorrect-' + index" :disabled="!isColorCorrect" :aria-label="getColorLabel()">
+    <button class="square" :id="'colorCorrect-' + index" :disabled="disabled" :aria-label="getColorLabel()">
       <font-awesome-icon v-if="isColorCorrect" icon="palette" size="xl"/>
     </button>
-    <b-tooltip :target="'colorCorrect-' + index" container="polishGuesser">{{ getColorLabel() }}</b-tooltip>
+    <b-tooltip 
+      :target="'colorCorrect-' + index" 
+      :fallback-placement="[]"
+      container="polishGuesser"
+      custom-class="hidden"
+      triggers="click blur"
+      @shown="positionTooltip"
+      @hide="hideTooltip"
+    >
+      {{ getColorLabel() }}
+    </b-tooltip>
 
-    <button class="square" :id="'coatsCorrect-' + index" :disabled="!isCoatsCorrect" :aria-label="getCoatsLabel()">
+    <button class="square" :id="'coatsCorrect-' + index" :disabled="disabled" :aria-label="getCoatsLabel()">
       <font-awesome-icon v-if="isCoatsCorrect" icon="paint-brush" size="xl"/>
     </button>
-    <b-tooltip :target="'coatsCorrect-' + index" container="polishGuesser">{{ getCoatsLabel() }}</b-tooltip>
+    <b-tooltip 
+      :target="'coatsCorrect-' + index" 
+      :fallback-placement="[]"
+      container="polishGuesser"
+      custom-class="hidden"
+      triggers="click blur"
+      @shown="positionTooltip"
+      @hide="hideTooltip"
+    >
+      {{ getCoatsLabel() }}
+    </b-tooltip>
 
-    <button class="square" :id="'polishCorrect-' + index" :disabled="!isPolishCorrect" :aria-label="getPolishLabel()">
+    <button class="square" :id="'polishCorrect-' + index" :disabled="disabled" :aria-label="getPolishLabel()">
       <font-awesome-icon v-if="isPolishCorrect" icon="flask" size="xl"/>
     </button>
-    <b-tooltip :target="'polishCorrect-' + index" container="polishGuesser">{{ getPolishLabel() }}</b-tooltip>
+    <b-tooltip 
+      :target="'polishCorrect-' + index" 
+      :fallback-placement="[]"
+      container="polishGuesser"
+      custom-class="hidden"
+      triggers="click blur"
+      @shown="positionTooltip"
+      @hide="hideTooltip"
+    >
+      {{ getPolishLabel() }}
+    </b-tooltip>
   </div>
 </template>
 
@@ -35,6 +85,7 @@ export default {
   props: [
     'correctPolish', // the polish to compare to
     'guess', // the polish(es) guessed, could be multiple if same name
+    'disabled', // whether the tooltips should be disabled
     'index' // the index of the guess
   ],
   computed: {
@@ -112,6 +163,37 @@ export default {
       }
       
       return `Polish ${this.isPolishCorrect ? 'correct' : 'incorrect'}`;
+    },
+    
+    /**
+     * Positions the tooltip above the target, taking the page scale into account.
+     * @param event - object containing the target and tooltip elements
+     */
+    positionTooltip(event) {
+      const html = document.querySelectorAll('html')[0];
+      const matrix = window.getComputedStyle(html).transform;
+      const matrixArray = matrix.replace("matrix(", "").split(",");
+      const scale = parseFloat(matrixArray[0]);
+
+      const rect = event.target.getBoundingClientRect();
+      const left = rect.left + (rect.width / 2);
+      const top = rect.top;
+      
+      const tooltip = event.relatedTarget;
+      tooltip.style.transform = `translate(${left / scale}px, ${top / scale}px) translate(-50%, -100%)`;
+      
+      const arrow = tooltip.querySelector('.arrow');
+      arrow.style.left = 'calc(50% - 10px)';
+      
+      tooltip.classList.remove('hidden');
+    },
+    
+    /**
+     * Immediately hides the tooltip.
+     * @param event - object containing the target and tooltip elements
+     */
+    hideTooltip(event) {
+      event.relatedTarget.classList?.add('hidden');
     }
   }
 }
@@ -134,5 +216,9 @@ export default {
     margin: 0 0.5rem;
     padding: 0.33rem 0;
     text-align: center;
+  }
+  
+  .hidden {
+    display: none !important;
   }
 </style>
