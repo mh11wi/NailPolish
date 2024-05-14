@@ -4418,5 +4418,35 @@
     "color": "Medium pink jelly base",
     "numCoats": "3",
     "collection": "Shimmering Secrets (2024)"
+  },
+  {
+    "id": "443",
+    "name": "Powerful Pink",
+    "brand": "OPI",
+    "type": "Smooth Metallic",
+    "colorFamily": "Pink",
+    "color": "Magenta pink with a silver satin-like shimmer",
+    "numCoats": "2",
+    "collection": "Nail Envy"
+  },
+  {
+    "id": "444",
+    "name": "Pearl Jammin'",
+    "brand": "China Glaze",
+    "type": "Pearl",
+    "colorFamily": "Blue",
+    "color": "Pearlescent blue-grey with copper shimmer",
+    "numCoats": "3",
+    "collection": "Rebel (2016)"
+  },
+  {
+    "id": "445",
+    "name": "As Good As It Glitz",
+    "brand": "China Glaze",
+    "type": "Chrome",
+    "colorFamily": "Pink",
+    "color": "Rose gold",
+    "numCoats": "1",
+    "collection": "The Glam Finale (2017)"
   }
 ]
