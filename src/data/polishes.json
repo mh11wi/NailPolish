@@ -4448,5 +4448,35 @@
     "color": "Rose gold",
     "numCoats": "1",
     "collection": "The Glam Finale (2017)"
+  },
+  {
+    "id": "446",
+    "name": "Shaka",
+    "brand": "Cirque Colors",
+    "type": "Shimmer",
+    "colorFamily": "Yellow",
+    "color": "Bright yellow with red shimmer and scattered holographic glitters",
+    "numCoats": "3",
+    "collection": "Surfer's Crush (2023)"
+  },
+  {
+    "id": "447",
+    "name": "Mãi Mãi",
+    "brand": "Cirque Colors",
+    "type": "Shimmer",
+    "colorFamily": "Red",
+    "color": "Bright cherry red 'shimmergraphic' with gold shimmer",
+    "numCoats": "2",
+    "collection": "Do Good (2024)"
+  },
+  {
+    "id": "448",
+    "name": "Spoonful of Sugar",
+    "brand": "Cirque Colors",
+    "type": "Shimmer",
+    "colorFamily": "Blue",
+    "color": "Dusty periwinkle 'shimmergraphic' with purple shimmer",
+    "numCoats": "3",
+    "collection": "Twisted Tea Party (2024)"
   }
 ]
