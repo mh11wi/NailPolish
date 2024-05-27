@@ -4478,5 +4478,45 @@
     "color": "Dusty periwinkle 'shimmergraphic' with purple shimmer",
     "numCoats": "3",
     "collection": "Twisted Tea Party (2024)"
+  },
+  {
+    "id": "449",
+    "name": "Cocoa Jelly",
+    "brand": "Cirque Colors",
+    "type": "Jelly",
+    "colorFamily": "Brown",
+    "color": "Sheer chocolate brown with red undertones",
+    "numCoats": "3",
+    "collection": "Glazed (2021)"
+  },
+  {
+    "id": "450",
+    "name": "Mango Jelly",
+    "brand": "Cirque Colors",
+    "type": "Jelly",
+    "colorFamily": "Yellow",
+    "color": "Sheer yellow-orange",
+    "numCoats": "3",
+    "collection": "Glazed (2024)"
+  },
+  {
+    "id": "451",
+    "name": "Pink Lady Jelly",
+    "brand": "Cirque Colors",
+    "type": "Jelly",
+    "colorFamily": "Pink",
+    "color": "Sheer cool-toned medium pink",
+    "numCoats": "3",
+    "collection": "Glazed (2024)"
+  },
+  {
+    "id": "452",
+    "name": "Star Fruit Jelly",
+    "brand": "Cirque Colors",
+    "type": "Jelly",
+    "colorFamily": "Green",
+    "color": "Sheer chartreuse",
+    "numCoats": "3",
+    "collection": "Glazed (2024)"
   }
 ]
