@@ -4518,5 +4518,35 @@
     "color": "Sheer chartreuse",
     "numCoats": "3",
     "collection": "Glazed (2024)"
+  },
+  {
+    "id": "453",
+    "name": "Far Far Pulsar",
+    "brand": "Cadillacquer",
+    "type": "Magnetic",
+    "colorFamily": "Blue",
+    "color": "Deep blue base with a copper highlight and purple-to-blue flakies",
+    "numCoats": "3",
+    "collection": "Interplanetary (2024)"
+  },
+  {
+    "id": "454",
+    "name": "Reliant Supergiant",
+    "brand": "Cadillacquer",
+    "type": "Magnetic",
+    "colorFamily": "Black",
+    "color": "Blackened base with a red highlight and turquoise flakies",
+    "numCoats": "3",
+    "collection": "Interplanetary (2024)"
+  },
+  {
+    "id": "455",
+    "name": "The Blue Marble",
+    "brand": "Cadillacquer",
+    "type": "Flash Reflective",
+    "colorFamily": "Blue",
+    "color": "Blue base with pink iridescent flakies and green reflective glitters",
+    "numCoats": "3",
+    "collection": "Interplanetary (2024)"
   }
 ]
