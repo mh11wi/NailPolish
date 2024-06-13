@@ -4548,5 +4548,75 @@
     "color": "Blue base with pink iridescent flakies and green reflective glitters",
     "numCoats": "3",
     "collection": "Interplanetary (2024)"
+  },
+  {
+    "id": "456",
+    "name": "Sugar Rush",
+    "brand": "Holo Taco",
+    "type": "Crushed Holographic",
+    "colorFamily": "White",
+    "color": "Off-white with yellow-orange iridescent micro-shimmer",
+    "numCoats": "3",
+    "collection": "Rock Candy (2024)"
+  },
+  {
+    "id": "457",
+    "name": "Sunshine Crush",
+    "brand": "Holo Taco",
+    "type": "Crushed Holographic",
+    "colorFamily": "Yellow",
+    "color": "Warm golden yellow with orange-pink iridescent micro-shimmer",
+    "numCoats": "3",
+    "collection": "Rock Candy (2024)"
+  },
+  {
+    "id": "458",
+    "name": "Sour Note",
+    "brand": "Holo Taco",
+    "type": "Crushed Holographic",
+    "colorFamily": "Green",
+    "color": "Green with pink-yellow iridescent micro-shimmer",
+    "numCoats": "3",
+    "collection": "Rock Candy (2024)"
+  },
+  {
+    "id": "459",
+    "name": "Blue Rizzler",
+    "brand": "Holo Taco",
+    "type": "Crushed Holographic",
+    "colorFamily": "Blue",
+    "color": "Blue-violet with pink iridescent micro-shimmer",
+    "numCoats": "3",
+    "collection": "Rock Candy (2024)"
+  },
+  {
+    "id": "460",
+    "name": "Electric Sweetner",
+    "brand": "Holo Taco",
+    "type": "Crushed Holographic",
+    "colorFamily": "Purple",
+    "color": "Purple-magenta with blue iridescent micro-shimmer",
+    "numCoats": "3",
+    "collection": "Rock Candy (2024)"
+  },
+  {
+    "id": "461",
+    "name": "Pop Rocker",
+    "brand": "Holo Taco",
+    "type": "Crushed Holographic",
+    "colorFamily": "Pink",
+    "color": "Bubblegum pink with indigo-blue micro-shimmer",
+    "numCoats": "3",
+    "collection": "Rock Candy (2024)"
+  },
+  {
+    "id": "462",
+    "name": "Jam Session",
+    "brand": "Holo Taco",
+    "type": "Crushed Holographic",
+    "colorFamily": "Red",
+    "color": "Red-coral with pink iridescent micro-shimmer",
+    "numCoats": "3",
+    "collection": "Rock Candy (2024)"
   }
 ]
