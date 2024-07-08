@@ -4618,5 +4618,45 @@
     "color": "Red-coral with pink iridescent micro-shimmer",
     "numCoats": "3",
     "collection": "Rock Candy (2024)"
+  },
+  {
+    "id": "463",
+    "name": "The Diabolical Mojo Jojo!!",
+    "brand": "Mooncat",
+    "type": "Iridescent Flakie",
+    "colorFamily": "Purple",
+    "color": "Purple jelly base with pink shimmer, black flakies, and holographic glitters",
+    "numCoats": "3",
+    "collection": "The Powerpuff Girls (2024)"
+  },
+  {
+    "id": "464",
+    "name": "Hardcore Buttercup",
+    "brand": "Mooncat",
+    "type": "Iridescent Flakie",
+    "colorFamily": "Green",
+    "color": "Green jelly base with holographic glitters",
+    "numCoats": "3",
+    "collection": "The Powerpuff Girls (2024)"
+  },
+  {
+    "id": "465",
+    "name": "Blossom's Firebreath",
+    "brand": "Mooncat",
+    "type": "Iridescent Flakie",
+    "colorFamily": "Pink",
+    "color": "Pink jelly base with holographic glitters",
+    "numCoats": "3",
+    "collection": "The Powerpuff Girls (2024)"
+  },
+  {
+    "id": "466",
+    "name": "Don't Cry, Bubbles",
+    "brand": "Mooncat",
+    "type": "Iridescent Flakie",
+    "colorFamily": "Blue",
+    "color": "Blue jelly base with round green and holographic glitters",
+    "numCoats": "3",
+    "collection": "The Powerpuff Girls (2024)"
   }
 ]
