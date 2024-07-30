@@ -4658,5 +4658,25 @@
     "color": "Blue jelly base with round green and holographic glitters",
     "numCoats": "3",
     "collection": "The Powerpuff Girls (2024)"
+  },
+  {
+    "id": "467",
+    "name": "Funny Feeling",
+    "brand": "Holo Taco",
+    "type": "Thermal",
+    "colorFamily": "Green",
+    "color": "Chartreuse to turquoise with green shimmer and holographic glitters",
+    "numCoats": "3",
+    "collection": "5th Anniv: Mixed Emotions (2024)"
+  },
+  {
+    "id": "468",
+    "name": "Deeply Superficial",
+    "brand": "Holo Taco",
+    "type": "Thermal",
+    "colorFamily": "Pink",
+    "color": "Pale to magenta pink with iridescent flakies and holographic glitters",
+    "numCoats": "2",
+    "collection": "5th Anniv: Mixed Emotions (2024)"
   }
 ]
