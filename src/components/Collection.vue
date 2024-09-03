@@ -31,26 +31,27 @@
         </div>
         <div v-if="search.length == 0" class="row filters mt-4 mb-3">
           <div class="col">
-            <FilterList label="Brand" filter="brand" :collection="polishes" @updatePolishList="filterPolishList"/>
-            <FilterList label="Type" filter="type" :collection="polishes" @updatePolishList="filterPolishList"/>
-            <FilterList label="Colour" filter="colorFamily" :collection="polishes" @updatePolishList="filterPolishList"/>
+            <FilterList label="Brand" filter="brand" :collection="polishes" :initial="initialBrand" @updatePolishList="filterPolishList"/>
+            <FilterList label="Type" filter="type" :collection="polishes" :initial="initialType" @updatePolishList="filterPolishList"/>
+            <FilterList label="Colour" filter="colorFamily" :collection="polishes" :initial="initialColor" @updatePolishList="filterPolishList"/>
           </div>
         </div>
       </div>
       <div class="col-8 polishList mh-100">
-        <div v-if="displayedPolishes.length == 0">
+        <div :style="{display: (displayedPolishes.length === 0 ? '' : 'none')}">
           No polishes found! Try adjusting your filters or search criteria.
         </div>
-        <div v-else>
+        <div :style="{display: (displayedPolishes.length > 0 ? '' : 'none')}">
           <b-row cols="3" cols-sm="4" cols-xl="5" class="px-2">
             <PolishTile 
-              v-for="(polish, index) in displayedPolishes" 
+              v-for="(polish, index) in polishes" 
               :key="index" 
               :polish="polish" 
               :finish="finish" 
               :hasToppers="toppersMap[polish.id] != null"
               :comparisonId="comparisonId"
               :comparisons="comparisons"
+              :style="{display: (displayedPolishes.some(p => p.id === polish.id) ? '' : 'none')}"
               @viewToppers="viewToppers"
               @incrementComparisonId="incrementComparisonId"
             />
@@ -115,6 +116,18 @@ export default {
     /** Initially extract all toppers from the list of polishes. */
     polishes: function() {
       return this.allPolishes.filter(polish => polish.type != 'Topper').sort((a, b) => b.id - a.id);
+    },
+    /** Set the initial brand to be selected. */
+    initialBrand: function() {
+      return new URLSearchParams(window.location.search).get('brand');
+    },
+    /** Set the initial type to be selected. */
+    initialType: function() {
+      return new URLSearchParams(window.location.search).get('type');
+    },
+    /** Set the initial color to be selected. */
+    initialColor: function() {
+      return new URLSearchParams(window.location.search).get('color');
     }
   },
   methods: {

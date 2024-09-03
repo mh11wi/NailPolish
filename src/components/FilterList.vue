@@ -28,11 +28,18 @@ export default {
   props: [
     'label', // the label for the filter
     'filter', // the kind of filter (either 'brand', 'type', or 'color')
-    'collection' // the collection of polishes to determine filter options from (excludes toppers)
+    'collection', // the collection of polishes to determine filter options from (excludes toppers)
+    'initial', // the initial value to select
   ],
   data: function() {
     return {
       selected: [] // the selected options for the filter
+    }
+  },
+  /** Select an initial filter option (if present) */
+  mounted: function() {
+    if (this.filterList.includes(this.initial)) {
+      this.selected.push(this.initial);
     }
   },
   computed: {

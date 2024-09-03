@@ -104,7 +104,7 @@ export default {
     setTimeout(() => {
       this.polishes = require('@/data/polishes.json');
       this.toppersMap = require('@/data/toppersMap.json');
-    }, 500);
+    }, 1000);
   },
   /** Ensure that the tabs are the correct height. */
   updated() {
