@@ -88,7 +88,10 @@ export default {
       typeFilters: [], // the selected polish types to filter by
       colorFilters: [], // the selected polish colors to filter by
       search: '', // the inputted search term
-      displayedPolishes: [] // the subset of polishes displayed based off search or filters
+      displayedPolishes: [], // the subset of polishes displayed based off search or filters
+      initialBrand: new URLSearchParams(window.location.search).get('brand'), // the initial brand to be selected
+      initialType: new URLSearchParams(window.location.search).get('type'), // the initial type to be selected
+      initialColor: new URLSearchParams(window.location.search).get('color') // the initial color to be selected
     }
   },
   watch: {
@@ -116,18 +119,6 @@ export default {
     /** Initially extract all toppers from the list of polishes. */
     polishes: function() {
       return this.allPolishes.filter(polish => polish.type != 'Topper').sort((a, b) => b.id - a.id);
-    },
-    /** Set the initial brand to be selected. */
-    initialBrand: function() {
-      return new URLSearchParams(window.location.search).get('brand');
-    },
-    /** Set the initial type to be selected. */
-    initialType: function() {
-      return new URLSearchParams(window.location.search).get('type');
-    },
-    /** Set the initial color to be selected. */
-    initialColor: function() {
-      return new URLSearchParams(window.location.search).get('color');
     }
   },
   methods: {
@@ -170,6 +161,9 @@ export default {
     
     /** Display only the polishes satisfying the search term. */
     doSearch() {
+      this.initialBrand = '';
+      this.initialType = '';
+      this.initialColor = '';
       this.displayedPolishes = this.polishes.filter(this.doesPolishSatisySearchTerm);
     },
     
