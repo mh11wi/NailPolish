@@ -4678,5 +4678,25 @@
     "color": "Pale to magenta pink with iridescent flakies and holographic glitters",
     "numCoats": "2",
     "collection": "5th Anniv: Mixed Emotions (2024)"
+  },
+  {
+    "id": "469",
+    "name": "Silent Library",
+    "brand": "Holo Taco",
+    "type": "Metallic Flakie",
+    "colorFamily": "Blue",
+    "color": "Deep muted navy 'frosted metal'",
+    "numCoats": "2",
+    "collection": "Dark Academia (2024)"
+  },
+  {
+    "id": "470",
+    "name": "Secret Society",
+    "brand": "Holo Taco",
+    "type": "Shimmer",
+    "colorFamily": "Grey",
+    "color": "Dark greige jelly base with gold-bronze shimmer and scattered holographic glitters",
+    "numCoats": "2",
+    "collection": "Dark Academia (2024)"
   }
 ]
