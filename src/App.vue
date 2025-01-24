@@ -7,18 +7,12 @@
           <font-awesome-icon icon="info-circle" size="lg"/>
         </b-nav-item>
         <b-popover variant="info" target="info-link" placement="leftbottom" :fallback-placement="[]" title="App Info" triggers="click blur">
-          <p>I created this application to track my collection of nail polishes and showcase some of my favourite nail art looks.</p>
+          <p>An application to track a collection of nail polishes and showcase nail art.</p>
           <p><strong>Browse Collection</strong><br>Search or filter through my collection of nail polishes.</p>
           <p><strong>Compare Polishes</strong><br>Compare similar polishes next to one another.</p>
           <p><strong>Top It Off</strong><br>See what different toppers look like over an applicable polish.</p>
           <p><strong>Nail Art Gallery</strong><br>View some of my past nail art.</p>
-          <p><strong>Polish Guesser</strong><br>A 'Wordle' inspired game!</p>
-          <penguin width="100" hAlign="center"/>
-          <div class="text-center"><a href="https://mh11wi.github.io/privacy-policy.html">Terms & Privacy Policy</a></div>
         </b-popover>
-        <b-nav-item href="https://mh11wi.github.io/" :link-attrs="{'aria-label': 'Home'}">
-          <font-awesome-icon icon="home" size="lg"/>
-        </b-nav-item>
       </b-navbar-nav>
     </b-navbar>
     <b-tabs v-model="tabIndex" class="flex-grow-1 d-flex flex-column" content-class="flex-grow-1">
@@ -54,9 +48,6 @@
       <b-tab title="Nail Art Gallery">
         <Gallery v-if="polishes.length > 0" :polishes="polishes"/>
       </b-tab>
-      <b-tab title="Polish Guesser">
-        <Guesser v-if="polishes.length > 0" :allPolishes="polishes"/>
-      </b-tab>
     </b-tabs>
   </div>
 </template>
@@ -67,8 +58,6 @@ import Collection from './components/Collection.vue'
 import ComparisonsList from './components/ComparisonsList.vue'
 import Toppers from './components/Toppers.vue'
 import Gallery from './components/Gallery.vue'
-import Guesser from './components/Guesser.vue'
-import Penguin from './components/Penguin.vue'
 
 export default {
   name: 'App',
@@ -77,9 +66,7 @@ export default {
     Collection,
     ComparisonsList,
     Toppers,
-    Gallery,
-    Guesser,
-    Penguin
+    Gallery
   },
   data: function() {
     return {
