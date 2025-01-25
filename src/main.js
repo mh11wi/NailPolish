@@ -10,7 +10,6 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { 
   faInfoCircle,
-  faHome,
   faPencilAlt, 
   faTrashAlt, 
   faSearch, 
@@ -22,17 +21,11 @@ import {
   faTimes, 
   faSun, 
   faMoon, 
-  faQuestionCircle,
-  faStore,
-  faHandSparkles,
-  faPalette,
-  faPaintBrush,
-  faFlask
+  faQuestionCircle
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 library.add(
-  faInfoCircle,
-  faHome,  
+  faInfoCircle, 
   faPencilAlt, 
   faTrashAlt, 
   faSearch, 
@@ -44,12 +37,7 @@ library.add(
   faTimes, 
   faSun, 
   faMoon, 
-  faQuestionCircle,
-  faStore,
-  faHandSparkles,
-  faPalette,
-  faPaintBrush,
-  faFlask
+  faQuestionCircle
 )
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
