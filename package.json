@@ -1,0 +1,66 @@
+{
+  "name": "NailPolish",
+  "author": "Madeleine Hill <mh11wi@outlook.com> (https://mh11wi.github.io)",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "gh-pages-deploy": "node scripts/gh-pages-deploy.mjs"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.1.0",
+    "@fortawesome/free-solid-svg-icons": "^6.4.2",
+    "@fortawesome/vue-fontawesome": "^2.0.10",
+    "autoprefixer": "10.4.5",
+    "bootstrap-vue": "^2.17.3",
+    "core-js": "^3.21.1",
+    "img-comparison-slider": "^3.0.4",
+    "save": "^2.9.0",
+    "vue": "^2.6.14"
+  },
+  "devDependencies": {
+    "@babel/polyfill": "^7.11.5",
+    "@vue/cli-plugin-babel": "^5.0.6",
+    "@vue/cli-plugin-eslint": "^5.0.6",
+    "@vue/cli-service": "^5.0.6",
+    "babel-eslint": "^10.1.0",
+    "bootstrap": "^4.6.1",
+    "eslint": "^7.32.0",
+    "eslint-plugin-vue": "^9.17.0",
+    "execa": "^6.1.0",
+    "mutationobserver-shim": "^0.3.7",
+    "popper.js": "^1.16.1",
+    "portal-vue": "^2.1.7",
+    "sass": "~1.32.12",
+    "sass-loader": "^10.2.1",
+    "vue-cli-plugin-bootstrap-vue": "~0.7.0",
+    "vue-template-compiler": "^2.6.14"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {
+      "vue/multi-word-component-names": "off",
+      "vue/no-mutating-props": "off"
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "overrides": {
+    "postcss": "^8.4.31"
+  }
+}
