@@ -4815,8 +4815,28 @@
     "brand": "Holo Taco",
     "type": "Crushed Holographic",
     "colorFamily": "Black",
-    "color": "Black with blue iridescent micro-shimmer ",
+    "color": "Black with blue iridescent micro-shimmer",
     "numCoats": "1",
     "collection": "Declassified Tacos: 002 (2024)"
+  },
+  {
+    "id": "483",
+    "name": "DAVIDsTEAL",
+    "brand": "Holo Taco",
+    "type": "Creme",
+    "colorFamily": "Blue",
+    "color": "Bright teal",
+    "numCoats": "1",
+    "collection": "Holo Taco x DAVIDsTEA (2025)"
+  },
+  {
+    "id": "484",
+    "name": "Steep Dreams",
+    "brand": "Holo Taco",
+    "type": "Crushed Holographic",
+    "colorFamily": "Blue",
+    "color": "Deep navy blue with blue iridescent micro-flakes",
+    "numCoats": "2",
+    "collection": "Holo Taco x DAVIDsTEA (2025)"
   }
 ]
