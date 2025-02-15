@@ -1,7 +1,7 @@
 <template>
   <div class="comparisonsList container-fluid mh-100">
-    <div class="row mx-0 mt-3">
-      <span v-if="comparisons.length == 0" class="mx-4 mb-4">
+    <div class="row w-100 mx-0 mt-3">
+      <span v-if="comparisons.length == 0" class="mx-3 mx-sm-4 mb-4">
         Start by adding a new comparison from the <strong>Browse Collection</strong> view or by clicking <strong>+ Add Comparison</strong> below.
       </span>
       <Comparison v-else 
@@ -12,10 +12,10 @@
         @deleteComparison="deleteComparison"
       />
     </div>
-    <div class="row">
+    <div class="row w-100">
       <b-button 
         variant="link" 
-        class="text-decoration-none ml-4 mb-3" 
+        class="text-decoration-none ml-3 ml-sm-4 mb-3" 
         @click="addComparison"
       >
         <strong>+ Add Comparison</strong>
@@ -60,5 +60,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+@media (width < 576px) {
+  .comparisonsList {
+    padding: 0 0.25rem;
+  }
+}
 </style>

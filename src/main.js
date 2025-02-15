@@ -11,6 +11,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { 
   faInfoCircle,
   faHome,
+  faBars,
   faPencilAlt, 
   faTrashAlt, 
   faSearch, 
@@ -32,7 +33,8 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 library.add(
   faInfoCircle,
-  faHome,  
+  faHome, 
+  faBars,
   faPencilAlt, 
   faTrashAlt, 
   faSearch, 

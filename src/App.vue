@@ -146,7 +146,7 @@ export default {
     /** Determines the correct number of polishes to show in a comparison based on the screen width. */
     handleResize() {
       const screenWidth = document.querySelectorAll('html')[0].offsetWidth;
-      if (screenWidth < 600) {
+      if (screenWidth < 576) {
         this.cardsPerSlide = 2;
       } else if (screenWidth < 1200) {
         this.cardsPerSlide = 3;
@@ -183,26 +183,26 @@ html, body, .app {
   overflow-y: auto;
 }
 
-/* Mobile - Portrait mode */
-@media (orientation: portrait) and (max-width: 600px) {
+/* Mobile - Portrait and Landscape modes */
+@media (orientation: portrait) and (width < 576px), (height < 576px) {
   html {
-    transform: scale(0.5);
+    transform: scale(0.7);
   }
   
   body, .app, .modal, .modal-backdrop {
-    width: 200% !important;
-    width: 200dvw !important;
-    height: 200% !important;
-    height: 200dvh !important;
+    width: 142.857% !important;
+    width: 142.857dvw !important;
+    height: 142.857% !important;
+    height: 142.857dvh !important;
   }
   
   .tab-pane, .tab-content {
-    height: calc(200% - 110px);
-    height: calc(200dvh - 110px);
+    height: calc(142.857% - 110px);
+    height: calc(142.857dvh - 110px);
   }
   
   .b-popover-info {
-    left: calc(200% - 450px - 6rem) !important;
+    left: calc(142.857% - 450px - 3.5rem) !important;
     transform: translate(0, 1rem) !important;
   }
   
@@ -212,7 +212,7 @@ html, body, .app {
 }
 
 /* Tablet - Portrait mode */
-@media (orientation: portrait) and (min-width: 600px) {
+@media (orientation: portrait) and (min-width: 576px) {
   html {
     transform: scale(0.78125);
   }
@@ -230,35 +230,7 @@ html, body, .app {
   }
   
   .b-popover-info {
-    left: calc(128% - 450px - 6rem) !important;
-    transform: translate(0, 1rem) !important;
-  }
-  
-  .dropdown-menu {
-    transform: translate(0, 38px) !important;
-  }
-}
-
-/* Mobile - Landscape mode */
-@media (orientation: landscape) and (max-height: 600px) {
-  html {
-    transform: scale(0.5);
-  }
-  
-  body, .app, .modal, .modal-backdrop {
-    width: 200% !important;
-    width: 200dvw !important;
-    height: 200% !important;
-    height: 200dvh !important;
-  }
-  
-  .tab-pane, .tab-content {
-    height: calc(200% - 110px);
-    height: calc(200dvh - 110px);
-  }
-  
-  .b-popover-info {
-    left: calc(200% - 450px - 6rem) !important;
+    left: calc(128% - 450px - 3.5rem) !important;
     transform: translate(0, 1rem) !important;
   }
   
@@ -276,10 +248,19 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .nav-tabs {
   flex-wrap: nowrap !important;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.nav-tabs::-webkit-scrollbar {
+  display: none;
 }
 
 .nav-tabs .nav-item {
   margin-bottom: -2px;
+  white-space: nowrap;
 }
 
 .nav-tabs .nav-link {
@@ -316,6 +297,12 @@ input[type="search"]::-webkit-search-results-decoration {
   font-weight: 500;
 }
 
+.b-popover-info .popover-body {
+  overflow-y: auto;
+  max-height: calc(128% - 20px);
+  max-height: calc(128dvh - 20px);
+}
+
 .b-popover-info a {
   color: #0c5460;
   font-size: 85%;
@@ -338,9 +325,26 @@ input[type="search"]::-webkit-search-results-decoration {
   max-width: 720px !important;
 }
 
-@media (max-width: 767px) {
+.hide-sm {
+  display: none !important;
+}
+
+@media (width < 576px) {
+  .b-popover-info {
+    min-width: 395px;
+	left: calc(142.857% - 395px - 3.5rem) !important;
+  }
+
   .modal-md, .modal-lg {
     max-width: 100% !important;
+  }
+  
+  .hide-xs {
+    display: none !important;
+  }
+  
+  .hide-sm {
+    display: block !important;
   }
 }
 
@@ -355,14 +359,30 @@ input[type="search"]::-webkit-search-results-decoration {
     justify-content: start !important;
   }
   
-  @media (max-width: 767px) {
+  @media (width < 576px) {
     .modal-md .modal-content {
       max-width: 92% !important;
     }
 
     .modal-lg .modal-content {
       max-width: 98% !important;
+      font-size: 13px;
     }
+  }
+  
+  @media (max-width: 360px) {
+    .modal-lg .modal-content {
+      max-width: 99% !important;
+      font-size: 11.5px;
+    }
+  }
+}
+
+@media (max-height: 320px) {
+  .modal-content {
+    max-height: 100%;
+    max-height: 100dvh; 
+    overflow: auto;
   }
 }
 </style>

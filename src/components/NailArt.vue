@@ -1,6 +1,6 @@
 <template>
   <b-row class="mb-3 entry">
-    <b-col cols="5" lg="4">
+    <b-col cols="9" sm="5" lg="4" offset-xl="1">
       <b-img-lazy 
         :src="getImage(entry.id)" 
         :alt="entry.alt"
@@ -8,8 +8,8 @@
         blank-color="black"
       />
     </b-col>
-    <b-col cols="7" lg="8">
-      <div>
+    <b-col cols="12" sm="7" xl="6">
+      <div class="details pt-2 pt-sm-0">
         <p><strong>{{ entry.date }}</strong></p>
         <p>{{ entry.description }}</p>
         <p class="text-underline mb-1">Polishes Used</p>
@@ -130,6 +130,12 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+@media (orientation: landscape) {
+  .details {
+    padding-right: 3rem;
+  }
+}
+
 .text-underline {
   text-decoration: underline;
 }

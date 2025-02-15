@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid h-100">
     <div class="row h-100">
-      <div class="col-4 toppersColumn mh-100">
+      <div class="col-12 col-sm-4 toppersColumn mh-100">
         <div>
           <label class="font-weight-bold">Base polish:</label>
           <b-form-select 
@@ -21,7 +21,7 @@
           />
         </div>
       </div>
-      <div class="col-8 display mh-100">
+      <div class="col-12 col-sm-8 display mh-100">
         <div v-if="combination.basePolishId == null">
           Start by selecting an applicable base polish from the <strong>Browse Collection</strong> view or from the drop-down menu to the left.
         </div>
@@ -161,6 +161,12 @@ export default {
   overflow-y: auto;
 }
 
+@media (max-width: 576px) {
+  .row:has(.toppersColumn) {
+    align-content: start;
+  }
+}
+
 .toppersColumn >>> .custom-control {
   padding-bottom: 0.75rem;
 }
@@ -172,17 +178,27 @@ export default {
   overflow-y: auto;
 }
 
+@media (max-width: 576px) {
+  .display {
+    padding-top: 2rem;
+  }
+  
+  .display .container-fluid {
+    padding-top: 1rem;
+  }
+}
+
 .combo {
   width: 85%
 }
 
-@media (orientation: landscape) and (max-height: 600px) {
+@media (orientation: landscape) and (height < 576px) {
   .combo {
-    width: 130vmin;
+    width: 85vmin;
   }
 }
 
-@media (orientation: landscape) and (min-height: 600px) {
+@media (orientation: landscape) and (min-height: 576px) {
   .combo {
     width: 65vmin;
   }

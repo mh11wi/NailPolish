@@ -1,9 +1,9 @@
 <template>
-  <b-card no-body class="mb-1">
+  <b-card no-body>
     <b-button block variant="white" v-b-toggle="filter">
       <div class="row font-weight-bold">
-        <div class="col-6 text-left">{{ label }}</div>
-        <div class="col-6 text-right"><span class="when-open">-</span><span class="when-closed">+</span></div>
+        <div class="col-8 text-left">{{ label }}</div>
+        <div class="col-4 text-right"><span class="when-open">-</span><span class="when-closed">+</span></div>
       </div>
     </b-button>
     <b-collapse :id="filter" visible>
