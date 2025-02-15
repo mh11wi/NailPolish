@@ -1,6 +1,6 @@
 <template>
   <div class="row py-3 justify-content-center">
-    <div class="col-4 col-xl-3 guessMade">{{ displayGuess }}</div>
+    <div class="col-5 col-sm-4 col-xl-3 guessMade">{{ displayGuess }}</div>
     <button class="square" :id="'brandCorrect-' + index" :disabled="disabled" :aria-label="getBrandLabel()">
       <font-awesome-icon v-if="isBrandCorrect" icon="store" size="xl"/>
     </button>
@@ -201,24 +201,46 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  .guessMade {
-    border: 1px solid black;
-    margin: 0 0.5rem;
-    padding: 0.33rem 0.5rem;
+.guessMade {
+  border: 1px solid black;
+  margin: 0 0.5rem;
+  padding: 0.33rem 0.5rem;
+}
+
+.square {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 0 0.5rem;
+  padding: 0.33rem 0;
+  text-align: center;
+}
+
+.hidden {
+  display: none !important;
+}
+
+@media (width < 576px) {
+  .guessMade, .square {
+    font-size: 14px;
+    height: 2rem;
   }
 
   .square {
-    background-color: white;
-    color: black;
-    border: 1px solid black;
-    width: 2.5rem;
-    height: 2.5rem;
-    margin: 0 0.5rem;
-    padding: 0.33rem 0;
-    text-align: center;
+    width: 2rem;
   }
-  
-  .hidden {
-    display: none !important;
+}
+
+@media (max-width: 360px) {
+  .guessMade, .square {
+    font-size: 12px;
+    height: 1.8rem;
   }
+
+  .square {
+    width: 1.8rem;
+  }
+}
 </style>

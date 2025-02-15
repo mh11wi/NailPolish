@@ -3,7 +3,7 @@
     <div class="row h-100" id="polishGuesser">
       <div class="col-12 mh-100">
         <div class="row mt-3 py-4 justify-content-center">
-          <b-input-group class="col-6 col-sm-5 col-xl-4">
+          <b-input-group class="col-7 col-sm-5 col-xl-4">
             <b-form-input 
               type="search"
               v-model="guess" 
@@ -84,8 +84,8 @@
       title-tag="h2"
       body-class="d-flex"
     >
-      <b-row class="flex-grow-1 align-items-center">
-        <b-col cols="5">
+      <b-row class="flex-grow-1 align-items-center justify-content-center">
+        <b-col cols="6" sm="5">
           <b-img-lazy
             :src="getCorrectPolishImage()" 
             :alt="correctPolish.name" 
@@ -93,7 +93,7 @@
             blank-color="black"
           />
         </b-col>
-        <b-col cols="7" class="h-100 justify-content-between pr-0 d-flex flex-column">
+        <b-col cols="12" sm="7" class="polishData d-flex flex-column justify-content-between">
             <div class="row mt-1 w-100">The correct polish was...</div>
             <div class="row align-items-center flex-grow-1 w-100">
               <table class="w-100">
@@ -253,24 +253,42 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  #polishGuesser {
-    overflow-y: auto;
-  }
+#polishGuesser {
+  overflow-y: auto;
+}
 
-  .examples {
-    border-top: solid 1px #dee2e6;
+.examples {
+  border-top: solid 1px #dee2e6;
+}
+  
+td {
+  vertical-align: baseline;
+}
+  
+.line-height-small {
+  line-height: 1.2;
+}
+  
+.makeGuess {
+  border-top-right-radius: 0.25rem !important;
+  border-bottom-right-radius: 0.25rem !important;
+}
+  
+@media (width < 576px) {
+  .polishData {
+    margin-top: 1rem;
+	margin-right: -2rem;
   }
   
-  td {
-    vertical-align: baseline;
+  .polishData .row {
+    margin-top: 1rem;
   }
-  
-  .line-height-small {
-    line-height: 1.2;
+}
+
+@media (min-width: 576px) {
+  .polishData {
+    height: 100%;
+	padding-right: 0;
   }
-  
-  .makeGuess {
-    border-top-right-radius: 0.25rem !important;
-    border-bottom-right-radius: 0.25rem !important;
-  }
+}
 </style>

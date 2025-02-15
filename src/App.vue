@@ -202,7 +202,7 @@ html, body, .app {
   }
   
   .b-popover-info {
-    left: calc(142.857% - 450px - 3.5rem) !important;
+    left: calc(142.857% - 450px - 6rem) !important;
     transform: translate(0, 1rem) !important;
   }
   
@@ -230,7 +230,7 @@ html, body, .app {
   }
   
   .b-popover-info {
-    left: calc(128% - 450px - 3.5rem) !important;
+    left: calc(128% - 450px - 6rem) !important;
     transform: translate(0, 1rem) !important;
   }
   
@@ -332,7 +332,7 @@ input[type="search"]::-webkit-search-results-decoration {
 @media (width < 576px) {
   .b-popover-info {
     min-width: 395px;
-	left: calc(142.857% - 395px - 3.5rem) !important;
+	left: calc(142.857% - 395px - 6rem) !important;
   }
 
   .modal-md, .modal-lg {
