@@ -62,4 +62,10 @@ export default {
 .entry:not(:last-child) {
   padding-bottom: 3rem;
 }
+
+@media (max-width: 576px) {
+  .entry:not(:last-child) {
+    padding-bottom: 2rem;
+  }
+}
 </style>

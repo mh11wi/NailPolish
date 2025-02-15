@@ -1,11 +1,11 @@
 <template>
-  <div class="container-fluid mb-5 comparison">
+  <div class="container-fluid mb-4 mb-sm-5 comparison">
     <div class="row align-items-center">
-      <div class="col-6 pl-0">
-        <div class="ml-4">
+      <div class="col-7 px-0">
+        <div class="ml-3 ml-sm-4">
           <strong v-if="!editMode" class="comparisonName h-100">{{ comparison.name }}</strong>
           <b-form-input type="search" ref="editName" v-model="name" :maxLength="maxNameLength" v-else @blur="finishEdit" @keyup.enter="finishEdit"/>
-          <b-button variant="link" class="ml-3" v-if="!editMode" @click="editMode = true" aria-label="Edit comparison name">
+          <b-button variant="link" class="ml-1 ml-sm-3" v-if="!editMode" @click="editMode = true" aria-label="Edit comparison name">
             <font-awesome-icon icon="pencil-alt" size="lg"/>
           </b-button>
           <b-button variant="link" v-if="!editMode" @click="deleteComparison" aria-label="Delete comparison">
@@ -13,19 +13,21 @@
           </b-button>
         </div>
       </div>
-      <div class="col-6 pr-0 text-right">
-        <div v-if="comparison.polishes.length != 0" class="mr-4">
+      <div class="col-5 px-0 text-right">
+        <div v-if="comparison.polishes.length != 0" class="mr-3 mr-sm-4">
           <b-form-checkbox 
             v-if="containsTwoState" 
             switch 
             v-model="effectChecked" 
             size="lg" 
-            class="mr-4" 
+            class="mr-2 mr-sm-4"
             aria-label="State for 'Solar' and 'Glow in the Dark' polishes"
           >
-            <font-awesome-icon icon="sun" class="text-warning" size="lg"/>
-            /
-            <font-awesome-icon icon="moon" class="text-warning"/>
+            <div class="two-state hide-xs">
+              <font-awesome-icon icon="sun" class="text-warning"/>
+              /
+              <font-awesome-icon icon="moon" class="text-warning"/>
+			</div>
           </b-form-checkbox>
           <FinishToggle v-model="finish" @updateFinish="finish = $event"/>
         </div>
@@ -35,23 +37,23 @@
       <div class="container-fluid">
         <span v-if="comparison.polishes.length == 0" class="ml-2">Please add polishes from the <strong>Browse Collection</strong> view to compare.</span>
         <div v-else class="row align-items-center">
-          <div class="col-1">
+          <div class="col-1 px-2 px-md-3">
             <b-button 
               v-if="slideIndex > 0" 
               variant="link" 
-              class="px-0" 
+              class="arrow-button" 
               @click="prev" 
               aria-label="Previous polishes in comparison"
             >
               <font-awesome-icon icon="chevron-circle-left" size="2x"/>
             </b-button>
           </div>
-          <div class="col-10">
+          <div class="col-10 px-0 px-md-2">
             <b-carousel class="mt-3" ref="comparisonCarousel" :controls="false" :interval="0" @sliding-end="slidingEnd" no-wrap>
               <b-carousel-slide v-for="(slide, index1) in slides" :key="index1">
                 <template v-slot:img>
                   <b-row align-h="center" class="mx-0">
-                    <b-col :cols="12 / cardsPerSlide" v-for="(card, index2) in slide" :key="card.polish.id">
+                    <b-col :cols="12 / cardsPerSlide" class="px-1 px-sm-2 px-md-3" v-for="(card, index2) in slide" :key="card.polish.id">
                       <ComparisonPolish 
                         :card="card" 
                         :index="cardsPerSlide * index1 + index2" 
@@ -67,11 +69,11 @@
               </b-carousel-slide>
             </b-carousel>
           </div>
-          <div class="col-1 text-right">
+          <div class="col-1 px-2 px-md-3 text-right">
             <b-button 
               v-if="slideIndex < numSlides - 1" 
               variant="link" 
-              class="px-0" 
+              class="arrow-button" 
               @click="next" 
               aria-label="Next polishes in comparison"
             >
@@ -216,8 +218,27 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.comparison >>> input[type="text"] {
+.comparison >>> input[type="search"] {
   width: 50%;
+}
+
+.arrow-button {
+  padding: 0;
+}
+
+@media (width < 576px) {
+  .comparison >>> input[type="search"] {
+    width: 75%;
+  }
+  
+  .arrow-button {
+    font-size: 12px;
+  }
+}
+
+.comparison >>> .custom-control-input:checked ~ .custom-control-label::before {
+  border-color: var(--warning);
+  background-color: var(--warning);
 }
 
 .comparison >>> .carousel-caption {
@@ -235,5 +256,12 @@ export default {
 .comparisonName, .comparison >>> .custom-switch {
   display: inline-block;
   vertical-align: middle;
+}
+
+.two-state {
+  color: var(--warning);
+  font-size: 0.85rem;
+  padding: 0.3rem 0;
+  opacity: 0.65;
 }
 </style>

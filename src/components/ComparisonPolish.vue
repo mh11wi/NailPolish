@@ -137,4 +137,16 @@ export default {
   border-bottom: 1px solid white;
   margin: -1px;
 }
+
+@media (max-width: 576px) {
+  .polish {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 360px) {
+  .polish {
+    font-size: 13px;
+  }
+}
 </style>

@@ -21,30 +21,12 @@ export default {
   font-size: 2vmax;
 }
 
-/* Mobile - Portrait mode */
-@media (orientation: portrait) and (max-width: 600px) {
-  .spinner-border {
-    width: 8vmax;
-    height: 8vmax;
-    font-size: 4vmax;
-  }
-}
-
-/* Tablet - Portrait mode */
-@media (orientation: portrait) and (min-width: 600px) {
+/* Mobile & Tablet - Portrait mode */
+@media (orientation: portrait), (height < 576px) {
   .spinner-border {
     width: 6vmax;
     height: 6vmax;
     font-size: 3vmax;
-  }
-}
-
-/* Mobile - Landscape mode */
-@media (orientation: landscape) and (max-height: 600px) {
-  .spinner-border {
-    width: 8vmax;
-    height: 8vmax;
-    font-size: 4vmax;
   }
 }
 </style>

@@ -1,15 +1,21 @@
 <template>
   <div class="container-fluid h-100">
-    <div class="row h-100">
-      <div class="col-4 filtersColumn mh-100">
-        <div class="row align-items-center justify-content-between stats">
+    <div class="row position-relative h-100">
+      <div class="col-6 col-sm-4 filtersColumn mh-100">
+        <div class="row align-items-center justify-content-between stats mb-4 hide-xs">
           <div>
             <strong class="mr-1">Polishes:</strong> 
             <span>{{ displayedPolishes.length }} / {{ polishes.length }}</span>
           </div>
           <FinishToggle v-model="finish" @updateFinish="finish = $event"/>
         </div>
-        <div class="row search mt-4">
+        <div class="row ml-0 mb-4 hide-sm">
+          <b-button variant="primary" @click="hideMobileFilters" aria-label="Hide filters">
+            <span class="mr-2">Close</span> 
+            <font-awesome-icon icon="times"/>
+          </b-button>
+        </div>
+        <div class="row search">
           <div class="col">
             <b-input-group>
               <font-awesome-icon icon="search" class="searchIcon"/>
@@ -29,19 +35,31 @@
             </b-input-group>
           </div>
         </div>
-        <div v-if="search.length == 0" class="row filters mt-4 mb-3">
+        <div v-if="search.length == 0" class="row filters mt-4">
           <div class="col">
-            <FilterList label="Brand" filter="brand" :collection="polishes" :initial="initialBrand" @updatePolishList="filterPolishList"/>
-            <FilterList label="Type" filter="type" :collection="polishes" :initial="initialType" @updatePolishList="filterPolishList"/>
+            <FilterList class="mb-2" label="Brand" filter="brand" :collection="polishes" :initial="initialBrand" @updatePolishList="filterPolishList"/>
+            <FilterList class="mb-2" label="Type" filter="type" :collection="polishes" :initial="initialType" @updatePolishList="filterPolishList"/>
             <FilterList label="Colour" filter="colorFamily" :collection="polishes" :initial="initialColor" @updatePolishList="filterPolishList"/>
           </div>
         </div>
       </div>
-      <div class="col-8 polishList mh-100">
+      <div class="col-12 col-sm-8 polishColumn mh-100">
+        <div class="stats-xs mb-3 hide-sm">
+          <div class="d-flex justify-content-between align-items-center">
+            <b-button variant="primary" @click="showMobileFilters" aria-label="Show filters">
+              <font-awesome-icon icon="bars" size="lg"/>
+            </b-button>
+            <div>
+              <strong class="mr-1">Polishes:</strong> 
+              <span>{{ displayedPolishes.length }} / {{ polishes.length }}</span>
+            </div>
+            <FinishToggle v-model="finish" @updateFinish="finish = $event"/>
+          </div>
+        </div>
         <div :style="{display: (displayedPolishes.length === 0 ? '' : 'none')}">
           No polishes found! Try adjusting your filters or search criteria.
         </div>
-        <div :style="{display: (displayedPolishes.length > 0 ? '' : 'none')}">
+        <div class="polishList" :style="{display: (displayedPolishes.length > 0 ? '' : 'none')}">
           <b-row cols="3" cols-sm="4" cols-xl="5" class="px-2">
             <PolishTile 
               v-for="(polish, index) in polishes" 
@@ -184,6 +202,16 @@ export default {
     /** Increments the comparison id in the parent component. */
     incrementComparisonId() {
       this.$emit("incrementComparisonId");
+    },
+    
+    /** Displays the filter column on mobile (portrait mode). */
+    showMobileFilters() {
+      document.querySelector('.filtersColumn').style.display = 'block';
+    },
+    
+    /** Hides the filter column on mobile (portrait mode). */
+    hideMobileFilters() {
+      document.querySelector('.filtersColumn').style.display = 'none';
     }
   }
 }
@@ -193,20 +221,51 @@ export default {
 <style scoped>
 .filtersColumn {
   padding-top: 1rem;
+  padding-bottom: 1rem;
   border-right: solid 1px #dee2e6;
   overflow-y: auto;
 }
 
+@media (width < 576px) {
+  .filtersColumn {
+    height: 100%;
+    position: absolute;
+    background-color: #fff;
+    z-index: 20;
+    display: none;
+  }
+}
+
+@media (min-width: 576px) {
+  .filtersColumn {
+    display: block !important;
+  }
+}
+
 .stats {
-  padding: 0 15px;
+  padding: 0 1rem;
   gap: 7.5px;
 }
 
-.polishList {
+.polishColumn {
   padding-top: 1rem;
   border-left: solid 1px #dee2e6;
   margin-left: -1px;
+  overflow: hidden;
+}
+
+.stats-xs {
+  border-bottom: 1px solid #dee2e6;
+  margin: -1rem;
+  padding: 1rem;
+}
+
+.polishList {
+  overflow-x: hidden;
   overflow-y: auto;
+  max-height: calc(100% + 1rem);
+  margin: -1rem;
+  padding: 1rem;
 }
 
 .searchIcon {

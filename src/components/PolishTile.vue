@@ -22,16 +22,16 @@
       <div><strong>{{ polish.brand }}</strong></div>
       <div>{{ polish.name }}</div>
     </div>
-    <b-modal centered :id="polish.id" :hide-footer=true ref="modal" title-tag="h2" body-class="d-flex">
+    <b-modal centered :id="polish.id" :hide-footer=true ref="modal" title-tag="h2" title-class="d-flex flex-wrap align-items-center" body-class="d-flex">
       <template #modal-title>
-        <span class="modal-title">{{ polish.name }}</span>
-        <span v-if="showAlert" class="text-success ml-3">
+        <span class="mr-3">{{ polish.name }}</span>
+        <span v-if="showAlert" class="text-success">
           <font-awesome-icon icon="check"/>
           <span class="ml-2">Added to {{ addedComparison }}</span>
         </span>
       </template>
-      <b-row class="flex-grow-1 align-items-center">
-        <b-col cols="5">
+      <b-row class="flex-grow-1 align-items-center justify-content-center">
+        <b-col cols="6" sm="5">
           <img-comparison-slider v-if="polish.type == 'Solar'">
             <b-img slot="before" :src="getImage(polish.id, true, '-sun')" :alt="polish.name + ' in the sun'" fluid/>
             <b-img slot="after" :src="getImage(polish.id, true)" :alt="polish.name" fluid/>
@@ -50,7 +50,7 @@
             fluid
           />
         </b-col>
-        <b-col cols="7" class="h-100 justify-content-between pr-0 d-flex flex-column">
+        <b-col cols="12" sm="7" class="polishData d-flex flex-column justify-content-between">
           <div class="row align-items-center w-100">
             <div class="col px-0">
               <FinishToggle v-model="modalFinish" @updateFinish="modalFinish = $event" />
@@ -207,8 +207,29 @@ export default {
   margin-top: -0.25rem;
 }
 
-.modal-title {
-  vertical-align: middle;
+@media (width < 576px) {
+  .polishData {
+    margin-top: 1rem;
+	margin-right: -2rem;
+  }
+  
+  .polishData .row:first-of-type {
+    max-width: 420px;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+  }
+  
+  .polishData .row:last-of-type {
+    margin-top: 3.5rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .polishData {
+    height: 100%;
+	padding-right: 0;
+  }
 }
 
 td {
