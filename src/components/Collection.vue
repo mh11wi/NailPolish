@@ -263,9 +263,15 @@ export default {
 .polishList {
   overflow-x: hidden;
   overflow-y: auto;
-  max-height: calc(100% + 1rem);
+  max-height: calc(100% + 2rem);
   margin: -1rem;
   padding: 1rem;
+}
+
+@media (width < 576px) {
+  .polishList {
+    max-height: calc(100% - 2rem);
+  }
 }
 
 .searchIcon {

@@ -25,15 +25,13 @@
         <div v-if="combination.basePolishId == null">
           Start by selecting an applicable base polish from the <strong>Browse Collection</strong> view or from the drop-down menu to the left.
         </div>
-        <div v-else>
-          <div class="container-fluid combo">
-            <b-img-lazy 
-              :src="getImage()" 
-              :alt="getAlt()" 
-              fluid
-              blank-color="black"
-            />
-          </div>
+        <div v-else class="container-fluid combo">
+          <b-img-lazy 
+            :src="getImage()" 
+            :alt="getAlt()" 
+            fluid
+            blank-color="black"
+          />
         </div>
       </div>
     </div>
@@ -179,12 +177,12 @@ export default {
 }
 
 @media (max-width: 576px) {
-  .display {
-    padding-top: 2rem;
+  .display, .display .container-fluid {
+    padding-top: 1rem;
   }
   
-  .display .container-fluid {
-    padding-top: 1rem;
+  .toppersColumn {
+    padding-bottom: 1rem;
   }
 }
 

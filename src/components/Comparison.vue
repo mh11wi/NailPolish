@@ -1,9 +1,9 @@
 <template>
   <div class="container-fluid mb-4 mb-sm-5 comparison">
-    <div class="row align-items-center">
+    <div class="row">
       <div class="col-7 px-0">
-        <div class="ml-3 ml-sm-4">
-          <strong v-if="!editMode" class="comparisonName h-100">{{ comparison.name }}</strong>
+        <div class="d-flex align-items-center ml-3 ml-sm-4">
+          <strong v-if="!editMode" class="h-100">{{ comparison.name }}</strong>
           <b-form-input type="search" ref="editName" v-model="name" :maxLength="maxNameLength" v-else @blur="finishEdit" @keyup.enter="finishEdit"/>
           <b-button variant="link" class="ml-1 ml-sm-3" v-if="!editMode" @click="editMode = true" aria-label="Edit comparison name">
             <font-awesome-icon icon="pencil-alt" size="lg"/>
@@ -13,8 +13,8 @@
           </b-button>
         </div>
       </div>
-      <div class="col-5 px-0 text-right">
-        <div v-if="comparison.polishes.length != 0" class="mr-3 mr-sm-4">
+      <div class="col-5 px-0">
+        <div v-if="comparison.polishes.length != 0" class="d-flex justify-content-end align-items-center mr-3 mr-sm-4">
           <b-form-checkbox 
             v-if="containsTwoState" 
             switch 
@@ -23,10 +23,10 @@
             class="mr-2 mr-sm-4"
             aria-label="State for 'Solar' and 'Glow in the Dark' polishes"
           >
-            <div class="two-state hide-xs">
-              <font-awesome-icon icon="sun" class="text-warning"/>
+            <div class="hide-xs">
+              <font-awesome-icon icon="sun" size="sm" />
               /
-              <font-awesome-icon icon="moon" class="text-warning"/>
+              <font-awesome-icon icon="moon" size="sm" />
 			</div>
           </b-form-checkbox>
           <FinishToggle v-model="finish" @updateFinish="finish = $event"/>
@@ -222,18 +222,19 @@ export default {
   width: 50%;
 }
 
-.arrow-button {
-  padding: 0;
-}
-
 @media (width < 576px) {
   .comparison >>> input[type="search"] {
     width: 75%;
   }
   
-  .arrow-button {
-    font-size: 12px;
+  .comparison >>> .btn-link {
+    padding: 0.5rem;
   }
+}
+
+.comparison >>> .custom-control-label {
+  color: var(--warning);
+  opacity: 0.65;
 }
 
 .comparison >>> .custom-control-input:checked ~ .custom-control-label::before {
@@ -253,15 +254,13 @@ export default {
   margin-top: -0.25rem;
 }
 
-.comparisonName, .comparison >>> .custom-switch {
-  display: inline-block;
-  vertical-align: middle;
+.arrow-button {
+  padding: 0;
 }
 
-.two-state {
-  color: var(--warning);
-  font-size: 0.85rem;
-  padding: 0.3rem 0;
-  opacity: 0.65;
+@media (width < 576px) {
+  .arrow-button {
+    font-size: 12px;
+  }
 }
 </style>
