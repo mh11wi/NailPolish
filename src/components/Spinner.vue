@@ -16,17 +16,8 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .spinner-border {
-  width: 4vmax;
-  height: 4vmax;
-  font-size: 2vmax;
-}
-
-/* Mobile & Tablet - Portrait mode */
-@media (orientation: portrait), (height < 576px) {
-  .spinner-border {
-    width: 6vmax;
-    height: 6vmax;
-    font-size: 3vmax;
-  }
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.5rem;
 }
 </style>

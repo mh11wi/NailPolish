@@ -378,7 +378,7 @@ input[type="search"]::-webkit-search-results-decoration {
   }
 }
 
-@media (max-height: 320px) {
+@media (min-width: 576px) and (max-height: 320px), (width < 576px) and (max-height: 400px) {
   .modal-content {
     max-height: 100%;
     max-height: 100dvh; 
