@@ -4838,5 +4838,25 @@
     "color": "Deep navy blue with blue iridescent micro-flakes",
     "numCoats": "2",
     "collection": "Holo Taco x DAVIDsTEA (2025)"
+  },
+  {
+    "id": "485",
+    "name": "Thyme After Thyme",
+    "brand": "Holo Taco",
+    "type": "Creme",
+    "colorFamily": "Green",
+    "color": "Pale cool sage green",
+    "numCoats": "2",
+    "collection": "Cottagecore (2025)"
+  },
+  {
+    "id": "486",
+    "name": "Garden Party Taco",
+    "brand": "Holo Taco",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": "Cottagecore (2025)"
   }
 ]
