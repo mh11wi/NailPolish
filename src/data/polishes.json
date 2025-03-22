@@ -4858,5 +4858,25 @@
     "color": "",
     "numCoats": "1",
     "collection": "Cottagecore (2025)"
+  },
+  {
+    "id": "487",
+    "name": "Imperial Stormtrooper",
+    "brand": "Mooncat",
+    "type": "Thermal",
+    "colorFamily": "Grey",
+    "color": "Light grey to black with a silver magnetic highlight",
+    "numCoats": "2",
+    "collection": "Join the Dark Side (2024)"
+  },
+  {
+    "id": "488",
+    "name": "Lord Vader",
+    "brand": "Mooncat",
+    "type": "Magnetic",
+    "colorFamily": "Red",
+    "color": "Red shimmer with a silver highlight",
+    "numCoats": "2",
+    "collection": "Join the Dark Side (2024)"
   }
 ]
