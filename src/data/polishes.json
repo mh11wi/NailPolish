@@ -4621,26 +4621,16 @@
   },
   {
     "id": "463",
-    "name": "The Diabolical Mojo Jojo!!",
+    "name": "Don't Cry, Bubbles",
     "brand": "Mooncat",
     "type": "Iridescent Flakie",
-    "colorFamily": "Purple",
-    "color": "Purple jelly base with pink shimmer, black flakies, and holographic glitters",
+    "colorFamily": "Blue",
+    "color": "Blue jelly base with round green and holographic glitters",
     "numCoats": "3",
     "collection": "The Powerpuff Girls (2024)"
   },
   {
     "id": "464",
-    "name": "Hardcore Buttercup",
-    "brand": "Mooncat",
-    "type": "Iridescent Flakie",
-    "colorFamily": "Green",
-    "color": "Green jelly base with holographic glitters",
-    "numCoats": "3",
-    "collection": "The Powerpuff Girls (2024)"
-  },
-  {
-    "id": "465",
     "name": "Blossom's Firebreath",
     "brand": "Mooncat",
     "type": "Iridescent Flakie",
@@ -4650,12 +4640,22 @@
     "collection": "The Powerpuff Girls (2024)"
   },
   {
-    "id": "466",
-    "name": "Don't Cry, Bubbles",
+    "id": "465",
+    "name": "Hardcore Buttercup",
     "brand": "Mooncat",
     "type": "Iridescent Flakie",
-    "colorFamily": "Blue",
-    "color": "Blue jelly base with round green and holographic glitters",
+    "colorFamily": "Green",
+    "color": "Green jelly base with holographic glitters",
+    "numCoats": "3",
+    "collection": "The Powerpuff Girls (2024)"
+  },
+  {
+    "id": "466",
+    "name": "The Diabolical Mojo Jojo!!",
+    "brand": "Mooncat",
+    "type": "Iridescent Flakie",
+    "colorFamily": "Purple",
+    "color": "Purple jelly base with pink shimmer, black flakies, and holographic glitters",
     "numCoats": "3",
     "collection": "The Powerpuff Girls (2024)"
   },
@@ -4878,5 +4878,65 @@
     "color": "Red shimmer with a silver highlight",
     "numCoats": "2",
     "collection": "Join the Dark Side (2024)"
+  },
+  {
+    "id": "489",
+    "name": "Big Reef Energy",
+    "brand": "Holo Taco",
+    "type": "Iridescent Flakie",
+    "colorFamily": "Red",
+    "color": "Coral red jelly base with gold reflective glitters",
+    "numCoats": "2",
+    "collection": "Off The Deep End (2025)"
+  },
+  {
+    "id": "490",
+    "name": "Made Me Ink",
+    "brand": "Holo Taco",
+    "type": "Iridescent Flakie",
+    "colorFamily": "Purple",
+    "color": "Indigo jelly base with silver reflective glitters",
+    "numCoats": "2",
+    "collection": "Off The Deep End (2025)"
+  },
+  {
+    "id": "491",
+    "name": "What A Catch",
+    "brand": "Holo Taco",
+    "type": "Iridescent Flakie",
+    "colorFamily": "Pink",
+    "color": "Bright pink jelly base with green reflective glitters",
+    "numCoats": "3",
+    "collection": "Off The Deep End (2025)"
+  },
+  {
+    "id": "492",
+    "name": "Wade A Minute",
+    "brand": "Holo Taco",
+    "type": "Iridescent Flakie",
+    "colorFamily": "Green",
+    "color": "Teal aqua jelly base",
+    "numCoats": "3",
+    "collection": "Off The Deep End (2025)"
+  },
+  {
+    "id": "493",
+    "name": "Don't Be Jelly",
+    "brand": "Holo Taco",
+    "type": "Iridescent Flakie",
+    "colorFamily": "Purple",
+    "color": "Magenta purple jelly base with pink reflective glitters",
+    "numCoats": "2",
+    "collection": "Off The Deep End (2025)"
+  },
+  {
+    "id": "494",
+    "name": "Crashing Out",
+    "brand": "Holo Taco",
+    "type": "Iridescent Flakie",
+    "colorFamily": "Blue",
+    "color": "Royal blue jelly base with scattered holographic glitters",
+    "numCoats": "2",
+    "collection": "Off The Deep End (2025)"
   }
 ]
