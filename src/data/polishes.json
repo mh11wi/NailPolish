@@ -4938,5 +4938,25 @@
     "color": "Royal blue jelly base with scattered holographic glitters",
     "numCoats": "2",
     "collection": "Off The Deep End (2025)"
+  },
+  {
+    "id": "495",
+    "name": "Castle of Cobwebs",
+    "brand": "Mooncat",
+    "type": "Glow in the Dark",
+    "colorFamily": "Grey",
+    "color": "Slate grey with blue shimmer; bright green in the dark",
+    "numCoats": "3",
+    "collection": "Baroquen (2025)"
+  },
+  {
+    "id": "496",
+    "name": "La Petite Mort",
+    "brand": "Mooncat",
+    "type": "Magnetic",
+    "colorFamily": "Blue",
+    "color": "Light blue shimmer with holo glitters, iridescent flakes, and a silver highlight",
+    "numCoats": "2",
+    "collection": "Baroquen (2025)"
   }
 ]
