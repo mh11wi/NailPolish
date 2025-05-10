@@ -4958,5 +4958,35 @@
     "color": "Light blue shimmer with holo glitters, iridescent flakes, and a silver highlight",
     "numCoats": "2",
     "collection": "Baroquen (2025)"
+  },
+  {
+    "id": "497",
+    "name": "Sparkling Spurs",
+    "brand": "Holo Taco",
+    "type": "Crushed Holographic",
+    "colorFamily": "Purple",
+    "color": "Lilac purple base",
+    "numCoats": "2",
+    "collection": "Disco Cowboy (2025)"
+  },
+  {
+    "id": "498",
+    "name": "Cowboy Tears",
+    "brand": "Holo Taco",
+    "type": "Crushed Holographic",
+    "colorFamily": "Blue",
+    "color": "Turquoise with purple iridescent micro-shimmer",
+    "numCoats": "2",
+    "collection": "Disco Cowboy (2025)"
+  },
+  {
+    "id": "499",
+    "name": "Bless Your Heart",
+    "brand": "Holo Taco",
+    "type": "Holographic Glitter",
+    "colorFamily": "Pink",
+    "color": "Berry pink jelly base",
+    "numCoats": "3",
+    "collection": "Disco Cowboy (2025)"
   }
 ]
