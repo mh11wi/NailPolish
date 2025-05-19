@@ -4988,5 +4988,25 @@
     "color": "Berry pink jelly base",
     "numCoats": "3",
     "collection": "Disco Cowboy (2025)"
+  },
+  {
+    "id": "500",
+    "name": "Worth a Shot",
+    "brand": "KB Shimmer",
+    "type": "Shimmer",
+    "colorFamily": "Purple",
+    "color": "Purple-to-blue shifting base with gold-to-green multichrome shimmer",
+    "numCoats": "3",
+    "collection": "In Good Spirits (2021)"
+  },
+  {
+    "id": "501",
+    "name": "Go Big or Gourd Home",
+    "brand": "KB Shimmer",
+    "type": "Shimmer",
+    "colorFamily": "Green",
+    "color": "Green-to-blue shifting base with pink-to-gold multichrome shimmer",
+    "numCoats": "3",
+    "collection": "It's Fall Good (2023)"
   }
 ]
