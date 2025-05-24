@@ -1915,7 +1915,7 @@
     "brand": "Color Club",
     "type": "Holographic Glitter",
     "colorFamily": "Pink",
-    "color": "Multi-sized hex glitters in a sheer pink base",
+    "color": "Multi-sized hex glitters in a sheer dusty rose base",
     "numCoats": "2",
     "collection": "Hello Holo (2019)"
   },
@@ -5008,5 +5008,25 @@
     "color": "Green-to-blue shifting base with pink-to-gold multichrome shimmer",
     "numCoats": "3",
     "collection": "It's Fall Good (2023)"
+  },
+  {
+    "id": "502",
+    "name": "Celebrate Good Shine",
+    "brand": "KB Shimmer",
+    "type": "Holographic Glitter",
+    "colorFamily": "Gold",
+    "color": "Pale champagne jelly base",
+    "numCoats": "3",
+    "collection": "Love at Frost Sight (2022)"
+  },
+  {
+    "id": "503",
+    "name": "Spring Theory",
+    "brand": "KB Shimmer",
+    "type": "Glitter & Sparkle",
+    "colorFamily": "White",
+    "color": "White crelly base with blue, purple, yellow and green mixed glitters",
+    "numCoats": "3",
+    "collection": "Plant One On Me (2023)"
   }
 ]
