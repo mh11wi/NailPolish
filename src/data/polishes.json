@@ -2585,7 +2585,7 @@
     "brand": "Holo Taco",
     "type": "Holographic Glitter",
     "colorFamily": "Grey",
-    "color": "Dark grey jelly base with additional holographic diamond-shaped glitters",
+    "color": "Dark grey crelly base with additional holographic square-shaped glitters",
     "numCoats": "2",
     "collection": "3rd Anniversary: Gala (2022)"
   },
@@ -3355,7 +3355,7 @@
     "brand": "Holo Taco",
     "type": "Crushed Holographic",
     "colorFamily": "Neutral",
-    "color": "Sand-coloured jelly base with gold reflective glitters",
+    "color": "Sand-coloured crelly base with gold reflective glitters",
     "numCoats": "3",
     "collection": "Vacation (2023)"
   },
@@ -3955,7 +3955,7 @@
     "brand": "Holo Taco",
     "type": "Holographic Glitter",
     "colorFamily": "Blue",
-    "color": "Grey-blue base with blue iridescent and diamond-shaped holo glitters",
+    "color": "Grey-blue crelly base with blue iridescent and square-shaped holo glitters",
     "numCoats": "2",
     "collection": "After Party (2023)"
   },
@@ -5028,5 +5028,25 @@
     "color": "White crelly base with blue, purple, yellow and green mixed glitters",
     "numCoats": "3",
     "collection": "Plant One On Me (2023)"
+  },
+  {
+    "id": "504",
+    "name": "Snow Much Fun",
+    "brand": "KB Shimmer",
+    "type": "Glitter & Sparkle",
+    "colorFamily": "Blue",
+    "color": "Light blue jelly with holographic, round white and snowflake glitters",
+    "numCoats": "3",
+    "collection": "Manicurator Blog Collab (2013)"
+  },
+  {
+    "id": "505",
+    "name": "Tulip to Apologize",
+    "brand": "KB Shimmer",
+    "type": "Glow in the Dark",
+    "colorFamily": "Pink",
+    "color": "Pink jelly base with golden shimmer; blue-purple in the dark",
+    "numCoats": "2",
+    "collection": "Growing Personality (2025)"
   }
 ]
