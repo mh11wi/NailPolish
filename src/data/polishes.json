@@ -637,7 +637,7 @@
     "colorFamily": "Pink",
     "color": "Baby pink jelly base",
     "numCoats": "2",
-    "collection": ""
+    "collection": "Simply's Cats (2020)"
   },
   {
     "id": "65",
@@ -647,7 +647,7 @@
     "colorFamily": "Orange",
     "color": "Rusted orange jelly base",
     "numCoats": "2",
-    "collection": ""
+    "collection": "Simply's Cats (2020)"
   },
   {
     "id": "66",
@@ -757,7 +757,7 @@
     "colorFamily": "Yellow",
     "color": "Banana yellow",
     "numCoats": "2",
-    "collection": ""
+    "collection": "For Art's Sake (2021)"
   },
   {
     "id": "77",
@@ -887,7 +887,7 @@
     "colorFamily": "Purple",
     "color": "Icy lilac with holographic flakes, silver foil, and purple shimmer",
     "numCoats": "3",
-    "collection": ""
+    "collection": "Simply's Birthday (2020)"
   },
   {
     "id": "90",
@@ -1337,7 +1337,7 @@
     "colorFamily": "Red",
     "color": "Hot coral-red",
     "numCoats": "2",
-    "collection": ""
+    "collection": "Life's a Beach (2021)"
   },
   {
     "id": "135",
@@ -1637,7 +1637,7 @@
     "colorFamily": "Blue",
     "color": "Teal jelly base with iridescent shimmer and blue holographic flakes",
     "numCoats": "2",
-    "collection": ""
+    "collection": "Simply's Birthday (2021)"
   },
   {
     "id": "165",
@@ -1647,7 +1647,7 @@
     "colorFamily": "Gold",
     "color": "Yellow-gold 'frosted metal' with scattered holographic glitters",
     "numCoats": "3",
-    "collection": ""
+    "collection": "Simply's Birthday (2021)"
   },
   {
     "id": "166",
@@ -2837,7 +2837,7 @@
     "colorFamily": "Blue",
     "color": "Medium-bright blue",
     "numCoats": "2",
-    "collection": ""
+    "collection": "Work/Life Balance (2022)"
   },
   {
     "id": "285",
@@ -2897,7 +2897,7 @@
     "colorFamily": "Red",
     "color": "Bright red 'frosted metal' with scattered holographic glitters",
     "numCoats": "2",
-    "collection": ""
+    "collection": "Simply's Birthday (2022)"
   },
   {
     "id": "291",
@@ -2907,7 +2907,7 @@
     "colorFamily": "Black",
     "color": "Black-to-red multichrome with holographic and red reflective glitters",
     "numCoats": "2",
-    "collection": ""
+    "collection": "Simply's Birthday (2022)"
   },
   {
     "id": "292",
@@ -3907,7 +3907,7 @@
     "colorFamily": "Green",
     "color": "Sage green with a gold highlight, shimmer and holographic glitters",
     "numCoats": "3",
-    "collection": ""
+    "collection": "Simply's Birthday (2023)"
   },
   {
     "id": "392",
@@ -3917,7 +3917,7 @@
     "colorFamily": "Orange",
     "color": "Burnt orange with a copper highlight, shimmer and holographic glitters",
     "numCoats": "3",
-    "collection": ""
+    "collection": "Simply's Birthday (2023)"
   },
   {
     "id": "393",
@@ -3927,7 +3927,7 @@
     "colorFamily": "Blue",
     "color": "Deep blue with a pink highlight, blue reflective and holographic glitters",
     "numCoats": "3",
-    "collection": ""
+    "collection": "Simply's Birthday (2023)"
   },
   {
     "id": "394",
@@ -3955,7 +3955,7 @@
     "brand": "Holo Taco",
     "type": "Holographic Glitter",
     "colorFamily": "Blue",
-    "color": "Grey-blue crelly base with blue iridescent and square-shaped holo glitters",
+    "color": "Grey-blue crelly base with iridescent and square-shaped holo glitters",
     "numCoats": "2",
     "collection": "After Party (2023)"
   },
@@ -4415,7 +4415,7 @@
     "brand": "Holo Taco",
     "type": "Holographic Glitter",
     "colorFamily": "Pink",
-    "color": "Medium pink jelly base",
+    "color": "Medium pink crelly base",
     "numCoats": "3",
     "collection": "Shimmering Secrets (2024)"
   },
@@ -5048,5 +5048,65 @@
     "color": "Pink jelly base with golden shimmer; blue-purple in the dark",
     "numCoats": "2",
     "collection": "Growing Personality (2025)"
+  },
+  {
+    "id": "506",
+    "name": "Bonus Life",
+    "brand": "Holo Taco",
+    "type": "Holographic Glitter",
+    "colorFamily": "Green",
+    "color": "Mint green jelly base with additional holographic square-shaped glitters",
+    "numCoats": "3",
+    "collection": "Pixel Perfect (2025)"
+  },
+  {
+    "id": "507",
+    "name": "8-Bit Blues",
+    "brand": "Holo Taco",
+    "type": "Holographic Glitter",
+    "colorFamily": "Blue",
+    "color": "Aqua blue jelly base with additional holographic square-shaped glitters",
+    "numCoats": "3",
+    "collection": "Pixel Perfect (2025)"
+  },
+  {
+    "id": "508",
+    "name": "Lo-Fi Lavender",
+    "brand": "Holo Taco",
+    "type": "Holographic Glitter",
+    "colorFamily": "Purple",
+    "color": "Cool lavender jelly base with additional holographic square-shaped glitters",
+    "numCoats": "3",
+    "collection": "Pixel Perfect (2025)"
+  },
+  {
+    "id": "509",
+    "name": "Glitch & Glam",
+    "brand": "Holo Taco",
+    "type": "Holographic Glitter",
+    "colorFamily": "Purple",
+    "color": "Warm-purple jelly base with additional holographic square-shaped glitters",
+    "numCoats": "3",
+    "collection": "Pixel Perfect (2025)"
+  },
+  {
+    "id": "510",
+    "name": "CTRL Cutie",
+    "brand": "Holo Taco",
+    "type": "Holographic Glitter",
+    "colorFamily": "Pink",
+    "color": "Medium pink jelly base with additional holographic square-shaped glitters",
+    "numCoats": "3",
+    "collection": "Pixel Perfect (2025)"
+  },
+  {
+    "id": "511",
+    "name": "Byte My Peach",
+    "brand": "Holo Taco",
+    "type": "Holographic Glitter",
+    "colorFamily": "Orange",
+    "color": "Peachy-pink jelly base with additional holographic square-shaped glitters",
+    "numCoats": "3",
+    "collection": "Pixel Perfect (2025)"
   }
 ]
