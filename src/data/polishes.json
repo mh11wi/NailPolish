@@ -1621,13 +1621,13 @@
   },
   {
     "id": "163",
-    "name": "Two-Timing the Zones",
-    "brand": "OPI",
+    "name": "Indigo Away",
+    "brand": "Holo Taco",
     "type": "Creme",
-    "colorFamily": "Pink",
-    "color": "Vibrant Barbie pink",
-    "numCoats": "2",
-    "collection": "Fiji (2017)"
+    "colorFamily": "Blue",
+    "color": "Deep indigo",
+    "numCoats": "1",
+    "collection": "Unicorn Skin (2020)"
   },
   {
     "id": "164",
@@ -5108,5 +5108,35 @@
     "color": "Peachy-pink jelly base with additional holographic square-shaped glitters",
     "numCoats": "3",
     "collection": "Pixel Perfect (2025)"
+  },
+  {
+    "id": "512",
+    "name": "Sky Lounge",
+    "brand": "Holo Taco",
+    "type": "Metallic Flakie",
+    "colorFamily": "Blue",
+    "color": "Cobalt blue metallic micro-flakes",
+    "numCoats": "2",
+    "collection": "6th Anniversary: Bon Voyage (2025)"
+  },
+  {
+    "id": "513",
+    "name": "Unicorn No. 1",
+    "brand": "Holo Taco",
+    "type": "Shimmer",
+    "colorFamily": "Purple",
+    "color": "Royal purple jelly base with red-orange shimmer",
+    "numCoats": "3",
+    "collection": "6th Anniversary: Bon Voyage (2025)"
+  },
+  {
+    "id": "514",
+    "name": "Precious Cargo",
+    "brand": "Holo Taco",
+    "type": "Linear Holographic",
+    "colorFamily": "Brown",
+    "color": "Bronze linear holographic multichrome with a red/gold/green shift",
+    "numCoats": "2",
+    "collection": "6th Anniversary: Bon Voyage (2025)"
   }
 ]
