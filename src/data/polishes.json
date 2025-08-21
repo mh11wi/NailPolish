@@ -5138,5 +5138,55 @@
     "color": "Bronze linear holographic multichrome with a red/gold/green shift",
     "numCoats": "2",
     "collection": "6th Anniversary: Bon Voyage (2025)"
+  },
+  {
+    "id": "515",
+    "name": "Yohanna",
+    "brand": "Zoya",
+    "type": "Creme",
+    "colorFamily": "Pink",
+    "color": "Cool knockout pink",
+    "numCoats": "2",
+    "collection": "Beachy Brights (2024)"
+  },
+  {
+    "id": "516",
+    "name": "Stevie",
+    "brand": "Zoya",
+    "type": "Glitter & Sparkle",
+    "colorFamily": "Purple",
+    "color": "Violet sparkle; dries matte and textured",
+    "numCoats": "3",
+    "collection": "PixieDust (2013)"
+  },
+  {
+    "id": "517",
+    "name": "Stop Buggin'",
+    "brand": "Holo Taco",
+    "type": "Metallic Flakie",
+    "colorFamily": "Green",
+    "color": "Bright green metallic micro-flakes with scattered holographic glitters",
+    "numCoats": "2",
+    "collection": "Camping (2025)"
+  },
+  {
+    "id": "518",
+    "name": "Nature Calls",
+    "brand": "Holo Taco",
+    "type": "Shimmer",
+    "colorFamily": "Blue",
+    "color": "Dark muted navy jelly base with yellow iridescent shimmer and blue flakes",
+    "numCoats": "2",
+    "collection": "Camping (2025)"
+  },
+  {
+    "id": "519",
+    "name": "Boom, Toasted",
+    "brand": "Holo Taco",
+    "type": "Shimmer",
+    "colorFamily": "Gold",
+    "color": "Pale gold 'crystal jelly' with iridescent shimmer",
+    "numCoats": "2",
+    "collection": "Camping (2025)"
   }
 ]
