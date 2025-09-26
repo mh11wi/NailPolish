@@ -5198,5 +5198,35 @@
     "color": "",
     "numCoats": "1",
     "collection": "Camping (2025)"
+  },
+  {
+    "id": "521",
+    "name": "Hypnosis",
+    "brand": "ILNP",
+    "type": "Magnetic",
+    "colorFamily": "Orange",
+    "color": "Orange shimmer with a teal to purple shifting highlight",
+    "numCoats": "3",
+    "collection": "Illusions (2025)"
+  },
+  {
+    "id": "522",
+    "name": "Unraveled",
+    "brand": "ILNP",
+    "type": "Magnetic",
+    "colorFamily": "Gold",
+    "color": "Gold shimmer with a pink to purple shifting highlight",
+    "numCoats": "3",
+    "collection": "Illusions (2025)"
+  },
+  {
+    "id": "523",
+    "name": "Flip Side",
+    "brand": "ILNP",
+    "type": "Magnetic",
+    "colorFamily": "Pink",
+    "color": "Magenta shimmer with a blue to purple shifting highlight",
+    "numCoats": "3",
+    "collection": "Illusions (2025)"
   }
 ]
