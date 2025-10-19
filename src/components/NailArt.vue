@@ -123,7 +123,12 @@ export default {
      * @param event - object containing the target and popover elements
      */
     hidePopover(event) {
-      event.relatedTarget.classList?.add('hidden');
+	  const parent = event.relatedTarget.parentElement;
+	  if (parent.hasAttribute('data-v-app')) {
+		parent.remove();
+	  } else {
+        event.relatedTarget.classList?.add('hidden');
+	  }
     }
   } 
 }
