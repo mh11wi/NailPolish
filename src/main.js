@@ -48,17 +48,12 @@ import "./assets/scss/custom.scss";
 Vue.use(BootstrapVue)
 
 // Image Comparison Slider
-import {
-  applyPolyfills,
-  defineCustomElements,
-} from 'img-comparison-slider/loader';
+import 'img-comparison-slider';
 
 Vue.config.productionTip = false;
-Vue.config.ignoredElements = [/test-\w*/];
 
-applyPolyfills().then(() => {
-  defineCustomElements(window);
-});
+// Tell Vue that the web component is present.
+Vue.config.ignoredElements = [/img-comparison-slider/];
 
 // Mount the app
 new Vue({
