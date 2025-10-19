@@ -185,6 +185,7 @@ export default {
       const arrow = tooltip.querySelector('.arrow');
       arrow.style.left = 'calc(50% - 10px)';
       
+	  tooltip.querySelector('.tooltip-inner').innerHTML = event.target.getAttribute('aria-label');
       tooltip.classList.remove('hidden');
     },
     
@@ -193,7 +194,12 @@ export default {
      * @param event - object containing the target and tooltip elements
      */
     hideTooltip(event) {
-      event.relatedTarget.classList?.add('hidden');
+      const parent = event.relatedTarget.parentElement;
+	  if (parent.hasAttribute('data-v-app')) {
+		parent.remove();
+	  } else {
+        event.relatedTarget.classList?.add('hidden');
+	  }
     }
   }
 }
@@ -216,10 +222,6 @@ export default {
   margin: 0 0.5rem;
   padding: 0.33rem 0;
   text-align: center;
-}
-
-.hidden {
-  display: none !important;
 }
 
 @media (width < 576px) {

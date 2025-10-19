@@ -257,6 +257,10 @@ export default {
   overflow-y: auto;
 }
 
+#polishGuesser :deep(.hidden) {
+  display: none !important;
+}
+
 .examples {
   border-top: solid 1px #dee2e6;
 }
