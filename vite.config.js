@@ -7,6 +7,7 @@ export default defineConfig(({ command, mode }) => {
 	const env = loadEnv(mode, process.cwd(), ''); // Load all env variables regardless of VITE_ prefix
   
 	return {
+		base: "https://mh11wi.github.io/NailPolish/",
 		plugins: [vue({
 			template: {
 				compilerOptions: {
