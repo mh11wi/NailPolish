@@ -59,6 +59,10 @@ export default {
   overflow-y: auto;
 }
 
+#gallery :deep(.hidden) {
+  display: none !important;
+}
+
 .entry:not(:last-child) {
   padding-bottom: 3rem;
 }
