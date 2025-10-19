@@ -77,7 +77,7 @@ export default {
   display: none;
 }
 
-.show >>> .custom-control {
+.show :deep(.custom-control) {
   padding-bottom: 0.75rem;
 }
 </style>

@@ -59,8 +59,8 @@ export default {
       const self = this;
       
       options.push({text: 'Select a topper', value: null, disabled: true});
-      options.push({text: self.polishes[process.env.VUE_APP_GLOSSY - 1].name, value: process.env.VUE_APP_GLOSSY});
-      options.push({text: self.polishes[process.env.VUE_APP_MATTE - 1].name, value: process.env.VUE_APP_MATTE});
+      options.push({text: self.polishes[import.meta.env.VITE_GLOSSY - 1].name, value: import.meta.env.VITE_GLOSSY});
+      options.push({text: self.polishes[import.meta.env.VITE_MATTE - 1].name, value: import.meta.env.VITE_MATTE});
       
       const brands = this.pluck(this.polishes, 'brand');
       brands.forEach(function(brand) {
@@ -112,14 +112,14 @@ export default {
   watch: {
     /** Updates the displayed combination when a base polish is selected from the 'Browse Collection' tab. */
     collectionBasePolish: function() {
-      const topperId = this.collectionBasePolish.finish == 'glossy' ? process.env.VUE_APP_GLOSSY : process.env.VUE_APP_MATTE;
+      const topperId = this.collectionBasePolish.finish == 'glossy' ? import.meta.env.VITE_GLOSSY : import.meta.env.VITE_MATTE;
       this.combination = {basePolishId: this.collectionBasePolish.id, topperId: topperId};
     }
   },
   methods: {
     /** Updates the displayed combination when the selected base polish is changed. */
     updateBasePolish(value) {
-      this.combination = {basePolishId: value, topperId: process.env.VUE_APP_GLOSSY};
+      this.combination = {basePolishId: value, topperId: import.meta.env.VITE_GLOSSY};
     },
     
     /** Updates the displayed combination when the selected topper is changed. */
@@ -129,7 +129,7 @@ export default {
   
     /** Gets the image of the selected base polish and topper combination. */
     getImage() {
-      return require('@/assets/images/polishes/' + this.combination.basePolishId + '/' + this.combination.topperId + process.env.VUE_APP_EXTENSION);
+	  return new URL(`../assets/images/polishes/${this.combination.basePolishId}/${this.combination.topperId}${import.meta.env.VITE_EXTENSION}`, import.meta.url).href;
     },
     
     /** Gets the alt text of the selected base polish and topper combination. */
@@ -165,7 +165,7 @@ export default {
   }
 }
 
-.toppersColumn >>> .custom-control {
+.toppersColumn :deep(.custom-control) {
   padding-bottom: 0.75rem;
 }
 

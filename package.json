@@ -4,38 +4,28 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "serve": "vite --host --port 8080",
+    "build": "vite build",
+	"preview": "vite preview",
+    "lint": "eslint --ext .js,.jsx ."
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.0",
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
-    "@fortawesome/vue-fontawesome": "^2.0.10",
-    "autoprefixer": "10.4.5",
+    "@fortawesome/vue-fontawesome": "^3.1.2",
+    "@vue/compat": "^3.1.0",
     "bootstrap-vue": "^2.17.3",
-    "core-js": "^3.21.1",
     "img-comparison-slider": "^3.0.4",
-    "save": "^2.9.0",
-    "vue": "^2.6.14"
+    "vue": "^3.1.0"
   },
   "devDependencies": {
-    "@babel/polyfill": "^7.11.5",
-    "@vue/cli-plugin-babel": "^5.0.6",
-    "@vue/cli-plugin-eslint": "^5.0.6",
-    "@vue/cli-service": "^5.0.6",
-    "babel-eslint": "^10.1.0",
-    "bootstrap": "^4.6.1",
-    "eslint": "^7.32.0",
-    "eslint-plugin-vue": "^9.17.0",
-    "execa": "^6.1.0",
-    "mutationobserver-shim": "^0.3.7",
+    "@vitejs/plugin-vue": "^5.2.0",
+    "bootstrap": "^4.6.2",
+    "eslint": "^8.57.1",
+    "eslint-plugin-vue": "^8.7.1",
     "popper.js": "^1.16.1",
-    "portal-vue": "^2.1.7",
-    "sass": "~1.32.12",
-    "sass-loader": "^10.2.1",
-    "vue-cli-plugin-bootstrap-vue": "~0.7.0",
-    "vue-template-compiler": "^2.6.14"
+    "sass": "^1.93.2",
+    "vite": "^6.0.6"
   },
   "eslintConfig": {
     "root": true,
@@ -46,9 +36,6 @@
       "plugin:vue/essential",
       "eslint:recommended"
     ],
-    "parserOptions": {
-      "parser": "babel-eslint"
-    },
     "rules": {
       "vue/multi-word-component-names": "off",
       "vue/no-mutating-props": "off"
@@ -60,6 +47,7 @@
     "not dead"
   ],
   "overrides": {
-    "postcss": "^8.4.31"
+    "postcss": "^8.4.31",
+    "portal-vue": "^3.0.0"
   }
 }

@@ -2,8 +2,8 @@ $theme-colors: (
   "primary": $primary-color
 );
 
-@import 'node_modules/bootstrap/scss/bootstrap';
-@import 'node_modules/bootstrap-vue/src/index.scss';
+@import 'bootstrap/scss/bootstrap';
+@import 'bootstrap-vue/src/index.scss';
 
 .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
   border: none;

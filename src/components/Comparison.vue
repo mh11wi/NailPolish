@@ -218,35 +218,35 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.comparison >>> input[type="search"] {
+.comparison :deep(input[type="search"]) {
   width: 50%;
 }
 
 @media (width < 576px) {
-  .comparison >>> input[type="search"] {
+  .comparison :deep(input[type="search"]) {
     width: 75%;
   }
   
-  .comparison >>> .btn-link {
+  .comparison :deep(.btn-link) {
     padding: 0.5rem;
   }
 }
 
-.comparison >>> .custom-control-label {
+.comparison :deep(.custom-control-label) {
   color: var(--warning);
   opacity: 0.65;
 }
 
-.comparison >>> .custom-control-input:checked ~ .custom-control-label::before {
+.comparison :deep(.custom-control-input:checked ~ .custom-control-label::before) {
   border-color: var(--warning);
   background-color: var(--warning);
 }
 
-.comparison >>> .carousel-caption {
+.comparison :deep(.carousel-caption) {
   color: black;
 }
 
-.comparison >>> .position-absolute {
+.comparison :deep(.position-absolute) {
   left: 0 !important;
   top: 0 !important;
   transform: none !important;
