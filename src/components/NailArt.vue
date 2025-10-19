@@ -26,6 +26,7 @@
               <b-popover 
                 :target="entry.id + '_' + polish.id"
                 triggers="click blur"
+				container="gallery"
                 custom-class="hidden"
                 @shown="positionPopover"
                 @hide="hidePopover"
@@ -114,7 +115,7 @@ export default {
       const arrowTop = rect.top - top - 3;
       arrow.style.top = `${arrowTop / scale}px`;
       
-      popover.classList.remove('hidden');
+	  popover.classList.remove('hidden');
     },
     
     /**
@@ -150,9 +151,5 @@ ul, p {
 
 .popover {
   min-width: 200px;
-}
-
-.hidden {
-  display: none !important;
 }
 </style>
