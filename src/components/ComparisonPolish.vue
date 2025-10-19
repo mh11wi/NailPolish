@@ -96,7 +96,7 @@ export default {
      * @param polishId - the id of the polish
      */
     getImage(polishId) {
-      const finishId = this.finish == 'glossy' ? process.env.VUE_APP_GLOSSY : process.env.VUE_APP_MATTE;
+      const finishId = this.finish == 'glossy' ? import.meta.env.VITE_GLOSSY : import.meta.env.VITE_MATTE;
       
       let suffix = '';
       if (this.card.polish.type == 'Solar' && this.isEffect) {
@@ -105,7 +105,7 @@ export default {
         suffix = '-dark';
       }
       
-      return require('@/assets/images/polishes/' + polishId + '/' + finishId + suffix + process.env.VUE_APP_EXTENSION);
+	  return new URL(`../assets/images/polishes/${polishId}/${finishId}${suffix}${import.meta.env.VITE_EXTENSION}`, import.meta.url).href;
     },
 
     /**
@@ -131,7 +131,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.polish >>> .card-footer {
+.polish :deep(.card-footer) {
   border-left: 1px solid white;
   border-right: 1px solid white;
   border-bottom: 1px solid white;

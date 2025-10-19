@@ -59,7 +59,7 @@ export default {
      * @param id - the id of the nail art entry
      */
     getImage(id) {
-      return require('@/assets/images/nailart/' + id + process.env.VUE_APP_EXTENSION);
+	  return new URL(`../assets/images/nailart/${id}${import.meta.env.VITE_EXTENSION}`, import.meta.url).href;
     },
     
     /**
@@ -68,10 +68,10 @@ export default {
      */
     getPolishImage(polish) {
       if (polish.base) {
-        return require('@/assets/images/polishes/' + polish.base + '/' + polish.id + process.env.VUE_APP_EXTENSION);
+		return new URL(`../assets/images/polishes/${polish.base}/${polish.id}${import.meta.env.VITE_EXTENSION}`, import.meta.url).href;
       }
 
-      return require('@/assets/images/polishes/' + polish.id + '/' + process.env.VUE_APP_GLOSSY + process.env.VUE_APP_EXTENSION);
+	  return new URL(`../assets/images/polishes/${polish.id}/${import.meta.env.VITE_GLOSSY}${import.meta.env.VITE_EXTENSION}`, import.meta.url).href;
     },
     
     /**

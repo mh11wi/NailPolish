@@ -200,7 +200,7 @@ export default {
   
     /** Picks a random polish from the list (excluding toppers). */
     chooseRandomPolish() {
-      const min = parseInt(process.env.VUE_APP_MATTE) + 1;
+      const min = parseInt(import.meta.env.VITE_MATTE) + 1;
       const max = this.polishes.length - 1;
       const id = Math.floor(Math.random() * (max - min) ) + min;
       this.correctPolish = this.polishes[id];
@@ -240,7 +240,7 @@ export default {
     
     /** Gets the image of the correct polish. */
     getCorrectPolishImage() {
-      return require('@/assets/images/polishes/' + this.correctPolish.id + '/' + process.env.VUE_APP_GLOSSY + process.env.VUE_APP_EXTENSION);
+	  return new URL(`../assets/images/polishes/${this.correctPolish.id}/${import.meta.env.VITE_GLOSSY}${import.meta.env.VITE_EXTENSION}`, import.meta.url).href;
     },
     
     /** Hides any open tooltips. */

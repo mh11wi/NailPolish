@@ -166,8 +166,8 @@ export default {
      */
     getImage(polishId, isModal, suffix = '') {
       const thisFinish = isModal? this.modalFinish : this.finish
-      const finishId = thisFinish == 'glossy' ? process.env.VUE_APP_GLOSSY : process.env.VUE_APP_MATTE;
-      return require('@/assets/images/polishes/' + polishId + '/' + finishId + suffix + process.env.VUE_APP_EXTENSION);
+      const finishId = thisFinish == 'glossy' ? import.meta.env.VITE_GLOSSY : import.meta.env.VITE_MATTE;
+	  return new URL(`../assets/images/polishes/${polishId}/${finishId}${suffix}${import.meta.env.VITE_EXTENSION}`, import.meta.url).href;
     },
     
     /** When the 'Top It Off' button is clicked, close the modal but otherwise handle in the parent component. */
@@ -199,7 +199,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.polish >>> .position-absolute {
+.polish :deep(.position-absolute) {
   left: 0 !important;
   top: 0 !important;
   transform: none !important;

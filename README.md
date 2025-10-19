@@ -8,10 +8,10 @@ See my own collection at [https://mh11wi.github.io/NailPolish/](https://mh11wi.g
 
 ### Configuration
 Several envars can be modified to customize the application. These are set in the `.env` file, and include
-- `VUE_APP_TITLE`: the title of the application shown in the browser's tab
-- `VUE_APP_COLLECTOR`: the name of the collector shown in the navbar
-- `VUE_APP_EXTENSION`: the file extension expected of all image files (default: .jpg)
-- `VUE_APP_PRIMARY_COLOR`: the primary color of the application; any of the Bootstrap-Vue color variants can be set, namely: `blue`, `indigo`, `purple`, `pink`, `red`, `orange`, `yellow`, `green`, `teal`, or `cyan`
+- `VITE_TITLE`: the title of the application shown in the browser's tab
+- `VITE_COLLECTOR`: the name of the collector shown in the navbar
+- `VITE_EXTENSION`: the file extension expected of all image files (default: .jpg)
+- `VITE_PRIMARY_COLOR`: the primary color of the application; any of the Bootstrap-Vue color variants can be set, namely: `blue`, `indigo`, `purple`, `pink`, `red`, `orange`, `yellow`, `green`, `teal`, or `cyan`
 
 ### Installing the application and dependencies
 Clone this repository and in the command line enter `npm install` in its directory.
@@ -49,7 +49,7 @@ Here is an example polish json:
 
 After logging a polish it is time to add images. All polish images are to be stored in the `src/assets/images/polishes` folder. Each polish (except for toppers) should have its own subfolder named after its id. For example, images associated with polish 3 should be located in the `src/assets/images/polishes/3` subfolder. 
 
-It is expected that each subfolder will minimally contain 2 images: one of the polish with a glossy top coat, and one of the polish with a matte top coat. These images should be named `1` and `2` respectively, and be of the file extension configured by `VUE_APP_EXTENSION`.
+It is expected that each subfolder will minimally contain 2 images: one of the polish with a glossy top coat, and one of the polish with a matte top coat. These images should be named `1` and `2` respectively, and be of the file extension configured by `VITE_EXTENSION`.
 
 #### Two-state polish effects
 If a polish is of type "Solar" its subfolder should contain 2 additional images: one of the polish in the sun with a glossy top coat, and one of the polish in the sun with a matte top coat. These images should be named `1-sun` and `2-sun` respectively (plus the noted file extension).
@@ -97,4 +97,4 @@ Notes:
 - If the polish is logged, the glossy image of the polish will display in the Nail Art Gallery view in a popover (unless the polish is a topper)
 - If the logged polish is a topper, the image of the topper over a specified `base` polish will be displayed in the popover instead
 
-Nail art images are stored directly in the `src/assets/images/nailart` folder. These images should be named after the id specified in `nailArt.json`. For example, if you have a design with id 1, the image should be named `1` and be of the file extension configured by `VUE_APP_EXTENSION`.
+Nail art images are stored directly in the `src/assets/images/nailart` folder. These images should be named after the id specified in `nailArt.json`. For example, if you have a design with id 1, the image should be named `1` and be of the file extension configured by `VITE_EXTENSION`.

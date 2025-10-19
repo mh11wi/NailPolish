@@ -90,7 +90,7 @@ export default {
       comparisonId: 0, // an identifier for a new comparison
       comparisons: [], // the list of polish comparisons
       cardsPerSlide: 2, // the number of polishes to show in a comparison slide
-      collector: process.env.VUE_APP_COLLECTOR // the name of the collector to display in the navbar
+      collector: import.meta.env.VITE_COLLECTOR // the name of the collector to display in the navbar
     }
   },
   /** 
@@ -101,9 +101,12 @@ export default {
     window.addEventListener('resize', this.debounce(this.handleResize));
     this.handleResize();
 
-    setTimeout(() => {
-      this.polishes = require('@/data/polishes.json');
-      this.toppersMap = require('@/data/toppersMap.json');
+    setTimeout(async () => {
+      const polishModule = await import('./data/polishes.json');
+	  this.polishes = polishModule.default;
+	  
+	  const topperModule = await import('./data/toppersMap.json');
+      this.toppersMap = topperModule.default;
     }, 1000);
   },
   /** Ensure that the tabs are the correct height. */
