@@ -1,21 +1,26 @@
 <template>
   <div class="polish">
     <div v-b-modal="polish.id" class="text-center mx-2 mb-3">
-      <b-overlay :show="polish.type == 'Solar' || polish.type == 'Glow in the Dark'" :opacity="0">
+      <b-overlay :show="polish.destashed || polish.type == 'Solar' || polish.type == 'Glow in the Dark'" :opacity="0">
         <b-img-lazy 
           :src="getImage(polish.id, false)" 
           :alt="polish.name" 
           blank-color="black"
           fluid
         />
-        <template #overlay v-if="polish.type == 'Solar'">
+		<template #overlay v-if="polish.destashed">
+          <div class="mt-3 mr-2 text-right text-danger">
+            <font-awesome-icon icon="ban" size="lg"/>
+          </div>
+        </template>
+        <template #overlay v-else-if="polish.type == 'Solar'">
           <div class="mt-3 mr-2 text-right text-warning">
             <font-awesome-icon icon="sun" size="lg"/>
           </div>
         </template>
         <template #overlay v-else-if="polish.type == 'Glow in the Dark'">
           <div class="mt-3 mr-2 text-right text-warning">
-            <font-awesome-icon icon="moon"/>
+            <font-awesome-icon icon="moon" size="lg"/>
           </div>
         </template>
       </b-overlay>

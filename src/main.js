@@ -24,6 +24,7 @@ import {
   faTimes, 
   faSun, 
   faMoon, 
+  faBan,
   faQuestionCircle
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
@@ -43,6 +44,7 @@ library.add(
   faTimes, 
   faSun, 
   faMoon, 
+  faBan, 
   faQuestionCircle
 )
 Vue.component('font-awesome-icon', FontAwesomeIcon)
