@@ -207,7 +207,8 @@
     "colorFamily": "Gold",
     "color": "Gold shimmer with holographic hex glitters",
     "numCoats": "3",
-    "collection": ""
+    "collection": "",
+	"destashed": true
   },
   {
     "id": "22",
@@ -437,7 +438,8 @@
     "colorFamily": "Red",
     "color": "Crimson to vampy red",
     "numCoats": "3",
-    "collection": "Maison (2017)"
+    "collection": "Maison (2017)",
+	"destashed": true
   },
   {
     "id": "45",
@@ -447,7 +449,8 @@
     "colorFamily": "Green",
     "color": "Lime to emerald green",
     "numCoats": "3",
-    "collection": "Do Good (2020)"
+    "collection": "Do Good (2020)",
+	"destashed": true
   },
   {
     "id": "46",
@@ -807,7 +810,8 @@
     "colorFamily": "White",
     "color": "Opaque white",
     "numCoats": "2",
-    "collection": ""
+    "collection": "",
+	"destashed": true
   },
   {
     "id": "82",
@@ -1007,7 +1011,8 @@
     "colorFamily": "Pink",
     "color": "Watermelon pink",
     "numCoats": "3",
-    "collection": "Xtreme Wear"
+    "collection": "Xtreme Wear",
+	"destashed": true
   },
   {
     "id": "102",
@@ -1017,7 +1022,8 @@
     "colorFamily": "Pink",
     "color": "Rosy pink",
     "numCoats": "2",
-    "collection": ""
+    "collection": "",
+	"destashed": true
   },
   {
     "id": "103",
@@ -1207,7 +1213,8 @@
     "colorFamily": "White",
     "color": "Snowflake white",
     "numCoats": "3",
-    "collection": ""
+    "collection": "",
+	"destashed": true
   },
   {
     "id": "122",
@@ -1437,7 +1444,8 @@
     "colorFamily": "Black",
     "color": "Opaque black",
     "numCoats": "1",
-    "collection": ""
+    "collection": "",
+	"destashed": true
   },
   {
     "id": "145",
@@ -1997,7 +2005,8 @@
     "colorFamily": "Pink",
     "color": "Sparkly peachy pink",
     "numCoats": "4",
-    "collection": "Colorstay Gel Envy"
+    "collection": "Colorstay Gel Envy",
+	"destashed": true
   },
   {
     "id": "201",
@@ -3727,7 +3736,8 @@
     "colorFamily": "Black",
     "color": "Opaque black; dries matte",
     "numCoats": "1",
-    "collection": "Kelli's Haunted House (2023)"
+    "collection": "Kelli's Haunted House (2023)",
+	"destashed": true
   },
   {
     "id": "374",

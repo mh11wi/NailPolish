@@ -28,10 +28,11 @@ The place store information about a nail polish is `src/data/polishes.json`. Not
 - **name**: the name of the polish
 - **brand**: the brand of the polish
 - **type**: the type or special effect of the polish
-- **colorFamily**: the rough color of the polish for grouping
+- **colorFamily**: the general color of the polish, for grouping
 - **color**: a broader description of the polish
 - **numCoats**: the number of coats applied in the image of the polish
-- **collection**: optional, if the polish is part of a collection
+- **collection**: the collection that the polish is part of (optional)
+- **destashed**: a boolean for if the polish has been destashed (optional)
 
 Here is an example polish json:
 ```
