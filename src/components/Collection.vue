@@ -9,11 +9,26 @@
           </div>
           <FinishToggle v-model="finish" @updateFinish="finish = $event"/>
         </div>
-        <div class="row ml-0 mb-4 hide-sm">
-          <b-button variant="primary" @click="hideMobileFilters" aria-label="Hide filters">
-            <span class="mr-2">Close</span> 
-            <font-awesome-icon icon="times"/>
-          </b-button>
+        <div class="hide-sm">
+          <div class="row align-items-center mb-4">
+            <div class="col-6 text-left">
+              <b-button variant="primary" @click="hideMobileFilters" aria-label="Hide filters">
+                <span class="mr-2">Close</span> 
+                <font-awesome-icon icon="times"/>
+              </b-button>
+            </div>
+            <div class="col-6 text-right pr-4">
+              <b-button 
+			    v-if="search.length == 0"
+                variant="link" 
+                size="sm" 
+                class="ml-1 px-1 py-0 text-secondary-underline"
+                @click="clearFilters"
+              >
+                Clear all
+              </b-button>
+            </div>
+          </div>
         </div>
         <div class="row search">
           <div class="col">
@@ -37,9 +52,9 @@
         </div>
         <div v-if="search.length == 0" class="row filters mt-4">
           <div class="col">
-            <FilterList class="mb-2" label="Brand" filter="brand" :collection="polishes" :initial="initialBrand" @updatePolishList="filterPolishList"/>
-            <FilterList class="mb-2" label="Type" filter="type" :collection="polishes" :initial="initialType" @updatePolishList="filterPolishList"/>
-            <FilterList label="Colour" filter="colorFamily" :collection="polishes" :initial="initialColor" @updatePolishList="filterPolishList"/>
+            <FilterList ref="brand" class="mb-2" label="Brand" filter="brand" :collection="polishes" :initial="initialBrand" @updatePolishList="filterPolishList"/>
+            <FilterList ref="type" class="mb-2" label="Type" filter="type" :collection="polishes" :initial="initialType" @updatePolishList="filterPolishList"/>
+            <FilterList ref="color" class="mb-0" label="Colour" filter="colorFamily" :collection="polishes" :initial="initialColor" @updatePolishList="filterPolishList"/>
           </div>
         </div>
       </div>
@@ -76,6 +91,7 @@
           </b-row>
         </div>
       </div>
+	  <div class="filtersOverlay" @click="hideMobileFilters"></div>
     </div>
   </div>
 </template>
@@ -207,12 +223,21 @@ export default {
     /** Displays the filter column on mobile (portrait mode). */
     showMobileFilters() {
       document.querySelector('.filtersColumn').style.display = 'block';
+	  document.querySelector('.filtersOverlay').style.display = 'block';
     },
     
     /** Hides the filter column on mobile (portrait mode). */
     hideMobileFilters() {
       document.querySelector('.filtersColumn').style.display = 'none';
-    }
+	  document.querySelector('.filtersOverlay').style.display = 'none';
+    },
+	
+	/** Clears all filters. */
+	clearFilters() {
+	  this.$refs.brand.clear();
+	  this.$refs.type.clear();
+	  this.$refs.color.clear();
+	}
   }
 }
 </script>
@@ -240,6 +265,19 @@ export default {
   .filtersColumn {
     display: block !important;
   }
+  
+  .filtersOverlay {
+    display: none !important;
+  }
+}
+
+.filtersOverlay {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 19;
 }
 
 .stats {
@@ -290,5 +328,15 @@ export default {
 .searchBox.grouped {
   border-top-right-radius: 0 !important;
   border-bottom-right-radius: 0 !important;
+}
+
+:deep(.text-secondary-underline) {
+  color: var(--secondary);
+  text-decoration: underline;
+}
+
+:deep(.text-secondary-underline:hover) {
+  color: var(--dark);
+  text-decoration: underline;
 }
 </style>
