@@ -32,7 +32,7 @@
         </div>
 		<div v-if="hasAnyDestashed" class="row mb-4">
           <div class="col">
-            <b-form-checkbox v-model="includeDestashed" value="true" switch>
+            <b-form-checkbox v-model="includeDestashed" value="true" class="destashedToggle" switch>
 			  Include destashed polishes
 			</b-form-checkbox>
           </div>
@@ -78,20 +78,20 @@
             <FinishToggle v-model="finish" @updateFinish="finish = $event"/>
           </div>
         </div>
-        <div :style="{display: (displayedPolishes.length === 0 ? '' : 'none')}">
+        <div v-show="displayedPolishes.length === 0">
           No polishes found! Try adjusting your filters or search criteria.
         </div>
-        <div class="polishList" :style="{display: (displayedPolishes.length > 0 ? '' : 'none')}">
+        <div v-show="displayedPolishes.length > 0" class="polishList">
           <b-row cols="3" cols-sm="4" cols-xl="5" class="px-2">
             <PolishTile 
               v-for="(polish, index) in polishes" 
+			  v-show="displayedPolishes.some(p => p.id === polish.id)"
               :key="index" 
               :polish="polish" 
               :finish="finish" 
               :hasToppers="toppersMap[polish.id] != null"
               :comparisonId="comparisonId"
               :comparisons="comparisons"
-              :style="{display: (displayedPolishes.some(p => p.id === polish.id) ? '' : 'none')}"
               @viewToppers="viewToppers"
               @incrementComparisonId="incrementComparisonId"
             />
@@ -328,7 +328,8 @@ export default {
 
 .stats {
   padding: 0 1rem;
-  gap: 7.5px;
+  column-gap: 7.5px;
+  row-gap: 1.5rem;
 }
 
 .polishColumn {
@@ -384,5 +385,10 @@ export default {
 :deep(.text-secondary-underline:hover) {
   color: var(--dark);
   text-decoration: underline;
+}
+
+.destashedToggle {
+  overflow: hidden;
+  height: 24px;
 }
 </style>
