@@ -5278,5 +5278,25 @@
     "color": "Burgundy 'shimmergraphic' with green shifting shimmer",
     "numCoats": "3",
     "collection": "Destiny (2025)"
+  },
+  {
+    "id": "528",
+    "name": "Seer",
+    "brand": "Cirque Colors",
+    "type": "Shimmer",
+    "colorFamily": "Purple",
+    "color": "Dusky purple 'shimmergraphic' with gold shifting shimmer",
+    "numCoats": "3",
+    "collection": "Destiny (2025)"
+  },
+  {
+    "id": "529",
+    "name": "Serendipity",
+    "brand": "Cirque Colors",
+    "type": "Shimmer",
+    "colorFamily": "White",
+    "color": "Sheer white 'shimmergraphic' with pink shifting shimmer",
+    "numCoats": "3",
+    "collection": "Destiny (2025)"
   }
 ]
