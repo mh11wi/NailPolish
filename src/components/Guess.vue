@@ -11,7 +11,7 @@
       custom-class="hidden"
       triggers="click blur"
       @shown="positionTooltip"
-      @hide="hideTooltip"
+      @hide="hideOrRemoveParent"
     >
       {{ getBrandLabel() }}
     </b-tooltip>
@@ -26,7 +26,7 @@
       custom-class="hidden"
       triggers="click blur"
       @shown="positionTooltip"
-      @hide="hideTooltip"
+      @hide="hideOrRemoveParent"
     >
       {{ getTypeLabel() }}
     </b-tooltip>
@@ -41,7 +41,7 @@
       custom-class="hidden"
       triggers="click blur"
       @shown="positionTooltip"
-      @hide="hideTooltip"
+      @hide="hideOrRemoveParent"
     >
       {{ getColorLabel() }}
     </b-tooltip>
@@ -56,7 +56,7 @@
       custom-class="hidden"
       triggers="click blur"
       @shown="positionTooltip"
-      @hide="hideTooltip"
+      @hide="hideOrRemoveParent"
     >
       {{ getCoatsLabel() }}
     </b-tooltip>
@@ -71,7 +71,7 @@
       custom-class="hidden"
       triggers="click blur"
       @shown="positionTooltip"
-      @hide="hideTooltip"
+      @hide="hideOrRemoveParent"
     >
       {{ getPolishLabel() }}
     </b-tooltip>
@@ -187,19 +187,6 @@ export default {
       
 	  tooltip.querySelector('.tooltip-inner').innerHTML = event.target.getAttribute('aria-label');
       tooltip.classList.remove('hidden');
-    },
-    
-    /**
-     * Immediately hides the tooltip.
-     * @param event - object containing the target and tooltip elements
-     */
-    hideTooltip(event) {
-      const parent = event.relatedTarget.parentElement;
-	  if (parent.hasAttribute('data-v-app')) {
-		parent.remove();
-	  } else {
-        event.relatedTarget.classList?.add('hidden');
-	  }
     }
   }
 }

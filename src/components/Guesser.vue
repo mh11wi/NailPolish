@@ -86,11 +86,12 @@
     >
       <b-row class="flex-grow-1 align-items-center justify-content-center">
         <b-col cols="6" sm="5">
-          <b-img-lazy
+          <b-img
             :src="getCorrectPolishImage()" 
             :alt="correctPolish.name" 
-            fluid
-            blank-color="black"
+            :blank-color="placeholderColor" 
+		    @error="handleImageError"
+		    fluidGrow
           />
         </b-col>
         <b-col cols="12" sm="7" class="polishData d-flex flex-column justify-content-between">
