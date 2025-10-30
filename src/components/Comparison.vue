@@ -20,16 +20,15 @@
             switch 
             v-model="effectChecked" 
             size="lg" 
-            class="mr-2 mr-sm-4"
             aria-label="State for 'Solar' and 'Glow in the Dark' polishes"
           >
-            <div class="hide-xs">
+            <div :class="{'hide-xs': showFinishToggle}">
               <font-awesome-icon icon="sun" size="sm" />
               /
               <font-awesome-icon icon="moon" size="sm" />
 			</div>
           </b-form-checkbox>
-          <FinishToggle v-model="finish" @updateFinish="finish = $event"/>
+          <FinishToggle class="ml-2 ml-sm-4" v-model="finish" @updateFinish="finish = $event"/>
         </div>
       </div>
     </div>

@@ -26,11 +26,12 @@
           Start by selecting an applicable base polish from the <strong>Browse Collection</strong> view or from the drop-down menu to the left.
         </div>
         <div v-else class="container-fluid combo">
-          <b-img-lazy 
+          <b-img 
             :src="getImage()" 
             :alt="getAlt()" 
-            fluid
-            blank-color="black"
+            :blank-color="placeholderColor" 
+		    @error="handleImageError"
+		    fluidGrow
           />
         </div>
       </div>
@@ -60,7 +61,9 @@ export default {
       
       options.push({text: 'Select a topper', value: null, disabled: true});
       options.push({text: self.polishes[import.meta.env.VITE_GLOSSY - 1].name, value: import.meta.env.VITE_GLOSSY});
-      options.push({text: self.polishes[import.meta.env.VITE_MATTE - 1].name, value: import.meta.env.VITE_MATTE});
+	  if (this.showFinishToggle || self.toppersMap[self.combination.basePolishId].includes(import.meta.env.VITE_MATTE)) {
+        options.push({text: self.polishes[import.meta.env.VITE_MATTE - 1].name, value: import.meta.env.VITE_MATTE});
+	  }
       
       const brands = this.pluck(this.polishes, 'brand');
       brands.forEach(function(brand) {
@@ -137,15 +140,6 @@ export default {
       const basePolishName = this.polishes[this.combination.basePolishId - 1].name;
       const topperName = this.polishes[this.combination.topperId - 1].name;
       return basePolishName + " + " + topperName;
-    },
-    
-    /**
-     * Plucks distinct items from an array satisfying the given key, and then sorts the set.
-     * @param array - an array of items
-     * @param key - the key to check
-     */
-    pluck: function(array, key) {
-      return [...new Set(array.map(o => o[key]))].sort();
     }
   }
 }

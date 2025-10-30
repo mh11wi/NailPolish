@@ -1,5 +1,5 @@
 <template>
-  <b-form-radio-group buttons button-variant="primary" v-model="selected" :options="options" @change="updateValue()"/>
+  <b-form-radio-group v-if="showFinishToggle" buttons button-variant="primary" v-model="selected" :options="options" @change="updateValue()"/>
 </template>
 
 <script>
@@ -13,9 +13,9 @@ export default {
     return {
       selected: this.value, // which finish is selected
       options: [ // data to display in the toggle
-          { text: 'Glossy', value: 'glossy' },
-          { text: 'Matte', value: 'matte' }
-        ]
+        { text: 'Glossy', value: 'glossy' },
+        { text: 'Matte', value: 'matte' }
+      ]
     }
   },
   watch: {

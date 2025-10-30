@@ -2,18 +2,26 @@
   <div class="polish">
     <b-overlay :show="true" :opacity="0">
       <b-aspect aspect="1:1">
-        <b-card 
-          v-if="!card.detailsMode" 
-          class="border-0" 
-          :img-src="getImage(card.polish.id)" 
-          :img-alt="card.polish.name" 
-          img-top no-body
-        />
+        <b-card v-if="!card.detailsMode" class="border-0" img-top no-body>
+          <b-img
+		    :src="getImage(card.polish.id)" 
+		    :alt="card.polish.name" 
+		    :blank-color="placeholderColor" 
+		    @error="handleImageError"
+		    fluidGrow
+		  />
+        </b-card>
         <b-card v-else class="pt-5 h-100" no-body>
           <b-card-text class="mx-3 h-100 d-flex flex-column">
             <b-row align-v="center">
               <b-col cols="6">
-                <b-img-lazy :src="getImage(card.polish.id)" :alt="card.polish.name" blank-color="black" fluid/>
+                <b-img
+				  :src="getImage(card.polish.id)" 
+				  :alt="card.polish.name" 
+				  :blank-color="placeholderColor" 
+				  @error="handleImageError"
+				  fluidGrow
+				/>
               </b-col>
               <b-col cols="6" class="pl-0">
                 <p class="mb-1">{{ card.polish.type }}</p>
@@ -72,9 +80,9 @@
         </div>
       </template>
     </b-overlay>
-    <div class="text-center mt-2">
-      <strong>{{ card.polish.brand }}</strong>
-      <br>{{ card.polish.name }}
+    <div class="text-center mt-1">
+      <strong class="line-height-small">{{ card.polish.brand }}</strong>
+      <span class="d-block line-height-small">{{ card.polish.name }}</span>
     </div>
   </div>
 </template>

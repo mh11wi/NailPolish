@@ -2,10 +2,11 @@
   <b-row class="mb-3 entry">
     <b-col cols="9" sm="5" lg="4" offset-xl="1">
       <b-img-lazy 
+		ref="image"
         :src="getImage(entry.id)" 
         :alt="entry.alt"
-        fluid
-        blank-color="black"
+        :blank-color="placeholderColor" 
+		fluidGrow
       />
     </b-col>
     <b-col cols="12" sm="7" xl="6">
@@ -29,13 +30,14 @@
 				container="gallery"
                 custom-class="hidden"
                 @shown="positionPopover"
-                @hide="hidePopover"
+                @hide="hideOrRemoveParent"
               >
-                <b-img-lazy
+                <b-img
                   :src="getPolishImage(polish)" 
                   :alt="polishes[polish.id - 1].name" 
+				  :blank-color="placeholderColor" 
+				  @error="handleImageError"
                   width=200 
-                  blank-color="black"
                 />
               </b-popover>
             </div>
@@ -54,6 +56,9 @@ export default {
     'entry', // data of the nail art entry
     'polishes' // data of all polishes
   ],
+  mounted: function() {
+	this.$refs.image.$el.onerror = this.handleImageError;
+  },
   methods: {
     /**
      * Gets the specified nail art image.
@@ -116,19 +121,6 @@ export default {
       arrow.style.top = `${arrowTop / scale}px`;
       
 	  popover.classList.remove('hidden');
-    },
-    
-    /**
-     * Immediately hides the popover.
-     * @param event - object containing the target and popover elements
-     */
-    hidePopover(event) {
-	  const parent = event.relatedTarget.parentElement;
-	  if (parent.hasAttribute('data-v-app')) {
-		parent.remove();
-	  } else {
-        event.relatedTarget.classList?.add('hidden');
-	  }
     }
   } 
 }

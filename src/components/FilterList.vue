@@ -61,16 +61,7 @@ export default {
       return this.pluck(this.collection, this.filter);
     }
   },
-  methods: {
-    /**
-     * Plucks distinct items from an array satisfying the given key, and then sorts the set.
-     * @param array - an array of items
-     * @param key - the key to check
-     */
-    pluck: function(array, key) {
-      return [...new Set(array.map(o => o[key]))].sort();
-    },
-	
+  methods: {	
 	/** Clears all selected items. */
 	clear: function() {
 	  this.selected = [];

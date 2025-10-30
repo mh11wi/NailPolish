@@ -6,12 +6,12 @@
         <b-nav-item :link-attrs="{id: 'info-link', tabindex: '0', 'aria-label': 'App Info'}">
           <font-awesome-icon icon="info-circle" size="lg"/>
         </b-nav-item>
-        <b-popover variant="info" target="info-link" placement="leftbottom" :fallback-placement="[]" title="App Info" triggers="click blur">
+        <b-popover v-if="polishes.length > 0" variant="info" target="info-link" placement="leftbottom" :fallback-placement="[]" title="App Info" triggers="click blur" @hide="hideOrRemoveParent">
           <p>I created this application to track my collection of nail polishes and showcase some of my favourite nail art looks.</p>
           <p><strong>Browse Collection</strong><br>Search or filter through my collection of nail polishes.</p>
           <p><strong>Compare Polishes</strong><br>Compare similar polishes next to one another.</p>
-          <p><strong>Top It Off</strong><br>See what different toppers look like over an applicable polish.</p>
-          <p><strong>Nail Art Gallery</strong><br>View some of my past nail art.</p>
+          <p v-if="Object.keys(toppersMap).length > 0"><strong>Top It Off</strong><br>See what different toppers look like over an applicable polish.</p>
+          <p v-if="nailArt.length > 0"><strong>Nail Art Gallery</strong><br>View some of my past nail art.</p>
           <p><strong>Polish Guesser</strong><br>A 'Wordle' inspired game!</p>
           <penguin width="100" hAlign="center"/>
           <div class="text-center"><a href="https://mh11wi.github.io/privacy-policy.html">Terms & Privacy Policy</a></div>
@@ -21,10 +21,9 @@
         </b-nav-item>
       </b-navbar-nav>
     </b-navbar>
-    <b-tabs v-model="tabIndex" class="flex-grow-1 d-flex flex-column" content-class="flex-grow-1">
-      <b-tab title="Browse Collection">
+    <b-tabs v-model="tabIndex" class="flex-grow-1 d-flex flex-column" content-class="flex-grow-1" v-if="polishes.length > 0" >
+      <b-tab title="Browse Collection" active>
         <Collection
-          v-if="polishes.length > 0"
           :allPolishes="polishes" 
           :toppersMap="toppersMap" 
           :comparisonId="comparisonId" 
@@ -32,32 +31,30 @@
           @viewToppers="viewToppers" 
           @incrementComparisonId="incrementComparisonId"
         />
-        <Spinner v-else />
       </b-tab>
       <b-tab title="Compare Polishes">
         <ComparisonsList 
-          v-if="polishes.length > 0" 
           :comparisonId="comparisonId" 
           :comparisons="comparisons"
           :cardsPerSlide="cardsPerSlide"
           @incrementComparisonId="incrementComparisonId"
         />
       </b-tab>
-      <b-tab title="Top It Off">
+      <b-tab title="Top It Off" v-if="Object.keys(toppersMap).length > 0">
         <Toppers 
-          v-if="polishes.length > 0" 
           :polishes="polishes" 
           :toppersMap="toppersMap" 
           :collectionBasePolish="basePolish"
         />
       </b-tab>
-      <b-tab title="Nail Art Gallery">
-        <Gallery v-if="polishes.length > 0" :polishes="polishes"/>
+      <b-tab title="Nail Art Gallery" v-if="nailArt.length > 0">
+        <Gallery :polishes="polishes" :nailArtData="nailArt"/>
       </b-tab>
       <b-tab title="Polish Guesser">
-        <Guesser v-if="polishes.length > 0" :allPolishes="polishes"/>
+        <Guesser :allPolishes="polishes"/>
       </b-tab>
     </b-tabs>
+	<Spinner v-else />
   </div>
 </template>
 
@@ -84,7 +81,8 @@ export default {
   data: function() {
     return {
       polishes: [], // polish data
-      toppersMap: {}, // toppers data
+      toppersMap: {}, // toppers data,
+	  nailArt: [], // nail art data,
       tabIndex: 0, // which tab is displayed
       basePolish: null, // the polish selected to view toppers over
       comparisonId: 0, // an identifier for a new comparison
@@ -102,11 +100,14 @@ export default {
     this.handleResize();
 
     setTimeout(async () => {
-      const polishModule = await import('./data/polishes.json');
-	  this.polishes = polishModule.default;
-	  
+	  const nailArtModule = await import('./data/nailArt.json');
+      this.nailArt = nailArtModule.default;
+
 	  const topperModule = await import('./data/toppersMap.json');
       this.toppersMap = topperModule.default;
+
+      const polishModule = await import('./data/polishes.json');
+	  this.polishes = polishModule.default;
     }, 1000);
   },
   /** Ensure that the tabs are the correct height. */
@@ -387,5 +388,9 @@ input[type="search"]::-webkit-search-results-decoration {
     max-height: 100dvh; 
     overflow: auto;
   }
+}
+
+.line-height-small {
+  line-height: 1.2 !important;
 }
 </style>

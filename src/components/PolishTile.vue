@@ -3,10 +3,21 @@
     <div v-b-modal="polish.id" class="text-center mx-2 mb-3">
       <b-overlay :show="polish.destashed || polish.type == 'Solar' || polish.type == 'Glow in the Dark'" :opacity="0">
         <b-img-lazy 
-          :src="getImage(polish.id, false)" 
+		  v-show="finish === 'glossy'"
+		  ref="glossy"
+          :src="getImage(polish.id, 'glossy')"
           :alt="polish.name" 
-          blank-color="black"
-          fluid
+          :blank-color="placeholderColor"
+          fluidGrow
+        />
+		<b-img-lazy 
+		  v-if="showFinishToggle"
+		  v-show="finish === 'matte'"
+		  ref="matte"
+          :src="getImage(polish.id, 'matte')"
+          :alt="polish.name" 
+          :blank-color="placeholderColor"
+          fluidGrow
         />
 		<template #overlay v-if="polish.destashed">
           <div class="mt-3 mr-2 text-right text-danger">
@@ -24,8 +35,8 @@
           </div>
         </template>
       </b-overlay>
-      <div><strong>{{ polish.brand }}</strong></div>
-      <div>{{ polish.name }}</div>
+      <div class="mt-1 line-height-small"><strong>{{ polish.brand }}</strong></div>
+      <div class="line-height-small">{{ polish.name }}</div>
     </div>
     <b-modal centered :id="polish.id" :hide-footer=true ref="modal" title-tag="h2" title-class="d-flex flex-wrap align-items-center" body-class="d-flex">
       <template #modal-title>
@@ -37,44 +48,67 @@
       </template>
       <b-row class="flex-grow-1 align-items-center justify-content-center">
         <b-col cols="6" sm="5">
-          <img-comparison-slider v-if="polish.type == 'Solar'">
-            <b-img slot="before" :src="getImage(polish.id, true, '-sun')" :alt="polish.name + ' in the sun'" fluid/>
-            <b-img slot="after" :src="getImage(polish.id, true)" :alt="polish.name" fluid/>
-            <img slot="handle" src="https://api.iconify.design/fa-solid:sun.svg?color=%23ffc107&height=30" role="none">
+          <img-comparison-slider v-if="polish.type == 'Solar'" class="w-100">
+            <b-img 
+			  slot="before" 
+			  :src="getImage(polish.id, modalFinish, '-sun')" 
+			  :alt="polish.name + ' in the sun'" 
+			  :blank-color="placeholderColor"
+			  @error="handleImageError" 
+			  fluidGrow
+			/>
+            <b-img 
+			  slot="after" 
+			  :src="getImage(polish.id, modalFinish)" 
+			  :alt="polish.name" 
+			  :blank-color="placeholderColor"
+			  @error="handleImageError"
+			  fluidGrow
+			/>
+            <font-awesome-icon slot="handle" icon="sun" class="sliderHandle" />
           </img-comparison-slider>
-          <img-comparison-slider v-else-if="polish.type == 'Glow in the Dark'">
-            <b-img slot="before" :src="getImage(polish.id, true, '-dark')" :alt="polish.name + ' in the dark'" fluid/>
-            <b-img slot="after" :src="getImage(polish.id, true)" :alt="polish.name" fluid/>
-            <img slot="handle" src="https://api.iconify.design/fa-solid:moon.svg?color=%23ffc107&width=35&height=30" role="none">
+          <img-comparison-slider v-else-if="polish.type == 'Glow in the Dark'" class="w-100">
+            <b-img 
+			  slot="before" 
+			  :src="getImage(polish.id, modalFinish, '-dark')" 
+			  :alt="polish.name + ' in the dark'" 
+			  :blank-color="placeholderColor"
+			  @error="handleImageError" 
+			  fluidGrow
+			/>
+            <b-img 
+			  slot="after" 
+			  :src="getImage(polish.id, modalFinish)" 
+			  :alt="polish.name" 
+			  :blank-color="placeholderColor"
+			  @error="handleImageError" 
+			  fluidGrow
+			/>
+            <font-awesome-icon slot="handle" icon="moon" class="sliderHandle ml-1" />
           </img-comparison-slider>
-          <b-img-lazy
+          <b-img
             v-else
-            :src="getImage(polish.id, true)" 
+            :src="getImage(polish.id, modalFinish)" 
             :alt="polish.name" 
-            blank-color="black"
-            fluid
+			:blank-color="placeholderColor"
+			@error="handleImageError"
+            fluidGrow
           />
         </b-col>
         <b-col cols="12" sm="7" class="polishData d-flex flex-column justify-content-between">
-          <div class="row align-items-center w-100">
-            <div class="col px-0">
-              <FinishToggle v-model="modalFinish" @updateFinish="modalFinish = $event" />
-            </div>
-            <div class="col px-0 text-right">
-              <b-dropdown text="Add To " variant="primary">
-                <b-dropdown-item 
-                  v-for="(option, index) in options" 
-                  :key="index" 
-                  @click="comparisonSelected(option.value)" 
-                  :disabled="option.disabled"
-                >
-                  {{ option.text }}
-                </b-dropdown-item>
-              </b-dropdown>
-            </div>
-            <div class="col px-0 text-right">
-              <b-button v-if="hasToppers" variant="primary" @click="viewToppers">Top It Off</b-button>
-            </div>
+          <div :class="['polishActions', 'row', actionsClass]">
+            <FinishToggle v-model="modalFinish" @updateFinish="modalFinish = $event" />
+            <b-dropdown text="Add To " variant="primary">
+              <b-dropdown-item 
+                v-for="(option, index) in options" 
+                :key="index" 
+                @click="comparisonSelected(option.value)" 
+                :disabled="option.disabled"
+              >
+                {{ option.text }}
+              </b-dropdown-item>
+            </b-dropdown>
+            <b-button v-if="hasToppers" variant="primary" @click="viewToppers">Top It Off</b-button>
           </div>
           <div class="row align-items-center flex-grow-1 w-100">
             <table class="w-100">
@@ -149,7 +183,16 @@ export default {
       }
       output.push({value: -1, text: 'New comparison...'});
       return output;
-    }
+    },
+	
+	/** The dynamic class for the row of actions in the modal. */
+	actionsClass: function() {
+	  if (!this.showFinishToggle || !this.hasToppers) {
+	    return 'justify-content-start';
+	  }
+	  
+	  return 'justify-content-between';
+	}
   },
   /** Adds listeners to reset modal appearance. */
   mounted: function() {
@@ -161,6 +204,11 @@ export default {
     this.$root.$on('bv::dropdown::show', () => {
       this.showAlert = false;
     });
+	
+	this.$refs.glossy.$el.onerror = this.handleImageError;
+	if (this.showFinishToggle) {
+	  this.$refs.matte.$el.onerror = this.handleImageError;
+    }
   },
   methods: {
     /**
@@ -169,9 +217,8 @@ export default {
      * @param isModal - whether the image is for the modal or not (so appropriate finish is displayed)
      * @param suffix - an optional suffix to the image file (e.g. '-sun' for solar, '-dark' for glow in the dark)
      */
-    getImage(polishId, isModal, suffix = '') {
-      const thisFinish = isModal? this.modalFinish : this.finish
-      const finishId = thisFinish == 'glossy' ? import.meta.env.VITE_GLOSSY : import.meta.env.VITE_MATTE;
+    getImage(polishId, finish, suffix = '') {
+	  const finishId = finish === 'glossy' ? import.meta.env.VITE_GLOSSY : import.meta.env.VITE_MATTE;
 	  return new URL(`../assets/images/polishes/${polishId}/${finishId}${suffix}${import.meta.env.VITE_EXTENSION}`, import.meta.url).href;
     },
     
@@ -212,21 +259,25 @@ export default {
   margin-top: -0.25rem;
 }
 
+.polishActions {
+  align-items: center;
+  width: 100%;
+}
+
+.polishActions.justify-content-start {
+  gap: 30px;
+}
+
 @media (width < 576px) {
+  .polishActions {
+    justify-content: center !important;
+	margin-bottom: 1rem;
+    gap: 30px;
+  }
+
   .polishData {
     margin-top: 1rem;
 	margin-right: -2rem;
-  }
-  
-  .polishData .row:first-of-type {
-    max-width: 420px;
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
-  }
-  
-  .polishData .row:last-of-type {
-    margin-top: 3.5rem;
   }
 }
 
@@ -242,17 +293,18 @@ td {
 }
 
 img-comparison-slider {
-  --divider-color: #ffc107;
+  --divider-color: var(--warning);
   --handle-size: 30px;
   --handle-opacity: 1;
   --handle-opacity-active: 1;
 }
 
-.text-success {
-  font-size: 0.75rem;
+.sliderHandle {
+  color: var(--warning);
+  height: 30px;
 }
 
-.line-height-small {
-  line-height: 1.2;
+.text-success {
+  font-size: 0.75rem;
 }
 </style>
