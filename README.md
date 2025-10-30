@@ -11,7 +11,7 @@ Several envars can be modified to customize the application. These are set in th
 - `VITE_TITLE`: the title of the application shown in the browser's tab
 - `VITE_COLLECTOR`: the name of the collector shown in the navbar
 - `VITE_EXTENSION`: the file extension expected of all image files (default: .jpg)
-- `VITE_PRIMARY_COLOR`: the primary color of the application; any of the Bootstrap-Vue color variants can be set, namely: `blue`, `indigo`, `purple`, `pink`, `red`, `orange`, `yellow`, `green`, `teal`, or `cyan`
+- `VITE_PRIMARY_COLOR`: the primary color of the application; any HTML color name, hex, or rgb value
 - `VITE_PLACEHOLDER_COLOR`: the color of the placeholder tile displayed before an image loads
 - `VITE_FINISH_TOGGLE`: whether a switch should be displayed that toggles between glossy and matte images
 
