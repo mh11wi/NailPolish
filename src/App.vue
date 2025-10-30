@@ -1,13 +1,13 @@
 <template>
   <div role="main" class="app d-flex flex-column">
-    <b-navbar variant="primary">
+    <b-navbar variant="primary" :type="getNavbarType()">
       <b-navbar-brand tag="h1" class="font-weight-normal mb-0">{{ collector }}'s Nail Polishes</b-navbar-brand>
       <b-navbar-nav class="ml-auto">
         <b-nav-item :link-attrs="{id: 'info-link', tabindex: '0', 'aria-label': 'App Info'}">
           <font-awesome-icon icon="info-circle" size="lg"/>
         </b-nav-item>
         <b-popover v-if="polishes.length > 0" variant="info" target="info-link" placement="leftbottom" :fallback-placement="[]" title="App Info" triggers="click blur" @hide="hideOrRemoveParent">
-          <p>An application to track a collection of nail polishes and showcase nail art.</p>
+          <p>An application to track my collection of nail polishes and showcase nail art.</p>
           <p><strong>Browse Collection</strong><br>Search or filter through my collection of nail polishes.</p>
           <p><strong>Compare Polishes</strong><br>Compare similar polishes next to one another.</p>
           <p v-if="Object.keys(toppersMap).length > 0"><strong>Top It Off</strong><br>See what different toppers look like over an applicable polish.</p>
@@ -144,7 +144,16 @@ export default {
       } else {
         this.cardsPerSlide = 4;
       }
-    }
+    },
+
+	/** Calculates whether the navbar should be light or dark based on the primary color. */
+	getNavbarType() {
+	  const rootStyles = getComputedStyle(document.documentElement);
+      const primaryRgbString = rootStyles.getPropertyValue('--primary-rgb');
+      const [r, g, b] = primaryRgbString.split(',').map(Number);
+	  const luminance = (r * 0.2126) + (g * 0.7152) + (b * 0.0722);
+	  return luminance < 128 ? 'dark' : 'light';
+	}
   }
 }
 </script>
@@ -264,7 +273,8 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .nav-tabs .nav-link:hover {
-  border: none;
+  border-left: none;
+  border-right: none;
 }
 
 .nav-tabs .nav-link, .nav-tabs .nav-link:visited { 
