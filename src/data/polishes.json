@@ -5298,5 +5298,25 @@
     "color": "Sheer white 'shimmergraphic' with pink shifting shimmer",
     "numCoats": "3",
     "collection": "Destiny (2025)"
+  },
+  {
+    "id": "530",
+    "name": "Belladonna",
+    "brand": "Cirque Colors",
+    "type": "Flash Reflective",
+    "colorFamily": "Purple",
+    "color": "Deep violet 'spotlight shimmer' with a gold to green shift",
+    "numCoats": "2",
+    "collection": "Apothescary (2025)"
+  },
+  {
+    "id": "531",
+    "name": "Foxglove",
+    "brand": "Cirque Colors",
+    "type": "Flash Reflective",
+    "colorFamily": "Purple",
+    "color": "Smoky purple 'spotlight shimmer' with a violet to pink shift",
+    "numCoats": "2",
+    "collection": "Apothescary (2025)"
   }
 ]
