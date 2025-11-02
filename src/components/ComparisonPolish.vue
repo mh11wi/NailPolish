@@ -147,13 +147,13 @@ export default {
 }
 
 @media (max-width: 576px) {
-  .polish {
+  .polish :deep(.b-overlay) {
     font-size: 15px;
   }
 }
 
 @media (max-width: 360px) {
-  .polish {
+  .polish :deep(.b-overlay) {
     font-size: 13px;
   }
 }

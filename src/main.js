@@ -77,7 +77,8 @@ Vue.mixin({
   data: function() {
     return {
 	  placeholderColor: import.meta.env.VITE_PLACEHOLDER_COLOR,
-      showFinishToggle: import.meta.env.VITE_FINISH_TOGGLE == 'true'
+      showFinishToggle: import.meta.env.VITE_FINISH_TOGGLE == 'true',
+	  hasTouch: 'ontouchstart' in window
     }
   },
   methods: {

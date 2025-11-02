@@ -150,12 +150,16 @@ export default {
     /** Determines the correct number of polishes to show in a comparison based on the screen width. */
     handleResize() {
       const screenWidth = document.querySelectorAll('html')[0].offsetWidth;
+	  const screenHeight = document.querySelectorAll('html')[0].offsetHeight;
+	  
       if (screenWidth < 576) {
         this.cardsPerSlide = 2;
-      } else if (screenWidth < 1200) {
-        this.cardsPerSlide = 3;
-      } else {
+      } else if (screenWidth < 996) {
+        this.cardsPerSlide = screenHeight < 576 ? 4 : 3;
+	  } else if (screenWidth < 1200) {
         this.cardsPerSlide = 4;
+      } else {
+        this.cardsPerSlide = 5;
       }
     },
 
