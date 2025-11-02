@@ -41,7 +41,7 @@
 	  >
 		<font-awesome-icon icon="chevron-circle-left"/>
 	  </b-button>
-	  <b-carousel class="mt-3" ref="comparisonCarousel" v-model="slideIndex" :interval="0" :indicators="numSlides > 1" :no-animation="noAnimation" no-wrap>
+	  <b-carousel class="mt-3 w-100" ref="comparisonCarousel" v-model="slideIndex" :interval="0" :indicators="numSlides > 1" :no-animation="noAnimation" no-wrap>
 		<b-carousel-slide v-for="(slide, index1) in slides" :key="index1">
 		  <template v-slot:img>
 			<b-row :cols="cardsPerSlide" :align-h="numSlides > 1 ? 'left' : 'center'" class="mx-0">

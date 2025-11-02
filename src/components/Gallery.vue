@@ -10,7 +10,6 @@
 </template>
 
 <script>
-import nailArtData from '../data/nailArt.json'
 import NailArt from './NailArt.vue'
 
 /** The 'Nail Art Gallery' tab, which displays a list of nail art and their polishes. */
@@ -42,7 +41,7 @@ export default {
   computed: {
     /** Nail art data, sorted descendingly. */
     nailArt: function() {
-      return nailArtData.sort((a, b) => b.id - a.id);
+      return this.nailArtData.sort((a, b) => b.id - a.id);
     }
   },
   methods: {
