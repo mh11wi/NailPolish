@@ -6,7 +6,7 @@
   "scripts": {
     "serve": "vite --host --port 8080",
     "build": "vite build",
-	"preview": "vite preview",
+	"preview": "vite preview --host",
     "lint": "eslint --ext .js,.jsx ."
   },
   "dependencies": {

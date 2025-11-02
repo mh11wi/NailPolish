@@ -70,6 +70,15 @@ Vue.mixin({
     }
   },
   methods: {
+	debounce(func) {
+      let timer;
+      return function(event) {
+        if (timer) {
+          clearTimeout(timer);
+        }
+        timer = setTimeout(func, 100, event);
+      };
+    },
     handleImageError(event) {
 	  event.target.src = `data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%221%22%20height%3D%221%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20%25%7Bw%7D%20%25%7Bh%7D%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20style%3D%22fill%3A${import.meta.env.VITE_PLACEHOLDER_COLOR}%3B%22%3E%3C%2Frect%3E%3C%2Fsvg%3E`;
 	},

@@ -15,7 +15,7 @@
         </b-popover>
       </b-navbar-nav>
     </b-navbar>
-    <b-tabs v-model="tabIndex" class="flex-grow-1 d-flex flex-column" content-class="flex-grow-1" v-if="polishes.length > 0" >
+    <b-tabs class="flex-grow-1 d-flex flex-column" content-class="flex-grow-1" v-if="polishes.length > 0">
       <b-tab title="Browse Collection" active>
         <Collection
           :allPolishes="polishes" 
@@ -26,40 +26,45 @@
           @incrementComparisonId="incrementComparisonId"
         />
       </b-tab>
-      <b-tab title="Compare Polishes">
+      <LazyTab title="Compare Polishes">
         <ComparisonsList 
           :comparisonId="comparisonId" 
           :comparisons="comparisons"
           :cardsPerSlide="cardsPerSlide"
           @incrementComparisonId="incrementComparisonId"
         />
-      </b-tab>
-      <b-tab title="Top It Off" v-if="Object.keys(toppersMap).length > 0">
+      </LazyTab>
+      <LazyTab ref="toppersTab" title="Top It Off" v-if="Object.keys(toppersMap).length > 0">
         <Toppers 
           :polishes="polishes" 
           :toppersMap="toppersMap" 
           :collectionBasePolish="basePolish"
         />
-      </b-tab>
-      <b-tab title="Nail Art Gallery" v-if="nailArt.length > 0">
+      </LazyTab>
+      <LazyTab title="Nail Art Gallery" v-if="nailArt.length > 0">
         <Gallery :polishes="polishes" :nailArtData="nailArt"/>
-      </b-tab>
+      </LazyTab>
     </b-tabs>
-	<Spinner v-else />
+	<Spinner v-if="showSpinner"/>
   </div>
 </template>
 
 <script>
 import Spinner from './components/Spinner.vue'
+import LazyTab from './components/LazyTab.vue'
 import Collection from './components/Collection.vue'
 import ComparisonsList from './components/ComparisonsList.vue'
 import Toppers from './components/Toppers.vue'
 import Gallery from './components/Gallery.vue'
+import polishData from './data/polishes.json'
+import topperData from './data/toppersMap.json'
+import nailArtData from './data/nailArt.json'
 
 export default {
   name: 'App',
   components: {
     Spinner,
+	LazyTab,
     Collection,
     ComparisonsList,
     Toppers,
@@ -70,32 +75,27 @@ export default {
       polishes: [], // polish data
       toppersMap: {}, // toppers data,
 	  nailArt: [], // nail art data,
-      tabIndex: 0, // which tab is displayed
       basePolish: null, // the polish selected to view toppers over
       comparisonId: 0, // an identifier for a new comparison
       comparisons: [], // the list of polish comparisons
       cardsPerSlide: 2, // the number of polishes to show in a comparison slide
-      collector: import.meta.env.VITE_COLLECTOR // the name of the collector to display in the navbar
+      collector: import.meta.env.VITE_COLLECTOR, // the name of the collector to display in the navbar
+	  showSpinner: false // whether the spinner should show on load
     }
   },
-  /** 
-   * Adds listener for when the browser is resized so that the tabs resize appropriately.
-   * Also loads polish and topper data.
-   */
+  /** Add listener for when the browser is resized and load all data. */
   created() {
-    window.addEventListener('resize', this.debounce(this.handleResize));
+    window.addEventListener('resize', this.debouncedResize);
     this.handleResize();
 
-    setTimeout(async () => {
-	  const nailArtModule = await import('./data/nailArt.json');
-      this.nailArt = nailArtModule.default;
-
-	  const topperModule = await import('./data/toppersMap.json');
-      this.toppersMap = topperModule.default;
-
-      const polishModule = await import('./data/polishes.json');
-	  this.polishes = polishModule.default;
-    }, 1000);
+	if (polishData.length == 2) {
+	  this.loadData();
+	} else {
+	  if ((polishData.length + Object.keys(topperData).length + nailArtData.length) > 100) {
+	    this.showSpinner = true;
+	  }
+      setTimeout(this.loadData, 0);
+	}
   },
   /** Ensure that the tabs are the correct height. */
   updated() {
@@ -103,37 +103,31 @@ export default {
   },
   /** Removes browser resize listener. */
   destroyed() {
-    window.removeEventListener('resize', this.handleResize);
+    window.removeEventListener('resize', this.debouncedResize);
   },
   methods: {
+    /** Loads the data into the app. */
+	loadData() {
+	  this.nailArt = nailArtData;
+      this.toppersMap = topperData;
+	  this.polishes = polishData;
+	  this.showSpinner = false;
+	},
+	
     /**
      * Opens the 'Top It Off' tab with the specified base polish and topper selected.
      * @param event - object containing base polish and selected topper id
      */
     viewToppers(event) {
       this.basePolish = event;
-      this.tabIndex = 2;
+      this.$refs.toppersTab.activate();
     },
     
     /** Increments the comparison id. */
     incrementComparisonId() {
       this.comparisonId++;
     },
-    
-    /** 
-     * Debounces the call of a specified function.
-     * @param func - the function to debounce
-     */
-    debounce(func){
-      let timer;
-      return function(event) {
-        if (timer) {
-          clearTimeout(timer);
-        }
-        timer = setTimeout(func, 100, event);
-      };
-    },
-    
+
     /** Determines the correct number of polishes to show in a comparison based on the screen width. */
     handleResize() {
       const screenWidth = document.querySelectorAll('html')[0].offsetWidth;
@@ -149,6 +143,11 @@ export default {
         this.cardsPerSlide = 5;
       }
     },
+	
+	/** Debounced resize handler for event registration and cleaup. */
+	debouncedResize() {
+	  this.debounce(this.handleResize());
+	},
 
 	/** Calculates whether the navbar should be light or dark based on the primary color. */
 	getNavbarType() {
