@@ -194,7 +194,11 @@ export default {
      */
     removePolish(event) {
       if (this.slideIndex > 0 && this.slides[this.slideIndex].length == 1) {
-        this.slideIndex--;
+        this.noAnimation = true;
+	    this.slideIndex--;
+	    this.$nextTick(() => {
+          this.noAnimation = false;
+        });
       }
       this.comparison.polishes.splice(event, 1);
     }
