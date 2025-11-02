@@ -2,7 +2,7 @@
   <div class="container-fluid h-100">
     <div class="row h-100" id="polishGuesser">
       <div class="col-12 mh-100">
-        <div class="row mt-3 py-4 justify-content-center">
+        <div class="row mt-3 p-custom justify-content-center">
           <b-input-group class="col-7 col-sm-5 col-xl-4">
             <b-form-input 
               type="search"
@@ -37,7 +37,7 @@
           :disabled="hasWon && !guesses[index - 1]"
           :index="index"
         />
-        <div class="row py-4 justify-content-center">
+        <div class="row pb-3 p-custom justify-content-center">
           <b-button variant="primary" class="mr-3" v-b-modal.rulesModal>How To Play</b-button>
           <b-button id="newButton" variant="primary" class="ml-3" @click="newGame">New Game</b-button>
         </div>
@@ -294,6 +294,16 @@ td {
   .polishData {
     height: 100%;
 	padding-right: 0;
+  }
+}
+
+.p-custom {
+  padding: 0.75rem 0;
+}
+
+@media (orientation: portrait) {
+  .p-custom {
+    padding: 1.25rem 0;
   }
 }
 </style>
