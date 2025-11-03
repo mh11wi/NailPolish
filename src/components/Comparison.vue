@@ -2,7 +2,7 @@
   <div class="comparison mb-5 w-100">
     <div class="container-fluid">
 	  <div class="row">
-        <div class="d-flex flex-grow-1 align-items-center pl-3 pl-sm-4">
+        <div class="d-flex flex-grow-1 align-items-center pl-2 pl-sm-4">
           <strong v-if="!editMode">{{ comparison.name }}</strong>
           <b-form-input type="search" ref="editName" v-model="name" :maxLength="maxNameLength" v-else @blur="finishEdit" @keyup.enter="finishEdit"/>
           <b-button variant="link" class="ml-1 ml-sm-3" v-if="!editMode" @click="editMode = true" aria-label="Edit comparison name">
@@ -12,7 +12,7 @@
             <font-awesome-icon icon="trash-alt" size="lg"/>
           </b-button>
         </div>
-        <div v-if="comparison.polishes.length != 0" class="d-flex justify-content-end align-items-center pr-3 pr-sm-3">
+        <div v-if="comparison.polishes.length != 0" class="d-flex justify-content-end align-items-center pr-2 pr-sm-3">
           <b-form-checkbox 
             v-if="containsTwoState" 
             switch 
@@ -30,12 +30,12 @@
         </div>
 	  </div>
     </div>
-    <div v-if="comparison.polishes.length == 0" class="container-fluid mt-2">Please add polishes from the <strong>Browse Collection</strong> view to compare.</div>
-	<div v-else class="row align-items-center position-relative mt-2 px-3 px-sm-2">
+    <div v-if="comparison.polishes.length == 0" class="container-fluid mt-2 px-2 px-sm-4">Please add polishes from the <strong>Browse Collection</strong> view to compare.</div>
+	<div v-else class="row align-items-center position-relative mt-2 px-2">
 	  <b-button 
 		v-if="!hasTouch && slideIndex > 0" 
 		variant="link" 
-		class="arrow-button arrow-left ml-4 ml-sm-2" 
+		class="arrow-button arrow-left ml-3 ml-sm-2" 
 		@click="prev" 
 		aria-label="Previous polishes in comparison"
 	  >
@@ -63,7 +63,7 @@
 	  <b-button 
 		v-if="!hasTouch && slideIndex < numSlides - 1" 
 		variant="link" 
-		class="arrow-button arrow-right mr-4 mr-sm-2" 
+		class="arrow-button arrow-right mr-3 mr-sm-2" 
 		@click="next" 
 		aria-label="Next polishes in comparison"
 	  >
