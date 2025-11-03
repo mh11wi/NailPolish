@@ -1,5 +1,5 @@
 <template>
-  <BTab :lazy="notActivated" @click="notActivated = false">
+  <BTab ref="tab" :lazy="notActivated" @click="notActivated = false">
     <template v-slot:title><slot name="title">{{ title }}</slot></template>
     <slot></slot>
   </BTab>
@@ -9,11 +9,17 @@
   import { BTab } from 'bootstrap-vue'
   export default {
     components: { BTab },
-	props: [ 'title', 'active' ],
+	props: [ 'title' ],
     data() {
       return {
         notActivated: true
       }
-    }
+    },
+	methods: {
+	  activate() {
+	    this.$refs.tab.activate();
+		this.notActivated = false;
+	  }
+	}
   }
 </script>

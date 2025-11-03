@@ -119,6 +119,12 @@ export default {
       this.combination = {basePolishId: this.collectionBasePolish.id, topperId: topperId};
     }
   },
+  mounted: function() {
+    if (this.collectionBasePolish) {
+	  const topperId = this.collectionBasePolish.finish == 'glossy' ? import.meta.env.VITE_GLOSSY : import.meta.env.VITE_MATTE;
+      this.combination = {basePolishId: this.collectionBasePolish.id, topperId: topperId};
+	}
+  },
   methods: {
     /** Updates the displayed combination when the selected base polish is changed. */
     updateBasePolish(value) {
