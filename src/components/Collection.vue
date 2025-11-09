@@ -59,7 +59,7 @@
         </div>
         <div v-if="search.length == 0" class="row filters mt-4">
           <div class="col">
-            <FilterList ref="brand" class="mb-2" label="Brand" filter="brand" :collection="polishes" :initial="initialBrand" @updatePolishList="filterPolishList"/>
+            <FilterList ref="brand" class="mb-2" label="Brand" filter="brand" :collection="polishes" :initial="initialBrand" :otherList="otherBrands" @updatePolishList="filterPolishList"/>
             <FilterList ref="type" class="mb-2" label="Type" filter="type" :collection="polishes" :initial="initialType" @updatePolishList="filterPolishList"/>
             <FilterList ref="color" class="mb-0" label="Colour" filter="colorFamily" :collection="polishes" :initial="initialColor" @updatePolishList="filterPolishList"/>
           </div>
@@ -180,7 +180,21 @@ export default {
     /** Whether any polish in the list is destashed. */
     hasAnyDestashed: function() {
       return this.polishes.some(polish => polish.destashed);
-    }
+    },
+	
+	/** Determines the list of brands that should be grouped as 'Other'. */
+	otherBrands: function() {
+	  const brands = this.pluck(this.polishes, 'brand');
+	  const other = [];
+	  
+	  brands.forEach(brand => {
+	    if (this.polishes.filter(polish => polish.brand == brand).length <= 6) {
+	      other.push(brand);
+	    }
+	  });
+	  
+	  return other;
+	}
   },
   methods: {
     /** 
@@ -207,7 +221,7 @@ export default {
      */
     doesPolishSatisfyFilters(polish) {
       return (
-	    (this.brandFilters.length == 0 || this.brandFilters.includes(polish.brand)) &&
+	    (this.brandFilters.length == 0 || this.brandFilters.includes(polish.brand) || (this.brandFilters.includes('Other') && this.otherBrands.includes(polish.brand))) &&
         (this.typeFilters.length == 0 || this.typeFilters.includes(polish.type)) &&
         (this.colorFilters.length == 0 || this.colorFilters.includes(polish.colorFamily))
 	  );

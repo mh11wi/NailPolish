@@ -43,6 +43,7 @@ export default {
     'filter', // the kind of filter (either 'brand', 'type', or 'color')
     'collection', // the collection of polishes to determine filter options from (excludes toppers)
     'initial', // the initial value to select
+	'otherList' // a list of filters that should be grouped into an 'Other' option
   ],
   data: function() {
     return {
@@ -58,7 +59,15 @@ export default {
   computed: {
     /** Gets the filter options from the collection of polishes. */
     filterList: function() {
-      return this.pluck(this.collection, this.filter);
+      const allList = this.pluck(this.collection, this.filter);
+	  let list = allList;
+	  
+	  if (this.otherList && this.otherList.length > 0) {
+	    list = allList.filter(item => !this.otherList.includes(item));
+	    list.push('Other');
+	  }
+	  
+	  return list;
     }
   },
   methods: {	
