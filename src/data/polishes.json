@@ -5318,5 +5318,25 @@
     "color": "Smoky purple 'spotlight shimmer' with a violet to pink shift",
     "numCoats": "2",
     "collection": "Apothescary (2025)"
+  },
+  {
+    "id": "532",
+    "name": "Extraterrestrial",
+    "brand": "Cadillacquer",
+    "type": "Magnetic",
+    "colorFamily": "Purple",
+    "color": "Purple multichrome base with a lime green highlight",
+    "numCoats": "2",
+    "collection": "Out of this World (2025)"
+  },
+  {
+    "id": "533",
+    "name": "Solar Nebula",
+    "brand": "Cadillacquer",
+    "type": "Magnetic",
+    "colorFamily": "Purple",
+    "color": "Purple to red shimmer base with an orange shifting highlight",
+    "numCoats": "2",
+    "collection": "Out of this World (2025)"
   }
 ]
