@@ -2894,7 +2894,7 @@
     "brand": "Bow Polish",
     "type": "Glow in the Dark",
     "colorFamily": "Pink",
-    "color": "Pink to burgundy thermal with glitters; peach and green in the dark",
+    "color": "Pink to burgundy thermal with glitters; white-coral to dark green in the dark",
     "numCoats": "3",
     "collection": "Summer 2022"
   },
@@ -5245,7 +5245,7 @@
     "brand": "KB Shimmer",
     "type": "Glow in the Dark",
     "colorFamily": "Red",
-    "color": "Red with orange and pink shimmer; yellow-orange in the dark",
+    "color": "Tomato red with orange and pink shimmer; cheesy in the dark",
     "numCoats": "2",
     "collection": "Polish & Beauty Expo Exclusive (2025)"
   },
@@ -5338,5 +5338,25 @@
     "color": "Purple to red shimmer base with an orange shifting highlight",
     "numCoats": "2",
     "collection": "Out of this World (2025)"
+  },
+  {
+    "id": "534",
+    "name": "Endure and Survive",
+    "brand": "Cadillacquer",
+    "type": "Glow in the Dark",
+    "colorFamily": "Orange",
+    "color": "Hot orange with purple metallic hex glitters; yellow-orange in the dark",
+    "numCoats": "2",
+    "collection": "Eerie Glow (2025)"
+  },
+  {
+    "id": "535",
+    "name": "The Night's Brighter Shade",
+    "brand": "Cadillacquer",
+    "type": "Glow in the Dark",
+    "colorFamily": "Pink",
+    "color": "Hot pink with matte black hex glitters; white-coral in the dark",
+    "numCoats": "2",
+    "collection": "Eerie Glow (2025)"
   }
 ]
