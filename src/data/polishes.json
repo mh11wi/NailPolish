@@ -5358,5 +5358,25 @@
     "color": "Hot pink with matte black hex glitters; white-coral in the dark",
     "numCoats": "2",
     "collection": "Eerie Glow (2025)"
+  },
+  {
+    "id": "536",
+    "name": "Last Ray of Dying Light",
+    "brand": "Cadillacquer",
+    "type": "Glow in the Dark",
+    "colorFamily": "Yellow",
+    "color": "Sheer highlighter yellow with orange shimmer; bright green in the dark",
+    "numCoats": "4",
+    "collection": "Eerie Glow (2025)"
+  },
+  {
+    "id": "537",
+    "name": "The Weight of the World",
+    "brand": "Cadillacquer",
+    "type": "Glow in the Dark",
+    "colorFamily": "Pink",
+    "color": "Dusky pink with blue flakies and black glitters; yellow-green in the dark",
+    "numCoats": "3",
+    "collection": "Eerie Glow (2025)"
   }
 ]
