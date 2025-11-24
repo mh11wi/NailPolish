@@ -1643,7 +1643,7 @@
     "brand": "Holo Taco",
     "type": "Shimmer",
     "colorFamily": "Blue",
-    "color": "Teal jelly base with iridescent shimmer and blue holographic flakes",
+    "color": "Deep teal jelly base with iridescent shimmer and holo flakes + glitters",
     "numCoats": "2",
     "collection": "Simply's Birthday (2021)"
   },
@@ -5378,5 +5378,35 @@
     "color": "Dusky pink with blue flakies and black glitters; yellow-green in the dark",
     "numCoats": "3",
     "collection": "Eerie Glow (2025)"
+  },
+  {
+    "id": "538",
+    "name": "Tchotchke",
+    "brand": "Alchemy Lacquers",
+    "type": "Glitter & Sparkle",
+    "colorFamily": "Blue",
+    "color": "Pale blue jelly base with pink shifting shimmer and blue metallic flakes",
+    "numCoats": "2",
+    "collection": "Odds and Ends (2022)"
+  },
+  {
+    "id": "539",
+    "name": "Botanical Ambrosia",
+    "brand": "Alchemy Lacquers",
+    "type": "Shimmer",
+    "colorFamily": "Green",
+    "color": "Teal jelly base with pink shifting shimmer and holographic flakes",
+    "numCoats": "2",
+    "collection": "Alchemist's Vault (2023)"
+  },
+  {
+    "id": "540",
+    "name": "Excelsior",
+    "brand": "Alchemy Lacquers",
+    "type": "Multichrome",
+    "colorFamily": "Red",
+    "color": "Shifts between red, gold and green",
+    "numCoats": "3",
+    "collection": "Fleet of Stars (2024)"
   }
 ]
