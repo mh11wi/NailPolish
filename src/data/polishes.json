@@ -4365,7 +4365,7 @@
     "brand": "Bow Polish",
     "type": "Solar",
     "colorFamily": "Orange",
-    "color": "Peach to orange with holographic glitters; fuchsia to red in the sun",
+    "color": "Pale peach to orange with holographic glitters; fuchsia to red in the sun",
     "numCoats": "3",
     "collection": "Conversion (2016)"
   },
@@ -5406,7 +5406,47 @@
     "type": "Multichrome",
     "colorFamily": "Red",
     "color": "Shifts between red, gold and green",
-    "numCoats": "3",
+    "numCoats": "2",
     "collection": "Fleet of Stars (2024)"
+  },
+  {
+    "id": "541",
+    "name": "Luminary",
+    "brand": "Alchemy Lacquers",
+    "type": "Solar",
+    "colorFamily": "Green",
+    "color": "Soft apple green with peach shifting shimmer; red in the sun",
+    "numCoats": "3",
+    "collection": "Sun Chasers (2024)"
+  },
+  {
+    "id": "542",
+    "name": "Sunburst",
+    "brand": "Alchemy Lacquers",
+    "type": "Solar",
+    "colorFamily": "Pink",
+    "color": "Candy pink with green shifting shimmer; orange in the sun",
+    "numCoats": "3",
+    "collection": "Sun Chasers (2024)"
+  },
+  {
+    "id": "543",
+    "name": "Lanterns of Light",
+    "brand": "Alchemy Lacquers",
+    "type": "Solar",
+    "colorFamily": "Orange",
+    "color": "Peach with blue iridescent flakes; purple in the sun",
+    "numCoats": "3",
+    "collection": "Shards of Illumination (2025)"
+  },
+  {
+    "id": "544",
+    "name": "Fireflies in Twilight",
+    "brand": "Alchemy Lacquers",
+    "type": "Solar",
+    "colorFamily": "Green",
+    "color": "Mint with gold iridescent flakes; plum in the sun",
+    "numCoats": "3",
+    "collection": "Shards of Illumination (2025)"
   }
 ]
