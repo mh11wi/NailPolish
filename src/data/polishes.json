@@ -5448,5 +5448,25 @@
     "color": "Mint with gold iridescent flakes; plum in the sun",
     "numCoats": "3",
     "collection": "Shards of Illumination (2025)"
+  },
+  {
+    "id": "545",
+    "name": "Vine to Table",
+    "brand": "Holo Taco",
+    "type": "Crushed Holographic",
+    "colorFamily": "Purple",
+    "color": "Deep warm purple",
+    "numCoats": "2",
+    "collection": "Holo Renaissance (2025)"
+  },
+  {
+    "id": "546",
+    "name": "Far From the Tree",
+    "brand": "Holo Taco",
+    "type": "Crushed Holographic",
+    "colorFamily": "Green",
+    "color": "Warm forest green",
+    "numCoats": "2",
+    "collection": "Holo Renaissance (2025)"
   }
 ]
