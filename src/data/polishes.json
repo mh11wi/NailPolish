@@ -5468,5 +5468,55 @@
     "color": "Warm forest green",
     "numCoats": "2",
     "collection": "Holo Renaissance (2025)"
+  },
+  {
+    "id": "547",
+    "name": "Gryffindor",
+    "brand": "ORLY",
+    "type": "Shimmer",
+    "colorFamily": "Red",
+    "color": "Bold brick red ignited with a golden holographic shimmer",
+    "numCoats": "2",
+    "collection": "ORLY x Harry Potter (2025)"
+  },
+  {
+    "id": "548",
+    "name": "Slytherin",
+    "brand": "ORLY",
+    "type": "Shimmer",
+    "colorFamily": "Green",
+    "color": "Emerald green with a holographic shimmer",
+    "numCoats": "2",
+    "collection": "ORLY x Harry Potter (2025)"
+  },
+  {
+    "id": "549",
+    "name": "Hufflepuff",
+    "brand": "ORLY",
+    "type": "Shimmer",
+    "colorFamily": "Black",
+    "color": "Striking black infused with gold and a holographic shimmer",
+    "numCoats": "2",
+    "collection": "ORLY x Harry Potter (2025)"
+  },
+  {
+    "id": "550",
+    "name": "Ravenclaw",
+    "brand": "ORLY",
+    "type": "Shimmer",
+    "colorFamily": "Blue",
+    "color": "Blue laced with a silver holographic shimmer",
+    "numCoats": "2",
+    "collection": "ORLY x Harry Potter (2025)"
+  },
+  {
+    "id": "551",
+    "name": "Polyjuice Potion",
+    "brand": "ORLY",
+    "type": "Magnetic",
+    "colorFamily": "Green",
+    "color": "Olive with a green-gold highlight",
+    "numCoats": "Polyjuice Potion",
+    "collection": "ORLY x Harry Potter (2025)"
   }
 ]
