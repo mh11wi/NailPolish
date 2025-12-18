@@ -500,7 +500,8 @@
     "colorFamily": "Blue",
     "color": "Sheer to royal blue thermal with glitters; purple shades in the sun",
     "numCoats": "3",
-    "collection": "Conversion (2016)"
+    "collection": "Conversion (2016)",
+    "suffix": "-sun"
   },
   {
     "id": "51",
@@ -2256,7 +2257,8 @@
     "colorFamily": "Red",
     "color": "Subdued reddish-brown with glitters; dark purple in the sun",
     "numCoats": "3",
-    "collection": "Conversion (2015)"
+    "collection": "Conversion (2015)",
+    "suffix": "-sun"
   },
   {
     "id": "226",
@@ -2266,7 +2268,8 @@
     "colorFamily": "Silver",
     "color": "Steel linear holographic; pinky-purple in the sun",
     "numCoats": "3",
-    "collection": "Summer 2020"
+    "collection": "Summer 2020",
+    "suffix": "-sun"
   },
   {
     "id": "227",
@@ -2376,7 +2379,8 @@
     "colorFamily": "",
     "color": "",
     "numCoats": "1",
-    "collection": ""
+    "collection": "",
+    "suffix": "-sun"
   },
   {
     "id": "238",
@@ -2656,7 +2660,8 @@
     "colorFamily": "Blue",
     "color": "Blue linear holographic with reflective glitters; purple in the sun",
     "numCoats": "2",
-    "collection": "Summer 2022"
+    "collection": "Summer 2022",
+    "suffix": "-sun"
   },
   {
     "id": "266",
@@ -2886,7 +2891,8 @@
     "colorFamily": "Neutral",
     "color": "Sheer nude base with golden shimmer; bright green in the dark",
     "numCoats": "4",
-    "collection": "Spring 2021"
+    "collection": "Spring 2021",
+    "suffix": "-dark"
   },
   {
     "id": "289",
@@ -2896,7 +2902,8 @@
     "colorFamily": "Pink",
     "color": "Pink to burgundy thermal with glitters; white-coral to dark green in the dark",
     "numCoats": "3",
-    "collection": "Summer 2022"
+    "collection": "Summer 2022",
+    "suffix": "-dark"
   },
   {
     "id": "290",
@@ -3787,7 +3794,8 @@
     "colorFamily": "White",
     "color": "Off-white with matte black hex glitters; bright lime in the dark",
     "numCoats": "3",
-    "collection": "Kelli's Haunted House (2023)"
+    "collection": "Kelli's Haunted House (2023)",
+    "suffix": "-dark"
   },
   {
     "id": "379",
@@ -3847,7 +3855,8 @@
     "colorFamily": "Green",
     "color": "Light green with green-yellow shimmer; bright green in the dark",
     "numCoats": "3",
-    "collection": "Nightmare Before Christmas (2023)"
+    "collection": "Nightmare Before Christmas (2023)",
+    "suffix": "-dark"
   },
   {
     "id": "385",
@@ -3857,7 +3866,8 @@
     "colorFamily": "White",
     "color": "White with pink-to-gold shimmer; bright green in the dark",
     "numCoats": "3",
-    "collection": "Nightmare Before Christmas (2023)"
+    "collection": "Nightmare Before Christmas (2023)",
+    "suffix": "-dark"
   },
   {
     "id": "386",
@@ -3867,7 +3877,8 @@
     "colorFamily": "Blue",
     "color": "Light blue with blue shimmer; bright green in the dark",
     "numCoats": "3",
-    "collection": "Nightmare Before Christmas (2023)"
+    "collection": "Nightmare Before Christmas (2023)",
+    "suffix": "-dark"
   },
   {
     "id": "387",
@@ -4347,7 +4358,8 @@
     "colorFamily": "Neutral",
     "color": "Light beige to grey thermal with red speckles; pink to purple in the sun",
     "numCoats": "2",
-    "collection": "Summer 2017"
+    "collection": "Summer 2017",
+    "suffix": "-sun"
   },
   {
     "id": "435",
@@ -4357,7 +4369,8 @@
     "colorFamily": "Blue",
     "color": "Turquoise to teal with holographic flakies; purple to navy in the sun",
     "numCoats": "2",
-    "collection": "Conversion (2016)"
+    "collection": "Conversion (2016)",
+    "suffix": "-sun"
   },
   {
     "id": "436",
@@ -4367,7 +4380,8 @@
     "colorFamily": "Orange",
     "color": "Pale peach to orange with holographic glitters; fuchsia to red in the sun",
     "numCoats": "3",
-    "collection": "Conversion (2016)"
+    "collection": "Conversion (2016)",
+    "suffix": "-sun"
   },
   {
     "id": "437",
@@ -4957,7 +4971,8 @@
     "colorFamily": "Grey",
     "color": "Slate grey with blue shimmer; bright green in the dark",
     "numCoats": "3",
-    "collection": "Baroquen (2025)"
+    "collection": "Baroquen (2025)",
+    "suffix": "-dark"
   },
   {
     "id": "496",
@@ -5057,7 +5072,8 @@
     "colorFamily": "Pink",
     "color": "Pink jelly base with golden shimmer; blue-purple in the dark",
     "numCoats": "2",
-    "collection": "Growing Personality (2025)"
+    "collection": "Growing Personality (2025)",
+    "suffix": "-dark"
   },
   {
     "id": "506",
@@ -5247,7 +5263,8 @@
     "colorFamily": "Red",
     "color": "Tomato red with orange and pink shimmer; cheesy in the dark",
     "numCoats": "2",
-    "collection": "Polish & Beauty Expo Exclusive (2025)"
+    "collection": "Polish & Beauty Expo Exclusive (2025)",
+    "suffix": "-dark"
   },
   {
     "id": "525",
@@ -5347,7 +5364,8 @@
     "colorFamily": "Orange",
     "color": "Hot orange with purple metallic hex glitters; yellow-orange in the dark",
     "numCoats": "2",
-    "collection": "Eerie Glow (2025)"
+    "collection": "Eerie Glow (2025)",
+    "suffix": "-dark"
   },
   {
     "id": "535",
@@ -5357,7 +5375,8 @@
     "colorFamily": "Pink",
     "color": "Hot pink with matte black hex glitters; white-coral in the dark",
     "numCoats": "2",
-    "collection": "Eerie Glow (2025)"
+    "collection": "Eerie Glow (2025)",
+    "suffix": "-dark"
   },
   {
     "id": "536",
@@ -5367,7 +5386,8 @@
     "colorFamily": "Yellow",
     "color": "Sheer highlighter yellow with orange shimmer; bright green in the dark",
     "numCoats": "4",
-    "collection": "Eerie Glow (2025)"
+    "collection": "Eerie Glow (2025)",
+    "suffix": "-dark"
   },
   {
     "id": "537",
@@ -5377,7 +5397,8 @@
     "colorFamily": "Pink",
     "color": "Dusky pink with blue flakies and black glitters; yellow-green in the dark",
     "numCoats": "3",
-    "collection": "Eerie Glow (2025)"
+    "collection": "Eerie Glow (2025)",
+    "suffix": "-dark"
   },
   {
     "id": "538",
@@ -5417,7 +5438,8 @@
     "colorFamily": "Green",
     "color": "Soft apple green with peach shifting shimmer; red in the sun",
     "numCoats": "3",
-    "collection": "Sun Chasers (2024)"
+    "collection": "Sun Chasers (2024)",
+    "suffix": "-sun"
   },
   {
     "id": "542",
@@ -5427,7 +5449,8 @@
     "colorFamily": "Pink",
     "color": "Candy pink with green shifting shimmer; orange in the sun",
     "numCoats": "3",
-    "collection": "Sun Chasers (2024)"
+    "collection": "Sun Chasers (2024)",
+    "suffix": "-sun"
   },
   {
     "id": "543",
@@ -5437,7 +5460,8 @@
     "colorFamily": "Orange",
     "color": "Peach with blue iridescent flakes; purple in the sun",
     "numCoats": "3",
-    "collection": "Shards of Illumination (2025)"
+    "collection": "Shards of Illumination (2025)",
+    "suffix": "-sun"
   },
   {
     "id": "544",
@@ -5447,7 +5471,8 @@
     "colorFamily": "Green",
     "color": "Mint with gold iridescent flakes; plum in the sun",
     "numCoats": "3",
-    "collection": "Shards of Illumination (2025)"
+    "collection": "Shards of Illumination (2025)",
+    "suffix": "-sun"
   },
   {
     "id": "545",
