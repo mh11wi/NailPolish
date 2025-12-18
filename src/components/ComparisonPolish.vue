@@ -4,24 +4,24 @@
       <b-aspect aspect="1:1">
         <b-card v-if="!card.detailsMode" class="border-0" img-top no-body>
           <b-img
-		    :src="getImage(card.polish.id)" 
-		    :alt="card.polish.name" 
-		    :blank-color="placeholderColor" 
-		    @error="handleImageError"
-		    fluidGrow
-		  />
+            :src="getImage(card.polish.id)" 
+            :alt="card.polish.name" 
+            :blank-color="placeholderColor" 
+            @error="handleImageError"
+            fluidGrow
+          />
         </b-card>
         <b-card v-else class="pt-5 h-100" no-body>
           <b-card-text class="mx-3 h-100 d-flex flex-column">
             <b-row align-v="center">
               <b-col cols="6">
                 <b-img
-				  :src="getImage(card.polish.id)" 
-				  :alt="card.polish.name" 
-				  :blank-color="placeholderColor" 
-				  @error="handleImageError"
-				  fluidGrow
-				/>
+                  :src="getImage(card.polish.id)" 
+                  :alt="card.polish.name" 
+                  :blank-color="placeholderColor" 
+                  @error="handleImageError"
+                  fluidGrow
+                />
               </b-col>
               <b-col cols="6" class="pl-0">
                 <p class="mb-1">{{ card.polish.type }}</p>
@@ -107,13 +107,11 @@ export default {
       const finishId = this.finish == 'glossy' ? import.meta.env.VITE_GLOSSY : import.meta.env.VITE_MATTE;
       
       let suffix = '';
-      if (this.card.polish.type == 'Solar' && this.isEffect) {
-        suffix = '-sun';
-      } else if (this.card.polish.type == 'Glow in the Dark' && this.isEffect) {
-        suffix = '-dark';
-      }
+      if (this.card.polish.suffix && this.isEffect) {
+        suffix = this.card.polish.suffix;
+      } 
       
-	  return new URL(`../assets/images/polishes/${polishId}/${finishId}${suffix}${import.meta.env.VITE_EXTENSION}`, import.meta.url).href;
+      return new URL(`../assets/images/polishes/${polishId}/${finishId}${suffix}${import.meta.env.VITE_EXTENSION}`, import.meta.url).href;
     },
 
     /**

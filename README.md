@@ -35,6 +35,7 @@ The place store information about a nail polish is `src/data/polishes.json`. Not
 - **numCoats**: the number of coats applied in the image of the polish
 - **collection**: the collection that the polish is part of (optional)
 - **destashed**: a boolean for if the polish has been destashed (optional)
+- **suffix**: if the polish is photographed in two states, a string to differentiate the second file (optional)
 
 Here is an example polish json:
 ```
@@ -57,9 +58,18 @@ If `VITE_FINISH_TOGGLE=="true"` it is expected that each subfolder will minimall
 Otherwise, only one image needs to be included in each subfolder with name `1` (plus the noted file extension). Ideally this would be a swatch of the polish either in its natural state or with a glossy top coat. Bottle shots could also work here, but are not recommended if you plan to add images of the polish with toppers later on.
 
 #### Two-state polish effects
-If a polish is of type "Solar" its subfolder should contain 1 or 2 additional images. Minimally, there needs to be one image of the polish in the sun with a glossy top coat. And, if `VITE_FINISH_TOGGLE=="true"`, there needs to be another image of the polish in the sun with a matte top coat. These images should be named `1-sun` and `2-sun` respectively (plus the noted file extension).
+Sometimes it is hard to capture the effect of a polish in a single image, e.g. with solar or glow in the dark polishes. This application can support a second image in this case, but it requires additional logging. Namely, the `suffix` attribute needs to be set for the polish in `polishes.json`. The following suffixes are currently accepted:
 
-If a polish is of type "Glow in the Dark" its subfolder should also contain analogous images. There needs to be one image of the polish in the dark with a glossy top coat minimally. And, if `VITE_FINISH_TOGGLE=="true"`, there needs to be another image of the polish in the dark with a matte top coat. These images should be named `1-dark` and `2-dark` respectively (plus the noted file extension).
+| **Polish Type**      | **Suffix**                                    |
+|--------------------- |-----------------------------------------------|
+| **Solar**            | -sun <br> -uv                                 |
+| **Glow in the Dark** | -dark <br> -glow                              |
+| **Thermal**\*        | -hot <br> -cold <br> -warm <br> -cool         |
+| **Magnetic** \*      | -magnet <br> -velvet <br> -aura <br> -crystal |
+
+\* *only needed if taking multiple photos. You could just dip the tip of your finger in hot/cold water for thermals instead. Likewise, you could apply the cat-eye style for magnetics.*
+
+For example, say you logged a solar polish with `suffix=="-sun"`. In addition to the glossy image of the polish in its natural state (and matte image if configured), the associated subfolder should contain 1 or 2 additional images. Minimally, there needs to be one image of the polish in the sun with a glossy top coat. And, if `VITE_FINISH_TOGGLE=="true"`, there needs to be another image of the polish in the sun with a matte top coat. These images should be named `1-sun` and `2-sun` respectively (plus the noted file extension).
 
 ### Adding a new topper
 Toppers are a special type of polish whose type must be "Topper". In the application they are not displayed in the Browse Collection view, but rather in the Top It Off view when mapped to another polish. 
@@ -78,7 +88,7 @@ If `VITE_FINISH_TOGGLE=="true"` mappings to both id 1 and 2 are implicitly assum
 "3": ["2", "4", "5"]
 ```
 
-While it is not yet implemented, images of solar or glow in the dark polishes with a topper should follow the same naming convention (i.e. `topperId-sun` or `topperId-dark`).
+Images of a two-state polish with a topper follow the same naming convention based on the `suffix` attribute of the polish (e.g. `topperId-sun` or `topperId-dark`). If the topper itself has two states, give it its own `suffix` attribute but still place the associated images in the subfolder for the base polish.
 
 Please note that if there are no topper mappings, the Top It Off view will not be displayed.
 
@@ -109,6 +119,7 @@ For example, if for a nail art design you used three polishes: one that you have
 Notes:
 - If the polish is logged, the glossy image of the polish will display in the Nail Art Gallery view in a popover (unless the polish is a topper)
 - If the logged polish is a topper, the image of the topper over a specified `base` polish will be displayed in the popover instead
+- If the logged polish or topper has two states, optionally specify a `suffix` for the desired image like `{"id": "5", "suffix": "-dark"}`
 
 Nail art images are stored directly in the `src/assets/images/nailart` folder. These images should be named after the id specified in `nailArt.json`. For example, if you have a design with id 1, the image should be named `1` and be of the file extension configured by `VITE_EXTENSION`.
 

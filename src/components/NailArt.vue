@@ -2,11 +2,11 @@
   <b-row class="mb-3 entry">
     <b-col cols="9" sm="5" lg="4" offset-xl="1">
       <b-img-lazy 
-		ref="image"
+        ref="image"
         :src="getImage(entry.id)" 
         :alt="entry.alt"
         :blank-color="placeholderColor" 
-		fluidGrow
+        fluidGrow
       />
     </b-col>
     <b-col cols="12" sm="7" xl="6">
@@ -27,7 +27,7 @@
               <b-popover 
                 :target="entry.id + '_' + polish.id"
                 triggers="click blur"
-				container="gallery"
+                container="gallery"
                 custom-class="hidden"
                 @shown="positionPopover"
                 @hide="hideOrRemoveParent"
@@ -35,8 +35,8 @@
                 <b-img
                   :src="getPolishImage(polish)" 
                   :alt="polishes[polish.id - 1].name" 
-				  :blank-color="placeholderColor" 
-				  @error="handleImageError"
+                  :blank-color="placeholderColor" 
+                  @error="handleImageError"
                   width=200 
                 />
               </b-popover>
@@ -57,7 +57,7 @@ export default {
     'polishes' // data of all polishes
   ],
   mounted: function() {
-	this.$refs.image.$el.onerror = this.handleImageError;
+    this.$refs.image.$el.onerror = this.handleImageError;
   },
   methods: {
     /**
@@ -65,7 +65,7 @@ export default {
      * @param id - the id of the nail art entry
      */
     getImage(id) {
-	  return new URL(`../assets/images/nailart/${id}${import.meta.env.VITE_EXTENSION}`, import.meta.url).href;
+      return new URL(`../assets/images/nailart/${id}${import.meta.env.VITE_EXTENSION}`, import.meta.url).href;
     },
     
     /**
@@ -73,11 +73,16 @@ export default {
      * @param polish - information about the polish
      */
     getPolishImage(polish) {
-      if (polish.base) {
-		return new URL(`../assets/images/polishes/${polish.base}/${polish.id}${import.meta.env.VITE_EXTENSION}`, import.meta.url).href;
+      let suffix = '';
+      if (polish.suffix) {
+        suffix = polish.suffix;
       }
-
-	  return new URL(`../assets/images/polishes/${polish.id}/${import.meta.env.VITE_GLOSSY}${import.meta.env.VITE_EXTENSION}`, import.meta.url).href;
+    
+      if (polish.base) {
+        return new URL(`../assets/images/polishes/${polish.base}/${polish.id}${suffix}${import.meta.env.VITE_EXTENSION}`, import.meta.url).href;
+      }
+      
+      return new URL(`../assets/images/polishes/${polish.id}/${import.meta.env.VITE_GLOSSY}${suffix}${import.meta.env.VITE_EXTENSION}`, import.meta.url).href;
     },
     
     /**
@@ -120,7 +125,7 @@ export default {
       const arrowTop = rect.top - top - 3;
       arrow.style.top = `${arrowTop / scale}px`;
       
-	  popover.classList.remove('hidden');
+      popover.classList.remove('hidden');
     }
   } 
 }

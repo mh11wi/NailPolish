@@ -26,12 +26,36 @@
           Start by selecting an applicable base polish from the <strong>Browse Collection</strong> view or from the drop-down menu to the left.
         </div>
         <div v-else class="container-fluid combo">
+          <img-comparison-slider v-if="combination.suffix" class="w-100">
+            <b-img 
+              slot="before" 
+              :src="getImage(true)" 
+              :alt="getAlt() + ' state one'" 
+              :blank-color="placeholderColor"
+              @error="handleImageError" 
+              fluidGrow
+            />
+            <b-img 
+              slot="after" 
+              :src="getImage()" 
+              :alt="getAlt() + ' state two'" 
+              :blank-color="placeholderColor"
+              @error="handleImageError"
+              fluidGrow
+            />
+            <font-awesome-icon 
+              slot="handle" 
+              :icon="getIcon(combination.suffix)" 
+              :class="['sliderHandle', getIcon(combination.suffix) == 'moon' ? 'ml-1' : '']" 
+            />
+          </img-comparison-slider>
           <b-img 
+            v-else
             :src="getImage()" 
             :alt="getAlt()" 
             :blank-color="placeholderColor" 
-		    @error="handleImageError"
-		    fluidGrow
+            @error="handleImageError"
+            fluidGrow
           />
         </div>
       </div>
@@ -50,7 +74,7 @@ export default {
   ],
   data: function() {
     return {
-      combination: {basePolishId: null, topperId: null} // the current combination of base polish and topper
+      combination: {basePolishId: null, topperId: null, suffix: null} // the current combination of base polish and topper
     }
   },
   computed: {
@@ -61,9 +85,9 @@ export default {
       
       options.push({text: 'Select a topper', value: null, disabled: true});
       options.push({text: self.polishes[import.meta.env.VITE_GLOSSY - 1].name, value: import.meta.env.VITE_GLOSSY});
-	  if (this.showFinishToggle || self.toppersMap[self.combination.basePolishId].includes(import.meta.env.VITE_MATTE)) {
+      if (this.showFinishToggle || self.toppersMap[self.combination.basePolishId].includes(import.meta.env.VITE_MATTE)) {
         options.push({text: self.polishes[import.meta.env.VITE_MATTE - 1].name, value: import.meta.env.VITE_MATTE});
-	  }
+      }
       
       const brands = this.pluck(this.polishes, 'brand');
       brands.forEach(function(brand) {
@@ -117,13 +141,30 @@ export default {
     collectionBasePolish: function() {
       const topperId = this.collectionBasePolish.finish == 'glossy' ? import.meta.env.VITE_GLOSSY : import.meta.env.VITE_MATTE;
       this.combination = {basePolishId: this.collectionBasePolish.id, topperId: topperId};
-    }
+    },
+    /** Determines the suffix of the combination based on the base polish or topper data. */
+    combination: {
+      handler: function() {
+        let suffix = null;
+        
+        if (this.combination.basePolishId) {
+          suffix = this.polishes[this.combination.basePolishId - 1].suffix || null;
+        }
+        
+        if (this.combination.topperId) {
+          suffix = this.polishes[this.combination.topperId - 1].suffix || null;
+        }
+        
+        this.combination.suffix = suffix;
+      },
+      deep: true
+    },
   },
   mounted: function() {
     if (this.collectionBasePolish) {
-	  const topperId = this.collectionBasePolish.finish == 'glossy' ? import.meta.env.VITE_GLOSSY : import.meta.env.VITE_MATTE;
+      const topperId = this.collectionBasePolish.finish == 'glossy' ? import.meta.env.VITE_GLOSSY : import.meta.env.VITE_MATTE;
       this.combination = {basePolishId: this.collectionBasePolish.id, topperId: topperId};
-	}
+    }
   },
   methods: {
     /** Updates the displayed combination when the selected base polish is changed. */
@@ -137,8 +178,12 @@ export default {
     },
   
     /** Gets the image of the selected base polish and topper combination. */
-    getImage() {
-	  return new URL(`../assets/images/polishes/${this.combination.basePolishId}/${this.combination.topperId}${import.meta.env.VITE_EXTENSION}`, import.meta.url).href;
+    getImage(useSuffix = false) {
+      let suffix = '';
+      if (useSuffix && this.combination.suffix) {
+        suffix = this.combination.suffix;
+      }
+      return new URL(`../assets/images/polishes/${this.combination.basePolishId}/${this.combination.topperId}${suffix}${import.meta.env.VITE_EXTENSION}`, import.meta.url).href;
     },
     
     /** Gets the alt text of the selected base polish and topper combination. */

@@ -6,20 +6,21 @@
 </template>
 
 <script>
-  import { BTab } from 'bootstrap-vue'
-  export default {
-    components: { BTab },
-	props: [ 'title' ],
-    data() {
-      return {
-        notActivated: true
-      }
-    },
-	methods: {
-	  activate() {
-	    this.$refs.tab.activate();
-		this.notActivated = false;
-	  }
-	}
+import { BTab } from 'bootstrap-vue'
+
+export default {
+  components: { BTab },
+  props: [ 'title' ],
+  data() {
+    return {
+      notActivated: true
+    }
+  },
+  methods: {
+    activate() {
+      this.$refs.tab.activate();
+      this.notActivated = false;
+    }
   }
+}
 </script>

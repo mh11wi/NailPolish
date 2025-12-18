@@ -90,8 +90,8 @@
             :src="getCorrectPolishImage()" 
             :alt="correctPolish.name" 
             :blank-color="placeholderColor" 
-		    @error="handleImageError"
-		    fluidGrow
+            @error="handleImageError"
+            fluidGrow
           />
         </b-col>
         <b-col cols="12" sm="7" class="polishData d-flex flex-column justify-content-between">
@@ -241,7 +241,7 @@ export default {
     
     /** Gets the image of the correct polish. */
     getCorrectPolishImage() {
-	  return new URL(`../assets/images/polishes/${this.correctPolish.id}/${import.meta.env.VITE_GLOSSY}${import.meta.env.VITE_EXTENSION}`, import.meta.url).href;
+      return new URL(`../assets/images/polishes/${this.correctPolish.id}/${import.meta.env.VITE_GLOSSY}${import.meta.env.VITE_EXTENSION}`, import.meta.url).href;
     },
     
     /** Hides any open tooltips. */
@@ -282,7 +282,7 @@ td {
 @media (width < 576px) {
   .polishData {
     margin-top: 1rem;
-	margin-right: -2rem;
+    margin-right: -2rem;
   }
   
   .polishData .row {
@@ -293,7 +293,7 @@ td {
 @media (min-width: 576px) {
   .polishData {
     height: 100%;
-	padding-right: 0;
+    padding-right: 0;
   }
 }
 

@@ -20,7 +20,7 @@ export default {
   },
   props: [
     'polishes', // data of all polishes
-	'nailArtData' // data of all nail art entries
+    'nailArtData' // data of all nail art entries
   ],
   data: function() {
     return {

@@ -1,7 +1,7 @@
 <template>
   <div class="comparison mb-5 w-100">
     <div class="container-fluid">
-	  <div class="row">
+      <div class="row">
         <div class="d-flex flex-grow-1 align-items-center pl-2 pl-sm-4">
           <strong v-if="!editMode">{{ comparison.name }}</strong>
           <b-form-input type="search" ref="editName" v-model="name" :maxLength="maxNameLength" v-else @blur="finishEdit" @keyup.enter="finishEdit"/>
@@ -18,58 +18,58 @@
             switch 
             v-model="effectChecked" 
             size="lg" 
-            aria-label="State for 'Solar' and 'Glow in the Dark' polishes"
+            aria-label="State of polishes"
           >
             <div :class="{'hide-xs': showFinishToggle}">
               <font-awesome-icon icon="sun" size="sm" />
               /
               <font-awesome-icon icon="moon" size="sm" />
-			</div>
+            </div>
           </b-form-checkbox>
           <FinishToggle class="ml-2 ml-sm-4" v-model="finish" @updateFinish="finish = $event"/>
         </div>
-	  </div>
+      </div>
     </div>
     <div v-if="comparison.polishes.length == 0" class="container-fluid mt-2 px-2 px-sm-4">Please add polishes from the <strong>Browse Collection</strong> view to compare.</div>
-	<div v-else class="row align-items-center position-relative mt-2 px-2">
-	  <b-button 
-		v-if="!hasTouch && slideIndex > 0" 
-		variant="link" 
-		class="arrow-button arrow-left ml-3 ml-sm-2" 
-		@click="prev" 
-		aria-label="Previous polishes in comparison"
-	  >
-		<font-awesome-icon icon="chevron-circle-left"/>
-	  </b-button>
-	  <b-carousel class="mt-3 w-100" ref="comparisonCarousel" v-model="slideIndex" :interval="0" :indicators="numSlides > 1" :no-animation="noAnimation" no-wrap>
-		<b-carousel-slide v-for="(slide, index1) in slides" :key="index1">
-		  <template v-slot:img>
-			<b-row :cols="cardsPerSlide" :align-h="numSlides > 1 ? 'left' : 'center'" class="mx-0">
-			  <b-col class="px-2" v-for="(card, index2) in slide" :key="card.polish.id">
-				<ComparisonPolish 
-				  :card="card" 
-				  :index="cardsPerSlide * index1 + index2" 
-				  :finish="finish" 
-				  :comparisonLength="comparison.polishes.length"
-				  :isEffect="effectChecked"
-				  @movePolish="movePolish"
-				  @removePolish="removePolish"
-				/>
-			  </b-col>
-			</b-row>
-		  </template>
-		</b-carousel-slide>
-	  </b-carousel>
-	  <b-button 
-		v-if="!hasTouch && slideIndex < numSlides - 1" 
-		variant="link" 
-		class="arrow-button arrow-right mr-3 mr-sm-2" 
-		@click="next" 
-		aria-label="Next polishes in comparison"
-	  >
-		<font-awesome-icon icon="chevron-circle-right"/>
-	  </b-button>
-	</div>
+    <div v-else class="row align-items-center position-relative mt-2 px-2">
+      <b-button 
+        v-if="!hasTouch && slideIndex > 0" 
+        variant="link" 
+        class="arrow-button arrow-left ml-3 ml-sm-2" 
+        @click="prev" 
+        aria-label="Previous polishes in comparison"
+      >
+        <font-awesome-icon icon="chevron-circle-left"/>
+      </b-button>
+      <b-carousel class="mt-3 w-100" ref="comparisonCarousel" v-model="slideIndex" :interval="0" :indicators="numSlides > 1" :no-animation="noAnimation" no-wrap>
+        <b-carousel-slide v-for="(slide, index1) in slides" :key="index1">
+          <template v-slot:img>
+            <b-row :cols="cardsPerSlide" :align-h="numSlides > 1 ? 'left' : 'center'" class="mx-0">
+              <b-col class="px-2" v-for="(card, index2) in slide" :key="card.polish.id">
+              <ComparisonPolish 
+                :card="card" 
+                :index="cardsPerSlide * index1 + index2" 
+                :finish="finish" 
+                :comparisonLength="comparison.polishes.length"
+                :isEffect="effectChecked"
+                @movePolish="movePolish"
+                @removePolish="removePolish"
+              />
+              </b-col>
+            </b-row>
+          </template>
+        </b-carousel-slide>
+      </b-carousel>
+      <b-button 
+        v-if="!hasTouch && slideIndex < numSlides - 1" 
+        variant="link" 
+        class="arrow-button arrow-right mr-3 mr-sm-2" 
+        @click="next" 
+        aria-label="Next polishes in comparison"
+       >
+        <font-awesome-icon icon="chevron-circle-right"/>
+      </b-button>
+    </div>
   </div>
 </template>
 
@@ -96,7 +96,7 @@ export default {
       effectChecked: false, // whether the effect toggle is checked or not (when a comparison contains a solar or glow in the dark polish)
       name: this.comparison.name, // the name being edited when editMode is true, and copied to the comparison prop when finished (for performance)
       slideIndex: 0, // the index of the current slide shown
-	  noAnimation: false // whether carousel animations should be prevented
+      noAnimation: false // whether carousel animations should be prevented
     }
   },
   watch: {
@@ -111,9 +111,9 @@ export default {
     
     /** Reset slides when number of cards per slides changes. */
     cardsPerSlide: function() {
-	  this.noAnimation = true;
-	  this.slideIndex = 0;
-	  this.$nextTick(() => {
+      this.noAnimation = true;
+      this.slideIndex = 0;
+      this.$nextTick(() => {
         this.noAnimation = false;
       });
     }
@@ -145,7 +145,7 @@ export default {
 
     /** Check whether the comparison contains a two state polish (solar or glow in the dark), in order to display the toggle. */
     containsTwoState: function() {
-      return this.comparison.polishes.some(item => item.polish.type == 'Solar' || item.polish.type == 'Glow in the Dark');
+      return this.comparison.polishes.some(item => item.polish.suffix);
     }
   },
   methods: {
@@ -195,8 +195,8 @@ export default {
     removePolish(event) {
       if (this.slideIndex > 0 && this.slides[this.slideIndex].length == 1) {
         this.noAnimation = true;
-	    this.slideIndex--;
-	    this.$nextTick(() => {
+        this.slideIndex--;
+        this.$nextTick(() => {
           this.noAnimation = false;
         });
       }
