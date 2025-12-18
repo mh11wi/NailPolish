@@ -45,7 +45,7 @@
         <Gallery :polishes="polishes" :nailArtData="nailArt"/>
       </LazyTab>
     </b-tabs>
-	<Spinner v-if="showSpinner"/>
+    <Spinner v-if="showSpinner"/>
   </div>
 </template>
 
@@ -64,7 +64,7 @@ export default {
   name: 'App',
   components: {
     Spinner,
-	LazyTab,
+    LazyTab,
     Collection,
     ComparisonsList,
     Toppers,

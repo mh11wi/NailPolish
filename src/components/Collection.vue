@@ -269,7 +269,7 @@ export default {
     /** Displays the filter column on mobile (portrait mode). */
     showMobileFilters() {
       document.querySelector('.filtersColumn').style.display = 'block';
-	  document.querySelector('.filtersOverlay').style.display = 'block';
+      document.querySelector('.filtersOverlay').style.display = 'block';
     },
     
     /** Hides the filter column on mobile (portrait mode). */

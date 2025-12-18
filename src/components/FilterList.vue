@@ -10,11 +10,11 @@
         <div class="col-4 text-right">
           <b-button 
             variant="link" 
-          size="sm" 
-          class="px-1 py-0 text-secondary-underline"
-          @click.stop="clear"
+            size="sm" 
+            class="px-1 py-0 text-secondary-underline"
+            @click.stop="clear"
           >
-          Clear
+            Clear
           </b-button>
         </div>
       </div>
