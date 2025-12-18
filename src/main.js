@@ -23,7 +23,9 @@ import {
   faArrowRight, 
   faTimes, 
   faSun, 
-  faMoon, 
+  faMoon,
+  faThermometerEmpty, 
+  faMagnet,
   faBan,
   faQuestionCircle
 } from '@fortawesome/free-solid-svg-icons'
@@ -44,6 +46,8 @@ library.add(
   faTimes, 
   faSun, 
   faMoon, 
+  faThermometerEmpty, 
+  faMagnet, 
   faBan, 
   faQuestionCircle
 )
@@ -70,7 +74,7 @@ Vue.mixin({
     }
   },
   methods: {
-	debounce(func) {
+    debounce(func) {
       let timer;
       return function(event) {
         if (timer) {
@@ -80,18 +84,44 @@ Vue.mixin({
       };
     },
     handleImageError(event) {
-	  event.target.src = `data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%221%22%20height%3D%221%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20%25%7Bw%7D%20%25%7Bh%7D%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20style%3D%22fill%3A${import.meta.env.VITE_PLACEHOLDER_COLOR}%3B%22%3E%3C%2Frect%3E%3C%2Fsvg%3E`;
-	},
-	pluck: function(array, key) {
+      event.target.src = `data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%221%22%20height%3D%221%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20%25%7Bw%7D%20%25%7Bh%7D%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20style%3D%22fill%3A${import.meta.env.VITE_PLACEHOLDER_COLOR}%3B%22%3E%3C%2Frect%3E%3C%2Fsvg%3E`;
+    },
+    pluck: function(array, key) {
       return [...new Set(array.map(o => o[key].length > 0 ? o[key] : null))].sort();
     },
-	hideOrRemoveParent(event) {
-	  const parent = event.relatedTarget.parentElement;
-	  if (parent.hasAttribute('data-v-app')) {
-		parent.remove();
-	  } else {
+    hideOrRemoveParent(event) {
+      const parent = event.relatedTarget.parentElement;
+      if (parent.hasAttribute('data-v-app')) {
+        parent.remove();
+      } else {
         event.relatedTarget.classList?.add('hidden');
-	  }
+      }
+    },
+    getIcon(suffix) {
+      let icon = '';
+      switch (suffix.slice(1)) {
+        case 'sun':
+        case 'uv':
+          icon = 'sun';
+          break;
+        case 'dark':
+        case 'glow':
+          icon = 'moon';
+          break;
+        case 'warm':
+        case 'hot':
+        case 'cold':
+        case 'cool':
+          icon = 'thermometer-empty';
+          break;
+        case 'magnet':
+        case 'velvet':
+        case 'aura':
+        case 'crystal':
+          icon = 'magnet';
+          break;
+      }
+      return icon;
     }
   }
 })

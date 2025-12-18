@@ -74,13 +74,13 @@ export default {
     return {
       polishes: [], // polish data
       toppersMap: {}, // toppers data,
-	  nailArt: [], // nail art data,
+      nailArt: [], // nail art data,
       basePolish: null, // the polish selected to view toppers over
       comparisonId: 0, // an identifier for a new comparison
       comparisons: [], // the list of polish comparisons
       cardsPerSlide: 2, // the number of polishes to show in a comparison slide
       collector: import.meta.env.VITE_COLLECTOR, // the name of the collector to display in the navbar
-	  showSpinner: false // whether the spinner should show on load
+      showSpinner: false // whether the spinner should show on load
     }
   },
   /** Add listener for when the browser is resized and load all data. */
@@ -88,14 +88,14 @@ export default {
     window.addEventListener('resize', this.debouncedResize);
     this.handleResize();
 
-	if (polishData.length == 2) {
-	  this.loadData();
-	} else {
-	  if ((polishData.length + Object.keys(topperData).length + nailArtData.length) > 100) {
-	    this.showSpinner = true;
-	  }
+    if (polishData.length == 2) {
+      this.loadData();
+    } else {
+      if ((polishData.length + Object.keys(topperData).length + nailArtData.length) > 100) {
+        this.showSpinner = true;
+      }
       setTimeout(this.loadData, 0);
-	}
+    }
   },
   /** Ensure that the tabs are the correct height. */
   updated() {
@@ -107,13 +107,13 @@ export default {
   },
   methods: {
     /** Loads the data into the app. */
-	loadData() {
-	  this.nailArt = nailArtData;
+    loadData() {
+      this.nailArt = nailArtData;
       this.toppersMap = topperData;
-	  this.polishes = polishData;
-	  this.showSpinner = false;
-	},
-	
+      this.polishes = polishData;
+      this.showSpinner = false;
+    },
+    
     /**
      * Opens the 'Top It Off' tab with the specified base polish and topper selected.
      * @param event - object containing base polish and selected topper id
@@ -131,32 +131,32 @@ export default {
     /** Determines the correct number of polishes to show in a comparison based on the screen width. */
     handleResize() {
       const screenWidth = document.querySelectorAll('html')[0].offsetWidth;
-	  const screenHeight = document.querySelectorAll('html')[0].offsetHeight;
-	  
+      const screenHeight = document.querySelectorAll('html')[0].offsetHeight;
+    
       if (screenWidth < 576) {
         this.cardsPerSlide = 2;
       } else if (screenWidth < 996) {
         this.cardsPerSlide = screenHeight < 576 ? 4 : 3;
-	  } else if (screenWidth < 1200) {
+      } else if (screenWidth < 1200) {
         this.cardsPerSlide = 4;
       } else {
         this.cardsPerSlide = 5;
       }
     },
-	
-	/** Debounced resize handler for event registration and cleaup. */
-	debouncedResize() {
-	  this.debounce(this.handleResize());
-	},
+    
+    /** Debounced resize handler for event registration and cleaup. */
+    debouncedResize() {
+      this.debounce(this.handleResize());
+    },
 
-	/** Calculates whether the navbar should be light or dark based on the primary color. */
-	getNavbarType() {
-	  const rootStyles = getComputedStyle(document.documentElement);
+    /** Calculates whether the navbar should be light or dark based on the primary color. */
+    getNavbarType() {
+      const rootStyles = getComputedStyle(document.documentElement);
       const primaryRgbString = rootStyles.getPropertyValue('--primary-rgb');
       const [r, g, b] = primaryRgbString.split(',').map(Number);
-	  const luminance = (r * 0.2126) + (g * 0.7152) + (b * 0.0722);
-	  return luminance < 128 ? 'dark' : 'light';
-	}
+      const luminance = (r * 0.2126) + (g * 0.7152) + (b * 0.0722);
+      return luminance < 128 ? 'dark' : 'light';
+    }
   }
 }
 </script>
@@ -336,7 +336,7 @@ input[type="search"]::-webkit-search-results-decoration {
 @media (width < 576px) {
   .b-popover-info {
     min-width: 395px;
-	left: calc(142.857% - 395px - 3.5rem) !important;
+	  left: calc(142.857% - 395px - 3.5rem) !important;
   }
 
   .modal-md, .modal-lg {
@@ -392,5 +392,17 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .line-height-small {
   line-height: 1.2 !important;
+}
+
+img-comparison-slider {
+  --divider-color: var(--warning);
+  --handle-size: 30px;
+  --handle-opacity: 1;
+  --handle-opacity-active: 1;
+}
+
+.sliderHandle {
+  color: var(--warning);
+  height: 30px;
 }
 </style>

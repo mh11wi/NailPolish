@@ -19,7 +19,7 @@
             </div>
             <div class="col-6 text-right pr-4">
               <b-button 
-			    v-if="search.length == 0"
+                v-if="search.length == 0"
                 variant="link" 
                 size="sm" 
                 class="px-1 py-0 text-secondary-underline"
@@ -30,11 +30,11 @@
             </div>
           </div>
         </div>
-		<div v-if="hasAnyDestashed" class="row mb-4">
+        <div v-if="hasAnyDestashed" class="row mb-4">
           <div class="col">
             <b-form-checkbox v-model="includeDestashed" value="true" class="destashedToggle" switch>
-			  Include destashed polishes
-			</b-form-checkbox>
+              Include destashed polishes
+            </b-form-checkbox>
           </div>
         </div>
         <div class="row search">
@@ -85,7 +85,7 @@
           <b-row cols="3" cols-sm="4" cols-xl="5" class="px-2">
             <PolishTile 
               v-for="(polish, index) in polishes" 
-			  v-show="displayedPolishes.some(p => p.id === polish.id)"
+              v-show="displayedPolishes.some(p => p.id === polish.id)"
               :key="index" 
               :polish="polish" 
               :finish="finish" 
@@ -98,7 +98,7 @@
           </b-row>
         </div>
       </div>
-	  <div class="filtersOverlay" @click="hideMobileFilters"></div>
+      <div class="filtersOverlay" @click="hideMobileFilters"></div>
     </div>
   </div>
 </template>
@@ -133,7 +133,7 @@ export default {
       initialBrand: new URLSearchParams(window.location.search).get('brand'), // the initial brand to be selected
       initialType: new URLSearchParams(window.location.search).get('type'), // the initial type to be selected
       initialColor: new URLSearchParams(window.location.search).get('color'), // the initial color to be selected
-	  includeDestashed: true // whether destashed polishes should be counted and displayed
+      includeDestashed: true // whether destashed polishes should be counted and displayed
     }
   },
   watch: {
@@ -155,7 +155,7 @@ export default {
     
     /** Further filter out destashed polishes if specified. */
     includeDestashed: function() {
-	  this.updateDisplayedPolishes();
+      this.updateDisplayedPolishes();
     }
   },
   /** Initially sets the polishes to display to all the polishes. */
@@ -168,14 +168,14 @@ export default {
       return this.allPolishes.filter(polish => polish.type != 'Topper').sort((a, b) => b.id - a.id);
     },
 	
-	/** The number of polishes, excluding toppers and those destashed if specified. */
-	polishCount: function() {
-	  if (this.includeDestashed) {
-	    return this.polishes.length;
-	  } else {
-	    return this.polishes.filter(polish => !polish.destashed).length;
-	  }
-	},
+    /** The number of polishes, excluding toppers and those destashed if specified. */
+    polishCount: function() {
+      if (this.includeDestashed) {
+        return this.polishes.length;
+      } else {
+        return this.polishes.filter(polish => !polish.destashed).length;
+      }
+    },
     
     /** Whether any polish in the list is destashed. */
     hasAnyDestashed: function() {
@@ -186,20 +186,20 @@ export default {
     /** 
      * Verifies whether a polish satisfies the destashed inclusion.
      * @param polish - the polish to check
-	 */
-	doesPolishSatisfyDestashed(polish) {
-	  return this.includeDestashed ? true : !polish.destashed;
-	},
+     */
+    doesPolishSatisfyDestashed(polish) {
+      return this.includeDestashed ? true : !polish.destashed;
+    },
 	
-	/** Update which filters to display based on filters or search. */
-	updateDisplayedPolishes() {
-	  const doesSatisfy = (polish) => (
-	    this.doesPolishSatisfyFilters(polish) && 
-		this.doesPolishSatisySearchTerm(polish) && 
-		this.doesPolishSatisfyDestashed(polish)
-	  );
+    /** Update which filters to display based on filters or search. */
+    updateDisplayedPolishes() {
+      const doesSatisfy = (polish) => (
+        this.doesPolishSatisfyFilters(polish) && 
+        this.doesPolishSatisySearchTerm(polish) && 
+        this.doesPolishSatisfyDestashed(polish)
+      );
       this.displayedPolishes = this.polishes.filter(doesSatisfy);
-	},
+    },
   
     /**
      * Verifies whether a polish satisfies the three filters (brand, type, and color).
@@ -207,10 +207,10 @@ export default {
      */
     doesPolishSatisfyFilters(polish) {
       return (
-	    (this.brandFilters.length == 0 || this.brandFilters.includes(polish.brand)) &&
+        (this.brandFilters.length == 0 || this.brandFilters.includes(polish.brand)) &&
         (this.typeFilters.length == 0 || this.typeFilters.includes(polish.type)) &&
         (this.colorFilters.length == 0 || this.colorFilters.includes(polish.colorFamily))
-	  );
+      );
     },
     
     /**
@@ -226,7 +226,7 @@ export default {
       } else {
         this.colorFilters = values;
       }
-	  this.updateDisplayedPolishes();
+      this.updateDisplayedPolishes();
     },
     
     /**
@@ -275,15 +275,15 @@ export default {
     /** Hides the filter column on mobile (portrait mode). */
     hideMobileFilters() {
       document.querySelector('.filtersColumn').style.display = 'none';
-	  document.querySelector('.filtersOverlay').style.display = 'none';
+      document.querySelector('.filtersOverlay').style.display = 'none';
     },
 	
-	/** Clears all filters. */
-	clearFilters() {
-	  this.$refs.brand.clear();
-	  this.$refs.type.clear();
-	  this.$refs.color.clear();
-	}
+    /** Clears all filters. */
+    clearFilters() {
+      this.$refs.brand.clear();
+      this.$refs.type.clear();
+      this.$refs.color.clear();
+    }
   }
 }
 </script>

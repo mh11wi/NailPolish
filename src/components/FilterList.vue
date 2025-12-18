@@ -3,20 +3,20 @@
     <b-button block variant="white" v-b-toggle="filter">
       <div class="row font-weight-bold">
         <div class="col-8 text-left">
-		  <span class="mr-3">{{ label }}</span>
-		  <font-awesome-icon icon="chevron-up" size="xs" class="when-open"/>
-		  <font-awesome-icon icon="chevron-down" size="xs" class="when-closed"/>
-		</div>
+          <span class="mr-3">{{ label }}</span>
+          <font-awesome-icon icon="chevron-up" size="xs" class="when-open"/>
+          <font-awesome-icon icon="chevron-down" size="xs" class="when-closed"/>
+        </div>
         <div class="col-4 text-right">
-		  <b-button 
-		    variant="link" 
-			size="sm" 
-			class="px-1 py-0 text-secondary-underline"
-			@click.stop="clear"
-		  >
-			Clear
-		  </b-button>
-		</div>
+          <b-button 
+            variant="link" 
+          size="sm" 
+          class="px-1 py-0 text-secondary-underline"
+          @click.stop="clear"
+          >
+          Clear
+          </b-button>
+        </div>
       </div>
     </b-button>
     <b-collapse :id="filter" visible>
@@ -62,10 +62,10 @@ export default {
     }
   },
   methods: {	
-	/** Clears all selected items. */
-	clear: function() {
-	  this.selected = [];
-	}
+    /** Clears all selected items. */
+    clear: function() {
+      this.selected = [];
+    }
   },
   watch: {
     /**
