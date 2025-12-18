@@ -142,17 +142,18 @@ export default {
       const topperId = this.collectionBasePolish.finish == 'glossy' ? import.meta.env.VITE_GLOSSY : import.meta.env.VITE_MATTE;
       this.combination = {basePolishId: this.collectionBasePolish.id, topperId: topperId};
     },
+    
     /** Determines the suffix of the combination based on the base polish or topper data. */
     combination: {
       handler: function() {
         let suffix = null;
         
-        if (this.combination.basePolishId) {
-          suffix = this.polishes[this.combination.basePolishId - 1].suffix || null;
+        if (this.combination.basePolishId && this.polishes[this.combination.basePolishId - 1].suffix) {
+          suffix = this.polishes[this.combination.basePolishId - 1].suffix;
         }
         
-        if (this.combination.topperId) {
-          suffix = this.polishes[this.combination.topperId - 1].suffix || null;
+        if (this.combination.topperId && this.polishes[this.combination.topperId - 1].suffix) {
+          suffix = this.polishes[this.combination.topperId - 1].suffix;
         }
         
         this.combination.suffix = suffix;
