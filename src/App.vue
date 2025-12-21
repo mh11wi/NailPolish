@@ -1,13 +1,13 @@
 <template>
   <div role="main" class="app d-flex flex-column">
     <b-navbar variant="primary" :type="getNavbarType()">
-      <b-navbar-brand tag="h1" class="font-weight-normal mb-0">{{ collector }}'s Nail Polishes</b-navbar-brand>
+      <b-navbar-brand tag="h1" class="font-weight-normal mb-0">{{ title }}</b-navbar-brand>
       <b-navbar-nav class="ml-auto">
         <b-nav-item :link-attrs="{id: 'info-link', tabindex: '0', 'aria-label': 'App Info'}">
           <font-awesome-icon icon="info-circle" size="lg"/>
         </b-nav-item>
         <b-popover v-if="polishes.length > 0" variant="info" target="info-link" placement="leftbottom" :fallback-placement="[]" title="App Info" triggers="click blur" @hide="hideOrRemoveParent">
-          <p>An application to track my collection of nail polishes and showcase nail art.</p>
+          <p>{{ description }}</p>
           <p><strong>Browse Collection</strong><br>Search or filter through my collection of nail polishes.</p>
           <p><strong>Compare Polishes</strong><br>Compare similar polishes next to one another.</p>
           <p v-if="Object.keys(toppersMap).length > 0"><strong>Top It Off</strong><br>See what different toppers look like over an applicable polish.</p>
@@ -79,7 +79,8 @@ export default {
       comparisonId: 0, // an identifier for a new comparison
       comparisons: [], // the list of polish comparisons
       cardsPerSlide: 2, // the number of polishes to show in a comparison slide
-      collector: import.meta.env.VITE_COLLECTOR, // the name of the collector to display in the navbar
+      title: import.meta.env.VITE_TITLE, // the title to display in the navbar
+      description: import.meta.env.VITE_DESCRIPTION, // description to show in the info popover
       showSpinner: false // whether the spinner should show on load
     }
   },
@@ -399,6 +400,7 @@ img-comparison-slider {
   --handle-size: 30px;
   --handle-opacity: 1;
   --handle-opacity-active: 1;
+  outline: none;
 }
 
 .sliderHandle {
