@@ -8,8 +8,8 @@ See my own collection at [https://mh11wi.github.io/NailPolish/](https://mh11wi.g
 
 ### Configuration
 Several envars can be modified to customize the application. These are set in the `.env` file, and include
-- `VITE_TITLE`: the title of the application shown in the browser's tab
-- `VITE_COLLECTOR`: the name of the collector shown in the navbar
+- `VITE_TITLE`: the title of the application shown in the navbar
+- `VITE_DESCRIPTION`: the description of the application shown in the info popover
 - `VITE_EXTENSION`: the file extension expected of all image files (default: .jpg)
 - `VITE_PRIMARY_COLOR`: the primary color of the application; any HTML color name, hex, or rgb value
 - `VITE_PLACEHOLDER_COLOR`: the color of the placeholder tile displayed before an image loads
@@ -64,7 +64,7 @@ Sometimes it is hard to capture the effect of a polish in a single image, e.g. w
 |--------------------- |-----------------------------------------------|
 | **Solar**            | -sun <br> -uv                                 |
 | **Glow in the Dark** | -dark <br> -glow                              |
-| **Thermal**\*        | -hot <br> -cold <br> -warm <br> -cool         |
+| **Thermal** \*       | -hot <br> -cold <br> -warm <br> -cool         |
 | **Magnetic** \*      | -magnet <br> -velvet <br> -aura <br> -crystal |
 
 \* *only needed if taking multiple photos. You could just dip the tip of your finger in hot/cold water for thermals instead. Likewise, you could apply the cat-eye style for magnetics.*
