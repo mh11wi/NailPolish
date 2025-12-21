@@ -5543,5 +5543,121 @@
     "color": "Olive with a green-gold highlight",
     "numCoats": "Polyjuice Potion",
     "collection": "ORLY x Harry Potter (2025)"
+  },
+  {
+    "id": "552",
+    "name": "Glow Up",
+    "brand": "ORLY",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": "",
+    "suffix": "-dark"
+  },
+  {
+    "id": "553",
+    "name": "Glow For It",
+    "brand": "ORLY",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": "",
+    "suffix": "-dark"
+  },
+  {
+    "id": "554",
+    "name": "Glow with the Flow",
+    "brand": "ORLY",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": "",
+    "suffix": "-dark"
+  },
+  {
+    "id": "555",
+    "name": "Talk to the Hand",
+    "brand": "ORLY",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": "",
+    "suffix": "-dark"
+  },
+  {
+    "id": "556",
+    "name": "Blue  Light Special",
+    "brand": "ORLY",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": "",
+    "suffix": "-dark"
+  },
+  {
+    "id": "557",
+    "name": "All That",
+    "brand": "ORLY",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": "",
+    "suffix": "-dark"
+  },
+  {
+    "id": "558",
+    "name": "Songbird",
+    "brand": "Cirque Colors",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": ""
+  },
+  {
+    "id": "559",
+    "name": "Gold Scattered Holo Taco",
+    "brand": "Holo Taco",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": "Mini Advent Calendar (2025)"
+  },
+  {
+    "id": "560",
+    "name": "Wreath Havoc Taco",
+    "brand": "Holo Taco",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": "Mini Advent Calendar (2025)"
+  },
+  {
+    "id": "561",
+    "name": "Diamond Dasher Taco",
+    "brand": "Holo Taco",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": "Mini Advent Calendar (2025)"
+  },
+  {
+    "id": "562",
+    "name": "Silent Night",
+    "brand": "Holo Taco",
+    "type": "Jelly",
+    "colorFamily": "Blue",
+    "color": "Deep navy crelly",
+    "numCoats": "2",
+    "collection": "Mini Advent Calendar (2025)"
   }
 ]

@@ -207,8 +207,8 @@
       {"id": "65"},
       {"id": "32"},
       {"id": "124"},
-      {"brand": "Twinkled T", "name": "Liquid Gold Stamping Polish"},
-      {"brand": "ORLY", "name": "Glow Up Top Effect"}
+      {"id": "552", "base": "22", "suffix": "-dark"},
+      {"brand": "Twinkled T", "name": "Liquid Gold Stamping Polish"}
     ]
   },
   {
