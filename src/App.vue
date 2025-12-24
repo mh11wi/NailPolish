@@ -13,6 +13,7 @@
           <p v-if="Object.keys(toppersMap).length > 0"><strong>Top It Off</strong><br>See what different toppers look like over an applicable polish.</p>
           <p v-if="nailArt.length > 0"><strong>Nail Art Gallery</strong><br>View some of my past nail art.</p>
           <p><strong>Polish Guesser</strong><br>A 'Wordle' inspired game!</p>
+          <p><strong>Gradient Guide</strong><br>A tool to plan a gradient manicure.</p>
           <penguin width="100" hAlign="center"/>
           <div class="text-center"><a href="https://mh11wi.github.io/privacy-policy.html">Terms & Privacy Policy</a></div>
         </b-popover>
@@ -50,8 +51,13 @@
       <LazyTab title="Nail Art Gallery" v-if="nailArt.length > 0">
         <Gallery :polishes="polishes" :nailArtData="nailArt"/>
       </LazyTab>
-	  <LazyTab title="Polish Guesser">
+      <LazyTab title="Polish Guesser">
         <Guesser :allPolishes="polishes"/>
+      </LazyTab>
+      <LazyTab title="Gradient Guide">
+        <div class="iframeContainer">
+          <iframe src="https://mh11wi.github.io/GradientGuide/embed.html" />
+        </div>
       </LazyTab>
     </b-tabs>
     <Spinner v-if="showSpinner"/>
@@ -254,6 +260,12 @@ html, body, .app {
   .dropdown-menu {
     transform: translate(0, 38px) !important;
   }
+  
+  .iframeContainer {
+    transform: scale(1.28) translate(10.9375%, 10.9375%);
+    width: 78.125% !important;
+    height: 78.125% !important;
+  }
 }
 
 input[type="search"]::-webkit-search-decoration,
@@ -419,5 +431,24 @@ img-comparison-slider {
 .sliderHandle {
   color: var(--warning);
   height: 30px;
+}
+
+.iframeContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+@media (orientation: landscape) and (min-width: 768px) {
+  iframe {
+    width: 768px;
+  }
 }
 </style>
