@@ -5697,5 +5697,45 @@
     "color": "Deep navy crelly",
     "numCoats": "2",
     "collection": "Mini Advent Calendar (2025)"
+  },
+  {
+    "id": "563",
+    "name": "Call Me Vixen",
+    "brand": "Holo Taco",
+    "type": "Shimmer",
+    "colorFamily": "Red",
+    "color": "Deep cranberry with scattered holographic glitters",
+    "numCoats": "2",
+    "collection": "Mini Advent Calendar (2025)"
+  },
+  {
+    "id": "564",
+    "name": "In a Flurry",
+    "brand": "Holo Taco",
+    "type": "Metallic Flakie",
+    "colorFamily": "Blue",
+    "color": "Pale blue 'frosted metal' with scattered holographic glitters",
+    "numCoats": "2",
+    "collection": "Mini Advent Calendar (2025)"
+  },
+  {
+    "id": "565",
+    "name": "Pirouette Pink",
+    "brand": "Holo Taco",
+    "type": "Crushed Holographic",
+    "colorFamily": "Pink",
+    "color": "Ballerina pink base with pink iridescent micro-shimmer",
+    "numCoats": "3",
+    "collection": "Mini Advent Calendar (2025)"
+  },
+  {
+    "id": "566",
+    "name": "Ice Angel",
+    "brand": "Holo Taco",
+    "type": "Linear Holographic",
+    "colorFamily": "Silver",
+    "color": "Icy ivory with gold iridescent micro-shimmer",
+    "numCoats": "2",
+    "collection": "Mini Advent Calendar (2025)"
   }
 ]
