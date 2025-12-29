@@ -97,7 +97,8 @@
     "colorFamily": "Blue",
     "color": "Bright cyan blue",
     "numCoats": "2",
-    "collection": "Unicorn Dream (2021)"
+    "collection": "Unicorn Dream (2021)",
+    "hex": "5FC7E4"
   },
   {
     "id": "11",
@@ -107,7 +108,8 @@
     "colorFamily": "Pink",
     "color": "Cool-toned bubblegum pink",
     "numCoats": "2",
-    "collection": "Unicorn Dream (2021)"
+    "collection": "Unicorn Dream (2021)",
+    "hex": "F0B9D9"
   },
   {
     "id": "12",
@@ -208,7 +210,7 @@
     "color": "Gold shimmer with holographic hex glitters",
     "numCoats": "3",
     "collection": "",
-	"destashed": true
+    "destashed": true
   },
   {
     "id": "22",
@@ -218,7 +220,8 @@
     "colorFamily": "White",
     "color": "Opaque white",
     "numCoats": "2",
-    "collection": "Unicorn Skin (2020)"
+    "collection": "Unicorn Skin (2020)",
+    "hex": "FFFFFF"
   },
   {
     "id": "23",
@@ -318,7 +321,8 @@
     "colorFamily": "Black",
     "color": "Opaque black",
     "numCoats": "1",
-    "collection": "Launch (2019)"
+    "collection": "Launch (2019)",
+    "hex": "000000"
   },
   {
     "id": "33",
@@ -368,7 +372,8 @@
     "colorFamily": "Green",
     "color": "Neon green",
     "numCoats": "3",
-    "collection": "Retrowave (Summer 2020)"
+    "collection": "Retrowave (Summer 2020)",
+    "hex": "9FEE9D"
   },
   {
     "id": "38",
@@ -439,7 +444,7 @@
     "color": "Crimson to vampy red",
     "numCoats": "3",
     "collection": "Maison (2017)",
-	"destashed": true
+    "destashed": true
   },
   {
     "id": "45",
@@ -450,7 +455,7 @@
     "color": "Lime to emerald green",
     "numCoats": "3",
     "collection": "Do Good (2020)",
-	"destashed": true
+    "destashed": true
   },
   {
     "id": "46",
@@ -761,7 +766,8 @@
     "colorFamily": "Yellow",
     "color": "Banana yellow",
     "numCoats": "2",
-    "collection": "For Art's Sake (2021)"
+    "collection": "For Art's Sake (2021)",
+    "hex": "E3DA59"
   },
   {
     "id": "77",
@@ -781,7 +787,8 @@
     "colorFamily": "Yellow",
     "color": "Neon chartreuse",
     "numCoats": "3",
-    "collection": "Vice (2021)"
+    "collection": "Vice (2021)",
+    "hex": "B5DC07"
   },
   {
     "id": "79",
@@ -812,7 +819,7 @@
     "color": "Opaque white",
     "numCoats": "2",
     "collection": "",
-	"destashed": true
+    "destashed": true
   },
   {
     "id": "82",
@@ -1013,7 +1020,7 @@
     "color": "Watermelon pink",
     "numCoats": "3",
     "collection": "Xtreme Wear",
-	"destashed": true
+    "destashed": true
   },
   {
     "id": "102",
@@ -1024,7 +1031,7 @@
     "color": "Rosy pink",
     "numCoats": "2",
     "collection": "",
-	"destashed": true
+    "destashed": true
   },
   {
     "id": "103",
@@ -1194,7 +1201,8 @@
     "colorFamily": "Purple",
     "color": "Soft lilac purple",
     "numCoats": "2",
-    "collection": "Xtreme Wear"
+    "collection": "Xtreme Wear",
+    "hex": "DDCEE1"
   },
   {
     "id": "120",
@@ -1204,7 +1212,8 @@
     "colorFamily": "Red",
     "color": "Bright tomato red",
     "numCoats": "2",
-    "collection": "Xtreme Wear"
+    "collection": "Xtreme Wear",
+    "hex": "FA0F16"
   },
   {
     "id": "121",
@@ -1215,7 +1224,7 @@
     "color": "Snowflake white",
     "numCoats": "3",
     "collection": "",
-	"destashed": true
+    "destashed": true
   },
   {
     "id": "122",
@@ -1235,7 +1244,8 @@
     "colorFamily": "Brown",
     "color": "Dark eggplant brown",
     "numCoats": "2",
-    "collection": ""
+    "collection": "",
+    "hex": "46191E"
   },
   {
     "id": "124",
@@ -1245,7 +1255,8 @@
     "colorFamily": "Green",
     "color": "Medium green",
     "numCoats": "2",
-    "collection": ""
+    "collection": "",
+    "hex": "2AAE7C"
   },
   {
     "id": "125",
@@ -1265,7 +1276,8 @@
     "colorFamily": "Orange",
     "color": "Saturated peachy orange",
     "numCoats": "3",
-    "collection": "Up and Away (2010)"
+    "collection": "Up and Away (2010)",
+    "hex": "FF9868"
   },
   {
     "id": "127",
@@ -1275,7 +1287,8 @@
     "colorFamily": "Yellow",
     "color": "Light pastel yellow",
     "numCoats": "3",
-    "collection": "Pastels (2017)"
+    "collection": "Pastels (2017)",
+    "hex": "ECEB9B"
   },
   {
     "id": "128",
@@ -1305,7 +1318,8 @@
     "colorFamily": "Yellow",
     "color": "Neon cheddar yellow-orange",
     "numCoats": "3",
-    "collection": "Vice (2021)"
+    "collection": "Vice (2021)",
+    "hex": "FEC200"
   },
   {
     "id": "131",
@@ -1315,7 +1329,8 @@
     "colorFamily": "Grey",
     "color": "Light grey",
     "numCoats": "2",
-    "collection": "Xtreme Wear"
+    "collection": "Xtreme Wear",
+    "hex": "A8B2AA"
   },
   {
     "id": "132",
@@ -1325,7 +1340,8 @@
     "colorFamily": "Brown",
     "color": "Milk chocolate brown",
     "numCoats": "2",
-    "collection": "Entice (2014)"
+    "collection": "Entice (2014)",
+    "hex": "8E592F"
   },
   {
     "id": "133",
@@ -1335,7 +1351,8 @@
     "colorFamily": "Neutral",
     "color": "Sweet coffee cream",
     "numCoats": "2",
-    "collection": "Venice (2015)"
+    "collection": "Venice (2015)",
+    "hex": "FAD5BB"
   },
   {
     "id": "134",
@@ -1345,7 +1362,8 @@
     "colorFamily": "Red",
     "color": "Hot coral-red",
     "numCoats": "2",
-    "collection": "Life's a Beach (2021)"
+    "collection": "Life's a Beach (2021)",
+    "hex": "FA6C54"
   },
   {
     "id": "135",
@@ -1446,7 +1464,7 @@
     "color": "Opaque black",
     "numCoats": "1",
     "collection": "",
-	"destashed": true
+    "destashed": true
   },
   {
     "id": "145",
@@ -1456,7 +1474,8 @@
     "colorFamily": "Purple",
     "color": "Neon purple",
     "numCoats": "3",
-    "collection": "Neons (2019)"
+    "collection": "Neons (2019)",
+    "hex": "CC75D3"
   },
   {
     "id": "146",
@@ -1476,7 +1495,8 @@
     "colorFamily": "Blue",
     "color": "Pale turquoise",
     "numCoats": "2",
-    "collection": "Xtreme Wear"
+    "collection": "Xtreme Wear",
+    "hex": "BAD6DA"
   },
   {
     "id": "148",
@@ -1486,7 +1506,8 @@
     "colorFamily": "Green",
     "color": "Soft mint green",
     "numCoats": "2",
-    "collection": "Xtreme Wear"
+    "collection": "Xtreme Wear",
+    "hex": "DEE7C8"
   },
   {
     "id": "149",
@@ -1496,7 +1517,8 @@
     "colorFamily": "Purple",
     "color": "Bright cool-toned purple",
     "numCoats": "2",
-    "collection": "Electric Escape (2021)"
+    "collection": "Electric Escape (2021)",
+    "hex": "805BDC"
   },
   {
     "id": "150",
@@ -1546,7 +1568,8 @@
     "colorFamily": "Orange",
     "color": "Bright medium orange",
     "numCoats": "3",
-    "collection": ""
+    "collection": "",
+    "hex": "F16E02"
   },
   {
     "id": "155",
@@ -1556,7 +1579,8 @@
     "colorFamily": "Brown",
     "color": "Chocolate macaron cookie",
     "numCoats": "2",
-    "collection": ""
+    "collection": "",
+    "hex": "B2948C"
   },
   {
     "id": "156",
@@ -1626,7 +1650,8 @@
     "colorFamily": "Purple",
     "color": "Blueberry smoothie",
     "numCoats": "2",
-    "collection": ""
+    "collection": "",
+    "hex": "8B184F"
   },
   {
     "id": "163",
@@ -1636,7 +1661,8 @@
     "colorFamily": "Blue",
     "color": "Deep indigo",
     "numCoats": "1",
-    "collection": "Unicorn Skin (2020)"
+    "collection": "Unicorn Skin (2020)",
+    "hex": "1F1F43"
   },
   {
     "id": "164",
@@ -2007,7 +2033,7 @@
     "color": "Sparkly peachy pink",
     "numCoats": "4",
     "collection": "Colorstay Gel Envy",
-	"destashed": true
+    "destashed": true
   },
   {
     "id": "201",
@@ -2107,7 +2133,8 @@
     "colorFamily": "Blue",
     "color": "Deep teal",
     "numCoats": "1",
-    "collection": "Tea Cremes (2021)"
+    "collection": "Tea Cremes (2021)",
+    "hex": "165775"
   },
   {
     "id": "211",
@@ -2117,7 +2144,8 @@
     "colorFamily": "Purple",
     "color": "Medium toned purple",
     "numCoats": "2",
-    "collection": "Kelli Marissa Series 4 (2021)"
+    "collection": "Kelli Marissa Series 4 (2021)",
+    "hex": "4D459B"
   },
   {
     "id": "212",
@@ -2127,7 +2155,8 @@
     "colorFamily": "Grey",
     "color": "Medium to dark grey",
     "numCoats": "2",
-    "collection": "Kelli Marissa Series 4 (2021)"
+    "collection": "Kelli Marissa Series 4 (2021)",
+    "hex": "626C6D"
   },
   {
     "id": "213",
@@ -2851,7 +2880,8 @@
     "colorFamily": "Blue",
     "color": "Medium-bright blue",
     "numCoats": "2",
-    "collection": "Work/Life Balance (2022)"
+    "collection": "Work/Life Balance (2022)",
+    "hex": "209AEF"
   },
   {
     "id": "285",
@@ -2861,7 +2891,8 @@
     "colorFamily": "Red",
     "color": "Deep Burgundy",
     "numCoats": "2",
-    "collection": "Tea Cremes (2021)"
+    "collection": "Tea Cremes (2021)",
+    "hex": "821E2A"
   },
   {
     "id": "286",
@@ -3603,7 +3634,8 @@
     "colorFamily": "Green",
     "color": "Dark mossy green",
     "numCoats": "2",
-    "collection": "Down To Earth (2023)"
+    "collection": "Down To Earth (2023)",
+    "hex": "5C7B4F"
   },
   {
     "id": "360",
@@ -3613,7 +3645,8 @@
     "colorFamily": "Purple",
     "color": "Rich eggplant purple",
     "numCoats": "2",
-    "collection": "Down To Earth (2023)"
+    "collection": "Down To Earth (2023)",
+    "hex": "7D5A72"
   },
   {
     "id": "361",
@@ -3623,7 +3656,8 @@
     "colorFamily": "Green",
     "color": "Warm olive green",
     "numCoats": "2",
-    "collection": "Down To Earth (2023)"
+    "collection": "Down To Earth (2023)",
+    "hex": "BEBD25"
   },
   {
     "id": "362",
@@ -3633,7 +3667,8 @@
     "colorFamily": "Purple",
     "color": "Muted deep mauve-magenta",
     "numCoats": "2",
-    "collection": "Holo Taco x Safiya (2023)"
+    "collection": "Holo Taco x Safiya (2023)",
+    "hex": "BD77AD"
   },
   {
     "id": "363",
@@ -3744,7 +3779,7 @@
     "color": "Opaque black; dries matte",
     "numCoats": "1",
     "collection": "Kelli's Haunted House (2023)",
-	"destashed": true
+    "destashed": true
   },
   {
     "id": "374",
@@ -4851,7 +4886,8 @@
     "colorFamily": "Blue",
     "color": "Bright teal",
     "numCoats": "1",
-    "collection": "Holo Taco x DAVIDsTEA (2025)"
+    "collection": "Holo Taco x DAVIDsTEA (2025)",
+    "hex": "36CBD2"
   },
   {
     "id": "484",
@@ -4871,7 +4907,8 @@
     "colorFamily": "Green",
     "color": "Pale cool sage green",
     "numCoats": "2",
-    "collection": "Cottagecore (2025)"
+    "collection": "Cottagecore (2025)",
+    "hex": "C5D5CA"
   },
   {
     "id": "486",
@@ -5173,7 +5210,8 @@
     "colorFamily": "Pink",
     "color": "Cool knockout pink",
     "numCoats": "2",
-    "collection": "Beachy Brights (2024)"
+    "collection": "Beachy Brights (2024)",
+    "hex": "F969AE"
   },
   {
     "id": "516",

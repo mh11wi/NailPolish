@@ -56,7 +56,7 @@
       </LazyTab>
       <LazyTab title="Gradient Guide">
         <div class="iframeContainer">
-          <iframe src="https://mh11wi.github.io/GradientGuide/embed.html" />
+          <iframe :src="'https://mh11wi.github.io/GradientGuide/embed.html?d=' + getIframeData()" />
         </div>
       </LazyTab>
     </b-tabs>
@@ -176,6 +176,13 @@ export default {
       const [r, g, b] = primaryRgbString.split(',').map(Number);
       const luminance = (r * 0.2126) + (g * 0.7152) + (b * 0.0722);
       return luminance < 128 ? 'dark' : 'light';
+    },
+    
+    /** Gets the data to pass to the iframe src URL. */
+    getIframeData() {
+      const cremes = this.polishes.filter(polish => polish.hex && !polish.destashed).sort((a, b) => b.id - a.id);
+      const data = cremes.map(polish => ({ n: polish.name, b: polish.brand, h: polish.hex }));
+      return btoa(JSON.stringify(data));
     }
   }
 }
