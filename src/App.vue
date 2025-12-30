@@ -180,7 +180,7 @@ export default {
     
     /** Gets the data to pass to the iframe src URL. */
     getIframeData() {
-      const cremes = this.polishes.filter(polish => polish.hex && !polish.destashed).sort((a, b) => b.id - a.id);
+      const cremes = this.polishes.filter(polish => polish.hex && !polish.destashed);
       const data = cremes.map(polish => ({ n: polish.name, b: polish.brand, h: polish.hex }));
       return btoa(JSON.stringify(data));
     }

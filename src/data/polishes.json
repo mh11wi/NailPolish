@@ -98,7 +98,7 @@
     "color": "Bright cyan blue",
     "numCoats": "2",
     "collection": "Unicorn Dream (2021)",
-    "hex": "5FC7E4"
+    "hex": "6ECFEF"
   },
   {
     "id": "11",
@@ -373,7 +373,7 @@
     "color": "Neon green",
     "numCoats": "3",
     "collection": "Retrowave (Summer 2020)",
-    "hex": "9FEE9D"
+    "hex": "7AED76"
   },
   {
     "id": "38",
@@ -767,7 +767,7 @@
     "color": "Banana yellow",
     "numCoats": "2",
     "collection": "For Art's Sake (2021)",
-    "hex": "E3DA59"
+    "hex": "F2F224"
   },
   {
     "id": "77",
@@ -788,7 +788,7 @@
     "color": "Neon chartreuse",
     "numCoats": "3",
     "collection": "Vice (2021)",
-    "hex": "B5DC07"
+    "hex": "CEF305"
   },
   {
     "id": "79",
@@ -1213,7 +1213,7 @@
     "color": "Bright tomato red",
     "numCoats": "2",
     "collection": "Xtreme Wear",
-    "hex": "FA0F16"
+    "hex": "F2000A"
   },
   {
     "id": "121",
@@ -1277,7 +1277,7 @@
     "color": "Saturated peachy orange",
     "numCoats": "3",
     "collection": "Up and Away (2010)",
-    "hex": "FF9868"
+    "hex": "FF9F72"
   },
   {
     "id": "127",
@@ -2145,7 +2145,7 @@
     "color": "Medium toned purple",
     "numCoats": "2",
     "collection": "Kelli Marissa Series 4 (2021)",
-    "hex": "4D459B"
+    "hex": "453F8C"
   },
   {
     "id": "212",
@@ -2892,7 +2892,7 @@
     "color": "Deep Burgundy",
     "numCoats": "2",
     "collection": "Tea Cremes (2021)",
-    "hex": "821E2A"
+    "hex": "6B1924"
   },
   {
     "id": "286",
@@ -3635,7 +3635,7 @@
     "color": "Dark mossy green",
     "numCoats": "2",
     "collection": "Down To Earth (2023)",
-    "hex": "5C7B4F"
+    "hex": "526D47"
   },
   {
     "id": "360",
@@ -3656,8 +3656,7 @@
     "colorFamily": "Green",
     "color": "Warm olive green",
     "numCoats": "2",
-    "collection": "Down To Earth (2023)",
-    "hex": "BEBD25"
+    "collection": "Down To Earth (2023)"
   },
   {
     "id": "362",
@@ -3667,8 +3666,7 @@
     "colorFamily": "Purple",
     "color": "Muted deep mauve-magenta",
     "numCoats": "2",
-    "collection": "Holo Taco x Safiya (2023)",
-    "hex": "BD77AD"
+    "collection": "Holo Taco x Safiya (2023)"
   },
   {
     "id": "363",
@@ -4887,7 +4885,7 @@
     "color": "Bright teal",
     "numCoats": "1",
     "collection": "Holo Taco x DAVIDsTEA (2025)",
-    "hex": "36CBD2"
+    "hex": "2ECCC4"
   },
   {
     "id": "484",
