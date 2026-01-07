@@ -5735,5 +5735,25 @@
     "color": "Icy ivory with gold iridescent micro-shimmer",
     "numCoats": "2",
     "collection": "Mini Advent Calendar (2025)"
+  },
+  {
+    "id": "567",
+    "name": "Hazard",
+    "brand": "Clionadh Cosmetics",
+    "type": "Magnetic",
+    "colorFamily": "Red",
+    "color": "Red-to-orange shifting shimmer with a yellow-to-green shifting highlight",
+    "numCoats": "2",
+    "collection": "Slick-adelics (2022)"
+  },
+  {
+    "id": "568",
+    "name": "Psilocybin",
+    "brand": "Clionadh Cosmetics",
+    "type": "Magnetic",
+    "colorFamily": "Green",
+    "color": "Green-to-blue shifting shimmer with a pink-to-yellow shifting highlight",
+    "numCoats": "2",
+    "collection": "Slick-adelics (2022)"
   }
 ]
