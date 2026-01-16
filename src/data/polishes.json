@@ -5738,16 +5738,6 @@
   },
   {
     "id": "567",
-    "name": "Hazard",
-    "brand": "Clionadh Cosmetics",
-    "type": "Magnetic",
-    "colorFamily": "Red",
-    "color": "Red-to-orange shifting shimmer with a yellow-to-green shifting highlight",
-    "numCoats": "2",
-    "collection": "Slick-adelics (2022)"
-  },
-  {
-    "id": "568",
     "name": "Psilocybin",
     "brand": "Clionadh Cosmetics",
     "type": "Magnetic",
@@ -5757,7 +5747,7 @@
     "collection": "Slick-adelics (2022)"
   },
   {
-    "id": "569",
+    "id": "568",
     "name": "Multiverse",
     "brand": "Clionadh Cosmetics",
     "type": "Magnetic",
@@ -5767,7 +5757,7 @@
     "collection": "Chroma Slicks (2023)"
   },
   {
-    "id": "570",
+    "id": "569",
     "name": "Singularity",
     "brand": "Clionadh Cosmetics",
     "type": "Magnetic",
@@ -5777,7 +5767,7 @@
     "collection": "Spacetime Slicks (2023)"
   },
   {
-    "id": "571",
+    "id": "570",
     "name": "Royalty",
     "brand": "Clionadh Cosmetics",
     "type": "Multichrome",
@@ -5787,7 +5777,7 @@
     "collection": "Stained Glass (2025)"
   },
   {
-    "id": "572",
+    "id": "571",
     "name": "Autumn Acres",
     "brand": "Clionadh Cosmetics",
     "type": "Iridescent Flakie",
@@ -5797,7 +5787,7 @@
     "collection": "Picnics & Patches (2025)"
   },
   {
-    "id": "573",
+    "id": "572",
     "name": "Step on a Crack",
     "brand": "Clionadh Cosmetics",
     "type": "Glitter & Sparkle",
