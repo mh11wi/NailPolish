@@ -5744,7 +5744,8 @@
     "colorFamily": "Green",
     "color": "Green-to-blue shifting shimmer with a pink-to-yellow shifting highlight",
     "numCoats": "2",
-    "collection": "Slick-adelics (2022)"
+    "collection": "Slick-adelics (2022)",
+    "suffix": "-magnet"
   },
   {
     "id": "568",
@@ -5795,5 +5796,25 @@
     "color": "Emerald multichrome flakes over a linear holo base giving a crackled look",
     "numCoats": "2",
     "collection": "Unlucky 13 (2024)"
+  },
+  {
+    "id": "573",
+    "name": "Cool Ranch",
+    "brand": "Holo Taco",
+    "type": "Shimmer",
+    "colorFamily": "Brown",
+    "color": "Mauve-brown jelly base with cyan micro-shimmer and scattered holo",
+    "numCoats": "3",
+    "collection": "Declassified Tacos: 003 (2025)"
+  },
+  {
+    "id": "574",
+    "name": "Water Works",
+    "brand": "Holo Taco",
+    "type": "Holographic Glitter",
+    "colorFamily": "Blue",
+    "color": "Deep aqua jelly base",
+    "numCoats": "3",
+    "collection": "Declassified Tacos: 003 (2025)"
   }
 ]
