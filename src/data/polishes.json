@@ -5866,5 +5866,35 @@
     "color": "Soft pink holographic jelly with radiant blue shimmer",
     "numCoats": "3",
     "collection": "Wildflowers (2024)"
+  },
+  {
+    "id": "580",
+    "name": "Bluebell",
+    "brand": "ILNP",
+    "type": "Shimmer",
+    "colorFamily": "Blue",
+    "color": "Sky-blue holographic jelly with vibrant orange-to-green shimmer",
+    "numCoats": "3",
+    "collection": "Wildflowers (2024)"
+  },
+  {
+    "id": "581",
+    "name": "Pixie Party",
+    "brand": "ILNP",
+    "type": "Shimmer",
+    "colorFamily": "Pink",
+    "color": "Dainty pink holographic jelly with bright green-to-blue shimmer",
+    "numCoats": "3",
+    "collection": "Fairy Forest (2023)"
+  },
+  {
+    "id": "582",
+    "name": "Fairy Dust",
+    "brand": "ILNP",
+    "type": "Shimmer",
+    "colorFamily": "Purple",
+    "color": "Violet holographic jelly with intense orange shimmer",
+    "numCoats": "3",
+    "collection": "Fairy Forest (2023)"
   }
 ]
