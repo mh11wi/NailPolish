@@ -5816,5 +5816,55 @@
     "color": "Deep aqua jelly base",
     "numCoats": "3",
     "collection": "Declassified Tacos: 003 (2025)"
+  },
+  {
+    "id": "575",
+    "name": "Hexy Bikini",
+    "brand": "KB Shimmer",
+    "type": "Holographic Glitter",
+    "colorFamily": "Silver",
+    "color": "Clear base packed with silver, teal and pink holographic glitters",
+    "numCoats": "2",
+    "collection": "Celebration (2014)"
+  },
+  {
+    "id": "576",
+    "name": "It's Crunch Time",
+    "brand": "KB Shimmer",
+    "type": "Glitter & Sparkle",
+    "colorFamily": "Orange",
+    "color": "Autumn leaf–inspired mix of metallic hex glitters in a clear base",
+    "numCoats": "3",
+    "collection": "I Keep On Falling (2025)"
+  },
+  {
+    "id": "577",
+    "name": "Constellation Prize",
+    "brand": "KB Shimmer",
+    "type": "Glitter & Sparkle",
+    "colorFamily": "Blue",
+    "color": "Shimmery cobalt blue with silver circle and moon shape holographic glitters",
+    "numCoats": "3",
+    "collection": "I Keep On Falling (2025)"
+  },
+  {
+    "id": "578",
+    "name": "Overload",
+    "brand": "ILNP",
+    "type": "Magnetic",
+    "colorFamily": "Black",
+    "color": "Black with a silver highlight and multicoloured shimmer",
+    "numCoats": "2",
+    "collection": "Twisted (2025)"
+  },
+  {
+    "id": "579",
+    "name": "Flower Child",
+    "brand": "ILNP",
+    "type": "Shimmer",
+    "colorFamily": "Pink",
+    "color": "Soft pink holographic jelly with radiant blue shimmer",
+    "numCoats": "3",
+    "collection": "Wildflowers (2024)"
   }
 ]
