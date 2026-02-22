@@ -5859,26 +5859,6 @@
   },
   {
     "id": "579",
-    "name": "Flower Child",
-    "brand": "ILNP",
-    "type": "Shimmer",
-    "colorFamily": "Pink",
-    "color": "Soft pink holographic jelly with radiant blue shimmer",
-    "numCoats": "3",
-    "collection": "Wildflowers (2024)"
-  },
-  {
-    "id": "580",
-    "name": "Bluebell",
-    "brand": "ILNP",
-    "type": "Shimmer",
-    "colorFamily": "Blue",
-    "color": "Sky-blue holographic jelly with vibrant orange-to-green shimmer",
-    "numCoats": "3",
-    "collection": "Wildflowers (2024)"
-  },
-  {
-    "id": "581",
     "name": "Pixie Party",
     "brand": "ILNP",
     "type": "Shimmer",
@@ -5888,7 +5868,7 @@
     "collection": "Fairy Forest (2023)"
   },
   {
-    "id": "582",
+    "id": "580",
     "name": "Fairy Dust",
     "brand": "ILNP",
     "type": "Shimmer",
@@ -5896,5 +5876,45 @@
     "color": "Violet holographic jelly with intense orange shimmer",
     "numCoats": "3",
     "collection": "Fairy Forest (2023)"
+  },
+  {
+    "id": "581",
+    "name": "Flower Child",
+    "brand": "ILNP",
+    "type": "Shimmer",
+    "colorFamily": "Pink",
+    "color": "Soft pink holographic jelly with radiant blue shimmer",
+    "numCoats": "3",
+    "collection": "Wildflowers (2024)"
+  },
+  {
+    "id": "582",
+    "name": "Bluebell",
+    "brand": "ILNP",
+    "type": "Shimmer",
+    "colorFamily": "Blue",
+    "color": "Sky-blue holographic jelly with vibrant orange-to-green shimmer",
+    "numCoats": "3",
+    "collection": "Wildflowers (2024)"
+  },
+  {
+    "id": "583",
+    "name": "Petals",
+    "brand": "ILNP",
+    "type": "Shimmer",
+    "colorFamily": "Pink",
+    "color": "Vivid magenta shimmer that shifts to orange in extreme angles",
+    "numCoats": "2",
+    "collection": "Wildflowers (2024)"
+  },
+  {
+    "id": "584",
+    "name": "Carved",
+    "brand": "ILNP",
+    "type": "Shimmer",
+    "colorFamily": "Orange",
+    "color": "Intense Jack-O’-Lantern orange shimmer with additional fiery flecks",
+    "numCoats": "2",
+    "collection": "Fright Night (2023)"
   }
 ]
