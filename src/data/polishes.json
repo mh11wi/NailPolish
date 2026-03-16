@@ -5916,5 +5916,35 @@
     "color": "Intense Jack-O’-Lantern orange shimmer with additional fiery flecks",
     "numCoats": "2",
     "collection": "Fright Night (2023)"
+  },
+  {
+    "id": "585",
+    "name": "Shadow Lake",
+    "brand": "Holo Taco",
+    "type": "Shimmer",
+    "colorFamily": "Grey",
+    "color": "Deep grey-blue jelly base with iridescent blue micro-shimmer",
+    "numCoats": "2",
+    "collection": "Underglow (2024)"
+  },
+  {
+    "id": "586",
+    "name": "Polar Opposites",
+    "brand": "Holo Taco",
+    "type": "Magnetic",
+    "colorFamily": "Blue",
+    "color": "Aqua-blue with a silver highlight and aqua-green shimmer",
+    "numCoats": "3",
+    "collection": "Magnetic Attraction (2026)"
+  },
+  {
+    "id": "587",
+    "name": "Flirt Alert",
+    "brand": "Holo Taco",
+    "type": "Magnetic",
+    "colorFamily": "Pink",
+    "color": "Raspberry pink with a light pink highlight and scattered holo",
+    "numCoats": "2",
+    "collection": "Magnetic Attraction (2026)"
   }
 ]
