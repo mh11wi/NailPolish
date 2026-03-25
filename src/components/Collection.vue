@@ -123,6 +123,7 @@ export default {
     'comparisons' // the list of polish comparisons
   ],
   data: function() {
+    const params = new URLSearchParams(window.location.search);
     return {
       finish: 'glossy', // the selected polish finish to display (either 'glossy' or 'matte')
       brandFilters: [], // the selected brands to filter by
@@ -130,10 +131,10 @@ export default {
       colorFilters: [], // the selected polish colors to filter by
       search: '', // the inputted search term
       displayedPolishes: [], // the subset of polishes displayed based off search or filters
-      initialBrand: new URLSearchParams(window.location.search).get('brand'), // the initial brand to be selected
-      initialType: new URLSearchParams(window.location.search).get('type'), // the initial type to be selected
-      initialColor: new URLSearchParams(window.location.search).get('color'), // the initial color to be selected
-      includeDestashed: true // whether destashed polishes should be counted and displayed
+      initialBrand: params.get('brand'), // the initial brand to be selected
+      initialType: params.get('type'), // the initial type to be selected
+      initialColor: params.get('color'), // the initial color to be selected
+      includeDestashed: params.get('destashed') !== 'false' // whether destashed polishes should be counted and displayed
     }
   },
   watch: {
