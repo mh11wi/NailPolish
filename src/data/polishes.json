@@ -5956,5 +5956,15 @@
     "color": "",
     "numCoats": "1",
     "collection": "Magnetic Attraction (2026)"
+  },
+  {
+    "id": "589",
+    "name": "Dirty Martini",
+    "brand": "Holo Taco",
+    "type": "Linear Holographic",
+    "colorFamily": "Green",
+    "color": "Deep muted olive linear-crushed holographic hybrid",
+    "numCoats": "2",
+    "collection": "Haute Garbage (2026)"
   }
 ]
