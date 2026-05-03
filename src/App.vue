@@ -14,6 +14,7 @@
           <p v-if="nailArt.length > 0"><strong>Nail Art Gallery</strong><br>View some of my past nail art.</p>
           <p><strong>Polish Guesser</strong><br>A 'Wordle' inspired game!</p>
           <p><strong>Gradient Guide</strong><br>A tool to plan a gradient manicure.</p>
+          <p><strong>Watermarble Witchcraft</strong><br>A tool to plan a watermarble manicure.</p>
           <penguin width="100" hAlign="center"/>
           <div class="text-center"><a href="https://mh11wi.github.io/privacy-policy.html">Terms & Privacy Policy</a></div>
         </b-popover>
@@ -57,6 +58,11 @@
       <LazyTab title="Gradient Guide">
         <div class="iframeContainer">
           <iframe :src="'https://mh11wi.github.io/GradientGuide/embed.html?d=' + getIframeData()" />
+        </div>
+      </LazyTab>
+      <LazyTab title="Watermarble Witchcraft">
+        <div class="iframeContainer">
+          <iframe :src="'https://mh11wi.github.io/WatermarbleWitchcraft/embed.html?d=' + getIframeData()" />
         </div>
       </LazyTab>
     </b-tabs>
