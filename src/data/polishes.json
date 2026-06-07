@@ -5986,5 +5986,16 @@
     "color": "",
     "numCoats": "1",
     "collection": "Garden Variety (2026)"
+  },
+  {
+    "id": "592",
+    "name": "Moonlight Lullaby",
+    "brand": "Mooncat",
+    "type": "Glow in the Dark",
+    "colorFamily": "White",
+    "color": "Icy white shimmer with blue undertones; bright white in the dark",
+    "numCoats": "3",
+    "collection": "",
+    "suffix": "-dark"
   }
 ]
