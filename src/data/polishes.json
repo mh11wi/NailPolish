@@ -6017,5 +6017,25 @@
     "color": "Saturated magenta holographic jelly with luminous blue shimmer",
     "numCoats": "2",
     "collection": "Euphoric (2026)"
+  },
+  {
+    "id": "595",
+    "name": "Slow Mornings",
+    "brand": "Cadillacquer",
+    "type": "Glitter & Sparkle",
+    "colorFamily": "Blue",
+    "color": "Light blue crelly with gold chrome and pink iridescent flakes",
+    "numCoats": "2",
+    "collection": "Take it Easy (2026)"
+  },
+  {
+    "id": "596",
+    "name": "Sweet Nothing",
+    "brand": "Cadillacquer",
+    "type": "Glitter & Sparkle",
+    "colorFamily": "Pink",
+    "color": "Baby pink crelly with teal-to-purple chrome and gold iridescent flakes",
+    "numCoats": "2",
+    "collection": "Take it Easy (2026)"
   }
 ]
