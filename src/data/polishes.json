@@ -6037,5 +6037,25 @@
     "color": "Baby pink crelly with teal-to-purple chrome and gold iridescent flakes",
     "numCoats": "2",
     "collection": "Take it Easy (2026)"
+  },
+  {
+    "id": "597",
+    "name": "Ophelia",
+    "brand": "Clionadh Cosmetics",
+    "type": "Shimmer",
+    "colorFamily": "Green",
+    "color": "Pale gold-green shimmer with aqua and holo micro-flakes (Millais 1852)",
+    "numCoats": "3",
+    "collection": "Famous Paintings: Love & Loss (2026)"
+  },
+  {
+    "id": "598",
+    "name": "Kiss",
+    "brand": "Clionadh Cosmetics",
+    "type": "Glitter & Sparkle",
+    "colorFamily": "Gold",
+    "color": "Antique golden shimmer with black, gold and white flakes (Klimt 1908)",
+    "numCoats": "2",
+    "collection": "Famous Paintings: Love & Loss (2026)"
   }
 ]
