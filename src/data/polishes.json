@@ -6067,5 +6067,25 @@
     "color": "Magenta shifting magnetic micro flakes that reveal aqua shifting flakes",
     "numCoats": "3",
     "collection": "Trip-adelic (2025)"
+  },
+  {
+    "id": "600",
+    "name": "Hyper Punch",
+    "brand": "Holo Taco",
+    "type": "Linear Holographic",
+    "colorFamily": "Pink",
+    "color": "Bright watermelon-red pink with added shimmer",
+    "numCoats": "2",
+    "collection": "POP! of Holo (2026)"
+  },
+  {
+    "id": "601",
+    "name": "Berry Loud",
+    "brand": "Holo Taco",
+    "type": "Linear Holographic",
+    "colorFamily": "Purple",
+    "color": "Bright magenta-purple with added shimmer",
+    "numCoats": "2",
+    "collection": "POP! of Holo (2026)"
   }
 ]
