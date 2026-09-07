@@ -6097,5 +6097,25 @@
     "color": "Holographic and iridescent shards of glitter with purple iridescent flakes",
     "numCoats": "3",
     "collection": "7th Anniversary: Jackpot (2026)"
+  },
+  {
+    "id": "603",
+    "name": "Velvet Room",
+    "brand": "Holo Taco",
+    "type": "Smooth Metallic",
+    "colorFamily": "Red",
+    "color": "Rich red metallic",
+    "numCoats": "2",
+    "collection": "7th Anniversary: Jackpot (2026)"
+  },
+  {
+    "id": "604",
+    "name": "Hit the Lights",
+    "brand": "Holo Taco",
+    "type": "Flash Reflective",
+    "colorFamily": "Blue",
+    "color": "Deep indigo-blue jelly with gold reflective and holographic glitters",
+    "numCoats": "3",
+    "collection": "7th Anniversary: Jackpot (2026)"
   }
 ]
