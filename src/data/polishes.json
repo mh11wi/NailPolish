@@ -6117,5 +6117,25 @@
     "color": "Deep indigo-blue jelly with gold reflective and holographic glitters",
     "numCoats": "3",
     "collection": "7th Anniversary: Jackpot (2026)"
+  },
+  {
+    "id": "605",
+    "name": "Sweeten the Pot",
+    "brand": "Holo Taco",
+    "type": "Chrome",
+    "colorFamily": "Gold",
+    "color": "Rich gold",
+    "numCoats": "1",
+    "collection": "7th Anniversary: Jackpot (2026)"
+  },
+  {
+    "id": "606",
+    "name": "All I Do is Sin",
+    "brand": "Holo Taco",
+    "type": "Glitter & Sparkle",
+    "colorFamily": "Black",
+    "color": "Multi-coloured and holographic glitter in a black jelly base",
+    "numCoats": "3",
+    "collection": "7th Anniversary: Jackpot (2026)"
   }
 ]
