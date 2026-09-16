@@ -6137,5 +6137,25 @@
     "color": "Multi-coloured and holographic glitter in a black jelly base",
     "numCoats": "3",
     "collection": "7th Anniversary: Jackpot (2026)"
+  },
+  {
+    "id": "607",
+    "name": "Suit Yourself Taco",
+    "brand": "Holo Taco",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": "7th Anniversary: Jackpot (2026)"
+  },
+  {
+    "id": "608",
+    "name": "Winning Streak Taco",
+    "brand": "Holo Taco",
+    "type": "Topper",
+    "colorFamily": "",
+    "color": "",
+    "numCoats": "1",
+    "collection": "7th Anniversary: Jackpot (2026)"
   }
 ]
