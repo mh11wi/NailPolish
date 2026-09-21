@@ -6157,5 +6157,25 @@
     "color": "",
     "numCoats": "1",
     "collection": "7th Anniversary: Jackpot (2026)"
+  },
+  {
+    "id": "609",
+    "name": "Maple Sugar Glaze",
+    "brand": "Holo Taco",
+    "type": "Shimmer",
+    "colorFamily": "Brown",
+    "color": "Warm syrup brown jelly with gold iridescent and reflective shimmer",
+    "numCoats": "3",
+    "collection": "Spice Rack (2026)"
+  },
+  {
+    "id": "610",
+    "name": "Brûlée Me Away",
+    "brand": "Holo Taco",
+    "type": "Magnetic",
+    "colorFamily": "Brown",
+    "color": "Warm brown with a gold highlight and scattered holographic glitters",
+    "numCoats": "2",
+    "collection": "Spice Rack (2026)"
   }
 ]
