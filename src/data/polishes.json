@@ -6177,5 +6177,25 @@
     "color": "Warm brown with a gold highlight and scattered holographic glitters",
     "numCoats": "2",
     "collection": "Spice Rack (2026)"
+  },
+  {
+    "id": "611",
+    "name": "Herb Your Enthusiasm",
+    "brand": "Holo Taco",
+    "type": "Smooth Metallic",
+    "colorFamily": "Green",
+    "color": "Warm dark sage green metallic",
+    "numCoats": "2",
+    "collection": "Spice Rack (2026)"
+  },
+  {
+    "id": "612",
+    "name": "Copper Coated",
+    "brand": "Holo Taco",
+    "type": "Chrome",
+    "colorFamily": "Orange",
+    "color": "Lustrous copper",
+    "numCoats": "1",
+    "collection": "Spice Rack (2026)"
   }
 ]
