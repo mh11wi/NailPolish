@@ -6197,5 +6197,25 @@
     "color": "Lustrous copper",
     "numCoats": "1",
     "collection": "Spice Rack (2026)"
+  },
+  {
+    "id": "613",
+    "name": "Girly Ghoul",
+    "brand": "Holo Taco",
+    "type": "Crushed Holographic",
+    "colorFamily": "Purple",
+    "color": "Icy lilac base with blue micro-shimmer",
+    "numCoats": "3",
+    "collection": "Holo Taco x Safiya Volume II (2026)"
+  },
+  {
+    "id": "614",
+    "name": "Dream Eater",
+    "brand": "Holo Taco",
+    "type": "Linear Holographic",
+    "colorFamily": "Purple",
+    "color": "Purple linear holographic multichrome polish with a purple/pink/gold shift",
+    "numCoats": "2",
+    "collection": "Holo Taco x Safiya Volume II (2026)"
   }
 ]
