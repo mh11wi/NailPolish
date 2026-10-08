@@ -6217,5 +6217,25 @@
     "color": "Purple linear holographic multichrome polish with a purple/pink/gold shift",
     "numCoats": "2",
     "collection": "Holo Taco x Safiya Volume II (2026)"
+  },
+  {
+    "id": "615",
+    "name": "RIP Bestie",
+    "brand": "Holo Taco",
+    "type": "Shimmer",
+    "colorFamily": "Purple",
+    "color": "Blackened plum with cyan-green micro-shimmer and scattered holo",
+    "numCoats": "2",
+    "collection": "Holo Taco x Safiya Volume II (2026)"
+  },
+  {
+    "id": "616",
+    "name": "Grim Keeper",
+    "brand": "Holo Taco",
+    "type": "Shimmer",
+    "colorFamily": "Purple",
+    "color": "Grungy deep mauve jelly with blue micro-shimmer",
+    "numCoats": "3",
+    "collection": "Holo Taco x Safiya Volume II (2026)"
   }
 ]
